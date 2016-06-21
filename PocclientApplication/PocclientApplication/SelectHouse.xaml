@@ -1,0 +1,59 @@
+﻿<UserControl x:Class="PocclientApplication.SelectHouse"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="800">
+    <Grid x:Name="house_grid" Loaded="house_grid_Loaded">
+
+
+        <DataGrid AutoGenerateColumns="False" CanUserAddRows="False" HorizontalAlignment="Stretch"  Name="house_dataGrid" VerticalAlignment="Stretch" Width="auto" Margin="0,63,0,0" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="id" Binding="{Binding Path=house_id }" Visibility="Hidden" />
+                <DataGridTextColumn Header="所有权人" Binding="{Binding Path=house_owner}"/>
+                <DataGridTextColumn Header="所有权性质" Binding="{Binding Path=house_nature_id}" />
+                <DataGridTextColumn Header="身份证号码" Binding="{Binding Path=house_idcardnumber}"/>
+                <DataGridTextColumn Header="房屋座落" Binding="{Binding Path=house_located_id}"/>
+                <DataGridTextColumn Header="地号" Binding="{Binding Path=house_dihao}"/>
+                <DataGridTextColumn Header="缮证人" Binding="{Binding Path=house_witness}"/>
+                <DataGridTextColumn Header="校对人" Binding="{Binding Path=house_proofreader}" />
+                <DataGridTextColumn Header="领证人签章" Binding="{Binding Path=house_autograph}"/>
+                <DataGridTextColumn Header="领证日期" Binding="{Binding Path=house_licensing_date}"/>
+                <DataGridTextColumn Header="填发机关" Binding="{Binding Path=house_office}"/>
+                <DataGridTextColumn Header="填发日期" Binding="{Binding Path=house_tianfatime}"/>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button  x:Name="edit_list" Click="edit_list_Click" BorderBrush="{x:Null}" Background="{x:Null}" ToolTip="编辑">
+                                <Image Width="18" Height="18" Source="/PocclientApplication;component/image/edit_active.png"></Image>
+                            </Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button x:Name="delete_list" Click="delete_list_Click" BorderBrush="{x:Null}" Background="{x:Null}" ToolTip="删除">
+                                <Image Width="18" Height="18" Source="/PocclientApplication;component/image/delete_active.png"></Image>
+                            </Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <!--<DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="报表" x:Name="baobiao" Click="baobiao_Click"></Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>-->
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="所有权人" Height="28" HorizontalAlignment="Left" Margin="20,14,0,0" Name="label1" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="84,16,0,0" Name="house_owner" VerticalAlignment="Top" Width="120" />
+        <Label Content="身份证号" Height="28" HorizontalAlignment="Left" Margin="223,14,0,0" Name="label2" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="292,16,0,0" Name="idcardnumber" VerticalAlignment="Top" Width="120" />
+        <Button Content="查询" Height="23" HorizontalAlignment="Left" Margin="457,19,0,0" Name="house_inquiry" VerticalAlignment="Top" Width="75" Click="house_inquiry_Click" />
+    </Grid>
+</UserControl>

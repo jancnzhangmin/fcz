@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ecbe792a-f601-4cf3-9dac-8811a182bae4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://cloudtime-pc:6787/Service1.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Service15.xsd" MetadataType="Schema" ID="794df335-4c86-44c9-a2e7-47806e63db23" SourceId="1" SourceUrl="http://cloudtime-pc:6787/Service1.svc?xsd=xsd4" />
+    <MetadataFile FileName="Service151.xsd" MetadataType="Schema" ID="3a136cce-a0a1-4cd1-974f-f0a19e9e8553" SourceId="1" SourceUrl="http://cloudtime-pc:6787/Service1.svc?xsd=xsd3" />
+    <MetadataFile FileName="Service152.xsd" MetadataType="Schema" ID="c8dfc71d-3fa8-4f13-a0d5-9c090854396f" SourceId="1" SourceUrl="http://cloudtime-pc:6787/Service1.svc?xsd=xsd2" />
+    <MetadataFile FileName="Service153.xsd" MetadataType="Schema" ID="1fcf4972-a574-4e9d-bbc3-19f7359a54cc" SourceId="1" SourceUrl="http://cloudtime-pc:6787/Service1.svc?xsd=xsd1" />
+    <MetadataFile FileName="Service154.xsd" MetadataType="Schema" ID="268afd0f-ac55-4153-93b6-d6f5d9e7f968" SourceId="1" SourceUrl="http://cloudtime-pc:6787/Service1.svc?xsd=xsd0" />
+    <MetadataFile FileName="Service11.wsdl" MetadataType="Wsdl" ID="cd7abcb4-9a64-417d-9f7b-374a0af361b9" SourceId="1" SourceUrl="http://cloudtime-pc:6787/Service1.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
