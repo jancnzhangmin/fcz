@@ -118,17 +118,17 @@ namespace FileService
 
         //增加契税摘要
         [OperationContract]
-        int Inserthousedeedtax(DateTime datetime, float price, string type, float tax_rate, float amount_money, string remarks, int house_id);
+        int Inserthousedeedtax(DateTime datetime, string price, string type, string tax_rate, string amount_money, string remarks, int house_id);
         //更新契税
         [OperationContract]
-        int Updatehousedeedtax(DateTime datetime, float price, string type, float tax_rate, float amount_money, string remarks, int house_id);
+        int Updatehousedeedtax(DateTime datetime, string price, string type, string tax_rate, string amount_money, string remarks, int house_id);
         //查询编辑契税摘要
         [OperationContract]
         DataSet Selecthousedeedtaxid(int id);
 
         //增加设定他项权利摘要
         [OperationContract]
-        int Inserthouseobligee(string obligee, string type, string room_number, string jianshu, float built_up_area, string right_value, string duration_right, DateTime logout_date, int house_id);
+        int Inserthouseobligee(string obligee, string type, string room_number, string jianshu, string built_up_area, string right_value, string duration_right, DateTime logout_date, int house_id);
         //查询他项权利摘要
         [OperationContract]
         DataSet Selectobligee(int house_id);
@@ -137,7 +137,7 @@ namespace FileService
         DataSet Selectobligeeid(int oblid);
         //更新他项权利摘要
         [OperationContract]
-        int Updataobligee(string obligee, string type, string room_number, string jianshu, float built_up_area, string right_value, string duration_right, DateTime logout_date, int house_id, int oblid);
+        int Updataobligee(string obligee, string type, string room_number, string jianshu, string built_up_area, string right_value, string duration_right, DateTime logout_date, int house_id, int oblid);
         //删除设定他项权利摘要
         [OperationContract]
         int Deleteobligee(int strobligeeid);

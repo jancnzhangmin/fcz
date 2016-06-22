@@ -1001,7 +1001,7 @@ namespace FileService
         }
 
         //增加契税摘要
-        public int Inserthousedeedtax(DateTime datetime, float price, string type, float tax_rate, float amount_money, string remarks, int house_id)
+        public int Inserthousedeedtax(DateTime datetime, string price, string type, string tax_rate, string amount_money, string remarks, int house_id)
         {
             try
             {
@@ -1038,7 +1038,7 @@ namespace FileService
             }
         }
         //更新契税
-        public int Updatehousedeedtax(DateTime datetime, float price, string type, float tax_rate, float amount_money, string remarks, int house_id)
+        public int Updatehousedeedtax(DateTime datetime, string price, string type, string tax_rate, string amount_money, string remarks, int house_id)
         {
             try
             {
@@ -1097,7 +1097,7 @@ namespace FileService
         }
 
         //增加设定他项权利摘要
-        public int Inserthouseobligee(string obligee, string type, string room_number, string jianshu, float built_up_area, string right_value, string duration_right, DateTime logout_date, int house_id)
+        public int Inserthouseobligee(string obligee, string type, string room_number, string jianshu, string built_up_area, string right_value, string duration_right, DateTime logout_date, int house_id)
         {
             try
             {
@@ -1182,7 +1182,7 @@ namespace FileService
             }
         }
         //更新他项权利摘要
-        public int Updataobligee(string obligee, string type, string room_number, string jianshu, float built_up_area, string right_value, string duration_right, DateTime logout_date, int house_id, int oblid)
+        public int Updataobligee(string obligee, string type, string room_number, string jianshu, string built_up_area, string right_value, string duration_right, DateTime logout_date, int house_id, int oblid)
         {
             try
             {
