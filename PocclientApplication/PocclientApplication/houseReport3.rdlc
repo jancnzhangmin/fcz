@@ -616,7 +616,7 @@
         <Top>16.95979cm</Top>
         <Left>20.09987cm</Left>
         <Height>0.6cm</Height>
-        <Width>1.4152cm</Width>
+        <Width>1.6757cm</Width>
         <ZIndex>14</ZIndex>
         <Style>
           <Border>
@@ -680,7 +680,7 @@
         <Top>16.95979cm</Top>
         <Left>23.3462cm</Left>
         <Height>0.6cm</Height>
-        <Width>1.04478cm</Width>
+        <Width>1.30937cm</Width>
         <ZIndex>16</ZIndex>
         <Style>
           <Border>
@@ -727,6 +727,7 @@
     <ColumnSpacing>0.13cm</ColumnSpacing>
     <Style />
   </Page>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportID>51f92663-f7a1-41e2-9965-d1cf12a7e7e4</rd:ReportID>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
 </Report>

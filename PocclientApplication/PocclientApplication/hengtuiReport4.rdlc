@@ -1403,7 +1403,7 @@
     <Height>16.53in</Height>
     <Style />
   </Body>
-  <Width>11.908in</Width>
+  <Width>11.69in</Width>
   <Page>
     <PageHeight>42cm</PageHeight>
     <PageWidth>29.7cm</PageWidth>
@@ -1414,6 +1414,7 @@
     <ColumnSpacing>0.13cm</ColumnSpacing>
     <Style />
   </Page>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportID>b0dbbebd-2b34-4a00-8f6f-9054c13a82be</rd:ReportID>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
 </Report>
