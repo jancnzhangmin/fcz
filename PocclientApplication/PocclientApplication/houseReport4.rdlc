@@ -415,10 +415,8 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=CDate(First(Fields!datetime.Value, "DataSet2")).ToString("yyyy年MM月dd日")</Value>
-                <Style>
-                  <FontSize>18pt</FontSize>
-                </Style>
+                <Value>=CDate(First(Fields!datetime.Value, "DataSet2")).ToString("yyyy-MM-dd")</Value>
+                <Style />
               </TextRun>
             </TextRuns>
             <Style />
@@ -449,7 +447,7 @@
               <TextRun>
                 <Value>=First(Fields!price.Value, "DataSet2")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -481,7 +479,7 @@
               <TextRun>
                 <Value>=First(Fields!type.Value, "DataSet2")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -513,7 +511,7 @@
               <TextRun>
                 <Value>=First(Fields!tax_rate.Value, "DataSet2")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -545,7 +543,7 @@
               <TextRun>
                 <Value>=First(Fields!amount_money.Value, "DataSet2")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -577,7 +575,7 @@
               <TextRun>
                 <Value>=First(Fields!remarks.Value, "DataSet2")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -609,7 +607,7 @@
               <TextRun>
                 <Value>=First(Fields!obligee.Value, "DataSet3")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -641,7 +639,7 @@
               <TextRun>
                 <Value>=First(Fields!type.Value, "DataSet3")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -673,7 +671,7 @@
               <TextRun>
                 <Value>=First(Fields!room_number.Value, "DataSet3")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -705,7 +703,7 @@
               <TextRun>
                 <Value>=First(Fields!jianshu.Value, "DataSet3")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -737,7 +735,7 @@
               <TextRun>
                 <Value>=First(Fields!built_up_area.Value, "DataSet3")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -769,7 +767,7 @@
               <TextRun>
                 <Value>=First(Fields!right_value.Value, "DataSet3")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -801,7 +799,7 @@
               <TextRun>
                 <Value>=First(Fields!duration_right.Value, "DataSet3")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -831,9 +829,9 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=CDate(First(Fields!logout_date.Value, "DataSet3")).ToString("yyyy年MM月dd日")</Value>
+                <Value>=CDate(First(Fields!logout_date.Value, "DataSet3")).ToString("yyyy-MM-dd")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>8pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -844,7 +842,7 @@
         <Top>12.55875cm</Top>
         <Left>11.50467cm</Left>
         <Height>0.6cm</Height>
-        <Width>1.73271cm</Width>
+        <Width>1.83853cm</Width>
         <ZIndex>17</ZIndex>
         <Style>
           <Border>
@@ -865,7 +863,7 @@
               <TextRun>
                 <Value>=First(Fields!use_area.Value, "DataSet4")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -897,7 +895,7 @@
               <TextRun>
                 <Value>=First(Fields!company.Value, "DataSet4")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -929,7 +927,7 @@
               <TextRun>
                 <Value>=First(Fields!card_number.Value, "DataSet4")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -961,7 +959,7 @@
               <TextRun>
                 <Value>=First(Fields!zidihao.Value, "DataSet4")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>

@@ -142,8 +142,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>land_government</rd:DefaultName>
-        <Top>12.63597cm</Top>
-        <Left>23.13863cm</Left>
+        <Top>12.80134cm</Top>
+        <Left>23.13201cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <Style>
@@ -173,8 +173,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>land_date</rd:DefaultName>
-        <Top>14.67855cm</Top>
-        <Left>22.29593cm</Left>
+        <Top>14.84392cm</Top>
+        <Left>22.28932cm</Left>
         <Height>0.6cm</Height>
         <Width>2.31479cm</Width>
         <ZIndex>1</ZIndex>
@@ -205,8 +205,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>land_date1</rd:DefaultName>
-        <Top>14.67855cm</Top>
-        <Left>24.83592cm</Left>
+        <Top>14.84392cm</Top>
+        <Left>24.82931cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>2</ZIndex>

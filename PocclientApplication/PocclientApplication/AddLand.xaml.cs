@@ -513,13 +513,13 @@ where T : DependencyObject
                         fs.Flush();
                         //关闭流
                         fs.Close();
-                        MessageBox.Show("下载成功！");
+                        //MessageBox.Show("下载成功！");
 
                     }
                     else
                     {
 
-                        MessageBox.Show(message);
+                        //MessageBox.Show(message);
 
                     }
 
@@ -537,7 +537,7 @@ where T : DependencyObject
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                //MessageBox.Show(ex.Message);
             }
 
 
