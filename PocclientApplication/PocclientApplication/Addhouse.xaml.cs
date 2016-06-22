@@ -640,7 +640,7 @@ where T : DependencyObject
 
             printDoc.PrintPage += new PrintPageEventHandler(PrintPage);
 
-            printDoc.DefaultPageSettings.Landscape = true;
+          //  printDoc.DefaultPageSettings.Landscape = true;
 
             //打印预览                   
             //PrintPreviewDialog ppd = new PrintPreviewDialog();
