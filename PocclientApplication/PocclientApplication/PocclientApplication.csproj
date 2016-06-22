@@ -170,6 +170,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>pocdatabaseDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="pocdatabaseDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pocdatabaseDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="pocdatabaseDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pocdatabaseDataSet4.xsd</DependentUpon>
+    </Compile>
     <Compile Include="PublicClass.cs" />
     <Compile Include="Register.xaml.cs">
       <DependentUpon>Register.xaml</DependentUpon>
@@ -331,6 +341,28 @@
     <EmbeddedResource Include="Report5.rdlc" />
     <EmbeddedResource Include="Report6.rdlc" />
     <None Include="PocclientApplication_TemporaryKey.pfx" />
+    <None Include="pocdatabaseDataSet3.xsc">
+      <DependentUpon>pocdatabaseDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="pocdatabaseDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pocdatabaseDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pocdatabaseDataSet3.xss">
+      <DependentUpon>pocdatabaseDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="pocdatabaseDataSet4.xsc">
+      <DependentUpon>pocdatabaseDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="pocdatabaseDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pocdatabaseDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pocdatabaseDataSet4.xss">
+      <DependentUpon>pocdatabaseDataSet4.xsd</DependentUpon>
+    </None>
     <None Include="Properties\app.manifest" />
     <None Include="Report1.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

@@ -158,7 +158,7 @@
               <TextRun>
                 <Value>=First(Fields!house_word.Value, "DataSet1")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>13pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -189,7 +189,7 @@
               <TextRun>
                 <Value>=First(Fields!house_number.Value, "DataSet1")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>13pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -229,8 +229,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>house_owner</rd:DefaultName>
-        <Top>3.90737cm</Top>
-        <Left>3.53695cm</Left>
+        <Top>4.28837cm</Top>
+        <Left>1.69545cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>2</ZIndex>
@@ -260,8 +260,8 @@
             <Style />
           </Paragraph>
         </Paragraphs>
-        <Top>3.90737cm</Top>
-        <Left>7.81438cm</Left>
+        <Top>4.28837cm</Top>
+        <Left>7.21113cm</Left>
         <Height>0.6cm</Height>
         <Width>5.67028cm</Width>
         <ZIndex>3</ZIndex>
@@ -292,8 +292,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox6</rd:DefaultName>
-        <Top>4.85987cm</Top>
-        <Left>3.53695cm</Left>
+        <Top>5.46312cm</Top>
+        <Left>1.69545cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>4</ZIndex>
@@ -316,7 +316,7 @@
               <TextRun>
                 <Value>=First(Fields!house_idcardnumber.Value, "DataSet1")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>8pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -324,8 +324,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>house_idcardnumber</rd:DefaultName>
-        <Top>4.85987cm</Top>
-        <Left>7.81438cm</Left>
+        <Top>5.46312cm</Top>
+        <Left>7.21113cm</Left>
         <Height>0.6cm</Height>
         <Width>5.67028cm</Width>
         <ZIndex>5</ZIndex>
@@ -356,8 +356,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox8</rd:DefaultName>
-        <Top>5.94466cm</Top>
-        <Left>3.53695cm</Left>
+        <Top>6.8019cm</Top>
+        <Left>1.69545cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>6</ZIndex>
@@ -388,8 +388,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>house_dihao</rd:DefaultName>
-        <Top>5.94466cm</Top>
-        <Left>7.81438cm</Left>
+        <Top>6.8019cm</Top>
+        <Left>7.21113cm</Left>
         <Height>0.6cm</Height>
         <Width>5.67028cm</Width>
         <ZIndex>7</ZIndex>
@@ -420,8 +420,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>building_number</rd:DefaultName>
-        <Top>7.79674cm</Top>
-        <Left>2.21403cm</Left>
+        <Top>8.84448cm</Top>
+        <Left>0.53128cm</Left>
         <Height>0.6cm</Height>
         <Width>0.93896cm</Width>
         <ZIndex>8</ZIndex>
@@ -452,8 +452,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>room_number</rd:DefaultName>
-        <Top>7.79674cm</Top>
-        <Left>3.25883cm</Left>
+        <Top>8.84448cm</Top>
+        <Left>2.17933cm</Left>
         <Height>0.6cm</Height>
         <Width>0.93896cm</Width>
         <ZIndex>9</ZIndex>
@@ -484,8 +484,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>jianshu</rd:DefaultName>
-        <Top>7.79674cm</Top>
-        <Left>4.26834cm</Left>
+        <Top>8.84448cm</Top>
+        <Left>3.18884cm</Left>
         <Height>0.6cm</Height>
         <Width>1.09771cm</Width>
         <ZIndex>10</ZIndex>
@@ -516,8 +516,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>building_structure</rd:DefaultName>
-        <Top>7.79674cm</Top>
-        <Left>5.54244cm</Left>
+        <Top>8.84448cm</Top>
+        <Left>4.46295cm</Left>
         <Height>0.6cm</Height>
         <Width>1.83854cm</Width>
         <ZIndex>11</ZIndex>
@@ -548,7 +548,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>cengshu</rd:DefaultName>
-        <Top>7.79674cm</Top>
+        <Top>8.84448cm</Top>
         <Left>7.52209cm</Left>
         <Height>0.6cm</Height>
         <Width>1.12417cm</Width>
@@ -580,7 +580,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>built_up_area</rd:DefaultName>
-        <Top>7.79674cm</Top>
+        <Top>8.84448cm</Top>
         <Left>8.78737cm</Left>
         <Height>0.6cm</Height>
         <Width>2.34125cm</Width>
@@ -612,8 +612,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>remarks</rd:DefaultName>
-        <Top>7.79674cm</Top>
-        <Left>11.19917cm</Left>
+        <Top>8.84448cm</Top>
+        <Left>11.54842cm</Left>
         <Height>0.6cm</Height>
         <Width>1.96799cm</Width>
         <ZIndex>14</ZIndex>
@@ -644,8 +644,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>house_postscript</rd:DefaultName>
-        <Top>14.04091cm</Top>
-        <Left>3.57633cm</Left>
+        <Top>16.39039cm</Top>
+        <Left>2.36983cm</Left>
         <Height>0.6cm</Height>
         <Width>9.90833cm</Width>
         <ZIndex>15</ZIndex>
@@ -676,8 +676,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>house_witness</rd:DefaultName>
-        <Top>15.04633cm</Top>
-        <Left>3.57633cm</Left>
+        <Top>17.39581cm</Top>
+        <Left>2.36983cm</Left>
         <Height>0.6cm</Height>
         <Width>4.12215cm</Width>
         <ZIndex>16</ZIndex>
@@ -708,8 +708,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>house_proofreader</rd:DefaultName>
-        <Top>15.04633cm</Top>
-        <Left>7.83959cm</Left>
+        <Top>17.39581cm</Top>
+        <Left>6.6331cm</Left>
         <Height>0.6cm</Height>
         <Width>5.64507cm</Width>
         <ZIndex>17</ZIndex>
@@ -740,8 +740,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>house_autograph</rd:DefaultName>
-        <Top>15.89299cm</Top>
-        <Left>3.57633cm</Left>
+        <Top>18.24248cm</Top>
+        <Left>2.36983cm</Left>
         <Height>0.6cm</Height>
         <Width>4.12215cm</Width>
         <ZIndex>18</ZIndex>
@@ -762,7 +762,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!house_licensing_date.Value, "DataSet1")</Value>
+                <Value>=CDate(First(Fields!house_licensing_date.Value, "DataSet1")).ToString("yyyy")</Value>
                 <Style>
                   <FontSize>18pt</FontSize>
                 </Style>
@@ -772,11 +772,75 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>house_licensing_date</rd:DefaultName>
-        <Top>15.89299cm</Top>
-        <Left>7.87487cm</Left>
+        <Top>18.24248cm</Top>
+        <Left>6.66838cm</Left>
         <Height>0.6cm</Height>
-        <Width>5.60979cm</Width>
+        <Width>1.97788cm</Width>
         <ZIndex>19</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="house_licensing_date1">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=CDate(First(Fields!house_licensing_date.Value, "DataSet1")).ToString("MM")</Value>
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>house_licensing_date1</rd:DefaultName>
+        <Top>18.24248cm</Top>
+        <Left>8.71682cm</Left>
+        <Height>0.6cm</Height>
+        <Width>1.52104cm</Width>
+        <ZIndex>20</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="house_licensing_date2">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=CDate(First(Fields!house_licensing_date.Value, "DataSet1")).ToString("dd")</Value>
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>house_licensing_date2</rd:DefaultName>
+        <Top>18.24248cm</Top>
+        <Left>10.30841cm</Left>
+        <Height>0.6cm</Height>
+        <Width>1.96976cm</Width>
+        <ZIndex>21</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>

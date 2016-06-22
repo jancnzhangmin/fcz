@@ -104,7 +104,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!house_number.Value, "house_DataSet")</Value>
+                <Value>=First(Fields!house_word.Value, "house_DataSet")</Value>
                 <Style>
                   <FontSize>18pt</FontSize>
                 </Style>
@@ -114,8 +114,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>house_number</rd:DefaultName>
-        <Top>9.96633cm</Top>
-        <Left>19.33258cm</Left>
+        <Top>12.15707cm</Top>
+        <Left>21.9679cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <Style>
@@ -145,8 +145,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>house_number1</rd:DefaultName>
-        <Top>9.96633cm</Top>
-        <Left>21.82376cm</Left>
+        <Top>12.15707cm</Top>
+        <Left>25.34811cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>1</ZIndex>

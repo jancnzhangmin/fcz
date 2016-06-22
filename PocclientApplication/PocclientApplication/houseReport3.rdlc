@@ -166,8 +166,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>house_owner</rd:DefaultName>
-        <Top>1.79917cm</Top>
-        <Left>3.64176cm</Left>
+        <Top>1.89442cm</Top>
+        <Left>1.70501cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <Style>
@@ -197,8 +197,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox5</rd:DefaultName>
-        <Top>1.79917cm</Top>
-        <Left>7.91919cm</Left>
+        <Top>1.89442cm</Top>
+        <Left>7.8174cm</Left>
         <Height>0.6cm</Height>
         <Width>5.67028cm</Width>
         <ZIndex>1</ZIndex>
@@ -219,7 +219,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Parameters!nature.Value</Value>
+                <Value>=Parameters!commonor.Value</Value>
                 <Style>
                   <FontSize>18pt</FontSize>
                 </Style>
@@ -229,8 +229,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox6</rd:DefaultName>
-        <Top>2.75167cm</Top>
-        <Left>3.64176cm</Left>
+        <Top>3.10092cm</Top>
+        <Left>1.70501cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>2</ZIndex>
@@ -253,7 +253,7 @@
               <TextRun>
                 <Value>=First(Fields!house_idcardnumber.Value, "DataSet1")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>8pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -261,8 +261,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>house_idcardnumber</rd:DefaultName>
-        <Top>2.75167cm</Top>
-        <Left>7.91919cm</Left>
+        <Top>3.10092cm</Top>
+        <Left>7.8174cm</Left>
         <Height>0.6cm</Height>
         <Width>5.67028cm</Width>
         <ZIndex>3</ZIndex>
@@ -293,8 +293,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox8</rd:DefaultName>
-        <Top>3.83646cm</Top>
-        <Left>3.64176cm</Left>
+        <Top>4.78896cm</Top>
+        <Left>1.70501cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>4</ZIndex>
@@ -325,8 +325,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>house_dihao</rd:DefaultName>
-        <Top>3.83646cm</Top>
-        <Left>7.91919cm</Left>
+        <Top>4.78896cm</Top>
+        <Left>7.8174cm</Left>
         <Height>0.6cm</Height>
         <Width>5.67028cm</Width>
         <ZIndex>5</ZIndex>
@@ -357,8 +357,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>building_number</rd:DefaultName>
-        <Top>6.64104cm</Top>
-        <Left>2.63634cm</Left>
+        <Top>7.40303cm</Top>
+        <Left>0.66784cm</Left>
         <Height>0.6cm</Height>
         <Width>0.93896cm</Width>
         <ZIndex>6</ZIndex>
@@ -389,8 +389,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>room_number</rd:DefaultName>
-        <Top>6.64104cm</Top>
-        <Left>3.68114cm</Left>
+        <Top>7.40303cm</Top>
+        <Left>1.99839cm</Left>
         <Height>0.6cm</Height>
         <Width>0.93896cm</Width>
         <ZIndex>7</ZIndex>
@@ -421,8 +421,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>jianshu</rd:DefaultName>
-        <Top>6.64104cm</Top>
-        <Left>4.69065cm</Left>
+        <Top>7.40303cm</Top>
+        <Left>3.2619cm</Left>
         <Height>0.6cm</Height>
         <Width>1.09771cm</Width>
         <ZIndex>8</ZIndex>
@@ -453,8 +453,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>building_structure</rd:DefaultName>
-        <Top>6.64104cm</Top>
-        <Left>5.96475cm</Left>
+        <Top>7.40303cm</Top>
+        <Left>4.59951cm</Left>
         <Height>0.6cm</Height>
         <Width>1.83854cm</Width>
         <ZIndex>9</ZIndex>
@@ -485,8 +485,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>cengshu</rd:DefaultName>
-        <Top>6.64104cm</Top>
-        <Left>7.9444cm</Left>
+        <Top>7.40303cm</Top>
+        <Left>7.8174cm</Left>
         <Height>0.6cm</Height>
         <Width>1.12417cm</Width>
         <ZIndex>10</ZIndex>
@@ -517,7 +517,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>built_up_area</rd:DefaultName>
-        <Top>6.64104cm</Top>
+        <Top>7.40303cm</Top>
         <Left>9.20968cm</Left>
         <Height>0.6cm</Height>
         <Width>2.34125cm</Width>
@@ -541,7 +541,7 @@
               <TextRun>
                 <Value>=First(Fields!remarks.Value, "DataSet2")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>13pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -549,8 +549,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>remarks</rd:DefaultName>
-        <Top>6.64104cm</Top>
-        <Left>11.62148cm</Left>
+        <Top>7.40303cm</Top>
+        <Left>12.00248cm</Left>
         <Height>0.6cm</Height>
         <Width>1.96799cm</Width>
         <ZIndex>12</ZIndex>
@@ -581,7 +581,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>house_office</rd:DefaultName>
-        <Top>13.64403cm</Top>
+        <Top>16.50153cm</Top>
         <Left>20.92008cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
@@ -613,8 +613,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>house_tianfatime</rd:DefaultName>
-        <Top>16.95979cm</Top>
-        <Left>20.09987cm</Left>
+        <Top>19.65856cm</Top>
+        <Left>23.68766cm</Left>
         <Height>0.6cm</Height>
         <Width>1.6757cm</Width>
         <ZIndex>14</ZIndex>
@@ -645,8 +645,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>house_tianfatime</rd:DefaultName>
-        <Top>16.95979cm</Top>
-        <Left>21.95196cm</Left>
+        <Top>19.65856cm</Top>
+        <Left>25.92076cm</Left>
         <Height>0.6cm</Height>
         <Width>1.0977cm</Width>
         <ZIndex>15</ZIndex>
@@ -677,8 +677,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>house_tianfatime</rd:DefaultName>
-        <Top>16.95979cm</Top>
-        <Left>23.3462cm</Left>
+        <Top>19.65856cm</Top>
+        <Left>27.5055cm</Left>
         <Height>0.6cm</Height>
         <Width>1.30937cm</Width>
         <ZIndex>16</ZIndex>

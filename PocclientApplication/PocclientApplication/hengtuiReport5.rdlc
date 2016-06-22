@@ -254,8 +254,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>land_user</rd:DefaultName>
-        <Top>1.09389cm</Top>
-        <Left>5.53656cm</Left>
+        <Top>1.63893cm</Top>
+        <Left>4.23482cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <Style>
@@ -285,8 +285,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>land_address</rd:DefaultName>
-        <Top>2.6191cm</Top>
-        <Left>5.53656cm</Left>
+        <Top>2.94189cm</Top>
+        <Left>4.23482cm</Left>
         <Height>0.6cm</Height>
         <Width>7.87104cm</Width>
         <ZIndex>1</ZIndex>
@@ -309,7 +309,7 @@
               <TextRun>
                 <Value>=First(Fields!land_idcardnumber.Value, "DataSet1")</Value>
                 <Style>
-                  <FontSize>14pt</FontSize>
+                  <FontSize>9pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -317,10 +317,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>land_idcardnumber</rd:DefaultName>
-        <Top>1.09389cm</Top>
-        <Left>10.37843cm</Left>
+        <Top>1.15739cm</Top>
+        <Left>10.69593cm</Left>
         <Height>0.6cm</Height>
-        <Width>1.78563cm</Width>
+        <Width>1.91792cm</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -349,8 +349,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>land_map</rd:DefaultName>
-        <Top>3.46605cm</Top>
-        <Left>5.56302cm</Left>
+        <Top>4.13809cm</Top>
+        <Left>4.26128cm</Left>
         <Height>0.6cm</Height>
         <Width>7.84458cm</Width>
         <ZIndex>3</ZIndex>
@@ -381,8 +381,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>land_ground</rd:DefaultName>
-        <Top>4.48855cm</Top>
-        <Left>5.56302cm</Left>
+        <Top>5.44634cm</Top>
+        <Left>4.26128cm</Left>
         <Height>0.6cm</Height>
         <Width>7.84458cm</Width>
         <ZIndex>4</ZIndex>
@@ -413,8 +413,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>land_use</rd:DefaultName>
-        <Top>5.51188cm</Top>
-        <Left>5.56302cm</Left>
+        <Top>6.81362cm</Top>
+        <Left>4.26128cm</Left>
         <Height>0.6cm</Height>
         <Width>7.84458cm</Width>
         <ZIndex>5</ZIndex>
@@ -445,8 +445,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>land_use_period</rd:DefaultName>
-        <Top>6.60577cm</Top>
-        <Left>5.56302cm</Left>
+        <Top>8.09801cm</Top>
+        <Left>4.26128cm</Left>
         <Height>0.9175cm</Height>
         <Width>7.84458cm</Width>
         <ZIndex>6</ZIndex>
@@ -477,8 +477,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>land_east</rd:DefaultName>
-        <Top>7.69966cm</Top>
-        <Left>5.56302cm</Left>
+        <Top>9.35065cm</Top>
+        <Left>3.27702cm</Left>
         <Height>0.6cm</Height>
         <Width>7.84458cm</Width>
         <ZIndex>7</ZIndex>
@@ -509,8 +509,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>land_south</rd:DefaultName>
-        <Top>8.72299cm</Top>
-        <Left>5.56302cm</Left>
+        <Top>10.37398cm</Top>
+        <Left>3.27702cm</Left>
         <Height>0.6cm</Height>
         <Width>7.84458cm</Width>
         <ZIndex>8</ZIndex>
@@ -541,8 +541,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>land_west</rd:DefaultName>
-        <Top>9.39355cm</Top>
-        <Left>5.56302cm</Left>
+        <Top>11.17154cm</Top>
+        <Left>3.27702cm</Left>
         <Height>0.6cm</Height>
         <Width>7.84458cm</Width>
         <ZIndex>9</ZIndex>
@@ -573,8 +573,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>land_north</rd:DefaultName>
-        <Top>10.41688cm</Top>
-        <Left>5.56302cm</Left>
+        <Top>12.13137cm</Top>
+        <Left>3.27702cm</Left>
         <Height>0.6cm</Height>
         <Width>7.84458cm</Width>
         <ZIndex>10</ZIndex>
@@ -605,7 +605,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>land_office</rd:DefaultName>
-        <Top>12.40896cm</Top>
+        <Top>14.6632cm</Top>
         <Left>3.65802cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
@@ -637,8 +637,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>land_send_date</rd:DefaultName>
-        <Top>13.31764cm</Top>
-        <Left>5.90698cm</Left>
+        <Top>15.57187cm</Top>
+        <Left>5.71648cm</Left>
         <Height>0.6cm</Height>
         <Width>2.12958cm</Width>
         <ZIndex>12</ZIndex>
@@ -669,8 +669,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>land_send_date1</rd:DefaultName>
-        <Top>13.31764cm</Top>
-        <Left>8.59049cm</Left>
+        <Top>15.57187cm</Top>
+        <Left>8.39999cm</Left>
         <Height>0.6cm</Height>
         <Width>0.9125cm</Width>
         <ZIndex>13</ZIndex>
@@ -701,7 +701,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>land_send_date2</rd:DefaultName>
-        <Top>13.31764cm</Top>
+        <Top>15.57187cm</Top>
         <Left>10.03448cm</Left>
         <Height>0.6cm</Height>
         <Width>1.81208cm</Width>

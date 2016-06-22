@@ -142,8 +142,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>land_area</rd:DefaultName>
-        <Top>2.8575cm</Top>
-        <Left>19.53302cm</Left>
+        <Top>3.39725cm</Top>
+        <Left>22.23179cm</Left>
         <Height>0.6cm</Height>
         <Width>5.41042cm</Width>
         <Style>
@@ -173,8 +173,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>built_up_area</rd:DefaultName>
-        <Top>3.72208cm</Top>
-        <Left>19.53302cm</Left>
+        <Top>4.26183cm</Top>
+        <Left>22.23179cm</Left>
         <Height>0.6cm</Height>
         <Width>5.41042cm</Width>
         <ZIndex>1</ZIndex>
@@ -205,8 +205,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>common_area</rd:DefaultName>
-        <Top>4.49847cm</Top>
-        <Left>19.53302cm</Left>
+        <Top>5.03822cm</Top>
+        <Left>22.23179cm</Left>
         <Height>0.6cm</Height>
         <Width>5.41042cm</Width>
         <ZIndex>2</ZIndex>
@@ -237,8 +237,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>sharing_area</rd:DefaultName>
-        <Top>5.27486cm</Top>
-        <Left>19.53302cm</Left>
+        <Top>5.81461cm</Top>
+        <Left>22.23179cm</Left>
         <Height>0.6cm</Height>
         <Width>5.41042cm</Width>
         <ZIndex>3</ZIndex>
@@ -269,8 +269,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>land_grade</rd:DefaultName>
-        <Top>6.05124cm</Top>
-        <Left>19.53302cm</Left>
+        <Top>6.59099cm</Top>
+        <Left>22.23179cm</Left>
         <Height>0.6cm</Height>
         <Width>5.41042cm</Width>
         <ZIndex>4</ZIndex>
@@ -301,8 +301,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>land_area1</rd:DefaultName>
-        <Top>9.29674cm</Top>
-        <Left>19.53302cm</Left>
+        <Top>9.83649cm</Top>
+        <Left>22.23179cm</Left>
         <Height>0.9175cm</Height>
         <Width>5.41042cm</Width>
         <ZIndex>5</ZIndex>
@@ -333,8 +333,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>cultivated_land</rd:DefaultName>
-        <Top>10.99785cm</Top>
-        <Left>17.94553cm</Left>
+        <Top>11.5376cm</Top>
+        <Left>20.6443cm</Left>
         <Height>0.6cm</Height>
         <Width>1.865cm</Width>
         <ZIndex>6</ZIndex>
@@ -365,8 +365,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>dry_land</rd:DefaultName>
-        <Top>12.09174cm</Top>
-        <Left>17.94553cm</Left>
+        <Top>12.63149cm</Top>
+        <Left>20.6443cm</Left>
         <Height>0.6cm</Height>
         <Width>1.83854cm</Width>
         <ZIndex>7</ZIndex>
@@ -397,8 +397,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>paddy_field</rd:DefaultName>
-        <Top>12.86813cm</Top>
-        <Left>17.94553cm</Left>
+        <Top>13.40788cm</Top>
+        <Left>20.6443cm</Left>
         <Height>0.6cm</Height>
         <Width>1.81208cm</Width>
         <ZIndex>8</ZIndex>
@@ -429,8 +429,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>orchard</rd:DefaultName>
-        <Top>13.96202cm</Top>
-        <Left>17.91907cm</Left>
+        <Top>14.50177cm</Top>
+        <Left>20.61784cm</Left>
         <Height>0.6cm</Height>
         <Width>1.83854cm</Width>
         <ZIndex>9</ZIndex>
@@ -461,8 +461,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>forest_land</rd:DefaultName>
-        <Top>14.7384cm</Top>
-        <Left>17.89261cm</Left>
+        <Top>15.27815cm</Top>
+        <Left>20.59138cm</Left>
         <Height>0.6cm</Height>
         <Width>1.865cm</Width>
         <ZIndex>10</ZIndex>
@@ -493,8 +493,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>grassland</rd:DefaultName>
-        <Top>15.89396cm</Top>
-        <Left>17.89261cm</Left>
+        <Top>16.43371cm</Top>
+        <Left>20.59138cm</Left>
         <Height>0.6cm</Height>
         <Width>1.865cm</Width>
         <ZIndex>11</ZIndex>
@@ -525,8 +525,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>inmate_mining</rd:DefaultName>
-        <Top>10.99785cm</Top>
-        <Left>22.68156cm</Left>
+        <Top>11.5376cm</Top>
+        <Left>25.38033cm</Left>
         <Height>0.6cm</Height>
         <Width>2.26188cm</Width>
         <ZIndex>12</ZIndex>
@@ -557,8 +557,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>construction_land</rd:DefaultName>
-        <Top>12.09174cm</Top>
-        <Left>22.68156cm</Left>
+        <Top>12.63149cm</Top>
+        <Left>25.38033cm</Left>
         <Height>0.6cm</Height>
         <Width>2.26188cm</Width>
         <ZIndex>13</ZIndex>
@@ -589,8 +589,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>homestead_land</rd:DefaultName>
-        <Top>12.86813cm</Top>
-        <Left>22.68156cm</Left>
+        <Top>13.40788cm</Top>
+        <Left>25.38033cm</Left>
         <Height>0.6cm</Height>
         <Width>2.26188cm</Width>
         <ZIndex>14</ZIndex>
@@ -621,8 +621,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>traffic_land</rd:DefaultName>
-        <Top>13.89146cm</Top>
-        <Left>22.68156cm</Left>
+        <Top>14.43121cm</Top>
+        <Left>25.38033cm</Left>
         <Height>0.6cm</Height>
         <Width>2.26188cm</Width>
         <ZIndex>15</ZIndex>
@@ -653,8 +653,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>water_land</rd:DefaultName>
-        <Top>14.70313cm</Top>
-        <Left>22.68156cm</Left>
+        <Top>15.24288cm</Top>
+        <Left>25.38033cm</Left>
         <Height>0.6cm</Height>
         <Width>2.26188cm</Width>
         <ZIndex>16</ZIndex>
@@ -685,8 +685,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>unused_land</rd:DefaultName>
-        <Top>15.89396cm</Top>
-        <Left>22.68156cm</Left>
+        <Top>16.43371cm</Top>
+        <Left>25.38033cm</Left>
         <Height>0.6cm</Height>
         <Width>2.26188cm</Width>
         <ZIndex>17</ZIndex>

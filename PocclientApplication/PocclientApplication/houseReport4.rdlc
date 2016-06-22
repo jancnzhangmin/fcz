@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition">
   <DataSources>
-    <DataSource Name="pocdatabaseDataSet">
+    <DataSource Name="pocdatabaseDataSet4">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>a8073cc7-ff3f-4e59-a855-efd38294f725</rd:DataSourceID>
+      <rd:DataSourceID>064a8ae7-75a8-4ddc-8dc2-f14493b850ec</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -38,12 +38,12 @@
         </Field>
       </Fields>
       <Query>
-        <DataSourceName>pocdatabaseDataSet</DataSourceName>
+        <DataSourceName>pocdatabaseDataSet4</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <rd:DataSetInfo>
-        <rd:DataSetName>pocdatabaseDataSet</rd:DataSetName>
-        <rd:SchemaPath>D:\工作\WCF测试\房产证管理系统\测试版\PocclientApplication\PocclientApplication\pocdatabaseDataSet.xsd</rd:SchemaPath>
+        <rd:DataSetName>pocdatabaseDataSet4</rd:DataSetName>
+        <rd:SchemaPath>D:\项目\房产证管理软件\fcz\PocclientApplication\PocclientApplication\pocdatabaseDataSet4.xsd</rd:SchemaPath>
         <rd:TableName>house_commonor</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -62,7 +62,7 @@
         </Field>
         <Field Name="price">
           <DataField>price</DataField>
-          <rd:TypeName>System.Double</rd:TypeName>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="type">
           <DataField>type</DataField>
@@ -70,11 +70,11 @@
         </Field>
         <Field Name="tax_rate">
           <DataField>tax_rate</DataField>
-          <rd:TypeName>System.Double</rd:TypeName>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="amount_money">
           <DataField>amount_money</DataField>
-          <rd:TypeName>System.Double</rd:TypeName>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="remarks">
           <DataField>remarks</DataField>
@@ -86,12 +86,12 @@
         </Field>
       </Fields>
       <Query>
-        <DataSourceName>pocdatabaseDataSet</DataSourceName>
+        <DataSourceName>pocdatabaseDataSet4</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <rd:DataSetInfo>
-        <rd:DataSetName>pocdatabaseDataSet</rd:DataSetName>
-        <rd:SchemaPath>D:\工作\WCF测试\房产证管理系统\测试版\PocclientApplication\PocclientApplication\pocdatabaseDataSet.xsd</rd:SchemaPath>
+        <rd:DataSetName>pocdatabaseDataSet4</rd:DataSetName>
+        <rd:SchemaPath>D:\项目\房产证管理软件\fcz\PocclientApplication\PocclientApplication\pocdatabaseDataSet4.xsd</rd:SchemaPath>
         <rd:TableName>house_deed_tax</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -122,7 +122,7 @@
         </Field>
         <Field Name="built_up_area">
           <DataField>built_up_area</DataField>
-          <rd:TypeName>System.Double</rd:TypeName>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="right_value">
           <DataField>right_value</DataField>
@@ -142,12 +142,12 @@
         </Field>
       </Fields>
       <Query>
-        <DataSourceName>pocdatabaseDataSet</DataSourceName>
+        <DataSourceName>pocdatabaseDataSet4</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <rd:DataSetInfo>
-        <rd:DataSetName>pocdatabaseDataSet</rd:DataSetName>
-        <rd:SchemaPath>D:\工作\WCF测试\房产证管理系统\测试版\PocclientApplication\PocclientApplication\pocdatabaseDataSet.xsd</rd:SchemaPath>
+        <rd:DataSetName>pocdatabaseDataSet4</rd:DataSetName>
+        <rd:SchemaPath>D:\项目\房产证管理软件\fcz\PocclientApplication\PocclientApplication\pocdatabaseDataSet4.xsd</rd:SchemaPath>
         <rd:TableName>house_obligee</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -182,12 +182,12 @@
         </Field>
       </Fields>
       <Query>
-        <DataSourceName>pocdatabaseDataSet</DataSourceName>
+        <DataSourceName>pocdatabaseDataSet4</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <rd:DataSetInfo>
-        <rd:DataSetName>pocdatabaseDataSet</rd:DataSetName>
-        <rd:SchemaPath>D:\工作\WCF测试\房产证管理系统\测试版\PocclientApplication\PocclientApplication\pocdatabaseDataSet.xsd</rd:SchemaPath>
+        <rd:DataSetName>pocdatabaseDataSet4</rd:DataSetName>
+        <rd:SchemaPath>D:\项目\房产证管理软件\fcz\PocclientApplication\PocclientApplication\pocdatabaseDataSet4.xsd</rd:SchemaPath>
         <rd:TableName>house_use_land</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -266,12 +266,12 @@
         </Field>
       </Fields>
       <Query>
-        <DataSourceName>pocdatabaseDataSet</DataSourceName>
+        <DataSourceName>pocdatabaseDataSet4</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <rd:DataSetInfo>
-        <rd:DataSetName>pocdatabaseDataSet</rd:DataSetName>
-        <rd:SchemaPath>D:\工作\WCF测试\房产证管理系统\测试版\PocclientApplication\PocclientApplication\pocdatabaseDataSet.xsd</rd:SchemaPath>
+        <rd:DataSetName>pocdatabaseDataSet4</rd:DataSetName>
+        <rd:SchemaPath>D:\项目\房产证管理软件\fcz\PocclientApplication\PocclientApplication\pocdatabaseDataSet4.xsd</rd:SchemaPath>
         <rd:TableName>house</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -447,7 +447,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Sum(Fields!price.Value, "DataSet2")</Value>
+                <Value>=First(Fields!price.Value, "DataSet2")</Value>
                 <Style>
                   <FontSize>18pt</FontSize>
                 </Style>
@@ -511,7 +511,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Sum(Fields!tax_rate.Value, "DataSet2")</Value>
+                <Value>=First(Fields!tax_rate.Value, "DataSet2")</Value>
                 <Style>
                   <FontSize>18pt</FontSize>
                 </Style>
@@ -543,7 +543,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Sum(Fields!amount_money.Value, "DataSet2")</Value>
+                <Value>=First(Fields!amount_money.Value, "DataSet2")</Value>
                 <Style>
                   <FontSize>18pt</FontSize>
                 </Style>
@@ -735,7 +735,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Sum(Fields!built_up_area.Value, "DataSet3")</Value>
+                <Value>=First(Fields!built_up_area.Value, "DataSet3")</Value>
                 <Style>
                   <FontSize>18pt</FontSize>
                 </Style>
@@ -831,7 +831,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!logout_date.Value, "DataSet3")</Value>
+                <Value>=CDate(First(Fields!logout_date.Value, "DataSet3")).ToString("yyyy年MM月dd日")</Value>
                 <Style>
                   <FontSize>18pt</FontSize>
                 </Style>

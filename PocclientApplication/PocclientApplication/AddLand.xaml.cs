@@ -451,13 +451,13 @@ where T : DependencyObject
                 }
                 if (prinreport.Content.ToString() == "第三页")
                 {
-                    reportrdlc = "hengtuiReport3.rdlc";
+                    reportrdlc = "hengtuiReport4.rdlc";
                     prinreport.Content = "第四页";
                     Run();
                 }
                 if (prinreport.Content.ToString() == "第四页")
                 {
-                    reportrdlc = "hengtuiReport4.rdlc";
+                    reportrdlc = "hengtuiReport3.rdlc";
                     prinreport.Content = "第五页";
                     Run();
                 }
