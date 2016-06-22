@@ -29,34 +29,34 @@
         <Label Content="    地 号" Height="28" HorizontalAlignment="Left" Margin="664,75,0,0" Name="label8" VerticalAlignment="Top" Width="70" />
         <TextBox Height="28" HorizontalAlignment="Left" Margin="750,75,0,0" Name="house_dihao" VerticalAlignment="Top" Width="200" />
 
-        <Label Content="  缮 证 人" Height="28" HorizontalAlignment="Left" Margin="25,115,0,0" Name="label11" VerticalAlignment="Top" Width="70" />
-        <TextBox Height="28" HorizontalAlignment="Left" Margin="120,115,0,0" Name="house_witness" VerticalAlignment="Top" Width="200" />
+        <Label Content="  缮 证 人" Height="28" HorizontalAlignment="Left" Margin="25,308,0,0" Name="label11" VerticalAlignment="Top" Width="70" />
+        <TextBox Height="28" HorizontalAlignment="Left" Margin="120,308,0,0" Name="house_witness" VerticalAlignment="Top" Width="200" />
         
-        <Label Content="  校 对 人" Height="28" HorizontalAlignment="Left" Margin="365,115,0,0" Name="label12" VerticalAlignment="Top" Width="70" />
-        <TextBox Height="28" HorizontalAlignment="Left" Margin="440,115,0,0" Name="house_proofreader" VerticalAlignment="Top" Width="200" />
+        <Label Content="  校 对 人" Height="28" HorizontalAlignment="Left" Margin="365,308,0,0" Name="label12" VerticalAlignment="Top" Width="70" />
+        <TextBox Height="28" HorizontalAlignment="Left" Margin="440,308,0,0" Name="house_proofreader" VerticalAlignment="Top" Width="200" />
         
-        <Label Content="领证人签章" Height="28" HorizontalAlignment="Left" Margin="664,115,0,0" Name="label13" VerticalAlignment="Top" />
-        <TextBox Height="28" HorizontalAlignment="Left" Margin="750,115,0,0" Name="house_autograph" VerticalAlignment="Top" Width="200" />
+        <Label Content="领证人签章" Height="28" HorizontalAlignment="Left" Margin="664,308,0,0" Name="label13" VerticalAlignment="Top" />
+        <TextBox Height="28" HorizontalAlignment="Left" Margin="750,308,0,0" Name="house_autograph" VerticalAlignment="Top" Width="200" />
         
-        <Label Content=" 领证日期" Height="28" HorizontalAlignment="Left" Margin="25,155,0,0" Name="label14" VerticalAlignment="Top" Width="70" />
-        <DatePicker Height="28" HorizontalAlignment="Left" Margin="120,155,0,0" Name="houselicensingdate" VerticalAlignment="Top" Width="120" />
+        <Label Content=" 领证日期" Height="28" HorizontalAlignment="Left" Margin="25,348,0,0" Name="label14" VerticalAlignment="Top" Width="70" />
+        <DatePicker Height="28" HorizontalAlignment="Left" Margin="120,348,0,0" Name="houselicensingdate" VerticalAlignment="Top" Width="120" />
         
-        <Label Content=" 填发机关" Height="28" HorizontalAlignment="Left" Margin="365,155,0,0" Name="label18" VerticalAlignment="Top" Width="70" />
-        <TextBox Height="28" HorizontalAlignment="Left" Margin="440,155,0,0" Name="house_office" VerticalAlignment="Top" Width="200" />
+        <Label Content=" 填发机关" Height="28" HorizontalAlignment="Left" Margin="365,348,0,0" Name="label18" VerticalAlignment="Top" Width="70" />
+        <TextBox Height="28" HorizontalAlignment="Left" Margin="440,348,0,0" Name="house_office" VerticalAlignment="Top" Width="200" />
         
-        <Label Content="办证人(签)" Height="28" HorizontalAlignment="Left" Margin="664,155,0,0" Name="label19" VerticalAlignment="Top" Width="70" />
-        <TextBox Height="28" HorizontalAlignment="Left" Margin="750,155,0,0" Name="house_banzhenren" VerticalAlignment="Top" Width="200" />
+        <Label Content="办证人(签)" Height="28" HorizontalAlignment="Left" Margin="664,348,0,0" Name="label19" VerticalAlignment="Top" Width="70" />
+        <TextBox Height="28" HorizontalAlignment="Left" Margin="750,348,0,0" Name="house_banzhenren" VerticalAlignment="Top" Width="200" />
         
-        <Label Content=" 填发日期" Height="28" HorizontalAlignment="Left" Margin="25,195,0,0" Name="label20" VerticalAlignment="Top" Width="70"/>
-        <DatePicker Height="28" HorizontalAlignment="Left" Margin="120,195,0,0" Name="house_tianfatime" VerticalAlignment="Top" Width="120" />
+        <Label Content=" 填发日期" Height="28" HorizontalAlignment="Left" Margin="25,388,0,0" Name="label20" VerticalAlignment="Top" Width="70"/>
+        <DatePicker Height="28" HorizontalAlignment="Left" Margin="120,388,0,0" Name="house_tianfatime" VerticalAlignment="Top" Width="120" />
         
-        <Label Content="    附 图" Height="28" HorizontalAlignment="Left" Margin="365,195,0,0" Name="label21" VerticalAlignment="Top" Width="70" />
-        <TextBox Height="28" HorizontalAlignment="Left" Margin="440,195,0,0" Name="house_figure" VerticalAlignment="Top" Width="200" />
-        <Button Content="上传" Height="28" HorizontalAlignment="Left" Margin="650,195,0,0" Name="upload_button" VerticalAlignment="Top" Width="35" Click="upload_Click" />
+        <Label Content="    附 图" Height="28" HorizontalAlignment="Left" Margin="17,890,0,0" Name="label21" VerticalAlignment="Top" Width="70" />
+        <TextBox Height="28" HorizontalAlignment="Left" Margin="92,890,0,0" Name="house_figure" VerticalAlignment="Top" Width="200" />
+        <Button Content="上传" Height="28" HorizontalAlignment="Left" Margin="302,890,0,0" Name="upload_button" VerticalAlignment="Top" Width="35" Click="upload_Click" />
 
-        <GroupBox Header="房屋所有权证基本信息" Height="221" HorizontalAlignment="Left" Margin="18,14,0,0" Name="groupBox1" VerticalAlignment="Top" Width="959"/>
+        <GroupBox Header="房屋所有权证基本信息" Height="412" HorizontalAlignment="Left" Margin="17,12,0,0" Name="groupBox1" VerticalAlignment="Top" Width="959"/>
 
-        <DataGrid AutoGenerateColumns="False" Height="82" HorizontalAlignment="Left" Margin="25,260,0,0" Name="house_condition_dataGrid" VerticalAlignment="Top" Width="925">
+        <DataGrid AutoGenerateColumns="False" Height="82" HorizontalAlignment="Left" Margin="25,126,0,0" Name="house_condition_dataGrid" VerticalAlignment="Top" Width="925" CanUserAddRows="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Path=house_condition_id}" Header="id" Visibility="Hidden" />
                 <DataGridTextColumn Binding="{Binding Path=building_number}" Header="幢号" />
@@ -83,37 +83,37 @@
             </DataGrid.Columns>
         </DataGrid>
 
-        <Label Content="附记" Height="28" HorizontalAlignment="Left" Margin="395,390,0,0" Name="label10" VerticalAlignment="Top" />
-        <TextBox Height="28" HorizontalAlignment="Left" Margin="440,390,0,0" Name="house_postscript" VerticalAlignment="Top" Width="390" />
+        <Label Content="附记" Height="28" HorizontalAlignment="Left" Margin="395,254,0,0" Name="label10" VerticalAlignment="Top" />
+        <TextBox Height="28" HorizontalAlignment="Left" Margin="440,254,0,0" Name="house_postscript" VerticalAlignment="Top" Width="390" />
   
         
-        <Label Content="   幢号" Height="28" HorizontalAlignment="Left" Margin="25,350,0,0" Name="label5" VerticalAlignment="Top" Width="58" />
-        <TextBox Height="28" HorizontalAlignment="Left" Margin="80,350,0,0" Name="conbuilding_number" VerticalAlignment="Top" Width="120" />
+        <Label Content="   幢号" Height="28" HorizontalAlignment="Left" Margin="25,214,0,0" Name="label5" VerticalAlignment="Top" Width="58" />
+        <TextBox Height="28" HorizontalAlignment="Left" Margin="80,214,0,0" Name="conbuilding_number" VerticalAlignment="Top" Width="120" />
         
-        <Label Content="房号" Height="28" HorizontalAlignment="Left" Margin="210,350,0,0" Name="label9" VerticalAlignment="Top" />
-        <TextBox Height="28" HorizontalAlignment="Left" Margin="255,350,0,0" Name="conroom_number" VerticalAlignment="Top" Width="120" />
+        <Label Content="房号" Height="28" HorizontalAlignment="Left" Margin="210,214,0,0" Name="label9" VerticalAlignment="Top" />
+        <TextBox Height="28" HorizontalAlignment="Left" Margin="255,214,0,0" Name="conroom_number" VerticalAlignment="Top" Width="120" />
         
-        <Label Content="间数" Height="28" HorizontalAlignment="Left" Margin="395,350,0,0" Name="label15" VerticalAlignment="Top" />
-        <TextBox Height="28" HorizontalAlignment="Left" Margin="440,350,0,0" Name="conjianshu" VerticalAlignment="Top" Width="120" />
+        <Label Content="间数" Height="28" HorizontalAlignment="Left" Margin="395,214,0,0" Name="label15" VerticalAlignment="Top" />
+        <TextBox Height="28" HorizontalAlignment="Left" Margin="440,214,0,0" Name="conjianshu" VerticalAlignment="Top" Width="120" />
         
-        <Label Content="建筑结构" Height="28" HorizontalAlignment="Left" Margin="580,350,0,0" Name="label16" VerticalAlignment="Top" />
-        <TextBox Height="28" HorizontalAlignment="Left" Margin="650,350,0,0" Name="conbuilding_structure" VerticalAlignment="Top" Width="120" />
+        <Label Content="建筑结构" Height="28" HorizontalAlignment="Left" Margin="580,214,0,0" Name="label16" VerticalAlignment="Top" />
+        <TextBox Height="28" HorizontalAlignment="Left" Margin="650,214,0,0" Name="conbuilding_structure" VerticalAlignment="Top" Width="120" />
         
-        <Label Content="层数" Height="28" HorizontalAlignment="Left" Margin="785,350,0,0" Name="label17" VerticalAlignment="Top" />
-        <TextBox Height="28" HorizontalAlignment="Left" Margin="830,350,0,0" Name="concenshu" VerticalAlignment="Top" Width="120" />
+        <Label Content="层数" Height="28" HorizontalAlignment="Left" Margin="785,214,0,0" Name="label17" VerticalAlignment="Top" />
+        <TextBox Height="28" HorizontalAlignment="Left" Margin="830,214,0,0" Name="concenshu" VerticalAlignment="Top" Width="120" />
         
-        <Label Content="建筑面积" Height="28" HorizontalAlignment="Left" Margin="25,390,0,0" Name="label22" VerticalAlignment="Top" />
-        <TextBox Height="28" HorizontalAlignment="Left" Margin="80,390,0,0" Name="conbuilt_up_area" VerticalAlignment="Top" Width="120" />
+        <Label Content="建筑面积" Height="28" HorizontalAlignment="Left" Margin="25,254,0,0" Name="label22" VerticalAlignment="Top" />
+        <TextBox Height="28" HorizontalAlignment="Left" Margin="80,254,0,0" Name="conbuilt_up_area" VerticalAlignment="Top" Width="120" />
         
-        <Label Content="备注" Height="28" HorizontalAlignment="Left" Margin="210,390,0,0" Name="label23" VerticalAlignment="Top" />
-        <TextBox Height="28" HorizontalAlignment="Left" Margin="255,390,0,0" Name="conremarks" VerticalAlignment="Top" Width="120" />
+        <Label Content="备注" Height="28" HorizontalAlignment="Left" Margin="210,254,0,0" Name="label23" VerticalAlignment="Top" />
+        <TextBox Height="28" HorizontalAlignment="Left" Margin="255,254,0,0" Name="conremarks" VerticalAlignment="Top" Width="120" />
         
-        <Button Content="增加房屋状况" Height="23" HorizontalAlignment="Left" Margin="870,395,0,0" Name="add_condition" VerticalAlignment="Top" Width="80" Click="add_condition_Click" />
+        <Button Content="增加房屋状况" Height="23" HorizontalAlignment="Left" Margin="870,259,0,0" Name="add_condition" VerticalAlignment="Top" Width="80" Click="add_condition_Click" />
 
         
-        <GroupBox Header="房屋状况" Height="184" HorizontalAlignment="Left" Margin="18,241,0,0" Name="groupBox2" VerticalAlignment="Top" Width="959"/>
+        <GroupBox Header="房屋状况" Height="184" HorizontalAlignment="Left" Margin="17,109,0,0" Name="groupBox2" VerticalAlignment="Top" Width="959"/>
         
-        <DataGrid AutoGenerateColumns="False" Height="82" HorizontalAlignment="Left" Margin="25,445,0,0" Name="commonor_dataGrid" VerticalAlignment="Top" Width="925">
+        <DataGrid AutoGenerateColumns="False" Height="82" HorizontalAlignment="Left" Margin="25,445,0,0" Name="commonor_dataGrid" VerticalAlignment="Top" Width="925" CanUserAddRows="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Path=house_commonor_id}" Header="id" Visibility="Hidden" />
                 <DataGridTextColumn Binding="{Binding Path=commonor}" Header="共有人" />
@@ -176,7 +176,7 @@
 
 
         <Button Content="完成" Height="23" HorizontalAlignment="Left" Margin="902,890,0,0" Name="addhouse" VerticalAlignment="Top" Width="75" Click="addhouse_Click" />
-        <DataGrid AutoGenerateColumns="False" Height="74" HorizontalAlignment="Left" Margin="25,645,0,0" Name="obligee_dataGrid" VerticalAlignment="Top" Width="925" Loaded="obligee_dataGrid_Loaded">
+        <DataGrid AutoGenerateColumns="False" Height="74" HorizontalAlignment="Left" Margin="25,645,0,0" Name="obligee_dataGrid" VerticalAlignment="Top" Width="925" Loaded="obligee_dataGrid_Loaded" CanUserAddRows="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Path=house_obligee_id}" Header="id" Visibility="Hidden" />
                 <DataGridTextColumn Binding="{Binding Path=obligee}" Header="权利人" />

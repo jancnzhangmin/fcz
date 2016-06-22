@@ -133,15 +133,17 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!land_tile.Value, "DataSet1")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>land_tile</rd:DefaultName>
-        <Top>2.08174cm</Top>
-        <Left>16.95133cm</Left>
+        <Top>1.96268cm</Top>
+        <Left>18.32716cm</Left>
         <Height>0.6cm</Height>
         <Width>1.52104cm</Width>
         <Style>
@@ -162,15 +164,17 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!land_word.Value, "DataSet1")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>land_word</rd:DefaultName>
-        <Top>2.08174cm</Top>
-        <Left>19.33258cm</Left>
+        <Top>1.96268cm</Top>
+        <Left>20.63816cm</Left>
         <Height>0.6cm</Height>
         <Width>1.57396cm</Width>
         <ZIndex>1</ZIndex>
@@ -192,15 +196,17 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!land_number.Value, "DataSet1")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>land_number</rd:DefaultName>
-        <Top>2.08174cm</Top>
-        <Left>22.37528cm</Left>
+        <Top>1.96268cm</Top>
+        <Left>24.18768cm</Left>
         <Height>0.6cm</Height>
         <Width>1.57396cm</Width>
         <ZIndex>2</ZIndex>

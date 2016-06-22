@@ -157,7 +157,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!house_owner.Value, "DataSet1")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -186,7 +188,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=Parameters!nature.Value</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -216,7 +220,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=Parameters!nature.Value</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -246,7 +252,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!house_idcardnumber.Value, "DataSet1")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -276,7 +284,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=Parameters!located.Value</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -306,7 +316,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!house_dihao.Value, "DataSet1")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -336,7 +348,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!building_number.Value, "DataSet2")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -366,7 +380,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!room_number.Value, "DataSet2")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -396,7 +412,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!jianshu.Value, "DataSet2")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -426,7 +444,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!building_structure.Value, "DataSet2")</Value>
-                <Style />
+                <Style>
+                  <FontSize>14pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -456,7 +476,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!cengshu.Value, "DataSet2")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -486,7 +508,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!built_up_area.Value, "DataSet2")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -516,7 +540,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!remarks.Value, "DataSet2")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -546,7 +572,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!house_office.Value, "DataSet1")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -575,8 +603,10 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!house_tianfatime.Value, "DataSet1")</Value>
-                <Style />
+                <Value>=CDate(First(Fields!house_tianfatime.Value, "DataSet1")).ToString("yyyy")</Value>
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -584,10 +614,74 @@
         </Paragraphs>
         <rd:DefaultName>house_tianfatime</rd:DefaultName>
         <Top>16.95979cm</Top>
-        <Left>21.44924cm</Left>
+        <Left>20.09987cm</Left>
         <Height>0.6cm</Height>
-        <Width>5.46333cm</Width>
+        <Width>1.4152cm</Width>
         <ZIndex>14</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="house_tianfatime2">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=CDate(First(Fields!house_tianfatime.Value, "DataSet1")).ToString("MM")</Value>
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>house_tianfatime</rd:DefaultName>
+        <Top>16.95979cm</Top>
+        <Left>21.95196cm</Left>
+        <Height>0.6cm</Height>
+        <Width>1.0977cm</Width>
+        <ZIndex>15</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="house_tianfatime3">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=CDate(First(Fields!house_tianfatime.Value, "DataSet1")).ToString("dd")</Value>
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>house_tianfatime</rd:DefaultName>
+        <Top>16.95979cm</Top>
+        <Left>23.3462cm</Left>
+        <Height>0.6cm</Height>
+        <Width>1.04478cm</Width>
+        <ZIndex>16</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>

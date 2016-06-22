@@ -45,7 +45,7 @@ namespace PocclientApplication
             newland.Width = 1000;
             newland.Height = 800;
             newland.Header = "使用土地编辑";
-            newland.Margin = new Thickness(SystemParameters.PrimaryScreenWidth / 2d - 250, SystemParameters.PrimaryScreenHeight / 2d - 250, 0, 0);
+            newland.Margin = new Thickness(SystemParameters.PrimaryScreenWidth / 2d - 400, SystemParameters.PrimaryScreenHeight / 2d - 230, 0, 0);
             newland.Show();
             newland.ShowMaximizeButton = false;
             newland.ShowMinimizeButton = false;
@@ -75,7 +75,7 @@ namespace PocclientApplication
             newreportland.Width = 800;
             newreportland.Height = 450;
             newreportland.Header = "土地使用报表";
-            newreportland.Margin = new Thickness(SystemParameters.PrimaryScreenWidth / 2d - 250, SystemParameters.PrimaryScreenHeight / 2d - 250, 0, 0);
+            newreportland.Margin = new Thickness(SystemParameters.PrimaryScreenWidth / 2d - 400, SystemParameters.PrimaryScreenHeight / 2d - 230, 0, 0);
             newreportland.Show();
             newreportland.ShowMaximizeButton = false;
             newreportland.ShowMinimizeButton = false;

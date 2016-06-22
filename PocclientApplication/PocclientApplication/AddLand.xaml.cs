@@ -131,11 +131,11 @@ where T : DependencyObject
                 }
             }
 
-            C1.WPF.C1Window findfixed = MainWindow.FindChild<C1.WPF.C1Window>(Application.Current.MainWindow, "newland");
-            if (findfixed != null)
-            {
-                findfixed.Close();
-            }
+            //C1.WPF.C1Window findfixed = MainWindow.FindChild<C1.WPF.C1Window>(Application.Current.MainWindow, "newAddLand");
+            //if (findfixed != null)
+            //{
+            //    findfixed.Close();
+            //}
 
         }
         private void nextopen()
@@ -173,19 +173,23 @@ where T : DependencyObject
         {
             bool check_status = true;
             string status_err = "";
-            if (land_user.Text == "")
+            if (land_title.Text == "")
             {
                 check_status = false;
-                status_err += "土地使用者 ";
+                status_err += "佤用 ";
             }
 
-            if (land_idcardnumber.Text == "")
+            if (land_word.Text == "")
             {
                 check_status = false;
-                status_err += "身份证号码 ";
+                status_err += "字 ";
             }
-           
 
+            if (land_number.Text == "")
+            {
+                check_status = false;
+                status_err += "号 ";
+            }
 
             if (!check_status)
             {

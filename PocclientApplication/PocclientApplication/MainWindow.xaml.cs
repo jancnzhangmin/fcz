@@ -191,7 +191,8 @@ where T : DependencyObject
                 newAddLand.HorizontalAlignment = HorizontalAlignment.Stretch;
                 newAddLand.HorizontalAlignment = HorizontalAlignment.Center;
                 //newSelectLande.land_dataGrid.Width = menu.ActualWidth;
-                newreport.Title = "添加土地使用证";
+                newreport.Title = "添加土地证";
+                
                 newreport.IsActive = true;
                 scrollv.Content = newAddLand;
                 newreport.Content = scrollv;

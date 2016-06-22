@@ -205,7 +205,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!commonor.Value, "DataSet1")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -234,7 +236,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!share.Value, "DataSet1")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -264,7 +268,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!number.Value, "DataSet1")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -294,7 +300,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!comments.Value, "DataSet1")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -323,8 +331,10 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!datetime.Value, "DataSet2")</Value>
-                <Style />
+                <Value>=CDate(First(Fields!datetime.Value, "DataSet2")).ToString("yyyy年MM月dd日")</Value>
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -354,7 +364,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=Sum(Fields!price.Value, "DataSet2")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -384,7 +396,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!type.Value, "DataSet2")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -414,7 +428,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=Sum(Fields!tax_rate.Value, "DataSet2")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -444,7 +460,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=Sum(Fields!amount_money.Value, "DataSet2")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -474,7 +492,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!remarks.Value, "DataSet2")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -504,7 +524,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!obligee.Value, "DataSet3")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -534,7 +556,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!type.Value, "DataSet3")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -564,7 +588,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!room_number.Value, "DataSet3")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -594,7 +620,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!jianshu.Value, "DataSet3")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -624,7 +652,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=Sum(Fields!built_up_area.Value, "DataSet3")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -654,7 +684,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!right_value.Value, "DataSet3")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -684,7 +716,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!duration_right.Value, "DataSet3")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -714,7 +748,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!logout_date.Value, "DataSet3")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -744,7 +780,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!use_area.Value, "DataSet4")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -774,7 +812,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!company.Value, "DataSet4")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -804,7 +844,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!card_number.Value, "DataSet4")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -834,7 +876,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!zidihao.Value, "DataSet4")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />

@@ -157,7 +157,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!house_word.Value, "DataSet1")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -186,7 +188,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!house_number.Value, "DataSet1")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -216,7 +220,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!house_owner.Value, "DataSet1")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -246,7 +252,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=Parameters!nature.Value</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -275,7 +283,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=Parameters!commonor.Value</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -305,7 +315,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!house_idcardnumber.Value, "DataSet1")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -335,7 +347,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=Parameters!located.Value</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -365,7 +379,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!house_dihao.Value, "DataSet1")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -395,7 +411,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!building_number.Value, "DataSet2")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -425,7 +443,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!room_number.Value, "DataSet2")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -455,7 +475,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!jianshu.Value, "DataSet2")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -485,7 +507,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!building_structure.Value, "DataSet2")</Value>
-                <Style />
+                <Style>
+                  <FontSize>14pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -515,7 +539,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!cengshu.Value, "DataSet2")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -545,7 +571,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!built_up_area.Value, "DataSet2")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -575,7 +603,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!remarks.Value, "DataSet2")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -605,7 +635,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!house_postscript.Value, "DataSet1")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -635,7 +667,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!house_witness.Value, "DataSet1")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -665,7 +699,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!house_proofreader.Value, "DataSet1")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -695,7 +731,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!house_autograph.Value, "DataSet1")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -725,7 +763,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!house_licensing_date.Value, "DataSet1")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />

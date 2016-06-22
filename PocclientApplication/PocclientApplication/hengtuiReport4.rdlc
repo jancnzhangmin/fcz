@@ -256,7 +256,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!land_user.Value, "DataSet1")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -285,7 +287,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!land_address.Value, "DataSet1")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -315,7 +319,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!land_idcardnumber.Value, "DataSet1")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -323,9 +329,9 @@
         </Paragraphs>
         <rd:DefaultName>land_idcardnumber</rd:DefaultName>
         <Top>3.64278cm</Top>
-        <Left>10.94528cm</Left>
+        <Left>10.17799cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
+        <Width>1.865cm</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -345,7 +351,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!land_map.Value, "DataSet1")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -375,7 +383,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!land_ground.Value, "DataSet1")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -405,7 +415,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!land_use.Value, "DataSet1")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -435,7 +447,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!land_use_period.Value, "DataSet1")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -465,7 +479,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!land_east.Value, "DataSet1")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -495,7 +511,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!land_south.Value, "DataSet1")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -525,7 +543,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!land_west.Value, "DataSet1")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -555,7 +575,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!land_north.Value, "DataSet1")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -585,7 +607,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!land_office.Value, "DataSet1")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -593,7 +617,7 @@
         </Paragraphs>
         <rd:DefaultName>land_office</rd:DefaultName>
         <Top>13.68785cm</Top>
-        <Left>4.0132cm</Left>
+        <Left>3.0607cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>11</ZIndex>
@@ -614,8 +638,10 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!land_send_date.Value, "DataSet1")</Value>
-                <Style />
+                <Value>=CDate(First(Fields!land_date.Value, "DataSet1")).ToString("yyyy")</Value>
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -623,9 +649,9 @@
         </Paragraphs>
         <rd:DefaultName>land_send_date</rd:DefaultName>
         <Top>13.96153cm</Top>
-        <Left>7.26758cm</Left>
+        <Left>5.9182cm</Left>
         <Height>0.6cm</Height>
-        <Width>6.1777cm</Width>
+        <Width>1.89146cm</Width>
         <ZIndex>12</ZIndex>
         <Style>
           <Border>
@@ -645,7 +671,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!land_area.Value, "DataSet2")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -675,7 +703,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!built_up_area.Value, "DataSet2")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -705,7 +735,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!common_area.Value, "DataSet2")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -735,7 +767,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!sharing_area.Value, "DataSet2")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -765,7 +799,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!land_grade.Value, "DataSet2")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -795,7 +831,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!land_area.Value, "DataSet3")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -825,7 +863,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!cultivated_land.Value, "DataSet3")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -855,7 +895,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!dry_land.Value, "DataSet3")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -885,7 +927,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!paddy_field.Value, "DataSet3")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -915,7 +959,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!orchard.Value, "DataSet3")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -945,7 +991,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!forest_land.Value, "DataSet3")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -975,7 +1023,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!grassland.Value, "DataSet3")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -1005,7 +1055,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!inmate_mining.Value, "DataSet3")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -1035,7 +1087,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!construction_land.Value, "DataSet3")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -1065,7 +1119,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!homestead_land.Value, "DataSet3")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -1095,7 +1151,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!traffic_land.Value, "DataSet3")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -1125,7 +1183,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!water_land.Value, "DataSet3")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -1155,7 +1215,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!unused_land.Value, "DataSet3")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -1185,7 +1247,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!land_tile.Value, "DataSet1")</Value>
-                <Style />
+                <Style>
+                  <FontSize>14pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -1215,7 +1279,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!land_word.Value, "DataSet1")</Value>
-                <Style />
+                <Style>
+                  <FontSize>14pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -1245,7 +1311,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!land_number.Value, "DataSet1")</Value>
-                <Style />
+                <Style>
+                  <FontSize>14pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -1267,11 +1335,75 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
+      <Textbox Name="land_send_date1">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=CDate(First(Fields!land_date.Value, "DataSet1")).ToString("MM")</Value>
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>land_send_date1</rd:DefaultName>
+        <Top>13.96153cm</Top>
+        <Left>8.48466cm</Left>
+        <Height>0.6cm</Height>
+        <Width>0.85958cm</Width>
+        <ZIndex>34</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="land_send_date2">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=CDate(First(Fields!land_date.Value, "DataSet1")).ToString("dd")</Value>
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>land_send_date2</rd:DefaultName>
+        <Top>13.96153cm</Top>
+        <Left>9.78112cm</Left>
+        <Height>0.6cm</Height>
+        <Width>0.85958cm</Width>
+        <ZIndex>35</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
     <Height>16.53in</Height>
     <Style />
   </Body>
-  <Width>11.69in</Width>
+  <Width>11.908in</Width>
   <Page>
     <PageHeight>42cm</PageHeight>
     <PageWidth>29.7cm</PageWidth>

@@ -197,28 +197,28 @@ where T : DependencyObject
                 check_status = false;
                 status_err += "房屋座落 ";
             }
-            if (dedprice.Text == "")
+            if (house_word.Text == "")
             {
                 check_status = false;
-                status_err += "税价 ";
+                status_err += "字 ";
             }
 
-            if (dedtax_rate.Text == "")
+            if (house_number.Text == "")
             {
                 check_status = false;
-                status_err += "税率 ";
+                status_err += "号 ";
             }
-            if (dedamount_money.Text == "")
-            {
-                check_status = false;
-                status_err += "纳税金额 ";
-            }
+            //if (dedamount_money.Text == "")
+            //{
+            //    check_status = false;
+            //    status_err += "纳税金额 ";
+            //}
 
-            if (obl_built_up_area.Text == "")
-            {
-                check_status = false;
-                status_err += "建筑面积 ";
-            }
+            //if (obl_built_up_area.Text == "")
+            //{
+            //    check_status = false;
+            //    status_err += "建筑面积 ";
+            //}
 
 
             if (!check_status)
@@ -305,10 +305,10 @@ where T : DependencyObject
                     //共有权人
                     client.Inserthousencommonor(com_comments.Text, com_share.Text, com_number.Text, com_comments.Text, PublicClass.houseid);
                     //契税摘要
-                    client.Inserthousedeedtax(DateTime.Parse(deddatetime.Text), float.Parse(dedprice.Text), dedtype.Text, float.Parse(dedtax_rate.Text), float.Parse(dedamount_money.Text), dedtaxremarks.Text, PublicClass.houseid);
+                    client.Inserthousedeedtax(DateTime.Parse(deddatetime.Text), dedprice.Text, dedtype.Text, dedtax_rate.Text, dedamount_money.Text, dedtaxremarks.Text, PublicClass.houseid);
                     //增加设定他项权利
-                    client.Inserthouseobligee(obligee.Text, obl_type.Text, obl_room_number.Text, obl_jianshu.Text, float.Parse(obl_built_up_area.Text), obl_right_value.Text, obl_duration_right.Text, DateTime.Parse(obl_logout_date.Text), PublicClass.houseid);
-
+                    client.Inserthouseobligee(obligee.Text, obl_type.Text, obl_room_number.Text, obl_jianshu.Text, obl_built_up_area.Text, obl_right_value.Text, obl_duration_right.Text, DateTime.Parse(obl_logout_date.Text), PublicClass.houseid);
+                    client.Inserthouseuseland(landuse_area.Text, landcompany.Text, landcard_number.Text, landzidihao.Text, PublicClass.houseid);
                     if (PublicClass.houseid > 0)
                     {  //查询房屋状况
                         house_condition_dataGrid.ItemsSource = client.Selectcondition(PublicClass.houseid).Tables[0].DefaultView;
@@ -330,9 +330,11 @@ where T : DependencyObject
                     int natureid = client.selecenayureID(house_nature.Text);
                     int locatedid = client.selectlocatedID(house_located.Text);
                     client.Updatahouse(house_word.Text, house_number.Text, house_owner.Text, natureid, idcardnumber.Text, locatedid, house_dihao.Text, house_postscript.Text, house_witness.Text, house_proofreader.Text, house_autograph.Text, DateTime.Parse(houselicensingdate.Text), house_office.Text, house_banzhenren.Text, DateTime.Parse(house_tianfatime.Text), house_figure.Text, selecthouseid);
-
-
-
+                    //更新契税摘要
+                    client.Updatehousedeedtax(DateTime.Parse(deddatetime.Text), dedprice.Text, dedtype.Text, dedtax_rate.Text, dedamount_money.Text, dedtaxremarks.Text, selecthouseid);
+                 
+                    //更新使用土地摘要
+                    client.Updataohouseuseland(landuse_area.Text, landcompany.Text, landcard_number.Text, landzidihao.Text, selecthouseid);
 
 
                 }
@@ -531,13 +533,13 @@ where T : DependencyObject
         {
             if (oblid <= 0)
             {
-                client.Inserthouseobligee(obligee.Text, obl_type.Text, obl_room_number.Text, obl_jianshu.Text, float.Parse(obl_built_up_area.Text), obl_right_value.Text, obl_duration_right.Text, DateTime.Parse(obl_logout_date.Text), PublicClass.houseid);
+                client.Inserthouseobligee(obligee.Text, obl_type.Text, obl_room_number.Text, obl_jianshu.Text, obl_built_up_area.Text, obl_right_value.Text, obl_duration_right.Text, DateTime.Parse(obl_logout_date.Text), PublicClass.houseid);
                 //查询他项权利
                 obligee_dataGrid.ItemsSource = client.Selectobligee(PublicClass.houseid).Tables[0].DefaultView;
             }
             else
             {
-                client.Updataobligee(obligee.Text, obl_type.Text, obl_room_number.Text, obl_jianshu.Text, float.Parse(obl_built_up_area.Text), obl_right_value.Text, obl_duration_right.Text, DateTime.Parse(obl_logout_date.Text), selecthouseid, oblid);
+                client.Updataobligee(obligee.Text, obl_type.Text, obl_room_number.Text, obl_jianshu.Text, obl_built_up_area.Text, obl_right_value.Text, obl_duration_right.Text, DateTime.Parse(obl_logout_date.Text), selecthouseid, oblid);
             }
         }
 
@@ -561,10 +563,10 @@ where T : DependencyObject
               "  <OutputFormat>EMF</OutputFormat>" +
                //"  <PageWidth>29.7cm</PageWidth>" +
                //     "  <PageHeight>21cm</PageHeight>" +
-                    "  <MarginTop>0.5cm</MarginTop>" +
-                    "  <MarginLeft>0.5cm</MarginLeft>" +
-                      "  <MarginRight>0.5cm</MarginRight>" +
-                     "  <MarginBottom>0.5cm</MarginBottom>" +
+                    //"  <MarginTop>0.5cm</MarginTop>" +
+                    //"  <MarginLeft>0.5cm</MarginLeft>" +
+                    //  "  <MarginRight>0.5cm</MarginRight>" +
+                    // "  <MarginBottom>0.5cm</MarginBottom>" +
             "</DeviceInfo>";
             Warning[] warnings;
             m_streams = new List<Stream>();
@@ -601,7 +603,7 @@ where T : DependencyObject
             ev.Graphics.DrawImage(pageImage, ev.PageBounds);
 
             //指定是否横向打印
-            ev.PageSettings.Landscape = true;
+            ev.PageSettings.Landscape = false;
 
             //这里的Graphics对象实际指向了打印机   
             // ev.Graphics.DrawImage(pageImage, 0, 0);

@@ -57,6 +57,19 @@ namespace PocclientApplication
             }
         }
 
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            numberTextBox.Focus();
+        }
+
+        private void numberTextBox_PreviewKeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                passwordTextBox.Focus();
+            }
+        }
+
       
     }
 }

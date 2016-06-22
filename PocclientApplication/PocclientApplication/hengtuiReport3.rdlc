@@ -133,7 +133,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!land_area.Value, "DataSet2")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -162,7 +164,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!built_up_area.Value, "DataSet2")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -192,7 +196,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!common_area.Value, "DataSet2")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -222,7 +228,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!sharing_area.Value, "DataSet2")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -252,7 +260,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!land_grade.Value, "DataSet2")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -282,7 +292,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!land_area.Value, "DataSet3")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -312,7 +324,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!cultivated_land.Value, "DataSet3")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -342,7 +356,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!dry_land.Value, "DataSet3")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -372,7 +388,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!paddy_field.Value, "DataSet3")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -402,7 +420,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!orchard.Value, "DataSet3")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -432,7 +452,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!forest_land.Value, "DataSet3")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -462,7 +484,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!grassland.Value, "DataSet3")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -492,7 +516,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!inmate_mining.Value, "DataSet3")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -522,7 +548,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!construction_land.Value, "DataSet3")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -552,7 +580,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!homestead_land.Value, "DataSet3")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -582,7 +612,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!traffic_land.Value, "DataSet3")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -612,7 +644,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!water_land.Value, "DataSet3")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -642,7 +676,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!unused_land.Value, "DataSet3")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />

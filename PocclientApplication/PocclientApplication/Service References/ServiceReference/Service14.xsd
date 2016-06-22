@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://cloudtime-pc:6787/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/FileService" />
-  <xs:import schemaLocation="http://cloudtime-pc:6787/Service1.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/Message" />
+  <xs:import schemaLocation="http://jancn-pc:6963/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/FileService" />
+  <xs:import schemaLocation="http://jancn-pc:6963/Service1.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/Message" />
   <xs:element name="GetData">
     <xs:complexType>
       <xs:sequence>
@@ -600,10 +600,10 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="datetime" type="xs:dateTime" />
-        <xs:element minOccurs="0" name="price" type="xs:float" />
+        <xs:element minOccurs="0" name="price" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="tax_rate" type="xs:float" />
-        <xs:element minOccurs="0" name="amount_money" type="xs:float" />
+        <xs:element minOccurs="0" name="tax_rate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="amount_money" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="remarks" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="house_id" type="xs:int" />
       </xs:sequence>
@@ -620,10 +620,10 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="datetime" type="xs:dateTime" />
-        <xs:element minOccurs="0" name="price" type="xs:float" />
+        <xs:element minOccurs="0" name="price" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="tax_rate" type="xs:float" />
-        <xs:element minOccurs="0" name="amount_money" type="xs:float" />
+        <xs:element minOccurs="0" name="tax_rate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="amount_money" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="remarks" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="house_id" type="xs:int" />
       </xs:sequence>
@@ -669,7 +669,7 @@
         <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="room_number" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="jianshu" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="built_up_area" type="xs:float" />
+        <xs:element minOccurs="0" name="built_up_area" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="right_value" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="duration_right" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="logout_date" type="xs:dateTime" />
@@ -743,7 +743,7 @@
         <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="room_number" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="jianshu" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="built_up_area" type="xs:float" />
+        <xs:element minOccurs="0" name="built_up_area" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="right_value" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="duration_right" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="logout_date" type="xs:dateTime" />

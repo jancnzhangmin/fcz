@@ -64,13 +64,14 @@ namespace PocclientApplication
             newhouse.Width = 1000;
             newhouse.Height = 950;
             newhouse.Header = "房产增加";
-            newhouse.Margin = new Thickness(SystemParameters.PrimaryScreenWidth / 2d - 250, SystemParameters.PrimaryScreenHeight / 2d - 250, 0, 0);
+            newhouse.Margin = new Thickness(SystemParameters.PrimaryScreenWidth / 2d - 500, SystemParameters.PrimaryScreenHeight / 2d - 480, 0, 0);
             newhouse.Show();
             newhouse.ShowMaximizeButton = false;
             newhouse.ShowMinimizeButton = false;
             Addhouse newaddhouse = new Addhouse();
             newaddhouse.selecthouseid = s;
             newhouse.Content = newaddhouse;
+
 
 
 

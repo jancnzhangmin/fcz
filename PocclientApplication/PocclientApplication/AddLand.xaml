@@ -5,6 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
              d:DesignHeight="800" d:DesignWidth="1000" >
+    
     <Grid x:Name="land" Loaded="land_Loaded">
         <Label Content="佤" Height="28" HorizontalAlignment="Left" Margin="25,35,0,0" Name="label1" VerticalAlignment="Top" />
         <TextBox Height="28" HorizontalAlignment="Left" Margin="53,35,0,0" Name="land_title" VerticalAlignment="Top" Width="80"/>

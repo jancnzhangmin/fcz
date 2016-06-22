@@ -105,7 +105,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!house_number.Value, "house_DataSet")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -134,7 +136,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!house_number.Value, "house_DataSet")</Value>
-                <Style />
+                <Style>
+                  <FontSize>18pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
