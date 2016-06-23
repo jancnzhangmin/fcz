@@ -331,9 +331,9 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=CDate(First(Fields!datetime.Value, "DataSet2")).ToString("yyyy年MM月dd日")</Value>
+                <Value />
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>8pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -341,7 +341,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>datetime</rd:DefaultName>
-        <Top>8.29945cm</Top>
+        <Top>8.32591cm</Top>
         <Left>14.55244cm</Left>
         <Height>0.6cm</Height>
         <Width>2.87042cm</Width>
@@ -747,9 +747,9 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=CDate(First(Fields!logout_date.Value, "DataSet3")).ToString("yyyy年MM月dd日")</Value>
+                <Value />
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>8pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -760,7 +760,7 @@
         <Top>12.34758cm</Top>
         <Left>24.37133cm</Left>
         <Height>0.6cm</Height>
-        <Width>1.73271cm</Width>
+        <Width>2.42063cm</Width>
         <ZIndex>17</ZIndex>
         <Style>
           <Border>
@@ -813,7 +813,7 @@
               <TextRun>
                 <Value>=First(Fields!company.Value, "DataSet4")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>8pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -824,7 +824,7 @@
         <Top>16.3957cm</Top>
         <Left>17.49341cm</Left>
         <Height>0.6cm</Height>
-        <Width>1.04479cm</Width>
+        <Width>1.50341cm</Width>
         <ZIndex>19</ZIndex>
         <Style>
           <Border>
@@ -854,9 +854,9 @@
         </Paragraphs>
         <rd:DefaultName>card_number</rd:DefaultName>
         <Top>16.3957cm</Top>
-        <Left>18.60876cm</Left>
+        <Left>19.03209cm</Left>
         <Height>0.6cm</Height>
-        <Width>3.22729cm</Width>
+        <Width>2.80396cm</Width>
         <ZIndex>20</ZIndex>
         <Style>
           <Border>
@@ -877,7 +877,7 @@
               <TextRun>
                 <Value>=First(Fields!zidihao.Value, "DataSet4")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>8pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -886,9 +886,9 @@
         </Paragraphs>
         <rd:DefaultName>zidihao</rd:DefaultName>
         <Top>16.3957cm</Top>
-        <Left>21.94188cm</Left>
+        <Left>21.90661cm</Left>
         <Height>0.6cm</Height>
-        <Width>4.16215cm</Width>
+        <Width>4.19743cm</Width>
         <ZIndex>21</ZIndex>
         <Style>
           <Border>

@@ -473,9 +473,7 @@ where T : DependencyObject
                     prinreport.Content = "第七页";
                     Run();
 
-                    stream.Close();
-                    next_page.IsEnabled = false;
-                    prinreport.IsEnabled = false;
+                   
                 }
 
 
@@ -517,7 +515,7 @@ where T : DependencyObject
                         fs.Flush();
                         //关闭流
                         fs.Close();
-                        MessageBox.Show("下载成功！");
+                       // MessageBox.Show("下载成功！");
 
                     }
                     else
@@ -534,6 +532,10 @@ where T : DependencyObject
 
                     params2 = new ReportParameter("LogoUrl", "file:///" + path2);//路径全部用”/“file:///" + path2
                     Run();
+
+                    stream.Close();
+                    next_page.IsEnabled = false;
+                    prinreport.IsEnabled = false;
 
                 }
 

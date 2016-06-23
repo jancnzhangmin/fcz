@@ -252,13 +252,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!house_idcardnumber.Value, "DataSet1")</Value>
-
-
                 <Style>
-                  <FontSize>8pt</FontSize>
+                  <FontSize>9pt</FontSize>
                 </Style>
-        
-
               </TextRun>
             </TextRuns>
             <Style />
@@ -268,13 +264,7 @@
         <Top>3.10092cm</Top>
         <Left>7.8174cm</Left>
         <Height>0.6cm</Height>
-
-
-        <Width>1.80736cm</Width>
-
-
-
-
+        <Width>1.99257cm</Width>
         <ZIndex>3</ZIndex>
         <Style>
           <Border>
@@ -367,7 +357,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>building_number</rd:DefaultName>
-        <Top>7.40303cm</Top>
+        <Top>8.35552cm</Top>
         <Left>0.66784cm</Left>
         <Height>0.6cm</Height>
         <Width>0.93896cm</Width>
@@ -399,7 +389,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>room_number</rd:DefaultName>
-        <Top>7.40303cm</Top>
+        <Top>8.35552cm</Top>
         <Left>1.99839cm</Left>
         <Height>0.6cm</Height>
         <Width>0.93896cm</Width>
@@ -431,7 +421,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>jianshu</rd:DefaultName>
-        <Top>7.40303cm</Top>
+        <Top>8.35552cm</Top>
         <Left>3.2619cm</Left>
         <Height>0.6cm</Height>
         <Width>1.09771cm</Width>
@@ -463,10 +453,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>building_structure</rd:DefaultName>
-        <Top>7.40303cm</Top>
+        <Top>8.35552cm</Top>
         <Left>4.59951cm</Left>
         <Height>0.6cm</Height>
-        <Width>1.83854cm</Width>
+        <Width>3.11206cm</Width>
         <ZIndex>9</ZIndex>
         <Style>
           <Border>
@@ -495,7 +485,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>cengshu</rd:DefaultName>
-        <Top>7.40303cm</Top>
+        <Top>8.35552cm</Top>
         <Left>7.8174cm</Left>
         <Height>0.6cm</Height>
         <Width>1.12417cm</Width>
@@ -527,7 +517,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>built_up_area</rd:DefaultName>
-        <Top>7.40303cm</Top>
+        <Top>8.35552cm</Top>
         <Left>9.20968cm</Left>
         <Height>0.6cm</Height>
         <Width>2.34125cm</Width>
@@ -559,7 +549,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>remarks</rd:DefaultName>
-        <Top>7.40303cm</Top>
+        <Top>8.35552cm</Top>
         <Left>12.00248cm</Left>
         <Height>0.6cm</Height>
         <Width>1.96799cm</Width>
@@ -594,7 +584,7 @@
         <Top>16.50153cm</Top>
         <Left>20.92008cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
+        <Width>3.71708cm</Width>
         <ZIndex>13</ZIndex>
         <Style>
           <Border>

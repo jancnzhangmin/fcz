@@ -415,9 +415,9 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=CDate(First(Fields!datetime.Value, "DataSet2")).ToString("yyyy年MM月dd日")</Value>
+                <Value />
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>8pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -831,9 +831,9 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=CDate(First(Fields!logout_date.Value, "DataSet3")).ToString("yyyy年MM月dd日")</Value>
+                <Value />
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>8pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -844,7 +844,7 @@
         <Top>12.55875cm</Top>
         <Left>11.50467cm</Left>
         <Height>0.6cm</Height>
-        <Width>1.73271cm</Width>
+        <Width>2.31479cm</Width>
         <ZIndex>17</ZIndex>
         <Style>
           <Border>
@@ -876,7 +876,7 @@
         <Top>16.28938cm</Top>
         <Left>1.6064cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.94979cm</Width>
+        <Width>2.80868cm</Width>
         <ZIndex>18</ZIndex>
         <Style>
           <Border>
@@ -897,7 +897,7 @@
               <TextRun>
                 <Value>=First(Fields!company.Value, "DataSet4")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>8pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -906,9 +906,9 @@
         </Paragraphs>
         <rd:DefaultName>company</rd:DefaultName>
         <Top>16.28938cm</Top>
-        <Left>4.62675cm</Left>
+        <Left>4.55619cm</Left>
         <Height>0.6cm</Height>
-        <Width>1.04479cm</Width>
+        <Width>1.56515cm</Width>
         <ZIndex>19</ZIndex>
         <Style>
           <Border>
@@ -938,9 +938,9 @@
         </Paragraphs>
         <rd:DefaultName>card_number</rd:DefaultName>
         <Top>16.28938cm</Top>
-        <Left>5.7421cm</Left>
+        <Left>6.19189cm</Left>
         <Height>0.6cm</Height>
-        <Width>3.22729cm</Width>
+        <Width>2.7775cm</Width>
         <ZIndex>20</ZIndex>
         <Style>
           <Border>
@@ -961,7 +961,7 @@
               <TextRun>
                 <Value>=First(Fields!zidihao.Value, "DataSet4")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>8pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -972,7 +972,7 @@
         <Top>16.28938cm</Top>
         <Left>9.07522cm</Left>
         <Height>0.6cm</Height>
-        <Width>4.16215cm</Width>
+        <Width>4.16216cm</Width>
         <ZIndex>21</ZIndex>
         <Style>
           <Border>
@@ -986,14 +986,13 @@
       </Textbox>
       <Image Name="Image1">
         <Source>External</Source>
-        <Value>=Parameters!house_figure.Value</Value>
+        <Value>=Parameters!LogoUrl.Value</Value>
         <Sizing>FitProportional</Sizing>
         <Top>3.4925cm</Top>
         <Left>14.38487cm</Left>
         <Height>15.38972cm</Height>
         <Width>10.36354cm</Width>
         <ZIndex>22</ZIndex>
-        <ToolTip>=Parameters!house_figure.Value</ToolTip>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1005,7 +1004,7 @@
     <Style />
   </Body>
   <ReportParameters>
-    <ReportParameter Name="house_figure">
+    <ReportParameter Name="LogoUrl">
       <DataType>String</DataType>
       <Nullable>true</Nullable>
       <AllowBlank>true</AllowBlank>

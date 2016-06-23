@@ -315,9 +315,7 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!house_idcardnumber.Value, "DataSet1")</Value>
-                <Style>
-                  <FontSize>8pt</FontSize>
-                </Style>
+                <Style />
               </TextRun>
             </TextRuns>
             <Style />
@@ -327,15 +325,7 @@
         <Top>5.46312cm</Top>
         <Left>7.21113cm</Left>
         <Height>0.6cm</Height>
-
-
-        <Width>1.69971cm</Width>
-
-
-
-
-
-
+        <Width>2.12304cm</Width>
         <ZIndex>5</ZIndex>
         <Style>
           <Border>
@@ -527,7 +517,7 @@
         <Top>8.84448cm</Top>
         <Left>4.46295cm</Left>
         <Height>0.6cm</Height>
-        <Width>1.83854cm</Width>
+        <Width>2.88275cm</Width>
         <ZIndex>11</ZIndex>
         <Style>
           <Border>
@@ -770,7 +760,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=CDate(First(Fields!house_licensing_date.Value, "DataSet1")).ToString("yyyy")</Value>
+                <Value>=CDate(First(Fields!house_licensing_date.Value, "DataSet1")).ToString("yyyy年MM月dd日")</Value>
                 <Style>
                   <FontSize>18pt</FontSize>
                 </Style>
@@ -783,72 +773,8 @@
         <Top>18.24248cm</Top>
         <Left>6.66838cm</Left>
         <Height>0.6cm</Height>
-        <Width>1.97788cm</Width>
+        <Width>5.60979cm</Width>
         <ZIndex>19</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="house_licensing_date1">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=CDate(First(Fields!house_licensing_date.Value, "DataSet1")).ToString("MM")</Value>
-                <Style>
-                  <FontSize>18pt</FontSize>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>house_licensing_date1</rd:DefaultName>
-        <Top>18.24248cm</Top>
-        <Left>8.71682cm</Left>
-        <Height>0.6cm</Height>
-        <Width>1.52104cm</Width>
-        <ZIndex>20</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="house_licensing_date2">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=CDate(First(Fields!house_licensing_date.Value, "DataSet1")).ToString("dd")</Value>
-                <Style>
-                  <FontSize>18pt</FontSize>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>house_licensing_date2</rd:DefaultName>
-        <Top>18.24248cm</Top>
-        <Left>10.30841cm</Left>
-        <Height>0.6cm</Height>
-        <Width>1.96976cm</Width>
-        <ZIndex>21</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>

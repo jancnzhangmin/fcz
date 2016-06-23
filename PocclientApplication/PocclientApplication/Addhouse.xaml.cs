@@ -549,6 +549,7 @@ where T : DependencyObject
         private int m_currentPageIndex;
         private IList<Stream> m_streams;
         private Stream stream;
+      
         private Stream CreateStream(string name, string fileNameExtension, Encoding encoding, string mimeType, bool willSeek)
         {
              stream = new FileStream(name + "." + fileNameExtension, FileMode.Create);
@@ -657,6 +658,10 @@ where T : DependencyObject
             //if (DialogResult.OK == ppd.ShowDialog())
             //{
             printDoc.Print();
+            stream.Close();
+            addhouse.IsEnabled = false;
+            printreport_house.IsEnabled = false;
+
             //}
 
         }
@@ -705,71 +710,13 @@ where T : DependencyObject
                     printreport_house.Content = "第五页";
                     Run();
                 }
+             
+
+
                 if (printreport_house.Content.ToString() == "第五页")
                 {
                     reportrdlc = "houseReport4.rdlc";
-                    Run();
-
-                    stream.Close();
-                    addhouse.IsEnabled = false;
-                    printreport_house.IsEnabled = false;
-
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-          
-        }
-
-        private void Run()
-        {
-            LocalReport report = new LocalReport();
-            report.ReportPath = reportrdlc;// "Report1.rdlc";//System.Windows.Forms.Application.StartupPath + "//Reportland.rdlc";
-            // report.DataSources.Add(new ReportDataSource("DataSet1", client.Selecthouseid(selecthouseid).Tables[0].DefaultView));
-            if (reportrdlc == "houseReport.rdlc")
-            {
-                report.DataSources.Add(new ReportDataSource("house_DataSet", client.Selecthouseid(selecthouseid).Tables[0].DefaultView));
-            }
-            if ( reportrdlc == "houseReport1.rdlc" || reportrdlc == "houseReport3.rdlc")
-            {
-                report.DataSources.Add(new ReportDataSource("DataSet1", client.Selecthouseid(selecthouseid).Tables[0].DefaultView));
-                int natureid_fromhouse = client.selece_nature_id_fromhouse(selecthouseid);
-                ReportParameter nature = new ReportParameter("nature", client.selecenatureID(natureid_fromhouse));
-                report.SetParameters(nature);
-
-                int locatedid_fromhouse = client.selece_located_id_fromhouse(selecthouseid);
-                ReportParameter located = new ReportParameter("located", client.selece_located_id(locatedid_fromhouse));
-                report.SetParameters(located);
-
-                ReportParameter commonor = new ReportParameter("commonor", client.Selecthousecommonortop1(selecthouseid));
-                report.SetParameters(commonor);
-                report.DataSources.Add(new ReportDataSource("DataSet2", client.Selectcondition(selecthouseid).Tables[0].DefaultView));
-            }
-            if (reportrdlc == "houseReport2.rdlc" || reportrdlc == "houseReport4.rdlc")
-            {
-                report.DataSources.Add(new ReportDataSource("DataSet1", client.Selecthousecommonor(selecthouseid).Tables[0].DefaultView));
-                report.DataSources.Add(new ReportDataSource("DataSet2", client.Selecthousedeedtaxid(selecthouseid).Tables[0].DefaultView));
-                report.DataSources.Add(new ReportDataSource("DataSet3", client.Selectobligee(selecthouseid).Tables[0].DefaultView));
-                report.DataSources.Add(new ReportDataSource("DataSet4", client.Selecthouseuselandid(selecthouseid).Tables[0].DefaultView));
-                report.DataSources.Add(new ReportDataSource("DataSet5", client.Selecthouseid(selecthouseid).Tables[0].DefaultView));
-
-            }
-
-                if (reportrdlc == "houseReport4.rdlc")
-                {
-                    report.DataSources.Add(new ReportDataSource("DataSet1", client.Selecthousecommonor(selecthouseid).Tables[0].DefaultView));
-                    report.DataSources.Add(new ReportDataSource("DataSet2", client.Selecthousedeedtaxid(selecthouseid).Tables[0].DefaultView));
-                    report.DataSources.Add(new ReportDataSource("DataSet3", client.Selectobligee(selecthouseid).Tables[0].DefaultView));
-                    report.DataSources.Add(new ReportDataSource("DataSet4", client.Selecthouseuselandid(selecthouseid).Tables[0].DefaultView));
-                    report.DataSources.Add(new ReportDataSource("DataSet5", client.Selecthouseid(selecthouseid).Tables[0].DefaultView));
                     PublicClass.picturefilename = client.Selecthousepicture(selecthouseid);//this.textBox2.Text;
-
-
-
-
                     string path = System.AppDomain.CurrentDomain.BaseDirectory + @"\client\";
                     bool issuccess = false;
                     string message = "";
@@ -803,7 +750,7 @@ where T : DependencyObject
                         fs.Flush();
                         //关闭流
                         fs.Close();
-                        // MessageBox.Show("下载成功！");
+                      //   MessageBox.Show("下载成功！");
 
                     }
                     else
@@ -813,20 +760,72 @@ where T : DependencyObject
 
                     }
 
-                    ReportParameter params2;
+                
 
                     string path1 = System.AppDomain.CurrentDomain.BaseDirectory + @"client\" + PublicClass.picturefilename;//"file:///D:/工作/WCF测试/房产证管理系统/测试版/PocclientApplication/PocclientApplication/bin/Debug/client/2.jpg";
                     string path2 = path1.Replace(@"\", @"/");
-                    params2 = new ReportParameter("house_figure", "file:///"+path2);//路径全部用”/“file:///" + path2
+                    params2 = new ReportParameter("LogoUrl", "file:///"+path2);
+
+                    Run();
+
+
                 }
 
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+          
+        }
+         ReportParameter params2;
+        private void Run()
+        {
+            LocalReport report = new LocalReport();
+            report.ReportPath = reportrdlc;// "Report1.rdlc";//System.Windows.Forms.Application.StartupPath + "//Reportland.rdlc";
+            // report.DataSources.Add(new ReportDataSource("DataSet1", client.Selecthouseid(selecthouseid).Tables[0].DefaultView));
+            if (reportrdlc == "houseReport.rdlc")
+            {
+                report.DataSources.Add(new ReportDataSource("house_DataSet", client.Selecthouseid(selecthouseid).Tables[0].DefaultView));
+            }
+            if ( reportrdlc == "houseReport1.rdlc" || reportrdlc == "houseReport3.rdlc")
+            {
+                report.DataSources.Add(new ReportDataSource("DataSet1", client.Selecthouseid(selecthouseid).Tables[0].DefaultView));
+                int natureid_fromhouse = client.selece_nature_id_fromhouse(selecthouseid);
+                ReportParameter nature = new ReportParameter("nature", client.selecenatureID(natureid_fromhouse));
+                report.SetParameters(nature);
+
+                int locatedid_fromhouse = client.selece_located_id_fromhouse(selecthouseid);
+                ReportParameter located = new ReportParameter("located", client.selece_located_id(locatedid_fromhouse));
+                report.SetParameters(located);
+
+                ReportParameter commonor = new ReportParameter("commonor", client.Selecthousecommonortop1(selecthouseid));
+                report.SetParameters(commonor);
+                report.DataSources.Add(new ReportDataSource("DataSet2", client.Selectcondition(selecthouseid).Tables[0].DefaultView));
+            }
+            if (reportrdlc == "houseReport2.rdlc" || reportrdlc == "houseReport4.rdlc")
+            {
+                report.DataSources.Add(new ReportDataSource("DataSet1", client.Selecthousecommonor(selecthouseid).Tables[0].DefaultView));
+                report.DataSources.Add(new ReportDataSource("DataSet2", client.Selecthousedeedtaxid(selecthouseid).Tables[0].DefaultView));
+                report.DataSources.Add(new ReportDataSource("DataSet3", client.Selectobligee(selecthouseid).Tables[0].DefaultView));
+                report.DataSources.Add(new ReportDataSource("DataSet4", client.Selecthouseuselandid(selecthouseid).Tables[0].DefaultView));
+                report.DataSources.Add(new ReportDataSource("DataSet5", client.Selecthouseid(selecthouseid).Tables[0].DefaultView));
+
+            }
+            report.EnableExternalImages = true;
+            if (reportrdlc == "houseReport4.rdlc")
+              {
+                  report.SetParameters(params2);
+              }
         
 
 
 
 
             //report.DataSources.Add(new ReportDataSource("DataSet3", client.Selectcountrysideiddate(landid).Tables[0].DefaultView));
-            report.EnableExternalImages = true;
+           
 
             Export(report);
 
