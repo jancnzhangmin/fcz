@@ -437,14 +437,14 @@ where T : DependencyObject
             try
             {
 
-                if (prinreport.Content.ToString() == "打印")
-                {
-                    reportrdlc = "hengtuiReport1.rdlc";
-                    prinreport.Content = "第二页";
-                    Run();
+                //if (prinreport.Content.ToString() == "打印")
+                //{
+                //    reportrdlc = "hengtuiReport1.rdlc";
+                //    prinreport.Content = "第二页";
+                //    Run();
 
-                }
-                if (prinreport.Content.ToString() == "第二页")
+                //}
+                if (prinreport.Content.ToString() == "打印")
                 {
                     reportrdlc = "hengtuiReport2.rdlc";
                     prinreport.Content = "第三页";
