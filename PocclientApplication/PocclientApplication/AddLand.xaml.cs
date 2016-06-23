@@ -392,7 +392,6 @@ where T : DependencyObject
             //if (DialogResult.OK == ppd.ShowDialog())
             //{
             printDoc.Print();
-            stream.Close();
             //}
 
         }
@@ -437,14 +436,14 @@ where T : DependencyObject
             try
             {
 
-                //if (prinreport.Content.ToString() == "打印")
-                //{
-                //    reportrdlc = "hengtuiReport1.rdlc";
-                //    prinreport.Content = "第二页";
-                //    Run();
-
-                //}
                 if (prinreport.Content.ToString() == "打印")
+                {
+                    reportrdlc = "hengtuiReport1.rdlc";
+                    prinreport.Content = "第二页";
+                    Run();
+
+                }
+                if (prinreport.Content.ToString() == "第二页")
                 {
                     reportrdlc = "hengtuiReport2.rdlc";
                     prinreport.Content = "第三页";
@@ -473,6 +472,8 @@ where T : DependencyObject
                     reportrdlc = "hengtuiReport6.rdlc";
                     prinreport.Content = "第七页";
                     Run();
+
+                    stream.Close();
                 }
 
 
@@ -520,7 +521,7 @@ where T : DependencyObject
                     else
                     {
 
-                        //MessageBox.Show(message);
+                        MessageBox.Show(message);
 
                     }
 
@@ -531,13 +532,6 @@ where T : DependencyObject
 
                     params2 = new ReportParameter("LogoUrl", "file:///" + path2);//路径全部用”/“file:///" + path2
                     Run();
-
-
-
-                    prinreport.IsEnabled = false;
-                    next_page.IsEnabled = false;
-                    reportrdlc = "";
-
 
                 }
 
