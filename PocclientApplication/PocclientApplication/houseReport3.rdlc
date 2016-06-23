@@ -252,7 +252,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!house_idcardnumber.Value, "DataSet1")</Value>
-                <Style />
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -262,7 +264,7 @@
         <Top>3.10092cm</Top>
         <Left>7.8174cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.17778cm</Width>
+        <Width>5.67028cm</Width>
         <ZIndex>3</ZIndex>
         <Style>
           <Border>
@@ -347,7 +349,7 @@
               <TextRun>
                 <Value>=First(Fields!building_number.Value, "DataSet2")</Value>
                 <Style>
-                  <FontSize>12pt</FontSize>
+                  <FontSize>18pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -358,7 +360,7 @@
         <Top>7.40303cm</Top>
         <Left>0.66784cm</Left>
         <Height>0.6cm</Height>
-        <Width>1.15416cm</Width>
+        <Width>0.93896cm</Width>
         <ZIndex>6</ZIndex>
         <Style>
           <Border>
@@ -379,7 +381,7 @@
               <TextRun>
                 <Value>=First(Fields!room_number.Value, "DataSet2")</Value>
                 <Style>
-                  <FontSize>12pt</FontSize>
+                  <FontSize>18pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -390,7 +392,7 @@
         <Top>7.40303cm</Top>
         <Left>1.99839cm</Left>
         <Height>0.6cm</Height>
-        <Width>1.19295cm</Width>
+        <Width>0.93896cm</Width>
         <ZIndex>7</ZIndex>
         <Style>
           <Border>
@@ -411,7 +413,7 @@
               <TextRun>
                 <Value>=First(Fields!jianshu.Value, "DataSet2")</Value>
                 <Style>
-                  <FontSize>12pt</FontSize>
+                  <FontSize>18pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -443,7 +445,7 @@
               <TextRun>
                 <Value>=First(Fields!building_structure.Value, "DataSet2")</Value>
                 <Style>
-                  <FontSize>12pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -454,7 +456,7 @@
         <Top>7.40303cm</Top>
         <Left>4.59951cm</Left>
         <Height>0.6cm</Height>
-        <Width>3.0415cm</Width>
+        <Width>1.83854cm</Width>
         <ZIndex>9</ZIndex>
         <Style>
           <Border>
@@ -475,7 +477,7 @@
               <TextRun>
                 <Value>=First(Fields!cengshu.Value, "DataSet2")</Value>
                 <Style>
-                  <FontSize>12pt</FontSize>
+                  <FontSize>18pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -486,7 +488,7 @@
         <Top>7.40303cm</Top>
         <Left>7.8174cm</Left>
         <Height>0.6cm</Height>
-        <Width>1.357cm</Width>
+        <Width>1.12417cm</Width>
         <ZIndex>10</ZIndex>
         <Style>
           <Border>
@@ -507,7 +509,7 @@
               <TextRun>
                 <Value>=First(Fields!built_up_area.Value, "DataSet2")</Value>
                 <Style>
-                  <FontSize>12pt</FontSize>
+                  <FontSize>18pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -518,7 +520,7 @@
         <Top>7.40303cm</Top>
         <Left>9.20968cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.68697cm</Width>
+        <Width>2.34125cm</Width>
         <ZIndex>11</ZIndex>
         <Style>
           <Border>
@@ -539,7 +541,7 @@
               <TextRun>
                 <Value>=First(Fields!remarks.Value, "DataSet2")</Value>
                 <Style>
-                  <FontSize>12pt</FontSize>
+                  <FontSize>13pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
