@@ -283,10 +283,10 @@ where T : DependencyObject
         string reportrdlc;
         private int m_currentPageIndex;
         private IList<Stream> m_streams;
-        private Stream stream;
+
         private Stream CreateStream(string name, string fileNameExtension, Encoding encoding, string mimeType, bool willSeek)
         {
-             stream = new FileStream(name + "." + fileNameExtension, FileMode.Create);
+            Stream stream = new FileStream(name + "." + fileNameExtension, FileMode.Create);
             m_streams.Add(stream);
             return stream;
         }
@@ -392,7 +392,6 @@ where T : DependencyObject
             //if (DialogResult.OK == ppd.ShowDialog())
             //{
             printDoc.Print();
-            stream.Close();
             //}
 
         }
@@ -437,14 +436,14 @@ where T : DependencyObject
             try
             {
 
-                //if (prinreport.Content.ToString() == "打印")
-                //{
-                //    reportrdlc = "hengtuiReport1.rdlc";
-                //    prinreport.Content = "第二页";
-                //    Run();
-
-                //}
                 if (prinreport.Content.ToString() == "打印")
+                {
+                    reportrdlc = "hengtuiReport1.rdlc";
+                    prinreport.Content = "第二页";
+                    Run();
+
+                }
+                if (prinreport.Content.ToString() == "第二页")
                 {
                     reportrdlc = "hengtuiReport2.rdlc";
                     prinreport.Content = "第三页";
@@ -531,13 +530,6 @@ where T : DependencyObject
 
                     params2 = new ReportParameter("LogoUrl", "file:///" + path2);//路径全部用”/“file:///" + path2
                     Run();
-
-
-
-                    prinreport.IsEnabled = false;
-                    next_page.IsEnabled = false;
-                    reportrdlc = "";
-
 
                 }
 
