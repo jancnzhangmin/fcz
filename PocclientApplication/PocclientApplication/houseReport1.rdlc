@@ -263,7 +263,7 @@
         <Top>4.28837cm</Top>
         <Left>7.21113cm</Left>
         <Height>0.6cm</Height>
-        <Width>5.67028cm</Width>
+        <Width>3.63242cm</Width>
         <ZIndex>3</ZIndex>
         <Style>
           <Border>
@@ -315,9 +315,7 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!house_idcardnumber.Value, "DataSet1")</Value>
-                <Style>
-                  <FontSize>8pt</FontSize>
-                </Style>
+                <Style />
               </TextRun>
             </TextRuns>
             <Style />
@@ -327,7 +325,11 @@
         <Top>5.46312cm</Top>
         <Left>7.21113cm</Left>
         <Height>0.6cm</Height>
+<<<<<<< HEAD
         <Width>1.69971cm</Width>
+=======
+        <Width>2.07138cm</Width>
+>>>>>>> origin/master
         <ZIndex>5</ZIndex>
         <Style>
           <Border>
@@ -604,7 +606,7 @@
               <TextRun>
                 <Value>=First(Fields!remarks.Value, "DataSet2")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
