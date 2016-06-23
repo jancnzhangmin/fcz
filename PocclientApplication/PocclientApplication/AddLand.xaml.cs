@@ -283,10 +283,10 @@ where T : DependencyObject
         string reportrdlc;
         private int m_currentPageIndex;
         private IList<Stream> m_streams;
-        private Stream stream;
+
         private Stream CreateStream(string name, string fileNameExtension, Encoding encoding, string mimeType, bool willSeek)
         {
-             stream = new FileStream(name + "." + fileNameExtension, FileMode.Create);
+            Stream stream = new FileStream(name + "." + fileNameExtension, FileMode.Create);
             m_streams.Add(stream);
             return stream;
         }
@@ -515,7 +515,7 @@ where T : DependencyObject
                         fs.Flush();
                         //关闭流
                         fs.Close();
-                        //MessageBox.Show("下载成功！");
+                        MessageBox.Show("下载成功！");
 
                     }
                     else
@@ -539,7 +539,7 @@ where T : DependencyObject
             }
             catch (Exception ex)
             {
-                //MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message);
             }
 
 
