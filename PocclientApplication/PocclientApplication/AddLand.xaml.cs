@@ -283,10 +283,10 @@ where T : DependencyObject
         string reportrdlc;
         private int m_currentPageIndex;
         private IList<Stream> m_streams;
-
+        private Stream stream;
         private Stream CreateStream(string name, string fileNameExtension, Encoding encoding, string mimeType, bool willSeek)
         {
-            Stream stream = new FileStream(name + "." + fileNameExtension, FileMode.Create);
+             stream = new FileStream(name + "." + fileNameExtension, FileMode.Create);
             m_streams.Add(stream);
             return stream;
         }
@@ -392,6 +392,7 @@ where T : DependencyObject
             //if (DialogResult.OK == ppd.ShowDialog())
             //{
             printDoc.Print();
+            stream.Close();
             //}
 
         }
@@ -530,6 +531,13 @@ where T : DependencyObject
 
                     params2 = new ReportParameter("LogoUrl", "file:///" + path2);//路径全部用”/“file:///" + path2
                     Run();
+
+
+
+                    prinreport.IsEnabled = false;
+                    next_page.IsEnabled = false;
+                    reportrdlc = "";
+
 
                 }
 

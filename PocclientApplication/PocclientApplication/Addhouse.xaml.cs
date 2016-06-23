@@ -548,12 +548,13 @@ where T : DependencyObject
         string reportrdlc;
         private int m_currentPageIndex;
         private IList<Stream> m_streams;
-
+        private Stream stream;
         private Stream CreateStream(string name, string fileNameExtension, Encoding encoding, string mimeType, bool willSeek)
         {
-            Stream stream = new FileStream(name + "." + fileNameExtension, FileMode.Create);
+             stream = new FileStream(name + "." + fileNameExtension, FileMode.Create);
             m_streams.Add(stream);
             return stream;
+          
         }
 
         private void Export(LocalReport report)
@@ -630,6 +631,7 @@ where T : DependencyObject
             // return;
 
             PrintDocument printDoc = new PrintDocument();
+           
             printDoc.PrinterSettings.PrinterName = DefaultPrinter;
 
             if (!printDoc.PrinterSettings.IsValid)
@@ -658,7 +660,7 @@ where T : DependencyObject
             //{
             printDoc.Print();
             //}
-
+            stream.Close();
         }
 
 
@@ -709,6 +711,9 @@ where T : DependencyObject
                 {
                     reportrdlc = "houseReport4.rdlc";
                     Run();
+                    printreport_house.IsEnabled = false;
+                    addhouse.IsEnabled = false;
+                    reportrdlc = "";
                 }
 
             }
@@ -722,7 +727,8 @@ where T : DependencyObject
         private void Run()
         {
             LocalReport report = new LocalReport();
-            report.ReportPath = reportrdlc;// "Report1.rdlc";//System.Windows.Forms.Application.StartupPath + "//Reportland.rdlc";
+            report.ReportPath = reportrdlc;
+            // "Report1.rdlc";//System.Windows.Forms.Application.StartupPath + "//Reportland.rdlc";
             // report.DataSources.Add(new ReportDataSource("DataSet1", client.Selecthouseid(selecthouseid).Tables[0].DefaultView));
             if (reportrdlc == "houseReport.rdlc")
             {

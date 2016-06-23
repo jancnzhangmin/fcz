@@ -253,7 +253,7 @@
               <TextRun>
                 <Value>=First(Fields!house_idcardnumber.Value, "DataSet1")</Value>
                 <Style>
-                  <FontSize>8pt</FontSize>
+                  <FontSize>9pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -264,7 +264,7 @@
         <Top>3.10092cm</Top>
         <Left>7.8174cm</Left>
         <Height>0.6cm</Height>
-        <Width>5.67028cm</Width>
+        <Width>1.80736cm</Width>
         <ZIndex>3</ZIndex>
         <Style>
           <Border>
