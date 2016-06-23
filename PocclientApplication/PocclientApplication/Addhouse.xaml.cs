@@ -548,10 +548,10 @@ where T : DependencyObject
         string reportrdlc;
         private int m_currentPageIndex;
         private IList<Stream> m_streams;
-
+        private Stream stream;
         private Stream CreateStream(string name, string fileNameExtension, Encoding encoding, string mimeType, bool willSeek)
         {
-            Stream stream = new FileStream(name + "." + fileNameExtension, FileMode.Create);
+             stream = new FileStream(name + "." + fileNameExtension, FileMode.Create);
             m_streams.Add(stream);
             return stream;
         }
@@ -709,10 +709,11 @@ where T : DependencyObject
                 {
                     reportrdlc = "houseReport4.rdlc";
                     Run();
-<<<<<<< HEAD
+
                     stream.Close();
-=======
->>>>>>> origin/master
+                    addhouse.IsEnabled = false;
+                    printreport_house.IsEnabled = false;
+
                 }
 
             }
