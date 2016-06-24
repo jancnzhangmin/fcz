@@ -2018,13 +2018,18 @@ namespace FileService
 
 
         //房屋条件查询
-        public DataSet Selecthouseinquiry(string owner , string idcardnumber)
+        public DataSet Selecthouseinquiry(string owner, string idcardnumber,string a2, DateTime oldtime, DateTime tianfatime)
         {
             try
             {
                 strCon.Open();
 
-                string strSql = "select * from house where house_owner like '%" + owner + "%'  and house_idcardnumber like '%" + idcardnumber + "%'";
+                string strSql = "select * from house where house_owner like '%" + owner + "%'  and house_idcardnumber like '%" + idcardnumber + "%' and  house_tianfatime >='" + oldtime + "' and  house_tianfatime <='" + tianfatime + "'";
+
+                if (a2 != "")
+                {
+                    strSql += " and house_id in ("+ a2 +")"; 
+                }
                 DataSet ds = new DataSet();
                 SqlDataAdapter s = new SqlDataAdapter(strSql, strCon);
                 s.Fill(ds);
@@ -2043,13 +2048,20 @@ namespace FileService
 
 
         //土地条件查询
-        public DataSet Selectlandinquiry(string user, string idcardnumber)
+        public DataSet Selectlandinquiry(string user, string idcardnumber, string address,DateTime oldtime, DateTime send_date)
         {
             try
             {
                 strCon.Open();
 
-                string strSql = "select * from land where land_user like '%" + user + "%'  and land_idcardnumber like '%" + idcardnumber + "%'";
+                string strSql = "select * from land where land_user like '%" + user + "%'  and land_idcardnumber like '%" + idcardnumber + "%' and land_address like '%" + address + "%' and land_send_date >='" + oldtime + "' and  land_send_date <='" + send_date + "'";
+
+                //if (testc != '')
+                //{
+                //    strSql+= " and 大表id in ( " +t +")";
+                //}
+
+
                 DataSet ds = new DataSet();
                 SqlDataAdapter s = new SqlDataAdapter(strSql, strCon);
                 s.Fill(ds);
@@ -2064,7 +2076,176 @@ namespace FileService
                 strCon.Close();
             }
         }
-        
+
+
+        public DataSet selectconditionhouse_id(string building_structure)
+        {
+            try
+            {
+                strCon.Open();
+
+                string strSql = "select house_id from house_condition where building_structure='"+building_structure+"'";
+
+                //if (testc != '')
+                //{
+                //    strSql+= " and 大表id in ( " +t +")";
+                //}
+
+
+                DataSet ds = new DataSet();
+                SqlDataAdapter s = new SqlDataAdapter(strSql, strCon);
+                s.Fill(ds);
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                strCon.Close();
+            }
+        }
+
+
+        //查询dategrid house 房屋状况建筑面积
+        public DataSet Selecthouselistid(string i)
+        {
+            try
+            {
+                strCon.Open();
+
+
+             
+
+
+                string strSql = "select * from house_condition where house_id in("+i+")";
+                DataSet ds = new DataSet();
+                SqlDataAdapter s = new SqlDataAdapter(strSql, strCon);
+                s.Fill(ds);
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                strCon.Close();
+            }
+        }
+
+
+        //查询dategrid house 设定它项权利建筑面积
+        public DataSet Selecthouselistobid(string i)
+        {
+            try
+            {
+                strCon.Open();
+
+
+
+
+
+                string strSql = "select * from house_obligee where house_id in(" + i + ")";
+                DataSet ds = new DataSet();
+                SqlDataAdapter s = new SqlDataAdapter(strSql, strCon);
+                s.Fill(ds);
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                strCon.Close();
+            }
+        }
+
+
+        //查询dategrid house 使用土地摘要土地面积
+        public DataSet Selecthouselistusid(string i)
+        {
+            try
+            {
+                strCon.Open();
+
+
+
+
+
+                string strSql = "select * from house_use_land where house_id in(" + i + ")";
+                DataSet ds = new DataSet();
+                SqlDataAdapter s = new SqlDataAdapter(strSql, strCon);
+                s.Fill(ds);
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                strCon.Close();
+            }
+        }
+
+
+
+        //查询dategrid land 农村土地面积
+        public DataSet Selectlandlistcoid(string i)
+        {
+            try
+            {
+                strCon.Open();
+
+
+
+
+
+                string strSql = "select * from land_countryside where land_id in(" + i + ")";
+                DataSet ds = new DataSet();
+                SqlDataAdapter s = new SqlDataAdapter(strSql, strCon);
+                s.Fill(ds);
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                strCon.Close();
+            }
+        }
+
+        //查询dategrid land 城镇土地面积
+        public DataSet Selectlandlisttoid(string i)
+        {
+            try
+            {
+                strCon.Open();
+
+
+
+
+
+                string strSql = "select * from land_town where land_id in(" + i + ")";
+                DataSet ds = new DataSet();
+                SqlDataAdapter s = new SqlDataAdapter(strSql, strCon);
+                s.Fill(ds);
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                strCon.Close();
+            }
+        }
 
         
     }

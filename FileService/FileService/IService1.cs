@@ -154,6 +154,21 @@ namespace FileService
         //查询房产图片
         [OperationContract]
         string Selecthousepicture(int id);
+
+        //查询dategrid house 房屋状况建筑面积
+        [OperationContract]
+        DataSet Selecthouselistid(string i);
+
+        //查询dategrid house 设定它项权利建筑面积
+        [OperationContract]
+        DataSet Selecthouselistobid(string i);
+
+        //查询dategrid house 使用土地摘要土地面积
+        [OperationContract]
+        DataSet Selecthouselistusid(string i);
+
+
+
         #endregion
 
         #region 土地证
@@ -200,6 +215,15 @@ namespace FileService
         [OperationContract]
         DataSet Selectlandtowniddate(int land_id);
 
+
+        //查询dategrid land 农村土地面积
+        [OperationContract]
+        DataSet Selectlandlistcoid(string i);
+        //查询dategrid land 城镇用地面积
+        [OperationContract]
+        DataSet Selectlandlisttoid(string i);
+
+
         #endregion
 
         #region 登录
@@ -213,11 +237,15 @@ namespace FileService
 
         //房屋条件查询
         [OperationContract]
-        DataSet Selecthouseinquiry(string owner, string idcardnumber);
+        DataSet Selecthouseinquiry(string owner, string idcardnumber, string a2, DateTime oldtime, DateTime tianfatime);
         
         //土地条件查询
         [OperationContract]
-        DataSet Selectlandinquiry(string user, string idcardnumber);
+        DataSet Selectlandinquiry(string user, string idcardnumber, string address, DateTime oldtime, DateTime send_date);
+
+        [OperationContract]
+        DataSet selectconditionhouse_id(string building_structure);
+
 
         //删除数据
         [OperationContract]

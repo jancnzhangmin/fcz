@@ -4,11 +4,11 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="400" d:DesignWidth="800">
+             d:DesignHeight="400" d:DesignWidth="1500">
     <Grid x:Name="house_grid" Loaded="house_grid_Loaded">
 
 
-        <DataGrid AutoGenerateColumns="False" CanUserAddRows="False" HorizontalAlignment="Stretch"  Name="house_dataGrid" VerticalAlignment="Stretch" Width="auto" Margin="0,63,0,0" >
+        <DataGrid AutoGenerateColumns="False" CanUserAddRows="False" HorizontalAlignment="Stretch"  Name="house_dataGrid" VerticalAlignment="Stretch" Width="auto" Margin="0,56,0,68" >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="id" Binding="{Binding Path=house_id }" Visibility="Hidden" />
                 <DataGridTextColumn Header="所有权人" Binding="{Binding Path=house_owner}"/>
@@ -54,6 +54,24 @@
         <TextBox Height="23" HorizontalAlignment="Left" Margin="84,16,0,0" Name="house_owner" VerticalAlignment="Top" Width="120" />
         <Label Content="身份证号" Height="28" HorizontalAlignment="Left" Margin="223,14,0,0" Name="label2" VerticalAlignment="Top" />
         <TextBox Height="23" HorizontalAlignment="Left" Margin="292,16,0,0" Name="idcardnumber" VerticalAlignment="Top" Width="120" />
-        <Button Content="查询" Height="23" HorizontalAlignment="Left" Margin="457,19,0,0" Name="house_inquiry" VerticalAlignment="Top" Width="75" Click="house_inquiry_Click" />
+        
+        <Label Content="建筑结构" Height="28" HorizontalAlignment="Left" Margin="450,14,0,0" Name="label13" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="514,14,0,0" Name="building_structure" VerticalAlignment="Top" Width="120" />
+        <Label Content="开始日期" Height="28" HorizontalAlignment="Left" Margin="650,14,0,0" Name="label14" VerticalAlignment="Top" />
+        <DatePicker Text="1990-1-1" Height="23" HorizontalAlignment="Left" Margin="720,14,0,0" Name="oldtime" VerticalAlignment="Top" Width="120" />
+        <Label Content="发证日期" Height="28" HorizontalAlignment="Left" Margin="883,13,0,0" Name="label15" VerticalAlignment="Top" />
+        <DatePicker Height="23" HorizontalAlignment="Left" Margin="957,14,0,0" Name="tianfatime" VerticalAlignment="Top" Width="120" />
+        <Button Content="查询" Height="23" HorizontalAlignment="Left" Margin="1157,16,0,0" Name="house_inquiry" VerticalAlignment="Top" Width="75" Click="house_inquiry_Click" />
+
+        <Label Content="房屋状况建筑面积" Height="28" HorizontalAlignment="Left" Margin="35,355,0,0" Name="label3" VerticalAlignment="Bottom" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="147,360,0,0" Name="area_co" Text="TextBlock" VerticalAlignment="Bottom" Width="85" />
+
+        <Label Content="权利摘要建筑面积" Height="28" HorizontalAlignment="Left" Margin="250,355,0,0" Name="label4" VerticalAlignment="Bottom" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="364,360,0,0" Name="area_ob" Text="TextBlock" VerticalAlignment="Bottom" Width="85" />
+        
+        <Label Content="土地摘要土地面积" Height="28" HorizontalAlignment="Left" Margin="455,355,0,0" Name="label5" VerticalAlignment="Bottom" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="575,360,0,0" Name="area_us" Text="TextBlock" VerticalAlignment="Bottom" Width="85" />
+        
+        
     </Grid>
 </UserControl>

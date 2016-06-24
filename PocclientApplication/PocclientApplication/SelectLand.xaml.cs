@@ -27,11 +27,72 @@ namespace PocclientApplication
             InitializeComponent();
         }
         Service1Client client = new Service1Client();
+        List<string> selectland_id = new List<string>();
       
         private void land_dataGrid_Loaded(object sender, RoutedEventArgs e)
         {
-            land_dataGrid.ItemsSource = client.Selectland().Tables[0].DefaultView;
+           // land_dataGrid.ItemsSource = client.Selectland().Tables[0].DefaultView;
+            //areatotal();
+            land_send_date.Text = DateTime.Now.ToString();
+            land_dataGrid.ItemsSource = client.Selectlandinquiry(land_user.Text, land_idcardnumber.Text, land_address.Text, DateTime.Parse(oldtime.Text), DateTime.Parse(land_send_date.Text)).Tables[0].DefaultView;
         }
+
+
+
+        private void areatotal()
+        {
+            for (int i = 0; i < land_dataGrid.Items.Count; i++)
+            {
+
+                DataGridTemplateColumn templeColumn = land_dataGrid.Columns[0] as DataGridTemplateColumn;
+                FrameworkElement s = land_dataGrid.Columns[0].GetCellContent(land_dataGrid.Items[i]);
+                // CheckBox tbOper = templeColumn.CellTemplate.FindName("checkbox", s) as CheckBox;
+                DataRowView mySelectedElement = (DataRowView)land_dataGrid.Items[i];
+                selectland_id.Add(mySelectedElement.Row[0].ToString());
+            }
+            string id = "";
+            foreach (var c in selectland_id)
+            {
+                id += "'" + c + "'" + ",";
+            }
+            id = id.Remove(id.LastIndexOf(","), 1);
+
+            //城镇用地面积
+            DataSet shuju_co = client.Selectlandlistcoid(id);
+            float sum_co = 0;
+            for (int j = 0; j < shuju_co.Tables[0].Rows.Count; j++)
+            {
+                try
+                {
+                    sum_co += float.Parse(shuju_co.Tables[0].Rows[j][1].ToString());
+                }
+                catch { }
+
+            }
+
+
+
+            //农村土地面积
+            DataSet shuju_to = client.Selectlandlisttoid(id);
+            float sum_to = 0;
+            for (int j = 0; j < shuju_to.Tables[0].Rows.Count; j++)
+            {
+                try
+                {
+                    sum_to += float.Parse(shuju_to.Tables[0].Rows[j][1].ToString());
+                }
+                catch { }
+
+            }
+
+            area_co.Text = sum_co.ToString();
+            area_to.Text = sum_to.ToString();
+
+        }
+
+
+
+
 
         private void edit_land_Click(object sender, RoutedEventArgs e)
         {
@@ -89,7 +150,12 @@ namespace PocclientApplication
 
         private void land_inquiry_Click(object sender, RoutedEventArgs e)
         {
-            land_dataGrid.ItemsSource = client.Selectlandinquiry(land_user.Text, land_idcardnumber.Text).Tables[0].DefaultView;
+            land_dataGrid.ItemsSource = client.Selectlandinquiry(land_user.Text, land_idcardnumber.Text,land_address.Text,DateTime.Parse(oldtime.Text),DateTime.Parse(land_send_date.Text)).Tables[0].DefaultView;
+            if (land_dataGrid.Items.Count > 0)
+            {
+                areatotal();
+            }
+
         }
 
     

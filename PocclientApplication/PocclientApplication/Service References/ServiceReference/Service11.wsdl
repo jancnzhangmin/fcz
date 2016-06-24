@@ -1,0 +1,1433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:6963/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:6963/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:6963/Service1.svc?xsd=xsd2" />
+      <xsd:import schemaLocation="http://localhost:6963/Service1.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/Message" />
+      <xsd:import schemaLocation="http://localhost:6963/Service1.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/FileService" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_Selecthouseinquiry_InputMessage">
+    <wsdl:part name="parameters" element="tns:Selecthouseinquiry" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Selecthouseinquiry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelecthouseinquiryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Selectlandinquiry_InputMessage">
+    <wsdl:part name="parameters" element="tns:Selectlandinquiry" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Selectlandinquiry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectlandinquiryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_selectconditionhouse_id_InputMessage">
+    <wsdl:part name="parameters" element="tns:selectconditionhouse_id" />
+  </wsdl:message>
+  <wsdl:message name="IService1_selectconditionhouse_id_OutputMessage">
+    <wsdl:part name="parameters" element="tns:selectconditionhouse_idResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteTest_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTest" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteTest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdataTest_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdataTest" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdataTest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdataTestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SelectTest_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectTest" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SelectTest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectTestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SelectLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectLogin" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SelectLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpFile">
+    <wsdl:part name="parameters" element="tns:UpFile" />
+  </wsdl:message>
+  <wsdl:message name="UpFile_Headers">
+    <wsdl:part name="FileName" element="tns:FileName" />
+    <wsdl:part name="FileSize" element="tns:FileSize" />
+  </wsdl:message>
+  <wsdl:message name="UpFileResult">
+    <wsdl:part name="parameters" element="tns:UpFileResult" />
+  </wsdl:message>
+  <wsdl:message name="UpFileResult_Headers">
+    <wsdl:part name="IsSuccess" element="tns:IsSuccess" />
+    <wsdl:part name="Message" element="tns:Message" />
+  </wsdl:message>
+  <wsdl:message name="DownFile">
+    <wsdl:part name="parameters" element="tns:DownFile" />
+  </wsdl:message>
+  <wsdl:message name="DownFile_Headers">
+    <wsdl:part name="FileName" element="tns:FileName" />
+  </wsdl:message>
+  <wsdl:message name="DownFileResult">
+    <wsdl:part name="parameters" element="tns:DownFileResult" />
+  </wsdl:message>
+  <wsdl:message name="DownFileResult_Headers">
+    <wsdl:part name="FileSize" element="tns:FileSize" />
+    <wsdl:part name="IsSuccess" element="tns:IsSuccess" />
+    <wsdl:part name="Message" element="tns:Message" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetData" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDataUsingDataContract_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDataUsingDataContract_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Inserthousenature_InputMessage">
+    <wsdl:part name="parameters" element="tns:Inserthousenature" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Inserthousenature_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InserthousenatureResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_selece_nature_id_fromhouse_InputMessage">
+    <wsdl:part name="parameters" element="tns:selece_nature_id_fromhouse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_selece_nature_id_fromhouse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:selece_nature_id_fromhouseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Deletehousenature_InputMessage">
+    <wsdl:part name="parameters" element="tns:Deletehousenature" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Deletehousenature_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletehousenatureResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Selecthousenature_InputMessage">
+    <wsdl:part name="parameters" element="tns:Selecthousenature" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Selecthousenature_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelecthousenatureResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_selecenayureID_InputMessage">
+    <wsdl:part name="parameters" element="tns:selecenayureID" />
+  </wsdl:message>
+  <wsdl:message name="IService1_selecenayureID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:selecenayureIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_checkhousenature_InputMessage">
+    <wsdl:part name="parameters" element="tns:checkhousenature" />
+  </wsdl:message>
+  <wsdl:message name="IService1_checkhousenature_OutputMessage">
+    <wsdl:part name="parameters" element="tns:checkhousenatureResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_selecenatureID_InputMessage">
+    <wsdl:part name="parameters" element="tns:selecenatureID" />
+  </wsdl:message>
+  <wsdl:message name="IService1_selecenatureID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:selecenatureIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Inserthousencommonor_InputMessage">
+    <wsdl:part name="parameters" element="tns:Inserthousencommonor" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Inserthousencommonor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InserthousencommonorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Selecthousecommonor_InputMessage">
+    <wsdl:part name="parameters" element="tns:Selecthousecommonor" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Selecthousecommonor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelecthousecommonorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Selecthousecommonortop1_InputMessage">
+    <wsdl:part name="parameters" element="tns:Selecthousecommonortop1" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Selecthousecommonortop1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Selecthousecommonortop1Response" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Selecthousecommonorid_InputMessage">
+    <wsdl:part name="parameters" element="tns:Selecthousecommonorid" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Selecthousecommonorid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelecthousecommonoridResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Updatacommonor_InputMessage">
+    <wsdl:part name="parameters" element="tns:Updatacommonor" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Updatacommonor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatacommonorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Deletecommonor_InputMessage">
+    <wsdl:part name="parameters" element="tns:Deletecommonor" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Deletecommonor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletecommonorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Inserthouse_InputMessage">
+    <wsdl:part name="parameters" element="tns:Inserthouse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Inserthouse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InserthouseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Updatahouse_InputMessage">
+    <wsdl:part name="parameters" element="tns:Updatahouse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Updatahouse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatahouseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Deletehouse_InputMessage">
+    <wsdl:part name="parameters" element="tns:Deletehouse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Deletehouse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletehouseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Selecthouse_InputMessage">
+    <wsdl:part name="parameters" element="tns:Selecthouse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Selecthouse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelecthouseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Selecthouseid_InputMessage">
+    <wsdl:part name="parameters" element="tns:Selecthouseid" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Selecthouseid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelecthouseidResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Selecthouseiddate_InputMessage">
+    <wsdl:part name="parameters" element="tns:Selecthouseiddate" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Selecthouseiddate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelecthouseiddateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Inserthouselocated_InputMessage">
+    <wsdl:part name="parameters" element="tns:Inserthouselocated" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Inserthouselocated_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InserthouselocatedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Selecthouselocated_InputMessage">
+    <wsdl:part name="parameters" element="tns:Selecthouselocated" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Selecthouselocated_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelecthouselocatedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_selece_located_id_fromhouse_InputMessage">
+    <wsdl:part name="parameters" element="tns:selece_located_id_fromhouse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_selece_located_id_fromhouse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:selece_located_id_fromhouseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_selectlocatedID_InputMessage">
+    <wsdl:part name="parameters" element="tns:selectlocatedID" />
+  </wsdl:message>
+  <wsdl:message name="IService1_selectlocatedID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:selectlocatedIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_selece_located_id_InputMessage">
+    <wsdl:part name="parameters" element="tns:selece_located_id" />
+  </wsdl:message>
+  <wsdl:message name="IService1_selece_located_id_OutputMessage">
+    <wsdl:part name="parameters" element="tns:selece_located_idResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_checkhouselocated_InputMessage">
+    <wsdl:part name="parameters" element="tns:checkhouselocated" />
+  </wsdl:message>
+  <wsdl:message name="IService1_checkhouselocated_OutputMessage">
+    <wsdl:part name="parameters" element="tns:checkhouselocatedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Insertcondition_InputMessage">
+    <wsdl:part name="parameters" element="tns:Insertcondition" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Insertcondition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertconditionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Selectcondition_InputMessage">
+    <wsdl:part name="parameters" element="tns:Selectcondition" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Selectcondition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectconditionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Selectconditionid_InputMessage">
+    <wsdl:part name="parameters" element="tns:Selectconditionid" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Selectconditionid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectconditionidResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Updatacondition_InputMessage">
+    <wsdl:part name="parameters" element="tns:Updatacondition" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Updatacondition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdataconditionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Deletecondition_InputMessage">
+    <wsdl:part name="parameters" element="tns:Deletecondition" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Deletecondition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteconditionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Inserthousedeedtax_InputMessage">
+    <wsdl:part name="parameters" element="tns:Inserthousedeedtax" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Inserthousedeedtax_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InserthousedeedtaxResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Updatehousedeedtax_InputMessage">
+    <wsdl:part name="parameters" element="tns:Updatehousedeedtax" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Updatehousedeedtax_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatehousedeedtaxResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Selecthousedeedtaxid_InputMessage">
+    <wsdl:part name="parameters" element="tns:Selecthousedeedtaxid" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Selecthousedeedtaxid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelecthousedeedtaxidResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Inserthouseobligee_InputMessage">
+    <wsdl:part name="parameters" element="tns:Inserthouseobligee" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Inserthouseobligee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InserthouseobligeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Selectobligee_InputMessage">
+    <wsdl:part name="parameters" element="tns:Selectobligee" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Selectobligee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectobligeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Selectobligeeid_InputMessage">
+    <wsdl:part name="parameters" element="tns:Selectobligeeid" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Selectobligeeid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectobligeeidResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Updataobligee_InputMessage">
+    <wsdl:part name="parameters" element="tns:Updataobligee" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Updataobligee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdataobligeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Deleteobligee_InputMessage">
+    <wsdl:part name="parameters" element="tns:Deleteobligee" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Deleteobligee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteobligeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Inserthouseuseland_InputMessage">
+    <wsdl:part name="parameters" element="tns:Inserthouseuseland" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Inserthouseuseland_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InserthouseuselandResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Updataohouseuseland_InputMessage">
+    <wsdl:part name="parameters" element="tns:Updataohouseuseland" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Updataohouseuseland_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdataohouseuselandResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Selecthouseuselandid_InputMessage">
+    <wsdl:part name="parameters" element="tns:Selecthouseuselandid" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Selecthouseuselandid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelecthouseuselandidResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Selecthousepicture_InputMessage">
+    <wsdl:part name="parameters" element="tns:Selecthousepicture" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Selecthousepicture_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelecthousepictureResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Selecthouselistid_InputMessage">
+    <wsdl:part name="parameters" element="tns:Selecthouselistid" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Selecthouselistid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelecthouselistidResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Selecthouselistobid_InputMessage">
+    <wsdl:part name="parameters" element="tns:Selecthouselistobid" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Selecthouselistobid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelecthouselistobidResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Selecthouselistusid_InputMessage">
+    <wsdl:part name="parameters" element="tns:Selecthouselistusid" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Selecthouselistusid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelecthouselistusidResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Insertland_InputMessage">
+    <wsdl:part name="parameters" element="tns:Insertland" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Insertland_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertlandResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Deleteland_InputMessage">
+    <wsdl:part name="parameters" element="tns:Deleteland" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Deleteland_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletelandResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Updataland_InputMessage">
+    <wsdl:part name="parameters" element="tns:Updataland" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Updataland_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatalandResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Selectland_InputMessage">
+    <wsdl:part name="parameters" element="tns:Selectland" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Selectland_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectlandResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Selectlandpicture_InputMessage">
+    <wsdl:part name="parameters" element="tns:Selectlandpicture" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Selectlandpicture_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectlandpictureResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Selectlandid_InputMessage">
+    <wsdl:part name="parameters" element="tns:Selectlandid" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Selectlandid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectlandidResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Selectlanddateto_edit_InputMessage">
+    <wsdl:part name="parameters" element="tns:Selectlanddateto_edit" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Selectlanddateto_edit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Selectlanddateto_editResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Insertcountryside_InputMessage">
+    <wsdl:part name="parameters" element="tns:Insertcountryside" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Insertcountryside_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertcountrysideResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Selectcountrysideiddate_InputMessage">
+    <wsdl:part name="parameters" element="tns:Selectcountrysideiddate" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Selectcountrysideiddate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectcountrysideiddateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Updatacountryside_InputMessage">
+    <wsdl:part name="parameters" element="tns:Updatacountryside" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Updatacountryside_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatacountrysideResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Insertlandtown_InputMessage">
+    <wsdl:part name="parameters" element="tns:Insertlandtown" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Insertlandtown_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertlandtownResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Updatalandtown_InputMessage">
+    <wsdl:part name="parameters" element="tns:Updatalandtown" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Updatalandtown_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatalandtownResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Selectlandtowniddate_InputMessage">
+    <wsdl:part name="parameters" element="tns:Selectlandtowniddate" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Selectlandtowniddate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectlandtowniddateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Selectlandlistcoid_InputMessage">
+    <wsdl:part name="parameters" element="tns:Selectlandlistcoid" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Selectlandlistcoid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectlandlistcoidResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Selectlandlisttoid_InputMessage">
+    <wsdl:part name="parameters" element="tns:Selectlandlisttoid" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Selectlandlisttoid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectlandlisttoidResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SelectLoginname_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectLoginname" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SelectLoginname_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectLoginnameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Insertlogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:Insertlogin" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Insertlogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertloginResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="Selecthouseinquiry">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Selecthouseinquiry" message="tns:IService1_Selecthouseinquiry_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SelecthouseinquiryResponse" message="tns:IService1_Selecthouseinquiry_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Selectlandinquiry">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Selectlandinquiry" message="tns:IService1_Selectlandinquiry_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SelectlandinquiryResponse" message="tns:IService1_Selectlandinquiry_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="selectconditionhouse_id">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/selectconditionhouse_id" message="tns:IService1_selectconditionhouse_id_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/selectconditionhouse_idResponse" message="tns:IService1_selectconditionhouse_id_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteTest" message="tns:IService1_DeleteTest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteTestResponse" message="tns:IService1_DeleteTest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdataTest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdataTest" message="tns:IService1_UpdataTest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdataTestResponse" message="tns:IService1_UpdataTest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectTest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SelectTest" message="tns:IService1_SelectTest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SelectTestResponse" message="tns:IService1_SelectTest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectLogin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SelectLogin" message="tns:IService1_SelectLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SelectLoginResponse" message="tns:IService1_SelectLogin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpLoadFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpLoadFile" name="UpFile" message="tns:UpFile" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpLoadFileResponse" name="UpFileResult" message="tns:UpFileResult" />
+    </wsdl:operation>
+    <wsdl:operation name="DownLoadFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DownLoadFile" name="DownFile" message="tns:DownFile" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DownLoadFileResponse" name="DownFileResult" message="tns:DownFileResult" />
+    </wsdl:operation>
+    <wsdl:operation name="GetData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataResponse" message="tns:IService1_GetData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUsingDataContract">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContract" message="tns:IService1_GetDataUsingDataContract_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContractResponse" message="tns:IService1_GetDataUsingDataContract_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Inserthousenature">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Inserthousenature" message="tns:IService1_Inserthousenature_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InserthousenatureResponse" message="tns:IService1_Inserthousenature_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="selece_nature_id_fromhouse">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/selece_nature_id_fromhouse" message="tns:IService1_selece_nature_id_fromhouse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/selece_nature_id_fromhouseResponse" message="tns:IService1_selece_nature_id_fromhouse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Deletehousenature">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Deletehousenature" message="tns:IService1_Deletehousenature_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeletehousenatureResponse" message="tns:IService1_Deletehousenature_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Selecthousenature">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Selecthousenature" message="tns:IService1_Selecthousenature_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SelecthousenatureResponse" message="tns:IService1_Selecthousenature_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="selecenayureID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/selecenayureID" message="tns:IService1_selecenayureID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/selecenayureIDResponse" message="tns:IService1_selecenayureID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="checkhousenature">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/checkhousenature" message="tns:IService1_checkhousenature_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/checkhousenatureResponse" message="tns:IService1_checkhousenature_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="selecenatureID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/selecenatureID" message="tns:IService1_selecenatureID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/selecenatureIDResponse" message="tns:IService1_selecenatureID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Inserthousencommonor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Inserthousencommonor" message="tns:IService1_Inserthousencommonor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InserthousencommonorResponse" message="tns:IService1_Inserthousencommonor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Selecthousecommonor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Selecthousecommonor" message="tns:IService1_Selecthousecommonor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SelecthousecommonorResponse" message="tns:IService1_Selecthousecommonor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Selecthousecommonortop1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Selecthousecommonortop1" message="tns:IService1_Selecthousecommonortop1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Selecthousecommonortop1Response" message="tns:IService1_Selecthousecommonortop1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Selecthousecommonorid">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Selecthousecommonorid" message="tns:IService1_Selecthousecommonorid_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SelecthousecommonoridResponse" message="tns:IService1_Selecthousecommonorid_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Updatacommonor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Updatacommonor" message="tns:IService1_Updatacommonor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdatacommonorResponse" message="tns:IService1_Updatacommonor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Deletecommonor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Deletecommonor" message="tns:IService1_Deletecommonor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeletecommonorResponse" message="tns:IService1_Deletecommonor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Inserthouse">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Inserthouse" message="tns:IService1_Inserthouse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InserthouseResponse" message="tns:IService1_Inserthouse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Updatahouse">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Updatahouse" message="tns:IService1_Updatahouse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdatahouseResponse" message="tns:IService1_Updatahouse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Deletehouse">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Deletehouse" message="tns:IService1_Deletehouse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeletehouseResponse" message="tns:IService1_Deletehouse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Selecthouse">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Selecthouse" message="tns:IService1_Selecthouse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SelecthouseResponse" message="tns:IService1_Selecthouse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Selecthouseid">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Selecthouseid" message="tns:IService1_Selecthouseid_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SelecthouseidResponse" message="tns:IService1_Selecthouseid_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Selecthouseiddate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Selecthouseiddate" message="tns:IService1_Selecthouseiddate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SelecthouseiddateResponse" message="tns:IService1_Selecthouseiddate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Inserthouselocated">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Inserthouselocated" message="tns:IService1_Inserthouselocated_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InserthouselocatedResponse" message="tns:IService1_Inserthouselocated_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Selecthouselocated">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Selecthouselocated" message="tns:IService1_Selecthouselocated_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SelecthouselocatedResponse" message="tns:IService1_Selecthouselocated_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="selece_located_id_fromhouse">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/selece_located_id_fromhouse" message="tns:IService1_selece_located_id_fromhouse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/selece_located_id_fromhouseResponse" message="tns:IService1_selece_located_id_fromhouse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="selectlocatedID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/selectlocatedID" message="tns:IService1_selectlocatedID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/selectlocatedIDResponse" message="tns:IService1_selectlocatedID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="selece_located_id">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/selece_located_id" message="tns:IService1_selece_located_id_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/selece_located_idResponse" message="tns:IService1_selece_located_id_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="checkhouselocated">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/checkhouselocated" message="tns:IService1_checkhouselocated_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/checkhouselocatedResponse" message="tns:IService1_checkhouselocated_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Insertcondition">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Insertcondition" message="tns:IService1_Insertcondition_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertconditionResponse" message="tns:IService1_Insertcondition_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Selectcondition">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Selectcondition" message="tns:IService1_Selectcondition_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SelectconditionResponse" message="tns:IService1_Selectcondition_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Selectconditionid">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Selectconditionid" message="tns:IService1_Selectconditionid_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SelectconditionidResponse" message="tns:IService1_Selectconditionid_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Updatacondition">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Updatacondition" message="tns:IService1_Updatacondition_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdataconditionResponse" message="tns:IService1_Updatacondition_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Deletecondition">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Deletecondition" message="tns:IService1_Deletecondition_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteconditionResponse" message="tns:IService1_Deletecondition_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Inserthousedeedtax">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Inserthousedeedtax" message="tns:IService1_Inserthousedeedtax_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InserthousedeedtaxResponse" message="tns:IService1_Inserthousedeedtax_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Updatehousedeedtax">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Updatehousedeedtax" message="tns:IService1_Updatehousedeedtax_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdatehousedeedtaxResponse" message="tns:IService1_Updatehousedeedtax_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Selecthousedeedtaxid">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Selecthousedeedtaxid" message="tns:IService1_Selecthousedeedtaxid_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SelecthousedeedtaxidResponse" message="tns:IService1_Selecthousedeedtaxid_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Inserthouseobligee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Inserthouseobligee" message="tns:IService1_Inserthouseobligee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InserthouseobligeeResponse" message="tns:IService1_Inserthouseobligee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Selectobligee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Selectobligee" message="tns:IService1_Selectobligee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SelectobligeeResponse" message="tns:IService1_Selectobligee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Selectobligeeid">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Selectobligeeid" message="tns:IService1_Selectobligeeid_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SelectobligeeidResponse" message="tns:IService1_Selectobligeeid_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Updataobligee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Updataobligee" message="tns:IService1_Updataobligee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdataobligeeResponse" message="tns:IService1_Updataobligee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Deleteobligee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Deleteobligee" message="tns:IService1_Deleteobligee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteobligeeResponse" message="tns:IService1_Deleteobligee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Inserthouseuseland">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Inserthouseuseland" message="tns:IService1_Inserthouseuseland_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InserthouseuselandResponse" message="tns:IService1_Inserthouseuseland_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Updataohouseuseland">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Updataohouseuseland" message="tns:IService1_Updataohouseuseland_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdataohouseuselandResponse" message="tns:IService1_Updataohouseuseland_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Selecthouseuselandid">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Selecthouseuselandid" message="tns:IService1_Selecthouseuselandid_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SelecthouseuselandidResponse" message="tns:IService1_Selecthouseuselandid_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Selecthousepicture">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Selecthousepicture" message="tns:IService1_Selecthousepicture_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SelecthousepictureResponse" message="tns:IService1_Selecthousepicture_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Selecthouselistid">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Selecthouselistid" message="tns:IService1_Selecthouselistid_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SelecthouselistidResponse" message="tns:IService1_Selecthouselistid_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Selecthouselistobid">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Selecthouselistobid" message="tns:IService1_Selecthouselistobid_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SelecthouselistobidResponse" message="tns:IService1_Selecthouselistobid_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Selecthouselistusid">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Selecthouselistusid" message="tns:IService1_Selecthouselistusid_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SelecthouselistusidResponse" message="tns:IService1_Selecthouselistusid_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Insertland">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Insertland" message="tns:IService1_Insertland_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertlandResponse" message="tns:IService1_Insertland_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Deleteland">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Deleteland" message="tns:IService1_Deleteland_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeletelandResponse" message="tns:IService1_Deleteland_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Updataland">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Updataland" message="tns:IService1_Updataland_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdatalandResponse" message="tns:IService1_Updataland_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Selectland">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Selectland" message="tns:IService1_Selectland_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SelectlandResponse" message="tns:IService1_Selectland_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Selectlandpicture">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Selectlandpicture" message="tns:IService1_Selectlandpicture_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SelectlandpictureResponse" message="tns:IService1_Selectlandpicture_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Selectlandid">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Selectlandid" message="tns:IService1_Selectlandid_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SelectlandidResponse" message="tns:IService1_Selectlandid_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Selectlanddateto_edit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Selectlanddateto_edit" message="tns:IService1_Selectlanddateto_edit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/Selectlanddateto_editResponse" message="tns:IService1_Selectlanddateto_edit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Insertcountryside">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Insertcountryside" message="tns:IService1_Insertcountryside_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertcountrysideResponse" message="tns:IService1_Insertcountryside_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Selectcountrysideiddate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Selectcountrysideiddate" message="tns:IService1_Selectcountrysideiddate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SelectcountrysideiddateResponse" message="tns:IService1_Selectcountrysideiddate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Updatacountryside">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Updatacountryside" message="tns:IService1_Updatacountryside_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdatacountrysideResponse" message="tns:IService1_Updatacountryside_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Insertlandtown">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Insertlandtown" message="tns:IService1_Insertlandtown_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertlandtownResponse" message="tns:IService1_Insertlandtown_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Updatalandtown">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Updatalandtown" message="tns:IService1_Updatalandtown_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdatalandtownResponse" message="tns:IService1_Updatalandtown_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Selectlandtowniddate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Selectlandtowniddate" message="tns:IService1_Selectlandtowniddate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SelectlandtowniddateResponse" message="tns:IService1_Selectlandtowniddate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Selectlandlistcoid">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Selectlandlistcoid" message="tns:IService1_Selectlandlistcoid_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SelectlandlistcoidResponse" message="tns:IService1_Selectlandlistcoid_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Selectlandlisttoid">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Selectlandlisttoid" message="tns:IService1_Selectlandlisttoid_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SelectlandlisttoidResponse" message="tns:IService1_Selectlandlisttoid_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectLoginname">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SelectLoginname" message="tns:IService1_SelectLoginname_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SelectLoginnameResponse" message="tns:IService1_SelectLoginname_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Insertlogin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Insertlogin" message="tns:IService1_Insertlogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertloginResponse" message="tns:IService1_Insertlogin_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Selecthouseinquiry">
+      <soap:operation soapAction="http://tempuri.org/IService1/Selecthouseinquiry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Selectlandinquiry">
+      <soap:operation soapAction="http://tempuri.org/IService1/Selectlandinquiry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectconditionhouse_id">
+      <soap:operation soapAction="http://tempuri.org/IService1/selectconditionhouse_id" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTest">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteTest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdataTest">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdataTest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectTest">
+      <soap:operation soapAction="http://tempuri.org/IService1/SelectTest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectLogin">
+      <soap:operation soapAction="http://tempuri.org/IService1/SelectLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpLoadFile">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpLoadFile" style="document" />
+      <wsdl:input name="UpFile">
+        <soap:header message="tns:UpFile_Headers" part="FileName" use="literal" />
+        <soap:header message="tns:UpFile_Headers" part="FileSize" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="UpFileResult">
+        <soap:header message="tns:UpFileResult_Headers" part="IsSuccess" use="literal" />
+        <soap:header message="tns:UpFileResult_Headers" part="Message" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownLoadFile">
+      <soap:operation soapAction="http://tempuri.org/IService1/DownLoadFile" style="document" />
+      <wsdl:input name="DownFile">
+        <soap:header message="tns:DownFile_Headers" part="FileName" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DownFileResult">
+        <soap:header message="tns:DownFileResult_Headers" part="FileSize" use="literal" />
+        <soap:header message="tns:DownFileResult_Headers" part="IsSuccess" use="literal" />
+        <soap:header message="tns:DownFileResult_Headers" part="Message" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetData">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUsingDataContract">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetDataUsingDataContract" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Inserthousenature">
+      <soap:operation soapAction="http://tempuri.org/IService1/Inserthousenature" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selece_nature_id_fromhouse">
+      <soap:operation soapAction="http://tempuri.org/IService1/selece_nature_id_fromhouse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Deletehousenature">
+      <soap:operation soapAction="http://tempuri.org/IService1/Deletehousenature" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Selecthousenature">
+      <soap:operation soapAction="http://tempuri.org/IService1/Selecthousenature" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selecenayureID">
+      <soap:operation soapAction="http://tempuri.org/IService1/selecenayureID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkhousenature">
+      <soap:operation soapAction="http://tempuri.org/IService1/checkhousenature" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selecenatureID">
+      <soap:operation soapAction="http://tempuri.org/IService1/selecenatureID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Inserthousencommonor">
+      <soap:operation soapAction="http://tempuri.org/IService1/Inserthousencommonor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Selecthousecommonor">
+      <soap:operation soapAction="http://tempuri.org/IService1/Selecthousecommonor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Selecthousecommonortop1">
+      <soap:operation soapAction="http://tempuri.org/IService1/Selecthousecommonortop1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Selecthousecommonorid">
+      <soap:operation soapAction="http://tempuri.org/IService1/Selecthousecommonorid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Updatacommonor">
+      <soap:operation soapAction="http://tempuri.org/IService1/Updatacommonor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Deletecommonor">
+      <soap:operation soapAction="http://tempuri.org/IService1/Deletecommonor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Inserthouse">
+      <soap:operation soapAction="http://tempuri.org/IService1/Inserthouse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Updatahouse">
+      <soap:operation soapAction="http://tempuri.org/IService1/Updatahouse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Deletehouse">
+      <soap:operation soapAction="http://tempuri.org/IService1/Deletehouse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Selecthouse">
+      <soap:operation soapAction="http://tempuri.org/IService1/Selecthouse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Selecthouseid">
+      <soap:operation soapAction="http://tempuri.org/IService1/Selecthouseid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Selecthouseiddate">
+      <soap:operation soapAction="http://tempuri.org/IService1/Selecthouseiddate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Inserthouselocated">
+      <soap:operation soapAction="http://tempuri.org/IService1/Inserthouselocated" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Selecthouselocated">
+      <soap:operation soapAction="http://tempuri.org/IService1/Selecthouselocated" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selece_located_id_fromhouse">
+      <soap:operation soapAction="http://tempuri.org/IService1/selece_located_id_fromhouse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectlocatedID">
+      <soap:operation soapAction="http://tempuri.org/IService1/selectlocatedID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selece_located_id">
+      <soap:operation soapAction="http://tempuri.org/IService1/selece_located_id" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkhouselocated">
+      <soap:operation soapAction="http://tempuri.org/IService1/checkhouselocated" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insertcondition">
+      <soap:operation soapAction="http://tempuri.org/IService1/Insertcondition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Selectcondition">
+      <soap:operation soapAction="http://tempuri.org/IService1/Selectcondition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Selectconditionid">
+      <soap:operation soapAction="http://tempuri.org/IService1/Selectconditionid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Updatacondition">
+      <soap:operation soapAction="http://tempuri.org/IService1/Updatacondition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Deletecondition">
+      <soap:operation soapAction="http://tempuri.org/IService1/Deletecondition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Inserthousedeedtax">
+      <soap:operation soapAction="http://tempuri.org/IService1/Inserthousedeedtax" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Updatehousedeedtax">
+      <soap:operation soapAction="http://tempuri.org/IService1/Updatehousedeedtax" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Selecthousedeedtaxid">
+      <soap:operation soapAction="http://tempuri.org/IService1/Selecthousedeedtaxid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Inserthouseobligee">
+      <soap:operation soapAction="http://tempuri.org/IService1/Inserthouseobligee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Selectobligee">
+      <soap:operation soapAction="http://tempuri.org/IService1/Selectobligee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Selectobligeeid">
+      <soap:operation soapAction="http://tempuri.org/IService1/Selectobligeeid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Updataobligee">
+      <soap:operation soapAction="http://tempuri.org/IService1/Updataobligee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Deleteobligee">
+      <soap:operation soapAction="http://tempuri.org/IService1/Deleteobligee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Inserthouseuseland">
+      <soap:operation soapAction="http://tempuri.org/IService1/Inserthouseuseland" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Updataohouseuseland">
+      <soap:operation soapAction="http://tempuri.org/IService1/Updataohouseuseland" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Selecthouseuselandid">
+      <soap:operation soapAction="http://tempuri.org/IService1/Selecthouseuselandid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Selecthousepicture">
+      <soap:operation soapAction="http://tempuri.org/IService1/Selecthousepicture" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Selecthouselistid">
+      <soap:operation soapAction="http://tempuri.org/IService1/Selecthouselistid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Selecthouselistobid">
+      <soap:operation soapAction="http://tempuri.org/IService1/Selecthouselistobid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Selecthouselistusid">
+      <soap:operation soapAction="http://tempuri.org/IService1/Selecthouselistusid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insertland">
+      <soap:operation soapAction="http://tempuri.org/IService1/Insertland" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Deleteland">
+      <soap:operation soapAction="http://tempuri.org/IService1/Deleteland" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Updataland">
+      <soap:operation soapAction="http://tempuri.org/IService1/Updataland" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Selectland">
+      <soap:operation soapAction="http://tempuri.org/IService1/Selectland" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Selectlandpicture">
+      <soap:operation soapAction="http://tempuri.org/IService1/Selectlandpicture" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Selectlandid">
+      <soap:operation soapAction="http://tempuri.org/IService1/Selectlandid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Selectlanddateto_edit">
+      <soap:operation soapAction="http://tempuri.org/IService1/Selectlanddateto_edit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insertcountryside">
+      <soap:operation soapAction="http://tempuri.org/IService1/Insertcountryside" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Selectcountrysideiddate">
+      <soap:operation soapAction="http://tempuri.org/IService1/Selectcountrysideiddate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Updatacountryside">
+      <soap:operation soapAction="http://tempuri.org/IService1/Updatacountryside" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insertlandtown">
+      <soap:operation soapAction="http://tempuri.org/IService1/Insertlandtown" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Updatalandtown">
+      <soap:operation soapAction="http://tempuri.org/IService1/Updatalandtown" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Selectlandtowniddate">
+      <soap:operation soapAction="http://tempuri.org/IService1/Selectlandtowniddate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Selectlandlistcoid">
+      <soap:operation soapAction="http://tempuri.org/IService1/Selectlandlistcoid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Selectlandlisttoid">
+      <soap:operation soapAction="http://tempuri.org/IService1/Selectlandlisttoid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectLoginname">
+      <soap:operation soapAction="http://tempuri.org/IService1/SelectLoginname" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insertlogin">
+      <soap:operation soapAction="http://tempuri.org/IService1/Insertlogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:6963/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

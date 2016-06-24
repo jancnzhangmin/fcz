@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="400" d:DesignWidth="800">
+             d:DesignHeight="400" d:DesignWidth="1500">
     <Grid>
         <DataGrid AutoGenerateColumns="False" CanUserAddRows="False"   HorizontalAlignment="Stretch"  Name="land_dataGrid" VerticalAlignment="Stretch"  Margin="0,50,0,0" Loaded="land_dataGrid_Loaded" >
             <DataGrid.Columns>
@@ -51,6 +51,20 @@
         <TextBox Height="23" HorizontalAlignment="Left" Margin="103,15,0,0" Name="land_user" VerticalAlignment="Top" Width="120" />
         <Label Content="身份证号" Height="28" HorizontalAlignment="Left" Margin="236,15,0,0" Name="label2" VerticalAlignment="Top" />
         <TextBox Height="23" HorizontalAlignment="Left" Margin="306,15,0,0" Name="land_idcardnumber" VerticalAlignment="Top" Width="120" />
-        <Button Content="查询" Height="23" HorizontalAlignment="Left" Margin="475,10,0,0" Name="land_inquiry" VerticalAlignment="Top" Width="75" Click="land_inquiry_Click" />
+
+        <Label Content="地址" Height="28" HorizontalAlignment="Left" Margin="450,12,0,0" Name="label5" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="500,15,0,0" Name="land_address" VerticalAlignment="Top" Width="120" />
+        <Label Content="开始日期" Height="28" HorizontalAlignment="Left" Margin="659,12,0,0" Name="label6" VerticalAlignment="Top" />
+        <DatePicker Text="1900-1-1" Height="23" HorizontalAlignment="Left" Margin="729,15,0,0" Name="oldtime" VerticalAlignment="Top" Width="120" />
+        <Label Content="发证日期" Height="28" HorizontalAlignment="Left" Margin="883,12,0,0" Name="labe14" VerticalAlignment="Top" />
+        <DatePicker Height="23" HorizontalAlignment="Left" Margin="953,15,0,0" Name="land_send_date" VerticalAlignment="Top" Width="120" />
+        <Button Content="查询" Height="23" HorizontalAlignment="Left" Margin="1413,20,0,0" Name="land_inquiry" VerticalAlignment="Top" Width="75" Click="land_inquiry_Click" />
+
+        <Label Content="城镇用地面积" Height="28" HorizontalAlignment="Left" Margin="35,355,0,0" Name="label3" VerticalAlignment="Bottom" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="147,360,0,0" Name="area_co" Text="TextBlock" VerticalAlignment="Bottom" Width="85" />
+
+        <Label Content="农村土地面积" Height="28" HorizontalAlignment="Left" Margin="250,355,0,0" Name="label4" VerticalAlignment="Bottom" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="364,360,0,0" Name="area_to" Text="TextBlock" VerticalAlignment="Bottom" Width="85" />
+        
     </Grid>
 </UserControl>

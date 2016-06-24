@@ -78,6 +78,35 @@ namespace PocclientApplication.ServiceReference {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference.IService1")]
     public interface IService1 {
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Selecthouseinquiry", ReplyAction="http://tempuri.org/IService1/SelecthouseinquiryResponse")]
+        System.Data.DataSet Selecthouseinquiry(string owner, string idcardnumber, string a2, System.DateTime oldtime, System.DateTime tianfatime);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Selectlandinquiry", ReplyAction="http://tempuri.org/IService1/SelectlandinquiryResponse")]
+        System.Data.DataSet Selectlandinquiry(string user, string idcardnumber, string address, System.DateTime oldtime, System.DateTime send_date);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/selectconditionhouse_id", ReplyAction="http://tempuri.org/IService1/selectconditionhouse_idResponse")]
+        System.Data.DataSet selectconditionhouse_id(string building_structure);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DeleteTest", ReplyAction="http://tempuri.org/IService1/DeleteTestResponse")]
+        int DeleteTest(string strName);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdataTest", ReplyAction="http://tempuri.org/IService1/UpdataTestResponse")]
+        int UpdataTest(string strName, string strSex, int intAge);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SelectTest", ReplyAction="http://tempuri.org/IService1/SelectTestResponse")]
+        System.Data.DataSet SelectTest();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SelectLogin", ReplyAction="http://tempuri.org/IService1/SelectLoginResponse")]
+        int SelectLogin(string login_name, string psw);
+        
+        // CODEGEN: 消息 UpFile 的包装名称(UpFile)以后生成的消息协定与默认值(UpLoadFile)不匹配
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpLoadFile", ReplyAction="http://tempuri.org/IService1/UpLoadFileResponse")]
+        PocclientApplication.ServiceReference.UpFileResult UpLoadFile(PocclientApplication.ServiceReference.UpFile request);
+        
+        // CODEGEN: 消息 DownFile 的包装名称(DownFile)以后生成的消息协定与默认值(DownLoadFile)不匹配
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DownLoadFile", ReplyAction="http://tempuri.org/IService1/DownLoadFileResponse")]
+        PocclientApplication.ServiceReference.DownFileResult DownLoadFile(PocclientApplication.ServiceReference.DownFile request);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetData", ReplyAction="http://tempuri.org/IService1/GetDataResponse")]
         string GetData(int value);
         
@@ -243,6 +272,15 @@ namespace PocclientApplication.ServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Selecthousepicture", ReplyAction="http://tempuri.org/IService1/SelecthousepictureResponse")]
         string Selecthousepicture(int id);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Selecthouselistid", ReplyAction="http://tempuri.org/IService1/SelecthouselistidResponse")]
+        System.Data.DataSet Selecthouselistid(string i);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Selecthouselistobid", ReplyAction="http://tempuri.org/IService1/SelecthouselistobidResponse")]
+        System.Data.DataSet Selecthouselistobid(string i);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Selecthouselistusid", ReplyAction="http://tempuri.org/IService1/SelecthouselistusidResponse")]
+        System.Data.DataSet Selecthouselistusid(string i);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Insertland", ReplyAction="http://tempuri.org/IService1/InsertlandResponse")]
         int Insertland(
                     string land_tile, 
@@ -329,37 +367,17 @@ namespace PocclientApplication.ServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Selectlandtowniddate", ReplyAction="http://tempuri.org/IService1/SelectlandtowniddateResponse")]
         System.Data.DataSet Selectlandtowniddate(int land_id);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Selectlandlistcoid", ReplyAction="http://tempuri.org/IService1/SelectlandlistcoidResponse")]
+        System.Data.DataSet Selectlandlistcoid(string i);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Selectlandlisttoid", ReplyAction="http://tempuri.org/IService1/SelectlandlisttoidResponse")]
+        System.Data.DataSet Selectlandlisttoid(string i);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SelectLoginname", ReplyAction="http://tempuri.org/IService1/SelectLoginnameResponse")]
         string SelectLoginname(string login_name);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Insertlogin", ReplyAction="http://tempuri.org/IService1/InsertloginResponse")]
         int Insertlogin(string name, string login_name, string password, string user_right);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Selecthouseinquiry", ReplyAction="http://tempuri.org/IService1/SelecthouseinquiryResponse")]
-        System.Data.DataSet Selecthouseinquiry(string owner, string idcardnumber);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Selectlandinquiry", ReplyAction="http://tempuri.org/IService1/SelectlandinquiryResponse")]
-        System.Data.DataSet Selectlandinquiry(string user, string idcardnumber);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DeleteTest", ReplyAction="http://tempuri.org/IService1/DeleteTestResponse")]
-        int DeleteTest(string strName);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpdataTest", ReplyAction="http://tempuri.org/IService1/UpdataTestResponse")]
-        int UpdataTest(string strName, string strSex, int intAge);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SelectTest", ReplyAction="http://tempuri.org/IService1/SelectTestResponse")]
-        System.Data.DataSet SelectTest();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SelectLogin", ReplyAction="http://tempuri.org/IService1/SelectLoginResponse")]
-        int SelectLogin(string login_name, string psw);
-        
-        // CODEGEN: 消息 UpFile 的包装名称(UpFile)以后生成的消息协定与默认值(UpLoadFile)不匹配
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpLoadFile", ReplyAction="http://tempuri.org/IService1/UpLoadFileResponse")]
-        PocclientApplication.ServiceReference.UpFileResult UpLoadFile(PocclientApplication.ServiceReference.UpFile request);
-        
-        // CODEGEN: 消息 DownFile 的包装名称(DownFile)以后生成的消息协定与默认值(DownLoadFile)不匹配
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DownLoadFile", ReplyAction="http://tempuri.org/IService1/DownLoadFileResponse")]
-        PocclientApplication.ServiceReference.DownFileResult DownLoadFile(PocclientApplication.ServiceReference.DownFile request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -479,6 +497,64 @@ namespace PocclientApplication.ServiceReference {
         
         public Service1Client(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        public System.Data.DataSet Selecthouseinquiry(string owner, string idcardnumber, string a2, System.DateTime oldtime, System.DateTime tianfatime) {
+            return base.Channel.Selecthouseinquiry(owner, idcardnumber, a2, oldtime, tianfatime);
+        }
+        
+        public System.Data.DataSet Selectlandinquiry(string user, string idcardnumber, string address, System.DateTime oldtime, System.DateTime send_date) {
+            return base.Channel.Selectlandinquiry(user, idcardnumber, address, oldtime, send_date);
+        }
+        
+        public System.Data.DataSet selectconditionhouse_id(string building_structure) {
+            return base.Channel.selectconditionhouse_id(building_structure);
+        }
+        
+        public int DeleteTest(string strName) {
+            return base.Channel.DeleteTest(strName);
+        }
+        
+        public int UpdataTest(string strName, string strSex, int intAge) {
+            return base.Channel.UpdataTest(strName, strSex, intAge);
+        }
+        
+        public System.Data.DataSet SelectTest() {
+            return base.Channel.SelectTest();
+        }
+        
+        public int SelectLogin(string login_name, string psw) {
+            return base.Channel.SelectLogin(login_name, psw);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        PocclientApplication.ServiceReference.UpFileResult PocclientApplication.ServiceReference.IService1.UpLoadFile(PocclientApplication.ServiceReference.UpFile request) {
+            return base.Channel.UpLoadFile(request);
+        }
+        
+        public bool UpLoadFile(string FileName, long FileSize, System.IO.Stream FileStream, out string Message) {
+            PocclientApplication.ServiceReference.UpFile inValue = new PocclientApplication.ServiceReference.UpFile();
+            inValue.FileName = FileName;
+            inValue.FileSize = FileSize;
+            inValue.FileStream = FileStream;
+            PocclientApplication.ServiceReference.UpFileResult retVal = ((PocclientApplication.ServiceReference.IService1)(this)).UpLoadFile(inValue);
+            Message = retVal.Message;
+            return retVal.IsSuccess;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        PocclientApplication.ServiceReference.DownFileResult PocclientApplication.ServiceReference.IService1.DownLoadFile(PocclientApplication.ServiceReference.DownFile request) {
+            return base.Channel.DownLoadFile(request);
+        }
+        
+        public long DownLoadFile(string FileName, out bool IsSuccess, out string Message, out System.IO.Stream FileStream) {
+            PocclientApplication.ServiceReference.DownFile inValue = new PocclientApplication.ServiceReference.DownFile();
+            inValue.FileName = FileName;
+            PocclientApplication.ServiceReference.DownFileResult retVal = ((PocclientApplication.ServiceReference.IService1)(this)).DownLoadFile(inValue);
+            IsSuccess = retVal.IsSuccess;
+            Message = retVal.Message;
+            FileStream = retVal.FileStream;
+            return retVal.FileSize;
         }
         
         public string GetData(int value) {
@@ -690,6 +766,18 @@ namespace PocclientApplication.ServiceReference {
             return base.Channel.Selecthousepicture(id);
         }
         
+        public System.Data.DataSet Selecthouselistid(string i) {
+            return base.Channel.Selecthouselistid(i);
+        }
+        
+        public System.Data.DataSet Selecthouselistobid(string i) {
+            return base.Channel.Selecthouselistobid(i);
+        }
+        
+        public System.Data.DataSet Selecthouselistusid(string i) {
+            return base.Channel.Selecthouselistusid(i);
+        }
+        
         public int Insertland(
                     string land_tile, 
                     string land_word, 
@@ -789,66 +877,20 @@ namespace PocclientApplication.ServiceReference {
             return base.Channel.Selectlandtowniddate(land_id);
         }
         
+        public System.Data.DataSet Selectlandlistcoid(string i) {
+            return base.Channel.Selectlandlistcoid(i);
+        }
+        
+        public System.Data.DataSet Selectlandlisttoid(string i) {
+            return base.Channel.Selectlandlisttoid(i);
+        }
+        
         public string SelectLoginname(string login_name) {
             return base.Channel.SelectLoginname(login_name);
         }
         
         public int Insertlogin(string name, string login_name, string password, string user_right) {
             return base.Channel.Insertlogin(name, login_name, password, user_right);
-        }
-        
-        public System.Data.DataSet Selecthouseinquiry(string owner, string idcardnumber) {
-            return base.Channel.Selecthouseinquiry(owner, idcardnumber);
-        }
-        
-        public System.Data.DataSet Selectlandinquiry(string user, string idcardnumber) {
-            return base.Channel.Selectlandinquiry(user, idcardnumber);
-        }
-        
-        public int DeleteTest(string strName) {
-            return base.Channel.DeleteTest(strName);
-        }
-        
-        public int UpdataTest(string strName, string strSex, int intAge) {
-            return base.Channel.UpdataTest(strName, strSex, intAge);
-        }
-        
-        public System.Data.DataSet SelectTest() {
-            return base.Channel.SelectTest();
-        }
-        
-        public int SelectLogin(string login_name, string psw) {
-            return base.Channel.SelectLogin(login_name, psw);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        PocclientApplication.ServiceReference.UpFileResult PocclientApplication.ServiceReference.IService1.UpLoadFile(PocclientApplication.ServiceReference.UpFile request) {
-            return base.Channel.UpLoadFile(request);
-        }
-        
-        public bool UpLoadFile(string FileName, long FileSize, System.IO.Stream FileStream, out string Message) {
-            PocclientApplication.ServiceReference.UpFile inValue = new PocclientApplication.ServiceReference.UpFile();
-            inValue.FileName = FileName;
-            inValue.FileSize = FileSize;
-            inValue.FileStream = FileStream;
-            PocclientApplication.ServiceReference.UpFileResult retVal = ((PocclientApplication.ServiceReference.IService1)(this)).UpLoadFile(inValue);
-            Message = retVal.Message;
-            return retVal.IsSuccess;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        PocclientApplication.ServiceReference.DownFileResult PocclientApplication.ServiceReference.IService1.DownLoadFile(PocclientApplication.ServiceReference.DownFile request) {
-            return base.Channel.DownLoadFile(request);
-        }
-        
-        public long DownLoadFile(string FileName, out bool IsSuccess, out string Message, out System.IO.Stream FileStream) {
-            PocclientApplication.ServiceReference.DownFile inValue = new PocclientApplication.ServiceReference.DownFile();
-            inValue.FileName = FileName;
-            PocclientApplication.ServiceReference.DownFileResult retVal = ((PocclientApplication.ServiceReference.IService1)(this)).DownLoadFile(inValue);
-            IsSuccess = retVal.IsSuccess;
-            Message = retVal.Message;
-            FileStream = retVal.FileStream;
-            return retVal.FileSize;
         }
     }
 }
