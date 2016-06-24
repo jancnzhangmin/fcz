@@ -290,7 +290,7 @@
               <TextRun>
                 <Value>=First(Fields!commonor.Value, "DataSet1")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -321,7 +321,7 @@
               <TextRun>
                 <Value>=First(Fields!share.Value, "DataSet1")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -353,7 +353,7 @@
               <TextRun>
                 <Value>=First(Fields!number.Value, "DataSet1")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -385,7 +385,7 @@
               <TextRun>
                 <Value>=First(Fields!comments.Value, "DataSet1")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -449,7 +449,7 @@
               <TextRun>
                 <Value>=First(Fields!price.Value, "DataSet2")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -481,7 +481,7 @@
               <TextRun>
                 <Value>=First(Fields!type.Value, "DataSet2")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -513,7 +513,7 @@
               <TextRun>
                 <Value>=First(Fields!tax_rate.Value, "DataSet2")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -545,7 +545,7 @@
               <TextRun>
                 <Value>=First(Fields!amount_money.Value, "DataSet2")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -577,7 +577,7 @@
               <TextRun>
                 <Value>=First(Fields!remarks.Value, "DataSet2")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -609,7 +609,7 @@
               <TextRun>
                 <Value>=First(Fields!obligee.Value, "DataSet3")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -641,7 +641,7 @@
               <TextRun>
                 <Value>=First(Fields!type.Value, "DataSet3")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -673,7 +673,7 @@
               <TextRun>
                 <Value>=First(Fields!room_number.Value, "DataSet3")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -705,7 +705,7 @@
               <TextRun>
                 <Value>=First(Fields!jianshu.Value, "DataSet3")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -737,7 +737,7 @@
               <TextRun>
                 <Value>=First(Fields!built_up_area.Value, "DataSet3")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -769,7 +769,7 @@
               <TextRun>
                 <Value>=First(Fields!right_value.Value, "DataSet3")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -801,7 +801,7 @@
               <TextRun>
                 <Value>=First(Fields!duration_right.Value, "DataSet3")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -865,7 +865,7 @@
               <TextRun>
                 <Value>=First(Fields!use_area.Value, "DataSet4")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -896,9 +896,7 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!company.Value, "DataSet4")</Value>
-                <Style>
-                  <FontSize>8pt</FontSize>
-                </Style>
+                <Style />
               </TextRun>
             </TextRuns>
             <Style />
@@ -929,7 +927,7 @@
               <TextRun>
                 <Value>=First(Fields!card_number.Value, "DataSet4")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -960,9 +958,7 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!zidihao.Value, "DataSet4")</Value>
-                <Style>
-                  <FontSize>8pt</FontSize>
-                </Style>
+                <Style />
               </TextRun>
             </TextRuns>
             <Style />
@@ -988,10 +984,10 @@
         <Source>External</Source>
         <Value>=Parameters!LogoUrl.Value</Value>
         <Sizing>FitProportional</Sizing>
-        <Top>3.4925cm</Top>
+        <Top>6.25475cm</Top>
         <Left>14.38487cm</Left>
         <Height>15.38972cm</Height>
-        <Width>10.36354cm</Width>
+        <Width>7.92937cm</Width>
         <ZIndex>22</ZIndex>
         <Style>
           <Border>

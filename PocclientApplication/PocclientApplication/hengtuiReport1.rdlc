@@ -142,8 +142,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>land_tile</rd:DefaultName>
-        <Top>1.96268cm</Top>
-        <Left>19.18442cm</Left>
+        <Top>1.20068cm</Top>
+        <Left>13.40592cm</Left>
         <Height>0.6cm</Height>
         <Width>1.52104cm</Width>
         <Style>
@@ -173,8 +173,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>land_word</rd:DefaultName>
-        <Top>1.96268cm</Top>
-        <Left>22.51143cm</Left>
+        <Top>1.20068cm</Top>
+        <Left>15.84393cm</Left>
         <Height>0.6cm</Height>
         <Width>1.57396cm</Width>
         <ZIndex>1</ZIndex>
@@ -205,8 +205,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>land_number</rd:DefaultName>
-        <Top>1.96268cm</Top>
-        <Left>26.37845cm</Left>
+        <Top>1.20068cm</Top>
+        <Left>18.5362cm</Left>
         <Height>0.6cm</Height>
         <Width>1.57396cm</Width>
         <ZIndex>2</ZIndex>

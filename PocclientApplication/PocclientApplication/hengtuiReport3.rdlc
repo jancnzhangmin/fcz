@@ -142,8 +142,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>land_area</rd:DefaultName>
-        <Top>3.39725cm</Top>
-        <Left>22.23179cm</Left>
+        <Top>2.3495cm</Top>
+        <Left>16.19929cm</Left>
         <Height>0.6cm</Height>
         <Width>5.41042cm</Width>
         <Style>
@@ -173,8 +173,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>built_up_area</rd:DefaultName>
-        <Top>4.26183cm</Top>
-        <Left>22.23179cm</Left>
+        <Top>3.21408cm</Top>
+        <Left>16.19929cm</Left>
         <Height>0.6cm</Height>
         <Width>5.41042cm</Width>
         <ZIndex>1</ZIndex>
@@ -205,8 +205,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>common_area</rd:DefaultName>
-        <Top>5.03822cm</Top>
-        <Left>22.23179cm</Left>
+        <Top>3.99047cm</Top>
+        <Left>16.19929cm</Left>
         <Height>0.6cm</Height>
         <Width>5.41042cm</Width>
         <ZIndex>2</ZIndex>
@@ -237,8 +237,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>sharing_area</rd:DefaultName>
-        <Top>5.81461cm</Top>
-        <Left>22.23179cm</Left>
+        <Top>4.76686cm</Top>
+        <Left>16.19929cm</Left>
         <Height>0.6cm</Height>
         <Width>5.41042cm</Width>
         <ZIndex>3</ZIndex>
@@ -269,8 +269,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>land_grade</rd:DefaultName>
-        <Top>6.59099cm</Top>
-        <Left>22.23179cm</Left>
+        <Top>5.54324cm</Top>
+        <Left>16.19929cm</Left>
         <Height>0.6cm</Height>
         <Width>5.41042cm</Width>
         <ZIndex>4</ZIndex>
@@ -333,8 +333,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>cultivated_land</rd:DefaultName>
-        <Top>11.5376cm</Top>
-        <Left>20.6443cm</Left>
+        <Top>11.44235cm</Top>
+        <Left>20.93006cm</Left>
         <Height>0.6cm</Height>
         <Width>1.865cm</Width>
         <ZIndex>6</ZIndex>
@@ -365,8 +365,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>dry_land</rd:DefaultName>
-        <Top>12.63149cm</Top>
-        <Left>20.6443cm</Left>
+        <Top>12.37749cm</Top>
+        <Left>20.93006cm</Left>
         <Height>0.6cm</Height>
         <Width>1.83854cm</Width>
         <ZIndex>7</ZIndex>
@@ -397,8 +397,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>paddy_field</rd:DefaultName>
-        <Top>13.40788cm</Top>
-        <Left>20.6443cm</Left>
+        <Top>13.31263cm</Top>
+        <Left>20.93006cm</Left>
         <Height>0.6cm</Height>
         <Width>1.81208cm</Width>
         <ZIndex>8</ZIndex>
@@ -429,8 +429,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>orchard</rd:DefaultName>
-        <Top>14.50177cm</Top>
-        <Left>20.61784cm</Left>
+        <Top>14.31127cm</Top>
+        <Left>20.9036cm</Left>
         <Height>0.6cm</Height>
         <Width>1.83854cm</Width>
         <ZIndex>9</ZIndex>
@@ -461,8 +461,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>forest_land</rd:DefaultName>
-        <Top>15.27815cm</Top>
-        <Left>20.59138cm</Left>
+        <Top>15.34165cm</Top>
+        <Left>20.87714cm</Left>
         <Height>0.6cm</Height>
         <Width>1.865cm</Width>
         <ZIndex>10</ZIndex>
@@ -493,8 +493,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>grassland</rd:DefaultName>
-        <Top>16.43371cm</Top>
-        <Left>20.59138cm</Left>
+        <Top>16.33846cm</Top>
+        <Left>20.87714cm</Left>
         <Height>0.6cm</Height>
         <Width>1.865cm</Width>
         <ZIndex>11</ZIndex>
@@ -526,7 +526,7 @@
         </Paragraphs>
         <rd:DefaultName>inmate_mining</rd:DefaultName>
         <Top>11.5376cm</Top>
-        <Left>25.38033cm</Left>
+        <Left>25.57084cm</Left>
         <Height>0.6cm</Height>
         <Width>2.26188cm</Width>
         <ZIndex>12</ZIndex>
@@ -558,7 +558,7 @@
         </Paragraphs>
         <rd:DefaultName>construction_land</rd:DefaultName>
         <Top>12.63149cm</Top>
-        <Left>25.38033cm</Left>
+        <Left>25.57084cm</Left>
         <Height>0.6cm</Height>
         <Width>2.26188cm</Width>
         <ZIndex>13</ZIndex>
@@ -590,7 +590,7 @@
         </Paragraphs>
         <rd:DefaultName>homestead_land</rd:DefaultName>
         <Top>13.40788cm</Top>
-        <Left>25.38033cm</Left>
+        <Left>25.57084cm</Left>
         <Height>0.6cm</Height>
         <Width>2.26188cm</Width>
         <ZIndex>14</ZIndex>
@@ -622,7 +622,7 @@
         </Paragraphs>
         <rd:DefaultName>traffic_land</rd:DefaultName>
         <Top>14.43121cm</Top>
-        <Left>25.38033cm</Left>
+        <Left>25.57084cm</Left>
         <Height>0.6cm</Height>
         <Width>2.26188cm</Width>
         <ZIndex>15</ZIndex>
@@ -654,7 +654,7 @@
         </Paragraphs>
         <rd:DefaultName>water_land</rd:DefaultName>
         <Top>15.24288cm</Top>
-        <Left>25.38033cm</Left>
+        <Left>25.57084cm</Left>
         <Height>0.6cm</Height>
         <Width>2.26188cm</Width>
         <ZIndex>16</ZIndex>
@@ -686,7 +686,7 @@
         </Paragraphs>
         <rd:DefaultName>unused_land</rd:DefaultName>
         <Top>16.43371cm</Top>
-        <Left>25.38033cm</Left>
+        <Left>25.57084cm</Left>
         <Height>0.6cm</Height>
         <Width>2.26188cm</Width>
         <ZIndex>17</ZIndex>

@@ -158,7 +158,7 @@
               <TextRun>
                 <Value>=First(Fields!house_word.Value, "DataSet1")</Value>
                 <Style>
-                  <FontSize>13pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -166,8 +166,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>house_word</rd:DefaultName>
-        <Top>2.76966cm</Top>
-        <Left>9.27841cm</Left>
+        <Top>2.29341cm</Top>
+        <Left>6.42091cm</Left>
         <Height>0.6cm</Height>
         <Width>1.56514cm</Width>
         <Style>
@@ -189,7 +189,7 @@
               <TextRun>
                 <Value>=First(Fields!house_number.Value, "DataSet1")</Value>
                 <Style>
-                  <FontSize>13pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -197,8 +197,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>house_number</rd:DefaultName>
-        <Top>2.76966cm</Top>
-        <Left>10.98466cm</Left>
+        <Top>2.29341cm</Top>
+        <Left>8.06366cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>1</ZIndex>
@@ -221,7 +221,7 @@
               <TextRun>
                 <Value>=First(Fields!house_owner.Value, "DataSet1")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -229,8 +229,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>house_owner</rd:DefaultName>
-        <Top>4.28837cm</Top>
-        <Left>1.69545cm</Left>
+        <Top>3.17712cm</Top>
+        <Left>0.61595cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>2</ZIndex>
@@ -253,15 +253,15 @@
               <TextRun>
                 <Value>=Parameters!nature.Value</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
-        <Top>4.28837cm</Top>
-        <Left>7.21113cm</Left>
+        <Top>3.17712cm</Top>
+        <Left>5.17913cm</Left>
         <Height>0.6cm</Height>
         <Width>5.67028cm</Width>
         <ZIndex>3</ZIndex>
@@ -284,7 +284,7 @@
               <TextRun>
                 <Value>=Parameters!commonor.Value</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -292,8 +292,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox6</rd:DefaultName>
-        <Top>5.46312cm</Top>
-        <Left>1.69545cm</Left>
+        <Top>4.03437cm</Top>
+        <Left>0.61595cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>4</ZIndex>
@@ -322,8 +322,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>house_idcardnumber</rd:DefaultName>
-        <Top>5.46312cm</Top>
-        <Left>7.21113cm</Left>
+        <Top>3.93912cm</Top>
+        <Left>5.17913cm</Left>
         <Height>0.6cm</Height>
         <Width>2.12304cm</Width>
         <ZIndex>5</ZIndex>
@@ -346,7 +346,7 @@
               <TextRun>
                 <Value>=Parameters!located.Value</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -354,8 +354,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox8</rd:DefaultName>
-        <Top>6.8019cm</Top>
-        <Left>1.69545cm</Left>
+        <Top>4.8334cm</Top>
+        <Left>0.61595cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>6</ZIndex>
@@ -378,7 +378,7 @@
               <TextRun>
                 <Value>=First(Fields!house_dihao.Value, "DataSet1")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -386,8 +386,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>house_dihao</rd:DefaultName>
-        <Top>6.8019cm</Top>
-        <Left>7.21113cm</Left>
+        <Top>4.8334cm</Top>
+        <Left>5.17913cm</Left>
         <Height>0.6cm</Height>
         <Width>5.67028cm</Width>
         <ZIndex>7</ZIndex>
@@ -410,7 +410,7 @@
               <TextRun>
                 <Value>=First(Fields!building_number.Value, "DataSet2")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -418,8 +418,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>building_number</rd:DefaultName>
-        <Top>8.84448cm</Top>
-        <Left>0.53128cm</Left>
+        <Top>6.78073cm</Top>
         <Height>0.6cm</Height>
         <Width>0.93896cm</Width>
         <ZIndex>8</ZIndex>
@@ -442,7 +441,7 @@
               <TextRun>
                 <Value>=First(Fields!room_number.Value, "DataSet2")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -450,8 +449,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>room_number</rd:DefaultName>
-        <Top>8.84448cm</Top>
-        <Left>2.17933cm</Left>
+        <Top>6.78073cm</Top>
+        <Left>0.94108cm</Left>
         <Height>0.6cm</Height>
         <Width>0.93896cm</Width>
         <ZIndex>9</ZIndex>
@@ -474,7 +473,7 @@
               <TextRun>
                 <Value>=First(Fields!jianshu.Value, "DataSet2")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -482,8 +481,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>jianshu</rd:DefaultName>
-        <Top>8.84448cm</Top>
-        <Left>3.18884cm</Left>
+        <Top>6.78073cm</Top>
+        <Left>2.01409cm</Left>
         <Height>0.6cm</Height>
         <Width>1.09771cm</Width>
         <ZIndex>10</ZIndex>
@@ -506,7 +505,7 @@
               <TextRun>
                 <Value>=First(Fields!building_structure.Value, "DataSet2")</Value>
                 <Style>
-                  <FontSize>14pt</FontSize>
+                  <FontSize>11pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -514,10 +513,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>building_structure</rd:DefaultName>
-        <Top>8.84448cm</Top>
-        <Left>4.46295cm</Left>
+        <Top>6.78073cm</Top>
+        <Left>3.12679cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.88275cm</Width>
+        <Width>2.06696cm</Width>
         <ZIndex>11</ZIndex>
         <Style>
           <Border>
@@ -538,7 +537,7 @@
               <TextRun>
                 <Value>=First(Fields!cengshu.Value, "DataSet2")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -546,10 +545,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>cengshu</rd:DefaultName>
-        <Top>8.84448cm</Top>
-        <Left>7.52209cm</Left>
+        <Top>6.78073cm</Top>
+        <Left>5.24667cm</Left>
         <Height>0.6cm</Height>
-        <Width>1.12417cm</Width>
+        <Width>0.95219cm</Width>
         <ZIndex>12</ZIndex>
         <Style>
           <Border>
@@ -570,7 +569,7 @@
               <TextRun>
                 <Value>=First(Fields!built_up_area.Value, "DataSet2")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -578,10 +577,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>built_up_area</rd:DefaultName>
-        <Top>8.84448cm</Top>
-        <Left>8.78737cm</Left>
+        <Top>6.78073cm</Top>
+        <Left>6.34262cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.34125cm</Width>
+        <Width>2.02375cm</Width>
         <ZIndex>13</ZIndex>
         <Style>
           <Border>
@@ -602,7 +601,7 @@
               <TextRun>
                 <Value>=First(Fields!remarks.Value, "DataSet2")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -610,8 +609,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>remarks</rd:DefaultName>
-        <Top>8.84448cm</Top>
-        <Left>11.54842cm</Left>
+        <Top>6.78073cm</Top>
+        <Left>8.40517cm</Left>
         <Height>0.6cm</Height>
         <Width>1.96799cm</Width>
         <ZIndex>14</ZIndex>
@@ -634,7 +633,7 @@
               <TextRun>
                 <Value>=First(Fields!house_postscript.Value, "DataSet1")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -642,8 +641,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>house_postscript</rd:DefaultName>
-        <Top>16.39039cm</Top>
-        <Left>2.36983cm</Left>
+        <Top>12.83439cm</Top>
+        <Left>1.32208cm</Left>
         <Height>0.6cm</Height>
         <Width>9.90833cm</Width>
         <ZIndex>15</ZIndex>
@@ -666,7 +665,7 @@
               <TextRun>
                 <Value>=First(Fields!house_witness.Value, "DataSet1")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -674,8 +673,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>house_witness</rd:DefaultName>
-        <Top>17.39581cm</Top>
-        <Left>2.36983cm</Left>
+        <Top>13.83981cm</Top>
+        <Left>1.32208cm</Left>
         <Height>0.6cm</Height>
         <Width>4.12215cm</Width>
         <ZIndex>16</ZIndex>
@@ -698,7 +697,7 @@
               <TextRun>
                 <Value>=First(Fields!house_proofreader.Value, "DataSet1")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -706,8 +705,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>house_proofreader</rd:DefaultName>
-        <Top>17.39581cm</Top>
-        <Left>6.6331cm</Left>
+        <Top>13.83981cm</Top>
+        <Left>5.58535cm</Left>
         <Height>0.6cm</Height>
         <Width>5.64507cm</Width>
         <ZIndex>17</ZIndex>
@@ -730,7 +729,7 @@
               <TextRun>
                 <Value>=First(Fields!house_autograph.Value, "DataSet1")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -738,8 +737,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>house_autograph</rd:DefaultName>
-        <Top>18.24248cm</Top>
-        <Left>2.36983cm</Left>
+        <Top>14.68648cm</Top>
+        <Left>1.32208cm</Left>
         <Height>0.6cm</Height>
         <Width>4.12215cm</Width>
         <ZIndex>18</ZIndex>
@@ -762,7 +761,7 @@
               <TextRun>
                 <Value>=CDate(First(Fields!house_licensing_date.Value, "DataSet1")).ToString("yyyy年MM月dd日")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -770,8 +769,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>house_licensing_date</rd:DefaultName>
-        <Top>18.24248cm</Top>
-        <Left>6.66838cm</Left>
+        <Top>14.68648cm</Top>
+        <Left>5.62063cm</Left>
         <Height>0.6cm</Height>
         <Width>5.60979cm</Width>
         <ZIndex>19</ZIndex>

@@ -142,8 +142,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>land_remarks</rd:DefaultName>
-        <Top>3.48403cm</Top>
-        <Left>1.28799cm</Left>
+        <Top>1.26153cm</Top>
+        <Left>0.97049cm</Left>
         <Height>14.09375cm</Height>
         <Width>10.78146cm</Width>
         <Style>
@@ -173,8 +173,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>land_change_items</rd:DefaultName>
-        <Top>3.48403cm</Top>
-        <Left>14.51716cm</Left>
+        <Top>1.26153cm</Top>
+        <Left>14.19966cm</Left>
         <Height>14.09375cm</Height>
         <Width>10.86083cm</Width>
         <ZIndex>1</ZIndex>
