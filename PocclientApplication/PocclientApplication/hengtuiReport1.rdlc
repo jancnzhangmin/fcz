@@ -134,7 +134,7 @@
               <TextRun>
                 <Value>=First(Fields!land_tile.Value, "DataSet1")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -165,7 +165,7 @@
               <TextRun>
                 <Value>=First(Fields!land_word.Value, "DataSet1")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -197,7 +197,7 @@
               <TextRun>
                 <Value>=First(Fields!land_number.Value, "DataSet1")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>

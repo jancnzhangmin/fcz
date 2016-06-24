@@ -103,6 +103,10 @@ namespace PocclientApplication
         private void house_inquiry_Click(object sender, RoutedEventArgs e)
         {
             house_dataGrid.ItemsSource = client.Selecthouseinquiry(house_owner.Text, idcardnumber.Text).Tables[0].DefaultView;
+
+
+
+
         }
     }
 }

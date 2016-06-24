@@ -246,7 +246,7 @@
               <TextRun>
                 <Value>=First(Fields!land_user.Value, "DataSet1")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -277,7 +277,7 @@
               <TextRun>
                 <Value>=First(Fields!land_address.Value, "DataSet1")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -341,7 +341,7 @@
               <TextRun>
                 <Value>=First(Fields!land_map.Value, "DataSet1")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -373,7 +373,7 @@
               <TextRun>
                 <Value>=First(Fields!land_ground.Value, "DataSet1")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -405,7 +405,7 @@
               <TextRun>
                 <Value>=First(Fields!land_use.Value, "DataSet1")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -437,7 +437,7 @@
               <TextRun>
                 <Value>=First(Fields!land_use_period.Value, "DataSet1")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -469,7 +469,7 @@
               <TextRun>
                 <Value>=First(Fields!land_east.Value, "DataSet1")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -501,7 +501,7 @@
               <TextRun>
                 <Value>=First(Fields!land_south.Value, "DataSet1")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -533,7 +533,7 @@
               <TextRun>
                 <Value>=First(Fields!land_west.Value, "DataSet1")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -565,7 +565,7 @@
               <TextRun>
                 <Value>=First(Fields!land_north.Value, "DataSet1")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -597,7 +597,7 @@
               <TextRun>
                 <Value>=First(Fields!land_office.Value, "DataSet1")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -629,7 +629,7 @@
               <TextRun>
                 <Value>=CDate(First(Fields!land_date.Value, "DataSet1")).ToString("yyyy")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -661,7 +661,7 @@
               <TextRun>
                 <Value>=CDate(First(Fields!land_date.Value, "DataSet1")).ToString("MM")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -693,7 +693,7 @@
               <TextRun>
                 <Value>=CDate(First(Fields!land_date.Value, "DataSet1")).ToString("dd")</Value>
                 <Style>
-                  <FontSize>18pt</FontSize>
+                  <FontSize>14pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
