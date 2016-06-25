@@ -16,7 +16,7 @@
                 
             </MenuItem>
             <MenuItem Header="系统">
-                <MenuItem Header="注册" x:Name="register" Click="register_Click"></MenuItem>
+                <MenuItem Header="用户注册" x:Name="register" Click="register_Click"></MenuItem>
             </MenuItem>
             <MenuItem x:Name="help" Header="帮助" Click="help_Click">
                 <MenuItem Header="关于" x:Name="memuabout" Click="memuabout_Click"></MenuItem>

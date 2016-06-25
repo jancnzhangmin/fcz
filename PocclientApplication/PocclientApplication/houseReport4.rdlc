@@ -873,10 +873,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>use_area</rd:DefaultName>
-        <Top>16.28938cm</Top>
-        <Left>1.6064cm</Left>
+        <Top>15.65438cm</Top>
+        <Left>0.0189cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.80868cm</Width>
+        <Width>1.17179cm</Width>
         <ZIndex>18</ZIndex>
         <Style>
           <Border>
@@ -903,8 +903,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>company</rd:DefaultName>
-        <Top>16.28938cm</Top>
-        <Left>4.55619cm</Left>
+        <Top>15.65438cm</Top>
+        <Left>1.19069cm</Left>
         <Height>0.6cm</Height>
         <Width>1.56515cm</Width>
         <ZIndex>19</ZIndex>
@@ -935,8 +935,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>card_number</rd:DefaultName>
-        <Top>16.28938cm</Top>
-        <Left>6.19189cm</Left>
+        <Top>15.65438cm</Top>
+        <Left>2.76289cm</Left>
         <Height>0.6cm</Height>
         <Width>2.7775cm</Width>
         <ZIndex>20</ZIndex>
@@ -965,8 +965,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>zidihao</rd:DefaultName>
-        <Top>16.28938cm</Top>
-        <Left>9.07522cm</Left>
+        <Top>15.65438cm</Top>
+        <Left>6.47172cm</Left>
         <Height>0.6cm</Height>
         <Width>4.16216cm</Width>
         <ZIndex>21</ZIndex>
@@ -987,7 +987,7 @@
         <Top>6.25475cm</Top>
         <Left>14.38487cm</Left>
         <Height>15.38972cm</Height>
-        <Width>7.92937cm</Width>
+        <Width>7.24145cm</Width>
         <ZIndex>22</ZIndex>
         <Style>
           <Border>

@@ -293,6 +293,8 @@ where T : DependencyObject
         {
             C1.WPF.C1Window cabout = new C1.WPF.C1Window();
             cabout.IsResizable = false;
+            cabout.Width = 636;
+            cabout.Height = 368;
             cabout.Margin = new Thickness(SystemParameters.PrimaryScreenWidth / 2d - 318, SystemParameters.PrimaryScreenHeight / 2d - 174, 0, 0);
             about ccabout = new about();
             cabout.Content = ccabout;

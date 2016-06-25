@@ -106,7 +106,7 @@ namespace PocclientApplication
             newland.Width = 1000;
             newland.Height = 800;
             newland.Header = "使用土地编辑";
-            newland.Margin = new Thickness(SystemParameters.PrimaryScreenWidth / 2d - 400, SystemParameters.PrimaryScreenHeight / 2d - 230, 0, 0);
+            newland.Margin = new Thickness(SystemParameters.PrimaryScreenWidth / 2d - 500, SystemParameters.PrimaryScreenHeight / 2d - 400, 0, 0);
             newland.Show();
             newland.ShowMaximizeButton = false;
             newland.ShowMinimizeButton = false;

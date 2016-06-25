@@ -198,7 +198,7 @@
         </Paragraphs>
         <rd:DefaultName>house_number</rd:DefaultName>
         <Top>2.29341cm</Top>
-        <Left>8.06366cm</Left>
+        <Left>7.96841cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>1</ZIndex>
@@ -261,7 +261,7 @@
           </Paragraph>
         </Paragraphs>
         <Top>3.17712cm</Top>
-        <Left>5.17913cm</Left>
+        <Left>4.89338cm</Left>
         <Height>0.6cm</Height>
         <Width>5.67028cm</Width>
         <ZIndex>3</ZIndex>
@@ -323,7 +323,7 @@
         </Paragraphs>
         <rd:DefaultName>house_idcardnumber</rd:DefaultName>
         <Top>3.93912cm</Top>
-        <Left>5.17913cm</Left>
+        <Left>4.89338cm</Left>
         <Height>0.6cm</Height>
         <Width>2.12304cm</Width>
         <ZIndex>5</ZIndex>
@@ -354,7 +354,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox8</rd:DefaultName>
-        <Top>4.8334cm</Top>
+        <Top>4.92865cm</Top>
         <Left>0.61595cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
@@ -387,7 +387,7 @@
         </Paragraphs>
         <rd:DefaultName>house_dihao</rd:DefaultName>
         <Top>4.8334cm</Top>
-        <Left>5.17913cm</Left>
+        <Left>4.89338cm</Left>
         <Height>0.6cm</Height>
         <Width>5.67028cm</Width>
         <ZIndex>7</ZIndex>
@@ -504,9 +504,7 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!building_structure.Value, "DataSet2")</Value>
-                <Style>
-                  <FontSize>11pt</FontSize>
-                </Style>
+                <Style />
               </TextRun>
             </TextRuns>
             <Style />
@@ -514,9 +512,9 @@
         </Paragraphs>
         <rd:DefaultName>building_structure</rd:DefaultName>
         <Top>6.78073cm</Top>
-        <Left>3.12679cm</Left>
+        <Left>2.88426cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.06696cm</Width>
+        <Width>2.26716cm</Width>
         <ZIndex>11</ZIndex>
         <Style>
           <Border>
@@ -641,8 +639,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>house_postscript</rd:DefaultName>
-        <Top>12.83439cm</Top>
-        <Left>1.32208cm</Left>
+        <Top>13.12014cm</Top>
+        <Left>1.22683cm</Left>
         <Height>0.6cm</Height>
         <Width>9.90833cm</Width>
         <ZIndex>15</ZIndex>
@@ -673,8 +671,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>house_witness</rd:DefaultName>
-        <Top>13.83981cm</Top>
-        <Left>1.32208cm</Left>
+        <Top>14.12556cm</Top>
+        <Left>1.22683cm</Left>
         <Height>0.6cm</Height>
         <Width>4.12215cm</Width>
         <ZIndex>16</ZIndex>
@@ -705,8 +703,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>house_proofreader</rd:DefaultName>
-        <Top>13.83981cm</Top>
-        <Left>5.58535cm</Left>
+        <Top>14.12556cm</Top>
+        <Left>5.4901cm</Left>
         <Height>0.6cm</Height>
         <Width>5.64507cm</Width>
         <ZIndex>17</ZIndex>
@@ -737,8 +735,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>house_autograph</rd:DefaultName>
-        <Top>14.68648cm</Top>
-        <Left>1.32208cm</Left>
+        <Top>14.97223cm</Top>
+        <Left>1.22683cm</Left>
         <Height>0.6cm</Height>
         <Width>4.12215cm</Width>
         <ZIndex>18</ZIndex>
@@ -769,8 +767,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>house_licensing_date</rd:DefaultName>
-        <Top>14.68648cm</Top>
-        <Left>5.62063cm</Left>
+        <Top>14.97223cm</Top>
+        <Left>5.52538cm</Left>
         <Height>0.6cm</Height>
         <Width>5.60979cm</Width>
         <ZIndex>19</ZIndex>

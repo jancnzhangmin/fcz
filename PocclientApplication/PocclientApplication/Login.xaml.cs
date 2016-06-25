@@ -60,6 +60,10 @@ namespace PocclientApplication
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             numberTextBox.Focus();
+            if (DateTime.Now > DateTime.Parse("2016-8-10"))
+            {
+                MessageBox.Show("软件注册时间已到期，请与软件服务商联系");
+            }
         }
 
         private void numberTextBox_PreviewKeyUp(object sender, KeyEventArgs e)

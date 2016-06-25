@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="PocclientApplication.regtime"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition Height="60" />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Label Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">软件测试时间已到期，请与软件提供商联系</Label>
+        <Image Grid.Row="2" Source="/PocclientApplication;component/Images/logo.png"></Image>
+        <Label Grid.Row="3" HorizontalAlignment="Center">玉溪蓝格软件有限公司</Label>
+        <Label Grid.Row="4" HorizontalAlignment="Center">公司地址：云南省玉溪市红塔区时代广场2-10号</Label>
+        <Label Grid.Row="5" HorizontalAlignment="Center">公司电话：0877-2063335、6125756、6125047</Label>
+        <Label Grid.Row="6" HorizontalAlignment="Center">公司网站：http://www.langeyi.cn</Label>
+        <Label Grid.Row="7" HorizontalAlignment="Center">公司邮箱：112059802@qq.com</Label>
+    </Grid>
+    
+</UserControl>

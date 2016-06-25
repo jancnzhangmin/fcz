@@ -198,7 +198,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox5</rd:DefaultName>
         <Top>1.19592cm</Top>
-        <Left>5.6584cm</Left>
+        <Left>5.2139cm</Left>
         <Height>0.6cm</Height>
         <Width>5.67028cm</Width>
         <ZIndex>1</ZIndex>
@@ -260,7 +260,7 @@
         </Paragraphs>
         <rd:DefaultName>house_idcardnumber</rd:DefaultName>
         <Top>2.21192cm</Top>
-        <Left>5.6584cm</Left>
+        <Left>5.2139cm</Left>
         <Height>0.6cm</Height>
         <Width>2.12486cm</Width>
         <ZIndex>3</ZIndex>
@@ -324,7 +324,7 @@
         </Paragraphs>
         <rd:DefaultName>house_dihao</rd:DefaultName>
         <Top>3.67771cm</Top>
-        <Left>5.6584cm</Left>
+        <Left>5.2139cm</Left>
         <Height>0.6cm</Height>
         <Width>5.67028cm</Width>
         <ZIndex>5</ZIndex>
@@ -355,7 +355,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>building_number</rd:DefaultName>
-        <Top>5.49802cm</Top>
+        <Top>5.59327cm</Top>
         <Left>0.03284cm</Left>
         <Height>0.6cm</Height>
         <Width>0.93896cm</Width>
@@ -387,7 +387,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>room_number</rd:DefaultName>
-        <Top>5.49802cm</Top>
+        <Top>5.59327cm</Top>
         <Left>1.04589cm</Left>
         <Height>0.6cm</Height>
         <Width>0.8199cm</Width>
@@ -419,7 +419,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>jianshu</rd:DefaultName>
-        <Top>5.49802cm</Top>
+        <Top>5.59327cm</Top>
         <Left>2.15065cm</Left>
         <Height>0.6cm</Height>
         <Width>0.87547cm</Width>
@@ -451,7 +451,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>building_structure</rd:DefaultName>
-        <Top>5.49802cm</Top>
+        <Top>5.59327cm</Top>
         <Left>3.0614cm</Left>
         <Height>0.6cm</Height>
         <Width>2.26098cm</Width>
@@ -483,7 +483,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>cengshu</rd:DefaultName>
-        <Top>5.49802cm</Top>
+        <Top>5.59327cm</Top>
         <Left>5.32238cm</Left>
         <Height>0.6cm</Height>
         <Width>1.32525cm</Width>
@@ -515,7 +515,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>built_up_area</rd:DefaultName>
-        <Top>5.49802cm</Top>
+        <Top>5.59327cm</Top>
         <Left>6.66968cm</Left>
         <Height>0.6cm</Height>
         <Width>2.0308cm</Width>
@@ -547,7 +547,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>remarks</rd:DefaultName>
-        <Top>5.49802cm</Top>
+        <Top>5.59327cm</Top>
         <Left>8.70048cm</Left>
         <Height>0.6cm</Height>
         <Width>1.96799cm</Width>
@@ -579,8 +579,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>house_office</rd:DefaultName>
-        <Top>16.50153cm</Top>
-        <Left>20.92008cm</Left>
+        <Top>13.64403cm</Top>
+        <Left>16.47508cm</Left>
         <Height>0.6cm</Height>
         <Width>3.71708cm</Width>
         <ZIndex>13</ZIndex>
@@ -611,8 +611,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>house_tianfatime</rd:DefaultName>
-        <Top>18.70606cm</Top>
-        <Left>22.73516cm</Left>
+        <Top>15.34056cm</Top>
+        <Left>17.52816cm</Left>
         <Height>0.6cm</Height>
         <Width>1.6757cm</Width>
         <ZIndex>14</ZIndex>
@@ -643,8 +643,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>house_tianfatime</rd:DefaultName>
-        <Top>18.70606cm</Top>
-        <Left>24.96826cm</Left>
+        <Top>15.34056cm</Top>
+        <Left>19.38026cm</Left>
         <Height>0.6cm</Height>
         <Width>1.0977cm</Width>
         <ZIndex>15</ZIndex>
@@ -675,8 +675,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>house_tianfatime</rd:DefaultName>
-        <Top>18.70606cm</Top>
-        <Left>26.553cm</Left>
+        <Top>15.34056cm</Top>
+        <Left>20.71099cm</Left>
         <Height>0.6cm</Height>
         <Width>1.30937cm</Width>
         <ZIndex>16</ZIndex>

@@ -182,6 +182,7 @@ namespace PocclientApplication
         {
             if (building_structure.Text != "")
             {
+                a2 = "";
                 quid();
             }
             if (building_structure.Text == "")
@@ -226,8 +227,11 @@ namespace PocclientApplication
             //    a2 += "'" + c + "'" + ",";
             //}
 
-
-            a2 = a2.Remove(a2.LastIndexOf(","), 1);
+            try
+            {
+                a2 = a2.Remove(a2.LastIndexOf(","), 1);
+            }
+            catch { a2 = "0"; }
 
         }
 

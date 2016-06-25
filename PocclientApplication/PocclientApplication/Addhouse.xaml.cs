@@ -756,7 +756,7 @@ where T : DependencyObject
                     else
                     {
 
-                        MessageBox.Show(message);
+                       // MessageBox.Show(message);
 
                     }
 

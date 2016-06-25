@@ -1,190 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://localhost:6963/Service1.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/Message" />
-  <xs:import schemaLocation="http://localhost:6963/Service1.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/FileService" />
-  <xs:element name="Selecthouseinquiry">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="owner" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="idcardnumber" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="a2" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="oldtime" type="xs:dateTime" />
-        <xs:element minOccurs="0" name="tianfatime" type="xs:dateTime" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="SelecthouseinquiryResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="SelecthouseinquiryResult" nillable="true">
-          <xs:complexType>
-            <xs:annotation>
-              <xs:appinfo>
-                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
-              </xs:appinfo>
-            </xs:annotation>
-            <xs:sequence>
-              <xs:element ref="xs:schema" />
-              <xs:any />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Selectlandinquiry">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="user" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="idcardnumber" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="address" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="oldtime" type="xs:dateTime" />
-        <xs:element minOccurs="0" name="send_date" type="xs:dateTime" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="SelectlandinquiryResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="SelectlandinquiryResult" nillable="true">
-          <xs:complexType>
-            <xs:annotation>
-              <xs:appinfo>
-                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
-              </xs:appinfo>
-            </xs:annotation>
-            <xs:sequence>
-              <xs:element ref="xs:schema" />
-              <xs:any />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="selectconditionhouse_id">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="building_structure" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="selectconditionhouse_idResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="selectconditionhouse_idResult" nillable="true">
-          <xs:complexType>
-            <xs:annotation>
-              <xs:appinfo>
-                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
-              </xs:appinfo>
-            </xs:annotation>
-            <xs:sequence>
-              <xs:element ref="xs:schema" />
-              <xs:any />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="DeleteTest">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="strName" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="DeleteTestResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="DeleteTestResult" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdataTest">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="strName" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="strSex" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="intAge" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdataTestResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="UpdataTestResult" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="SelectTest">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="SelectTestResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="SelectTestResult" nillable="true">
-          <xs:complexType>
-            <xs:annotation>
-              <xs:appinfo>
-                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
-              </xs:appinfo>
-            </xs:annotation>
-            <xs:sequence>
-              <xs:element ref="xs:schema" />
-              <xs:any />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="SelectLogin">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="login_name" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="psw" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="SelectLoginResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="SelectLoginResult" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpFile">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q1="http://schemas.microsoft.com/Message" name="FileStream" type="q1:StreamBody" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="FileName" nillable="true" type="xs:string" />
-  <xs:element name="FileSize" type="xs:long" />
-  <xs:element name="UpFileResult">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="IsSuccess" type="xs:boolean" />
-  <xs:element name="Message" nillable="true" type="xs:string" />
-  <xs:element name="DownFile">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="DownFileResult">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.microsoft.com/Message" name="FileStream" type="q2:StreamBody" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
+  <xs:import schemaLocation="http://jancn-pc:6963/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/FileService" />
+  <xs:import schemaLocation="http://jancn-pc:6963/Service1.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/Message" />
   <xs:element name="GetData">
     <xs:complexType>
       <xs:sequence>
@@ -202,14 +19,14 @@
   <xs:element name="GetDataUsingDataContract">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/FileService" minOccurs="0" name="composite" nillable="true" type="q3:CompositeType" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/FileService" minOccurs="0" name="composite" nillable="true" type="q1:CompositeType" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="GetDataUsingDataContractResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/FileService" minOccurs="0" name="GetDataUsingDataContractResult" nillable="true" type="q4:CompositeType" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/FileService" minOccurs="0" name="GetDataUsingDataContractResult" nillable="true" type="q2:CompositeType" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -1500,6 +1317,189 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="InsertloginResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Selecthouseinquiry">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="owner" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idcardnumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="a2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="oldtime" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="tianfatime" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelecthouseinquiryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SelecthouseinquiryResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Selectlandinquiry">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="user" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idcardnumber" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="address" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="oldtime" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="send_date" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectlandinquiryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SelectlandinquiryResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="selectconditionhouse_id">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="building_structure" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="selectconditionhouse_idResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="selectconditionhouse_idResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteTest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteTestResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteTestResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdataTest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strSex" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intAge" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdataTestResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdataTestResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectTest">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectTestResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SelectTestResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectLogin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="login_name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="psw" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectLoginResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SelectLoginResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpFile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.microsoft.com/Message" name="FileStream" type="q3:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FileName" nillable="true" type="xs:string" />
+  <xs:element name="FileSize" type="xs:long" />
+  <xs:element name="UpFileResult">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsSuccess" type="xs:boolean" />
+  <xs:element name="Message" nillable="true" type="xs:string" />
+  <xs:element name="DownFile">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DownFileResult">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.microsoft.com/Message" name="FileStream" type="q4:StreamBody" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

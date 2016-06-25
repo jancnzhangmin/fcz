@@ -1,84 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:types>
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
-      <xsd:import schemaLocation="http://localhost:6963/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
-      <xsd:import schemaLocation="http://localhost:6963/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
-      <xsd:import schemaLocation="http://localhost:6963/Service1.svc?xsd=xsd2" />
-      <xsd:import schemaLocation="http://localhost:6963/Service1.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/Message" />
-      <xsd:import schemaLocation="http://localhost:6963/Service1.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/FileService" />
+      <xsd:import schemaLocation="http://jancn-pc:6963/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://jancn-pc:6963/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://jancn-pc:6963/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/FileService" />
+      <xsd:import schemaLocation="http://jancn-pc:6963/Service1.svc?xsd=xsd3" />
+      <xsd:import schemaLocation="http://jancn-pc:6963/Service1.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/Message" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="IService1_Selecthouseinquiry_InputMessage">
-    <wsdl:part name="parameters" element="tns:Selecthouseinquiry" />
-  </wsdl:message>
-  <wsdl:message name="IService1_Selecthouseinquiry_OutputMessage">
-    <wsdl:part name="parameters" element="tns:SelecthouseinquiryResponse" />
-  </wsdl:message>
-  <wsdl:message name="IService1_Selectlandinquiry_InputMessage">
-    <wsdl:part name="parameters" element="tns:Selectlandinquiry" />
-  </wsdl:message>
-  <wsdl:message name="IService1_Selectlandinquiry_OutputMessage">
-    <wsdl:part name="parameters" element="tns:SelectlandinquiryResponse" />
-  </wsdl:message>
-  <wsdl:message name="IService1_selectconditionhouse_id_InputMessage">
-    <wsdl:part name="parameters" element="tns:selectconditionhouse_id" />
-  </wsdl:message>
-  <wsdl:message name="IService1_selectconditionhouse_id_OutputMessage">
-    <wsdl:part name="parameters" element="tns:selectconditionhouse_idResponse" />
-  </wsdl:message>
-  <wsdl:message name="IService1_DeleteTest_InputMessage">
-    <wsdl:part name="parameters" element="tns:DeleteTest" />
-  </wsdl:message>
-  <wsdl:message name="IService1_DeleteTest_OutputMessage">
-    <wsdl:part name="parameters" element="tns:DeleteTestResponse" />
-  </wsdl:message>
-  <wsdl:message name="IService1_UpdataTest_InputMessage">
-    <wsdl:part name="parameters" element="tns:UpdataTest" />
-  </wsdl:message>
-  <wsdl:message name="IService1_UpdataTest_OutputMessage">
-    <wsdl:part name="parameters" element="tns:UpdataTestResponse" />
-  </wsdl:message>
-  <wsdl:message name="IService1_SelectTest_InputMessage">
-    <wsdl:part name="parameters" element="tns:SelectTest" />
-  </wsdl:message>
-  <wsdl:message name="IService1_SelectTest_OutputMessage">
-    <wsdl:part name="parameters" element="tns:SelectTestResponse" />
-  </wsdl:message>
-  <wsdl:message name="IService1_SelectLogin_InputMessage">
-    <wsdl:part name="parameters" element="tns:SelectLogin" />
-  </wsdl:message>
-  <wsdl:message name="IService1_SelectLogin_OutputMessage">
-    <wsdl:part name="parameters" element="tns:SelectLoginResponse" />
-  </wsdl:message>
-  <wsdl:message name="UpFile">
-    <wsdl:part name="parameters" element="tns:UpFile" />
-  </wsdl:message>
-  <wsdl:message name="UpFile_Headers">
-    <wsdl:part name="FileName" element="tns:FileName" />
-    <wsdl:part name="FileSize" element="tns:FileSize" />
-  </wsdl:message>
-  <wsdl:message name="UpFileResult">
-    <wsdl:part name="parameters" element="tns:UpFileResult" />
-  </wsdl:message>
-  <wsdl:message name="UpFileResult_Headers">
-    <wsdl:part name="IsSuccess" element="tns:IsSuccess" />
-    <wsdl:part name="Message" element="tns:Message" />
-  </wsdl:message>
-  <wsdl:message name="DownFile">
-    <wsdl:part name="parameters" element="tns:DownFile" />
-  </wsdl:message>
-  <wsdl:message name="DownFile_Headers">
-    <wsdl:part name="FileName" element="tns:FileName" />
-  </wsdl:message>
-  <wsdl:message name="DownFileResult">
-    <wsdl:part name="parameters" element="tns:DownFileResult" />
-  </wsdl:message>
-  <wsdl:message name="DownFileResult_Headers">
-    <wsdl:part name="FileSize" element="tns:FileSize" />
-    <wsdl:part name="IsSuccess" element="tns:IsSuccess" />
-    <wsdl:part name="Message" element="tns:Message" />
-  </wsdl:message>
   <wsdl:message name="IService1_GetData_InputMessage">
     <wsdl:part name="parameters" element="tns:GetData" />
   </wsdl:message>
@@ -463,43 +393,77 @@
   <wsdl:message name="IService1_Insertlogin_OutputMessage">
     <wsdl:part name="parameters" element="tns:InsertloginResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_Selecthouseinquiry_InputMessage">
+    <wsdl:part name="parameters" element="tns:Selecthouseinquiry" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Selecthouseinquiry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelecthouseinquiryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Selectlandinquiry_InputMessage">
+    <wsdl:part name="parameters" element="tns:Selectlandinquiry" />
+  </wsdl:message>
+  <wsdl:message name="IService1_Selectlandinquiry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectlandinquiryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_selectconditionhouse_id_InputMessage">
+    <wsdl:part name="parameters" element="tns:selectconditionhouse_id" />
+  </wsdl:message>
+  <wsdl:message name="IService1_selectconditionhouse_id_OutputMessage">
+    <wsdl:part name="parameters" element="tns:selectconditionhouse_idResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteTest_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTest" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteTest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdataTest_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdataTest" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdataTest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdataTestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SelectTest_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectTest" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SelectTest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectTestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SelectLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectLogin" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SelectLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpFile">
+    <wsdl:part name="parameters" element="tns:UpFile" />
+  </wsdl:message>
+  <wsdl:message name="UpFile_Headers">
+    <wsdl:part name="FileName" element="tns:FileName" />
+    <wsdl:part name="FileSize" element="tns:FileSize" />
+  </wsdl:message>
+  <wsdl:message name="UpFileResult">
+    <wsdl:part name="parameters" element="tns:UpFileResult" />
+  </wsdl:message>
+  <wsdl:message name="UpFileResult_Headers">
+    <wsdl:part name="IsSuccess" element="tns:IsSuccess" />
+    <wsdl:part name="Message" element="tns:Message" />
+  </wsdl:message>
+  <wsdl:message name="DownFile">
+    <wsdl:part name="parameters" element="tns:DownFile" />
+  </wsdl:message>
+  <wsdl:message name="DownFile_Headers">
+    <wsdl:part name="FileName" element="tns:FileName" />
+  </wsdl:message>
+  <wsdl:message name="DownFileResult">
+    <wsdl:part name="parameters" element="tns:DownFileResult" />
+  </wsdl:message>
+  <wsdl:message name="DownFileResult_Headers">
+    <wsdl:part name="FileSize" element="tns:FileSize" />
+    <wsdl:part name="IsSuccess" element="tns:IsSuccess" />
+    <wsdl:part name="Message" element="tns:Message" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
-    <wsdl:operation name="Selecthouseinquiry">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Selecthouseinquiry" message="tns:IService1_Selecthouseinquiry_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SelecthouseinquiryResponse" message="tns:IService1_Selecthouseinquiry_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="Selectlandinquiry">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Selectlandinquiry" message="tns:IService1_Selectlandinquiry_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SelectlandinquiryResponse" message="tns:IService1_Selectlandinquiry_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="selectconditionhouse_id">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/selectconditionhouse_id" message="tns:IService1_selectconditionhouse_id_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/selectconditionhouse_idResponse" message="tns:IService1_selectconditionhouse_id_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="DeleteTest">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteTest" message="tns:IService1_DeleteTest_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteTestResponse" message="tns:IService1_DeleteTest_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="UpdataTest">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdataTest" message="tns:IService1_UpdataTest_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdataTestResponse" message="tns:IService1_UpdataTest_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="SelectTest">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SelectTest" message="tns:IService1_SelectTest_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SelectTestResponse" message="tns:IService1_SelectTest_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="SelectLogin">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SelectLogin" message="tns:IService1_SelectLogin_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SelectLoginResponse" message="tns:IService1_SelectLogin_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="UpLoadFile">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpLoadFile" name="UpFile" message="tns:UpFile" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpLoadFileResponse" name="UpFileResult" message="tns:UpFileResult" />
-    </wsdl:operation>
-    <wsdl:operation name="DownLoadFile">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DownLoadFile" name="DownFile" message="tns:DownFile" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DownLoadFileResponse" name="DownFileResult" message="tns:DownFileResult" />
-    </wsdl:operation>
     <wsdl:operation name="GetData">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataResponse" message="tns:IService1_GetData_OutputMessage" />
@@ -756,98 +720,45 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/Insertlogin" message="tns:IService1_Insertlogin_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertloginResponse" message="tns:IService1_Insertlogin_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="Selecthouseinquiry">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Selecthouseinquiry" message="tns:IService1_Selecthouseinquiry_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SelecthouseinquiryResponse" message="tns:IService1_Selecthouseinquiry_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Selectlandinquiry">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/Selectlandinquiry" message="tns:IService1_Selectlandinquiry_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SelectlandinquiryResponse" message="tns:IService1_Selectlandinquiry_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="selectconditionhouse_id">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/selectconditionhouse_id" message="tns:IService1_selectconditionhouse_id_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/selectconditionhouse_idResponse" message="tns:IService1_selectconditionhouse_id_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteTest" message="tns:IService1_DeleteTest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteTestResponse" message="tns:IService1_DeleteTest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdataTest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdataTest" message="tns:IService1_UpdataTest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdataTestResponse" message="tns:IService1_UpdataTest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectTest">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SelectTest" message="tns:IService1_SelectTest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SelectTestResponse" message="tns:IService1_SelectTest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectLogin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SelectLogin" message="tns:IService1_SelectLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SelectLoginResponse" message="tns:IService1_SelectLogin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpLoadFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpLoadFile" name="UpFile" message="tns:UpFile" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpLoadFileResponse" name="UpFileResult" message="tns:UpFileResult" />
+    </wsdl:operation>
+    <wsdl:operation name="DownLoadFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DownLoadFile" name="DownFile" message="tns:DownFile" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DownLoadFileResponse" name="DownFileResult" message="tns:DownFileResult" />
+    </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="Selecthouseinquiry">
-      <soap:operation soapAction="http://tempuri.org/IService1/Selecthouseinquiry" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Selectlandinquiry">
-      <soap:operation soapAction="http://tempuri.org/IService1/Selectlandinquiry" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="selectconditionhouse_id">
-      <soap:operation soapAction="http://tempuri.org/IService1/selectconditionhouse_id" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="DeleteTest">
-      <soap:operation soapAction="http://tempuri.org/IService1/DeleteTest" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="UpdataTest">
-      <soap:operation soapAction="http://tempuri.org/IService1/UpdataTest" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="SelectTest">
-      <soap:operation soapAction="http://tempuri.org/IService1/SelectTest" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="SelectLogin">
-      <soap:operation soapAction="http://tempuri.org/IService1/SelectLogin" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="UpLoadFile">
-      <soap:operation soapAction="http://tempuri.org/IService1/UpLoadFile" style="document" />
-      <wsdl:input name="UpFile">
-        <soap:header message="tns:UpFile_Headers" part="FileName" use="literal" />
-        <soap:header message="tns:UpFile_Headers" part="FileSize" use="literal" />
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="UpFileResult">
-        <soap:header message="tns:UpFileResult_Headers" part="IsSuccess" use="literal" />
-        <soap:header message="tns:UpFileResult_Headers" part="Message" use="literal" />
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="DownLoadFile">
-      <soap:operation soapAction="http://tempuri.org/IService1/DownLoadFile" style="document" />
-      <wsdl:input name="DownFile">
-        <soap:header message="tns:DownFile_Headers" part="FileName" use="literal" />
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="DownFileResult">
-        <soap:header message="tns:DownFileResult_Headers" part="FileSize" use="literal" />
-        <soap:header message="tns:DownFileResult_Headers" part="IsSuccess" use="literal" />
-        <soap:header message="tns:DownFileResult_Headers" part="Message" use="literal" />
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="GetData">
       <soap:operation soapAction="http://tempuri.org/IService1/GetData" style="document" />
       <wsdl:input>
@@ -1424,10 +1335,99 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="Selecthouseinquiry">
+      <soap:operation soapAction="http://tempuri.org/IService1/Selecthouseinquiry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Selectlandinquiry">
+      <soap:operation soapAction="http://tempuri.org/IService1/Selectlandinquiry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectconditionhouse_id">
+      <soap:operation soapAction="http://tempuri.org/IService1/selectconditionhouse_id" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTest">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteTest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdataTest">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdataTest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectTest">
+      <soap:operation soapAction="http://tempuri.org/IService1/SelectTest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SelectLogin">
+      <soap:operation soapAction="http://tempuri.org/IService1/SelectLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpLoadFile">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpLoadFile" style="document" />
+      <wsdl:input name="UpFile">
+        <soap:header message="tns:UpFile_Headers" part="FileName" use="literal" />
+        <soap:header message="tns:UpFile_Headers" part="FileSize" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="UpFileResult">
+        <soap:header message="tns:UpFileResult_Headers" part="IsSuccess" use="literal" />
+        <soap:header message="tns:UpFileResult_Headers" part="Message" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownLoadFile">
+      <soap:operation soapAction="http://tempuri.org/IService1/DownLoadFile" style="document" />
+      <wsdl:input name="DownFile">
+        <soap:header message="tns:DownFile_Headers" part="FileName" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DownFileResult">
+        <soap:header message="tns:DownFileResult_Headers" part="FileSize" use="literal" />
+        <soap:header message="tns:DownFileResult_Headers" part="IsSuccess" use="literal" />
+        <soap:header message="tns:DownFileResult_Headers" part="Message" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:service name="Service1">
     <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
-      <soap:address location="http://localhost:6963/Service1.svc" />
+      <soap:address location="http://jancn-pc:6963/Service1.svc" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>
