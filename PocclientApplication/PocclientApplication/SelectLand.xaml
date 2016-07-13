@@ -4,11 +4,19 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="400" d:DesignWidth="1500">
-    <Grid>
-        <DataGrid AutoGenerateColumns="False" CanUserAddRows="False"   HorizontalAlignment="Stretch"  Name="land_dataGrid" VerticalAlignment="Stretch"  Margin="0,50,0,0" Loaded="land_dataGrid_Loaded" >
+             d:DesignHeight="400" d:DesignWidth="1500" GotFocus="UserControl_GotFocus">
+    <Grid GotFocus="Grid_GotFocus">
+
+
+
+        <DataGrid AutoGenerateColumns="False" CanUserAddRows="False"   HorizontalAlignment="Stretch"  Name="land_dataGrid" VerticalAlignment="Stretch"  Margin="0,50,0,34" Loaded="land_dataGrid_Loaded" ItemsSource="{Binding}" IsReadOnly="True">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="id" Binding="{Binding Path=land_id }" Visibility="Hidden" />
+                <DataGridTextColumn Header="佤用" Binding="{Binding Path=land_tile}"/>
+                <DataGridTextColumn Header="字" Binding="{Binding Path=land_word}"/>
+                <DataGridTextColumn Header="号" Binding="{Binding Path=land_number}"/>
+                <DataGridTextColumn Header="政府" Binding="{Binding Path=land_government}"/>
+                <DataGridTextColumn Header="发证日期" Binding="{Binding Path=land_date, StringFormat=\{0:d\}}"/>
                 <DataGridTextColumn Header="土地使用者" Binding="{Binding Path=land_user}"/>
                 <DataGridTextColumn Header="身份证号码" Binding="{Binding Path=land_idcardnumber}"/>
                 <DataGridTextColumn Header="地址" Binding="{Binding Path=land_address}"/>
@@ -21,12 +29,37 @@
                 <DataGridTextColumn Header="西至" Binding="{Binding Path=land_west}"/>
                 <DataGridTextColumn Header="北至" Binding="{Binding Path=land_north}"/>
                 <DataGridTextColumn Header="填发机关" Binding="{Binding Path=land_office}"/>
-                <DataGridTextColumn Header="填发日期" Binding="{Binding Path=land_send_date}"/>
-                <DataGridTemplateColumn>
+                <DataGridTextColumn Header="填发日期" Binding="{Binding Path=land_send_date,StringFormat=\{0:d\}}"/>
+                <!--<DataGridTextColumn Header="经办人" Binding="{Binding Path=land_managers}"/>
+                <DataGridTextColumn Header="领证人" Binding="{Binding Path=land_licensing_people}"/>-->
+                <DataGridTextColumn Header="备注" Binding="{Binding Path=land_remarks}"/>
+                <DataGridTextColumn Header="注意事项 " Binding="{Binding Path=land_change_items}"/>
+                <!--<DataGridTextColumn Header="附图 " Binding="{Binding Path=land_figure}"/>-->
+                <DataGridTextColumn Header="用地面积 " Binding="{Binding Path=land_area}"/>
+                <DataGridTextColumn Header="建筑面积 " Binding="{Binding Path=built_up_area}"/>
+                <DataGridTextColumn Header="共有使用权面积 " Binding="{Binding Path=common_area}"/>
+                <DataGridTextColumn Header="分摊面积 " Binding="{Binding Path=sharing_area}"/>
+                <DataGridTextColumn Header="土地等级 " Binding="{Binding Path=land_grade}"/>
+                <DataGridTextColumn Header="土地面积 " Binding="{Binding Path=land_countryside_area}"/>
+                <DataGridTextColumn Header="耕地 " Binding="{Binding Path=cultivated_land}"/>
+                <DataGridTextColumn Header="旱地 " Binding="{Binding Path=dry_land}"/>
+                <DataGridTextColumn Header="水田 " Binding="{Binding Path=paddy_field}"/>
+                <DataGridTextColumn Header="园地 " Binding="{Binding Path=orchard}"/>
+                <DataGridTextColumn Header="林地 " Binding="{Binding Path=forest_land}"/>
+                <DataGridTextColumn Header="牧草地 " Binding="{Binding Path=grassland}"/>
+
+                <DataGridTextColumn Header="矿用地 " Binding="{Binding Path=inmate_mining}"/>
+                <DataGridTextColumn Header="建设用地 " Binding="{Binding Path=construction_land}"/>
+                <DataGridTextColumn Header="宅基地 " Binding="{Binding Path=homestead_land}"/>
+                <DataGridTextColumn Header="交通用地 " Binding="{Binding Path=traffic_land}"/>
+                <DataGridTextColumn Header="水域" Binding="{Binding Path=water_land}"/>
+                <DataGridTextColumn Header="未利用 " Binding="{Binding Path=unused_land}"/>
+                
+                <DataGridTemplateColumn Header="编辑" x:Name="bianji">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
 
-                            <Button x:Name="edit_land" Click="edit_land_Click" BorderBrush="{x:Null}" Background="{x:Null}" ToolTip="编辑">
+                            <Button x:Name="edit_land" Click="edit_land_Click" BorderBrush="{x:Null}" Background="{x:Null}" ToolTip="修改">
                                 <Image Width="18" Height="18" Source="/PocclientApplication;component/image/edit_active.png"></Image>
                             </Button>
                                 
@@ -34,7 +67,7 @@
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                <DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="删除" x:Name="shanchu">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Button x:Name="delete_land" Click="delete_land_Click" BorderBrush="{x:Null}" Background="{x:Null}" ToolTip="删除">
@@ -47,6 +80,10 @@
 
             </DataGrid.Columns>
         </DataGrid>
+
+        <!--<DataGrid x:Name="aaaa" Margin="0,320,0,0" Height="50">-->
+            <!--<DataGridTextColumn Header="地号" Binding="{Binding a2}"/>
+        </DataGrid>-->
         <Label Content="土地使用者" Height="28" HorizontalAlignment="Left" Margin="31,12,0,0" Name="label1" VerticalAlignment="Top" />
         <TextBox Height="23" HorizontalAlignment="Left" Margin="103,15,0,0" Name="land_user" VerticalAlignment="Top" Width="120" />
         <Label Content="身份证号" Height="28" HorizontalAlignment="Left" Margin="236,15,0,0" Name="label2" VerticalAlignment="Top" />
@@ -56,15 +93,28 @@
         <TextBox Height="23" HorizontalAlignment="Left" Margin="500,15,0,0" Name="land_address" VerticalAlignment="Top" Width="120" />
         <Label Content="开始日期" Height="28" HorizontalAlignment="Left" Margin="659,12,0,0" Name="label6" VerticalAlignment="Top" />
         <DatePicker Text="1900-1-1" Height="23" HorizontalAlignment="Left" Margin="729,15,0,0" Name="oldtime" VerticalAlignment="Top" Width="120" />
-        <Label Content="发证日期" Height="28" HorizontalAlignment="Left" Margin="883,12,0,0" Name="labe14" VerticalAlignment="Top" />
+        <Label Content="结束日期" Height="28" HorizontalAlignment="Left" Margin="883,12,0,0" Name="labe14" VerticalAlignment="Top" />
         <DatePicker Height="23" HorizontalAlignment="Left" Margin="953,15,0,0" Name="land_send_date" VerticalAlignment="Top" Width="120" />
-        <Button Content="查询" Height="23" HorizontalAlignment="Left" Margin="1413,20,0,0" Name="land_inquiry" VerticalAlignment="Top" Width="75" Click="land_inquiry_Click" />
+        <Button Content="查询" Height="23"  Margin="1000,20,12,0" Name="land_inquiry" VerticalAlignment="Top" Width="75" Click="land_inquiry_Click" />
 
-        <Label Content="城镇用地面积" Height="28" HorizontalAlignment="Left" Margin="35,355,0,0" Name="label3" VerticalAlignment="Bottom" />
-        <TextBlock Height="23" HorizontalAlignment="Left" Margin="147,360,0,0" Name="area_co" Text="TextBlock" VerticalAlignment="Bottom" Width="85" />
+        <Label Content="城镇用地面积:" Height="28" HorizontalAlignment="Left" Margin="273,0,0,0" Name="label3" VerticalAlignment="Bottom" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="359,0,0,0" Name="area_co" Text="0" VerticalAlignment="Bottom" Width="60" />
 
-        <Label Content="农村土地面积" Height="28" HorizontalAlignment="Left" Margin="250,355,0,0" Name="label4" VerticalAlignment="Bottom" />
-        <TextBlock Height="23" HorizontalAlignment="Left" Margin="364,360,0,0" Name="area_to" Text="TextBlock" VerticalAlignment="Bottom" Width="85" />
-        
+        <Label Content="建筑面积:" Height="28" HorizontalAlignment="Left" Margin="452,0,0,0" Name="build_area" VerticalAlignment="Bottom" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="512,0,0,0" Name="build_area_co" Text="0" VerticalAlignment="Bottom" Width="60" />
+
+        <Label Content="共有使用全面积:" Height="28" HorizontalAlignment="Left" Margin="597,0,0,0" Name="shiyongquan" VerticalAlignment="Bottom" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="693,0,0,0" Name="right_area_co" Text="0" VerticalAlignment="Bottom" Width="78" />
+
+        <Label Content="农村土地面积:" Height="28" HorizontalAlignment="Left" Margin="802,0,0,0" Name="label4" VerticalAlignment="Bottom" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="893,0,0,0" Name="area_to" Text="0" VerticalAlignment="Bottom" Width="85" />
+
+        <Label Content="耕地面积:" Height="28" HorizontalAlignment="Left" Margin="1022,0,0,0" Name="label8" VerticalAlignment="Bottom" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="1084,0,0,0" Name="gengdi_to" Text="0" VerticalAlignment="Bottom" Width="85" />
+
+        <GroupBox Header="发证日期查询" Height="42" HorizontalAlignment="Left" Margin="646,0,0,0" Name="groupBox1" VerticalAlignment="Top" Width="446"/>
+        <Button Content="导出" Height="23"  Margin="1200,20,0,0" Name="print_excel" VerticalAlignment="Top" Width="75" Click="print_excel_Click" />
+        <Label Content="合计:" Height="28" HorizontalAlignment="Left" Margin="12,372,0,0" Name="label7" VerticalAlignment="Bottom" />
+        <!--<Button Content="Button" Height="23" HorizontalAlignment="Left" Margin="1108,17,0,0" Name="prin_datagrid" VerticalAlignment="Top" Width="75" Click="prin_datagrid_Click" />-->
     </Grid>
 </UserControl>

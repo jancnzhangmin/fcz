@@ -77,7 +77,10 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="C1.WPF.4, Version=4.0.20151.455, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce" />
+    <Reference Include="C1.WPF.4, Version=4.0.20141.391, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\C1.WPF.4.dll</HintPath>
+    </Reference>
     <Reference Include="C1.WPF.C1Report.4, Version=4.0.20151.38, Culture=neutral, PublicKeyToken=594a0605db190bb9" />
     <Reference Include="C1.WPF.ReportViewer.4, Version=4.0.20151.455, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce" />
     <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
@@ -104,12 +107,14 @@
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="WPFToolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
     <Reference Include="Xceed.Wpf.AvalonDock, Version=2.0.2000.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\迅雷下载\AvalonDock_2_0_2000\Xceed.Wpf.AvalonDock.dll</HintPath>
+      <HintPath>bin\Debug\Xceed.Wpf.AvalonDock.dll</HintPath>
     </Reference>
-    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Aero">
-      <HintPath>..\..\..\..\..\迅雷下载\AvalonDock.Themes.Aero\Xceed.Wpf.AvalonDock.Themes.Aero.dll</HintPath>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Aero, Version=2.0.2000.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\CloudTime\Documents\Tencent Files\652212003\FileRecv\AvalonDock.Themes.Aero(1)\Xceed.Wpf.AvalonDock.Themes.Aero.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -131,8 +136,14 @@
       <SubType>Code</SubType>
       <DependentUpon>addnature.xaml</DependentUpon>
     </Compile>
+    <Compile Include="databack.xaml.cs">
+      <DependentUpon>databack.xaml</DependentUpon>
+    </Compile>
     <Compile Include="dockpaneltest.xaml.cs">
       <DependentUpon>dockpaneltest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EditPWD.xaml.cs">
+      <DependentUpon>EditPWD.xaml</DependentUpon>
     </Compile>
     <Compile Include="FourthPages.xaml.cs">
       <DependentUpon>FourthPages.xaml</DependentUpon>
@@ -180,6 +191,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>pocdatabaseDataSet4.xsd</DependentUpon>
     </Compile>
+    <Compile Include="pocdatabaseDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pocdatabaseDataSet6.xsd</DependentUpon>
+    </Compile>
     <Compile Include="PublicClass.cs" />
     <Compile Include="Register.xaml.cs">
       <DependentUpon>Register.xaml</DependentUpon>
@@ -207,6 +223,9 @@
     <Compile Include="ThirdPages.xaml.cs">
       <DependentUpon>ThirdPages.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Userlist.xaml.cs">
+      <DependentUpon>Userlist.xaml</DependentUpon>
+    </Compile>
     <Page Include="about.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -223,7 +242,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="databack.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="dockpaneltest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EditPWD.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -291,6 +318,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Userlist.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -342,12 +373,12 @@
     <None Include="HouseReport.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Report2.rdlc" />
     <EmbeddedResource Include="Report3.rdlc" />
     <EmbeddedResource Include="Report4.rdlc" />
     <EmbeddedResource Include="Report5.rdlc" />
     <EmbeddedResource Include="Report6.rdlc" />
-    <None Include="PocclientApplication_TemporaryKey.pfx" />
     <None Include="pocdatabaseDataSet3.xsc">
       <DependentUpon>pocdatabaseDataSet3.xsd</DependentUpon>
     </None>
@@ -370,7 +401,19 @@
     <None Include="pocdatabaseDataSet4.xss">
       <DependentUpon>pocdatabaseDataSet4.xsd</DependentUpon>
     </None>
+    <None Include="pocdatabaseDataSet6.xsc">
+      <DependentUpon>pocdatabaseDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="pocdatabaseDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pocdatabaseDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pocdatabaseDataSet6.xss">
+      <DependentUpon>pocdatabaseDataSet6.xsd</DependentUpon>
+    </None>
     <None Include="Properties\app.manifest" />
+    <None Include="Properties\DataSources\SelectLand.datasource" />
     <None Include="Report1.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -388,7 +431,6 @@
     <None Include="Reportland.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -427,20 +469,20 @@
     <None Include="Service References\ServiceReference\PocclientApplication.ServiceReference.CompositeType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\ServiceReference\Service1.wsdl" />
-    <None Include="Service References\ServiceReference\Service1.xsd">
+    <None Include="Service References\ServiceReference\Service11.wsdl" />
+    <None Include="Service References\ServiceReference\Service15.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\ServiceReference\Service11.xsd">
+    <None Include="Service References\ServiceReference\Service151.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\ServiceReference\Service12.xsd">
+    <None Include="Service References\ServiceReference\Service152.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\ServiceReference\Service13.xsd">
+    <None Include="Service References\ServiceReference\Service153.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\ServiceReference\Service14.xsd">
+    <None Include="Service References\ServiceReference\Service154.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
@@ -557,7 +599,13 @@
     <Resource Include="Images\welcome.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\ServiceReference\Service1.disco" />
+    <Resource Include="image\find1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\find2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceReference\Service11.disco" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

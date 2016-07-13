@@ -4,17 +4,40 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="250" d:DesignWidth="400">
+             d:DesignHeight="300" d:DesignWidth="700" Loaded="UserControl_Loaded">
     <Grid>
-        <Label Content="姓名" Height="28" HorizontalAlignment="Left" Margin="64,18,0,0" Name="label1" VerticalAlignment="Top" />
-        <Label Content="用户名" Height="28" HorizontalAlignment="Left" Margin="64,64,0,0" Name="label2" VerticalAlignment="Top" />
-        <Label Content="密码" Height="28" HorizontalAlignment="Left" Margin="64,107,0,0" Name="label3" VerticalAlignment="Top" />
 
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="128,23,0,0" Name="name" VerticalAlignment="Top" Width="120" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="128,69,0,0" Name="login_name" VerticalAlignment="Top" Width="120" />
-        <PasswordBox Height="23" HorizontalAlignment="Left" Margin="128,109,0,0" Name="password" VerticalAlignment="Top" Width="120" />
-        <Label Content="确认密码" Height="28" HorizontalAlignment="Left" Margin="64,149,0,0" Name="label4" VerticalAlignment="Top" />
-        <PasswordBox Height="23" HorizontalAlignment="Left" Margin="128,151,0,0" Name="affirm_password" VerticalAlignment="Top" Width="120" />
-        <Button Content="确认" Height="23" HorizontalAlignment="Left" Margin="285,185,0,0" Name="register" VerticalAlignment="Top" Width="75" Click="register_Click" />
+        <GroupBox Header="基本信息" Height="188" HorizontalAlignment="Left" Margin="13,19,0,0" Name="groupBox1" VerticalAlignment="Top" Width="253"/>
+        <Label Content="姓名" Height="28" HorizontalAlignment="Left" Margin="48,33,0,0" Name="label1" VerticalAlignment="Top" />
+        <Label Content="用户名" Height="28" HorizontalAlignment="Left" Margin="48,79,0,0" Name="label2" VerticalAlignment="Top" />
+        <Label Content="密码" Height="28" HorizontalAlignment="Left" Margin="48,122,0,0" Name="label3" VerticalAlignment="Top" />
+
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="112,38,0,0" Name="name" VerticalAlignment="Top" Width="120" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="112,84,0,0" Name="login_name" VerticalAlignment="Top" Width="120" />
+        <PasswordBox Height="23" HorizontalAlignment="Left" Margin="112,124,0,0" Name="password" VerticalAlignment="Top" Width="120" />
+        <Label Content="确认密码" Height="28" HorizontalAlignment="Left" Margin="48,164,0,0" Name="label4" VerticalAlignment="Top" />
+        <PasswordBox Height="23" HorizontalAlignment="Left" Margin="112,166,0,0" Name="affirm_password" VerticalAlignment="Top" Width="120" />
+        <Button Content="确认" Height="23" HorizontalAlignment="Left" Margin="114,213,0,0" Name="register" VerticalAlignment="Top" Width="75" Click="register_Click" />
+
+        <GroupBox Header="权限管理" VerticalAlignment="Top" HorizontalAlignment="Left" Width="400"  Height="188"   Margin="276,19,0,0"></GroupBox>
+        <GroupBox Header="数据操作" VerticalAlignment="Top" HorizontalAlignment="Left" Width="380"  Height="95"   Margin="286,39,0,0"></GroupBox>
+        
+        <CheckBox Content="房产增加" Height="16" HorizontalAlignment="Left" Margin="296,65,0,0" Name="radioButton3" VerticalAlignment="Top" IsChecked="False" />
+        <CheckBox Content="房产修改" Height="16" HorizontalAlignment="Left" Margin="426,65,0,0" Name="radioButton4" VerticalAlignment="Top" IsChecked="False" />
+        <CheckBox Content="房产删除" Height="16" HorizontalAlignment="Left" Margin="556,65,0,0" Name="radioButton5" VerticalAlignment="Top" IsChecked="False" />
+        
+        <CheckBox Content="土地增加" Height="16" HorizontalAlignment="Left" Margin="296,99,0,0" Name="radioButton6" VerticalAlignment="Top" IsChecked="False" />
+        <CheckBox Content="土地修改" Height="16" HorizontalAlignment="Left" Margin="426,99,0,0" Name="radioButton7" VerticalAlignment="Top" IsChecked="False" />
+        <CheckBox Content="土地删除" Height="16" HorizontalAlignment="Left" Margin="556,99,0,0" Name="radioButton8" VerticalAlignment="Top" IsChecked="False" />
+        
+        <GroupBox Header="设置" VerticalAlignment="Top" HorizontalAlignment="Left" Width="380"  Height="50"   Margin="286,144,0,0"></GroupBox>
+        <CheckBox Content="用户管理" Height="16" HorizontalAlignment="Left" Margin="296,169,0,0" Name="radioButton9" VerticalAlignment="Top" IsChecked="False" />
+        <!--<CheckBox Content="用户注册" Height="16" HorizontalAlignment="Left" Margin="426,169,0,0" Name="radioButton10" VerticalAlignment="Top" IsChecked="False" />-->
+        
+        <CheckBox Content="数据管理" Height="16" HorizontalAlignment="Left" Margin="556,169,0,0" Name="radioButton11" VerticalAlignment="Top" IsChecked="False" />
+
+
+        <Button Content="全选" Height="23" HorizontalAlignment="Left" Margin="426,213,0,0" Name="check_all" VerticalAlignment="Top" Width="75" Click="check_all_Click" />
+     
     </Grid>
 </UserControl>

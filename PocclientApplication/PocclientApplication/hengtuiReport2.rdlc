@@ -126,7 +126,6 @@
   <Body>
     <ReportItems>
       <Textbox Name="land_government">
-        <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
@@ -134,16 +133,18 @@
               <TextRun>
                 <Value>=First(Fields!land_government.Value, "DataSet1")</Value>
                 <Style>
-                  <FontSize>14pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>land_government</rd:DefaultName>
-        <Top>8.95297cm</Top>
-        <Left>16.43938cm</Left>
+        <Top>9.01647cm</Top>
+        <Left>18.43963cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <Style>
@@ -165,16 +166,18 @@
               <TextRun>
                 <Value>=CDate(First(Fields!land_date.Value, "DataSet1")).ToString("yyyy")</Value>
                 <Style>
-                  <FontSize>14pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>land_date</rd:DefaultName>
-        <Top>10.55105cm</Top>
-        <Left>16.04118cm</Left>
+        <Top>10.5193cm</Top>
+        <Left>18.00968cm</Left>
         <Height>0.6cm</Height>
         <Width>1.71449cm</Width>
         <ZIndex>1</ZIndex>
@@ -197,18 +200,20 @@
               <TextRun>
                 <Value>=CDate(First(Fields!land_date.Value, "DataSet1")).ToString("MM")</Value>
                 <Style>
-                  <FontSize>14pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>land_date1</rd:DefaultName>
-        <Top>10.55105cm</Top>
-        <Left>17.75567cm</Left>
+        <Top>10.5193cm</Top>
+        <Left>19.62891cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
+        <Width>1.65333cm</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>

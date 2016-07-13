@@ -246,16 +246,18 @@
               <TextRun>
                 <Value>=First(Fields!land_user.Value, "DataSet1")</Value>
                 <Style>
-                  <FontSize>14pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>land_user</rd:DefaultName>
-        <Top>1.19443cm</Top>
-        <Left>2.80607cm</Left>
+        <Top>0.81343cm</Top>
+        <Left>5.02857cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <Style>
@@ -269,7 +271,6 @@
         </Style>
       </Textbox>
       <Textbox Name="land_address">
-        <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
@@ -277,16 +278,18 @@
               <TextRun>
                 <Value>=First(Fields!land_address.Value, "DataSet1")</Value>
                 <Style>
-                  <FontSize>14pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>land_address</rd:DefaultName>
-        <Top>2.30689cm</Top>
-        <Left>2.80607cm</Left>
+        <Top>1.89414cm</Top>
+        <Left>4.36182cm</Left>
         <Height>0.6cm</Height>
         <Width>7.87104cm</Width>
         <ZIndex>1</ZIndex>
@@ -313,14 +316,16 @@
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>land_idcardnumber</rd:DefaultName>
-        <Top>0.93514cm</Top>
-        <Left>7.61618cm</Left>
+        <Top>0.74464cm</Top>
+        <Left>10.06093cm</Left>
         <Height>0.6cm</Height>
-        <Width>1.91792cm</Width>
+        <Width>1.79886cm</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -333,7 +338,6 @@
         </Style>
       </Textbox>
       <Textbox Name="land_map">
-        <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
@@ -341,16 +345,18 @@
               <TextRun>
                 <Value>=First(Fields!land_map.Value, "DataSet1")</Value>
                 <Style>
-                  <FontSize>14pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>land_map</rd:DefaultName>
-        <Top>3.37609cm</Top>
-        <Left>2.83253cm</Left>
+        <Top>2.96334cm</Top>
+        <Left>4.38828cm</Left>
         <Height>0.6cm</Height>
         <Width>7.84458cm</Width>
         <ZIndex>3</ZIndex>
@@ -365,7 +371,6 @@
         </Style>
       </Textbox>
       <Textbox Name="land_ground">
-        <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
@@ -373,16 +378,18 @@
               <TextRun>
                 <Value>=First(Fields!land_ground.Value, "DataSet1")</Value>
                 <Style>
-                  <FontSize>14pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>land_ground</rd:DefaultName>
-        <Top>4.52559cm</Top>
-        <Left>2.83253cm</Left>
+        <Top>4.11284cm</Top>
+        <Left>4.38828cm</Left>
         <Height>0.6cm</Height>
         <Width>7.84458cm</Width>
         <ZIndex>4</ZIndex>
@@ -397,7 +404,6 @@
         </Style>
       </Textbox>
       <Textbox Name="land_use">
-        <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
@@ -405,16 +411,18 @@
               <TextRun>
                 <Value>=First(Fields!land_use.Value, "DataSet1")</Value>
                 <Style>
-                  <FontSize>14pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>land_use</rd:DefaultName>
-        <Top>5.60712cm</Top>
-        <Left>2.83253cm</Left>
+        <Top>5.19437cm</Top>
+        <Left>4.38828cm</Left>
         <Height>0.6cm</Height>
         <Width>7.84458cm</Width>
         <ZIndex>5</ZIndex>
@@ -429,7 +437,6 @@
         </Style>
       </Textbox>
       <Textbox Name="land_use_period">
-        <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
@@ -437,17 +444,19 @@
               <TextRun>
                 <Value>=First(Fields!land_use_period.Value, "DataSet1")</Value>
                 <Style>
-                  <FontSize>14pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>land_use_period</rd:DefaultName>
-        <Top>6.60576cm</Top>
-        <Left>2.83253cm</Left>
-        <Height>0.9175cm</Height>
+        <Top>6.35176cm</Top>
+        <Left>4.38828cm</Left>
+        <Height>0.58942cm</Height>
         <Width>7.84458cm</Width>
         <ZIndex>6</ZIndex>
         <Style>
@@ -461,7 +470,6 @@
         </Style>
       </Textbox>
       <Textbox Name="land_east">
-        <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
@@ -469,16 +477,18 @@
               <TextRun>
                 <Value>=First(Fields!land_east.Value, "DataSet1")</Value>
                 <Style>
-                  <FontSize>14pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>land_east</rd:DefaultName>
-        <Top>7.50915cm</Top>
-        <Left>1.81652cm</Left>
+        <Top>7.31865cm</Top>
+        <Left>3.72152cm</Left>
         <Height>0.6cm</Height>
         <Width>7.84458cm</Width>
         <ZIndex>7</ZIndex>
@@ -493,7 +503,6 @@
         </Style>
       </Textbox>
       <Textbox Name="land_south">
-        <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
@@ -501,16 +510,18 @@
               <TextRun>
                 <Value>=First(Fields!land_south.Value, "DataSet1")</Value>
                 <Style>
-                  <FontSize>14pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>land_south</rd:DefaultName>
-        <Top>8.34198cm</Top>
-        <Left>1.81652cm</Left>
+        <Top>8.11973cm</Top>
+        <Left>3.72152cm</Left>
         <Height>0.6cm</Height>
         <Width>7.84458cm</Width>
         <ZIndex>8</ZIndex>
@@ -525,7 +536,6 @@
         </Style>
       </Textbox>
       <Textbox Name="land_west">
-        <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
@@ -533,16 +543,18 @@
               <TextRun>
                 <Value>=First(Fields!land_west.Value, "DataSet1")</Value>
                 <Style>
-                  <FontSize>14pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>land_west</rd:DefaultName>
-        <Top>8.94904cm</Top>
-        <Left>1.81652cm</Left>
+        <Top>8.98079cm</Top>
+        <Left>3.72152cm</Left>
         <Height>0.6cm</Height>
         <Width>7.84458cm</Width>
         <ZIndex>9</ZIndex>
@@ -557,7 +569,6 @@
         </Style>
       </Textbox>
       <Textbox Name="land_north">
-        <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
@@ -565,16 +576,18 @@
               <TextRun>
                 <Value>=First(Fields!land_north.Value, "DataSet1")</Value>
                 <Style>
-                  <FontSize>14pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>land_north</rd:DefaultName>
-        <Top>9.68662cm</Top>
-        <Left>1.81652cm</Left>
+        <Top>9.75012cm</Top>
+        <Left>3.72152cm</Left>
         <Height>0.6cm</Height>
         <Width>7.84458cm</Width>
         <ZIndex>10</ZIndex>
@@ -589,13 +602,12 @@
         </Style>
       </Textbox>
       <Textbox Name="land_office">
-        <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!land_office.Value, "DataSet1")</Value>
+                <Value />
                 <Style>
                   <FontSize>14pt</FontSize>
                 </Style>
@@ -606,7 +618,7 @@
         </Paragraphs>
         <rd:DefaultName>land_office</rd:DefaultName>
         <Top>11.4882cm</Top>
-        <Left>3.02302cm</Left>
+        <Left>5.56302cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>11</ZIndex>
@@ -629,16 +641,18 @@
               <TextRun>
                 <Value>=CDate(First(Fields!land_date.Value, "DataSet1")).ToString("yyyy")</Value>
                 <Style>
-                  <FontSize>14pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>land_send_date</rd:DefaultName>
         <Top>12.30162cm</Top>
-        <Left>4.00198cm</Left>
+        <Left>6.35148cm</Left>
         <Height>0.6cm</Height>
         <Width>1.54051cm</Width>
         <ZIndex>12</ZIndex>
@@ -661,16 +675,18 @@
               <TextRun>
                 <Value>=CDate(First(Fields!land_date.Value, "DataSet1")).ToString("MM")</Value>
                 <Style>
-                  <FontSize>14pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>land_send_date1</rd:DefaultName>
         <Top>12.30162cm</Top>
-        <Left>5.92349cm</Left>
+        <Left>8.27299cm</Left>
         <Height>0.6cm</Height>
         <Width>0.9125cm</Width>
         <ZIndex>13</ZIndex>
@@ -693,16 +709,18 @@
               <TextRun>
                 <Value>=CDate(First(Fields!land_date.Value, "DataSet1")).ToString("dd")</Value>
                 <Style>
-                  <FontSize>14pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>land_send_date2</rd:DefaultName>
         <Top>12.30162cm</Top>
-        <Left>7.11348cm</Left>
+        <Left>9.17723cm</Left>
         <Height>0.6cm</Height>
         <Width>1.81208cm</Width>
         <ZIndex>14</ZIndex>

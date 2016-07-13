@@ -18,6 +18,10 @@ using Xceed.Wpf.AvalonDock;
 using Xceed.Wpf.AvalonDock.Themes;
 
 using Microsoft.Reporting.WinForms;
+using System.Collections;
+using Microsoft.Win32;
+using System.Data.SqlClient;
+using System.IO;
 
 namespace PocclientApplication
 {
@@ -29,8 +33,97 @@ namespace PocclientApplication
         public MainWindow()
         {
             InitializeComponent();
+            this.Closing += F;
         }
+
+        private void F(object o, System.ComponentModel.CancelEventArgs e)
+        {
+            beifei();
+            //if (MessageBox.Show("关闭", "", MessageBoxButton.YesNo) == MessageBoxResult.No)
+            //    e.Cancel = true;
+        }
+        
+
+
+        //
+        private void beifei()
+        {
+            
+            //StreamWriter test = new StreamWriter(System.AppDomain.CurrentDomain.BaseDirectory + @"\Autobak\", true);
+            string a = string.Format("{0:yyyyMMddHHmmssffff}", System.DateTime.Now);
+
+            string saveAway = System.AppDomain.CurrentDomain.BaseDirectory + Directory.CreateDirectory("Autobak") + @"\"+a+".bak";
+            //SaveFileDialog sa = new SaveFileDialog();
+            //sa.Filter = "数据库备份文件 (.bak)|*.bak";
+            //if (sa.ShowDialog() == true)
+            //{
+            //    saveAway = sa.FileName;
+            //}
+            string cmdText = @"backup database pocdatabase to disk='" + saveAway + "'";
+            BakReductSql(cmdText, true);
+        }
+
+
+        private void BakReductSql(string cmdText, bool isBak)
+        {
+            SqlCommand cmdBakRst = new SqlCommand();
+            SqlConnection conn = new SqlConnection("Data Source=.;Initial Catalog=master;Trusted_Connection=Yes");
+
+            try
+            {
+                conn.Open();
+                cmdBakRst.Connection = conn;
+                cmdBakRst.CommandType = CommandType.Text;
+                if (!isBak)     //如果是恢复操作
+                {
+                    string setOffline = "Alter database GroupMessage Set Offline With rollback immediate ";
+                    string setOnline = " Alter database GroupMessage Set Online With Rollback immediate";
+                    cmdBakRst.CommandText = setOffline + cmdText + setOnline;
+                }
+                else
+                {
+                    cmdBakRst.CommandText = cmdText;
+                }
+                cmdBakRst.ExecuteNonQuery();
+                if (!isBak)
+                {
+                    MessageBox.Show("恭喜你，数据成功恢复为所选文档的状态！", "系统消息");
+                }
+                else
+                {
+                    MessageBox.Show("数据库备份成功！", "系统消息");
+                }
+            }
+            catch (SqlException sexc)
+            {
+                MessageBox.Show("失败，可能是对数据库操作失败，原因：" + sexc, "数据库错误消息");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("对不起，操作失败，可能原因：" + ex, "系统消息");
+            }
+            finally
+            {
+                cmdBakRst.Dispose();
+                conn.Close();
+                conn.Dispose();
+            }
+        }
+
+        private void huanyuan()
+        {
+            string openAway = "d:/pocdatabase.bak";//读取文件的路径
+            string cmdText = @"restore database pocdatabase from disk='" + openAway + "'";
+            BakReductSql(cmdText, false);
+        }
+
+
+
+
+        
+
         Service1Client client = new Service1Client();
+        public string[] per_list;
 
         public static T FindChild<T>(DependencyObject parent, string childName)//查找控件
 where T : DependencyObject
@@ -219,7 +312,7 @@ where T : DependencyObject
             {
                 foreach (var t in mainpanel.Children)
                 {
-                    if (t.Title == "土地使用")
+                    if (t.Title == "土地查询")
                     {
                         t.IsActive = true;
                         break;
@@ -234,7 +327,7 @@ where T : DependencyObject
                 //newSelectLande.Width = menu.ActualWidth;
                 newSelectLande.HorizontalAlignment = HorizontalAlignment.Stretch;
                 //newSelectLande.land_dataGrid.Width = menu.ActualWidth;
-                newreport.Title = "土地证";
+                newreport.Title = "土地查询";
                 newreport.IsActive = true;
                 newreport.Content = newSelectLande;
                 newSelectLande.Name = "newSelectLande";
@@ -251,6 +344,10 @@ where T : DependencyObject
             //newreport.Content = newl;
             //newl.Name = "newSelectLande";
             //mainpanel.Children.Add(newreport);
+
+         
+
+    
         }
         #endregion
 
@@ -261,7 +358,7 @@ where T : DependencyObject
             SelectHouse newSelectHouse = new SelectHouse();
             //newEffective.Margin = new Thickness(0, 20, 0, 0);
             LayoutDocument newreport = new LayoutDocument();
-            newreport.Title = "房屋使用";
+            newreport.Title = "房屋查询";
             newreport.IsActive = true;
             newreport.Content = newSelectHouse;
             newSelectHouse.Name = "newSelectHouse";
@@ -304,15 +401,113 @@ where T : DependencyObject
         private void register_Click(object sender, RoutedEventArgs e)
         {
             C1.WPF.C1Window zhuce = new C1.WPF.C1Window();
+            zhuce.Name = "newRegister";
             zhuce.IsResizable = false;
-            zhuce.Height = 250;
-            zhuce.Width = 400;
+            zhuce.Height = 300;
+            zhuce.Width = 700;
             zhuce.Header = "注册";
             zhuce.Margin = new Thickness(SystemParameters.PrimaryScreenWidth / 2d - 318, SystemParameters.PrimaryScreenHeight / 2d - 174, 0, 0);
             Register ccabout = new Register();
             zhuce.Content = ccabout;
             zhuce.Show();
         }
+
+
+        //权限
+        private void permissions()
+        {
+
+            
+
+            string pem = client.SelectLoginpem(PublicClass.loginid);
+            per_list = pem.Split('f');
+
+
+
+            foreach (string s in per_list)
+            {
+                if (s == "3")
+                {
+                    addhouse.IsEnabled = true;
+                    addland.IsEnabled = true;
+                }
+                if (s == "6")
+                {
+                    fix_add.IsEnabled = true;
+                    fixed_transfers.IsEnabled = true;
+                }
+                if (s == "9")
+                {
+                    account.IsEnabled = true;
+                }
+                //if (s == "10")
+                //{
+                //    register.IsEnabled = true;
+                //}
+                if (s == "11")
+                {
+                    backup.IsEnabled = true;
+                }
+
+
+
+            }
+        }
+
+        private void backup_Click(object sender, RoutedEventArgs e)
+        {
+            //Backup newBackup = new Backup();
+            //LayoutDocument newreport = new LayoutDocument();
+            //newreport.Title = "数据管理";
+            //newreport.IsActive = true;
+            //newreport.Content = newBackup;
+            //newBackup.Name = "newBackup";
+            //mainpanel.Children.Add(newreport);
+            databack newbak = new databack();
+            LayoutDocument newdoc = new LayoutDocument();
+            newdoc.Title = "数据操作";
+            newdoc.IsActive = true;
+            newdoc.Content = newbak;
+            mainpanel.Children.Add(newdoc);
+        }
+
+        private void account_Click(object sender, RoutedEventArgs e)
+        {
+            Userlist newUserlist = new Userlist();
+            LayoutDocument newreport = new LayoutDocument();
+            newreport.Title = "用户管理";
+            newreport.IsActive = true;
+            newreport.Content = newUserlist;
+            newUserlist.Name = "newUserlist";
+            mainpanel.Children.Add(newreport);
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            permissions();
+        }
+
+        private void editpwd_Click(object sender, RoutedEventArgs e)
+        {
+            C1.WPF.C1Window editpassw = new C1.WPF.C1Window();
+            editpassw.Name = "editpassw";
+            editpassw.IsResizable = false;
+            editpassw.Height = 250;
+            editpassw.Width = 300;
+            editpassw.Header = "修改密码";
+            editpassw.Margin = new Thickness(SystemParameters.PrimaryScreenWidth / 2d - 318, SystemParameters.PrimaryScreenHeight / 2d - 174, 0, 0);
+            EditPWD neweditpwd = new EditPWD();
+            editpassw.Content = neweditpwd;
+            editpassw.Show();
+        }
+
+        private void zhuxiao_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+            Login newlogin = new Login();
+            newlogin.Show();
+        }
+
 
 
 

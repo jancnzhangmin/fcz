@@ -455,12 +455,12 @@ namespace FileService
         }
 
         //增加所有权表
-        public int Inserthouse(string house_word, string house_number, string house_owner, int house_nature_id, string house_idcardnumber, int house_located_id, string house_dihao, string house_postscript, string house_witness, string house_proofreader, string house_autograph, DateTime house_licensing_date, string house_office, string house_banzhenren, DateTime house_tianfatime, string house_figure)
+        public int Inserthouse(string house_word, string house_number, string house_owner, int house_nature, string house_idcardnumber, string house_located, string house_dihao, string house_postscript, string house_witness, string house_proofreader, string house_autograph, DateTime house_licensing_date, string house_office, string house_banzhenren, DateTime house_tianfatime, string house_figure)
         {
             try
             {
                 strCon.Open();
-                string strSql = "INSERT INTO house(house_word,house_number,house_owner,house_nature_id,house_idcardnumber,house_located_id,house_dihao,house_postscript,house_witness,house_proofreader,house_autograph,house_licensing_date,house_office,house_banzhenren,house_tianfatime,house_figure) VALUES(@house_word,@house_number,@house_owner,@house_nature_id,@house_idcardnumber,@house_located_id,@house_dihao,@house_postscript,@house_witness,@house_proofreader,@house_autograph,@house_licensing_date,@house_office,@house_banzhenren,@house_tianfatime,@house_figure)";
+                string strSql = "INSERT INTO house(house_word,house_number,house_owner,house_nature,house_idcardnumber,house_located,house_dihao,house_postscript,house_witness,house_proofreader,house_autograph,house_licensing_date,house_office,house_banzhenren,house_tianfatime,house_figure) VALUES(@house_word,@house_number,@house_owner,@house_nature,@house_idcardnumber,@house_located,@house_dihao,@house_postscript,@house_witness,@house_proofreader,@house_autograph,@house_licensing_date,@house_office,@house_banzhenren,@house_tianfatime,@house_figure)";
                 SqlCommand cmd = new SqlCommand(strSql, strCon);
 
 
@@ -471,13 +471,13 @@ namespace FileService
                 SqlParameter houseowner = new SqlParameter("@house_owner", house_owner);
                 cmd.Parameters.Add(houseowner);
 
-                SqlParameter housenature_id = new SqlParameter("@house_nature_id", house_nature_id);
+                SqlParameter housenature_id = new SqlParameter("@house_nature", house_nature);
                 cmd.Parameters.Add(housenature_id);
 
                 SqlParameter houseidcardnumber = new SqlParameter("@house_idcardnumber", house_idcardnumber);
                 cmd.Parameters.Add(houseidcardnumber);
 
-                SqlParameter houselocated = new SqlParameter("@house_located_id", house_located_id);
+                SqlParameter houselocated = new SqlParameter("@house_located", house_located);
                 cmd.Parameters.Add(houselocated);
                 SqlParameter housedihao = new SqlParameter("@house_dihao", house_dihao);
                 cmd.Parameters.Add(housedihao);
@@ -523,7 +523,7 @@ namespace FileService
             {
                 strCon.Open();
 
-                string strSql = "SELECT house_id, house_word,house_number,house_owner,house_nature_id,house_idcardnumber,house_located_id,house_dihao,house_postscript,house_witness,house_proofreader,house_autograph,house_licensing_date,house_office,house_banzhenren,house_tianfatime,house_figure FROM house ";
+                string strSql = "SELECT house_id, house_word,house_number,house_owner,house_nature,house_idcardnumber,house_located,house_dihao,house_postscript,house_witness,house_proofreader,house_autograph,house_licensing_date,house_office,house_banzhenren,house_tianfatime,house_figure FROM house ";
                 DataSet ds = new DataSet();
                 SqlDataAdapter s = new SqlDataAdapter(strSql, strCon);
                 s.Fill(ds);
@@ -571,7 +571,7 @@ namespace FileService
             {
                 strCon.Open();
 
-                string strSql = "SELECT  house_word,house_number,house_owner,house_nature_id,house_idcardnumber,house_located_id,house_dihao,house_postscript,house_witness,house_proofreader,house_autograph,house_licensing_date,house_office,house_banzhenren,house_tianfatime,house_figure FROM house where house_id= '" + id + "'";
+                string strSql = "SELECT  house_word,house_number,house_owner,house_nature,house_idcardnumber,house_located,house_dihao,house_postscript,house_witness,house_proofreader,house_autograph,house_licensing_date,house_office,house_banzhenren,house_tianfatime,house_figure FROM house where house_id= '" + id + "'";
                 DataSet ds = new DataSet();
                 SqlDataAdapter s = new SqlDataAdapter(strSql, strCon);
                 s.Fill(ds);
@@ -587,12 +587,12 @@ namespace FileService
             }
         }
         //更新所有权表
-        public int Updatahouse(string house_word, string house_number, string house_owner, int house_nature_id, string house_idcardnumber, int house_located_id, string house_dihao, string house_postscript, string house_witness, string house_proofreader, string house_autograph, DateTime house_licensing_date, string house_office, string house_banzhenren, DateTime house_tianfatime, string house_figure, int houseid)
+        public int Updatahouse(string house_word, string house_number, string house_owner, int house_nature, string house_idcardnumber, string house_located, string house_dihao, string house_postscript, string house_witness, string house_proofreader, string house_autograph, DateTime house_licensing_date, string house_office, string house_banzhenren, DateTime house_tianfatime, string house_figure, int houseid)
         {
             try
             {
                 strCon.Open();
-                string strSql = "UPDATE  house  SET house_word=@house_word,house_number=@house_number,house_owner=@house_owner,house_nature_id=@house_nature_id,house_idcardnumber=@house_idcardnumber,house_located_id=@house_located_id,house_dihao=@house_dihao,house_postscript=@house_postscript,house_witness=@house_witness,house_proofreader=@house_proofreader,house_autograph=@house_autograph,house_licensing_date=@house_licensing_date,house_office=@house_office,house_banzhenren=@house_banzhenren,house_tianfatime=@house_tianfatime,house_figure=@house_figure WHERE house_id ='" + houseid + "'";
+                string strSql = "UPDATE  house  SET house_word=@house_word,house_number=@house_number,house_owner=@house_owner,house_nature=@house_nature,house_idcardnumber=@house_idcardnumber,house_located=@house_located,house_dihao=@house_dihao,house_postscript=@house_postscript,house_witness=@house_witness,house_proofreader=@house_proofreader,house_autograph=@house_autograph,house_licensing_date=@house_licensing_date,house_office=@house_office,house_banzhenren=@house_banzhenren,house_tianfatime=@house_tianfatime,house_figure=@house_figure WHERE house_id ='" + houseid + "'";
                 SqlCommand cmd = new SqlCommand(strSql, strCon);
                 SqlParameter houseword = new SqlParameter("@house_word", house_word);
                 cmd.Parameters.Add(houseword);
@@ -601,13 +601,13 @@ namespace FileService
                 SqlParameter houseowner = new SqlParameter("@house_owner", house_owner);
                 cmd.Parameters.Add(houseowner);
 
-                SqlParameter housenature_id = new SqlParameter("@house_nature_id", house_nature_id);
+                SqlParameter housenature_id = new SqlParameter("@house_nature", house_nature);
                 cmd.Parameters.Add(housenature_id);
 
                 SqlParameter houseidcardnumber = new SqlParameter("@house_idcardnumber", house_idcardnumber);
                 cmd.Parameters.Add(houseidcardnumber);
 
-                SqlParameter houselocated = new SqlParameter("@house_located_id", house_located_id);
+                SqlParameter houselocated = new SqlParameter("@house_located", house_located);
                 cmd.Parameters.Add(houselocated);
                 SqlParameter housedihao = new SqlParameter("@house_dihao", house_dihao);
                 cmd.Parameters.Add(housedihao);
@@ -763,7 +763,7 @@ namespace FileService
             {
                 strCon.Open();
 
-                string strSql = "SELECT house_nature_id FROM house where house_id= '" + house_id + "'";
+                string strSql = "SELECT house_nature FROM house where house_id= '" + house_id + "'";
                 DataSet ds = new DataSet();
 
                 SqlDataAdapter s = new SqlDataAdapter(strSql, strCon);
@@ -1001,7 +1001,7 @@ namespace FileService
         }
 
         //增加契税摘要
-        public int Inserthousedeedtax(DateTime datetime, string price, string type, string tax_rate, string amount_money, string remarks, int house_id)
+        public int Inserthousedeedtax(string datetime, string price, string type, string tax_rate, string amount_money, string remarks, int house_id)
         {
             try
             {
@@ -1038,7 +1038,7 @@ namespace FileService
             }
         }
         //更新契税
-        public int Updatehousedeedtax(DateTime datetime, string price, string type, string tax_rate, string amount_money, string remarks, int house_id)
+        public int Updatehousedeedtax(string datetime, string price, string type, string tax_rate, string amount_money, string remarks, int house_id)
         {
             try
             {
@@ -1097,7 +1097,7 @@ namespace FileService
         }
 
         //增加设定他项权利摘要
-        public int Inserthouseobligee(string obligee, string type, string room_number, string jianshu, string built_up_area, string right_value, string duration_right, DateTime logout_date, int house_id)
+        public int Inserthouseobligee(string obligee, string type, string room_number, string jianshu, string built_up_area, string right_value, string duration_right, string logout_date, int house_id)
         {
             try
             {
@@ -1182,7 +1182,7 @@ namespace FileService
             }
         }
         //更新他项权利摘要
-        public int Updataobligee(string obligee, string type, string room_number, string jianshu, string built_up_area, string right_value, string duration_right, DateTime logout_date, int house_id, int oblid)
+        public int Updataobligee(string obligee, string type, string room_number, string jianshu, string built_up_area, string right_value, string duration_right, string logout_date, int house_id, int oblid)
         {
             try
             {
@@ -1250,23 +1250,21 @@ namespace FileService
 
 
         //增加使用土地摘要
-        public int Inserthouseuseland(string use_area, string company, string card_number, string zidihao, int house_id)
+        public int Inserthouseuseland(string use_area, string card_number,  int house_id)
         {
             try
             {
                 strCon.Open();
-                string strSql = "INSERT INTO house_use_land(use_area,company,card_number,zidihao,house_id) VALUES(@use_area,@company,@card_number,@zidihao,@house_id)";
+                string strSql = "INSERT INTO house_use_land(use_area,card_number,house_id) VALUES(@use_area,@card_number,@house_id)";
                 SqlCommand cmd = new SqlCommand(strSql, strCon);
 
 
                 SqlParameter usearea = new SqlParameter("@use_area", use_area);
                 cmd.Parameters.Add(usearea);
-                SqlParameter addcompany = new SqlParameter("@company", company);
-                cmd.Parameters.Add(addcompany);
+
                 SqlParameter cardnumber = new SqlParameter("@card_number", card_number);
                 cmd.Parameters.Add(cardnumber);
-                SqlParameter addzidihao = new SqlParameter("@zidihao", zidihao);
-                cmd.Parameters.Add(addzidihao);
+
                 SqlParameter houseid = new SqlParameter("@house_id", house_id);
                 cmd.Parameters.Add(houseid);
                 int result = cmd.ExecuteNonQuery();
@@ -1283,23 +1281,21 @@ namespace FileService
             }
         }
         //更新使用土地
-        public int Updataohouseuseland(string use_area, string company, string card_number, string zidihao, int house_id)
+        public int Updataohouseuseland(string use_area,  string card_number, int house_id)
         {
             try
             {
                 strCon.Open();
-                string strSql = "UPDATE  house_use_land  SET use_area=@use_area,company=@company,card_number=@card_number,zidihao=@zidihao WHERE house_id ='" + house_id + "'";
+                string strSql = "UPDATE  house_use_land  SET use_area=@use_area,card_number=@card_number WHERE house_id ='" + house_id + "'";
                 SqlCommand cmd = new SqlCommand(strSql, strCon);
 
 
                 SqlParameter usearea = new SqlParameter("@use_area", use_area);
                 cmd.Parameters.Add(usearea);
-                SqlParameter addcompany = new SqlParameter("@company", company);
-                cmd.Parameters.Add(addcompany);
+               
                 SqlParameter cardnumber = new SqlParameter("@card_number", card_number);
                 cmd.Parameters.Add(cardnumber);
-                SqlParameter addzidihao = new SqlParameter("@zidihao", zidihao);
-                cmd.Parameters.Add(addzidihao);
+        
                 int result = cmd.ExecuteNonQuery();
                 cmd.Dispose();
                 return result;
@@ -1320,7 +1316,7 @@ namespace FileService
             {
                 strCon.Open();
 
-                string strSql = "SELECT  use_area,company,card_number,zidihao,house_id FROM house_use_land where house_id= '" + id + "'";
+                string strSql = "SELECT  use_area,card_number,house_id FROM house_use_land where house_id= '" + id + "'";
                 DataSet ds = new DataSet();
                 SqlDataAdapter s = new SqlDataAdapter(strSql, strCon);
                 s.Fill(ds);
@@ -1390,12 +1386,12 @@ namespace FileService
 
         #region 土地证
         //增加土地使用
-        public int Insertland(string land_tile, string land_word, string land_number, string land_government, DateTime land_date, string land_user, string land_idcardnumber, string land_address, string land_map, string land_ground, string land_use, string land_use_period, string land_east, string land_south, string land_west, string land_north, string land_office, DateTime land_send_date, string land_managers, string land_licensing_people, string land_remarks, string land_change_items, string land_figure)
+        public int Insertland(string land_tile, string land_word, string land_number, string land_government, DateTime land_date, string land_user, string land_idcardnumber, string land_address, string land_map, string land_ground, string land_use, string land_use_period, string land_east, string land_south, string land_west, string land_north, string land_office, DateTime land_send_date, string land_remarks, string land_change_items, string land_figure)
         {
             try
             {
                 strCon.Open();
-                string strSql = "INSERT INTO land(land_tile, land_word, land_number, land_government, land_date , land_user, land_idcardnumber, land_address, land_map, land_ground, land_use, land_use_period, land_east, land_south, land_west, land_north,land_office, land_send_date, land_managers, land_licensing_people, land_remarks, land_change_items, land_figure) VALUES(@land_tile,@land_word,@land_number,@land_government,@land_date ,@land_user,@land_idcardnumber,@land_address,@land_map,@land_ground,@land_use,@land_use_period,@land_east,@land_south,@land_west,@land_north,@land_office,@land_send_date,@land_managers,@land_licensing_people,@land_remarks,@land_change_items,@land_figure)";
+                string strSql = "INSERT INTO land(land_tile, land_word, land_number, land_government, land_date , land_user, land_idcardnumber, land_address, land_map, land_ground, land_use, land_use_period, land_east, land_south, land_west, land_north,land_office, land_send_date, land_remarks, land_change_items, land_figure) VALUES(@land_tile,@land_word,@land_number,@land_government,@land_date ,@land_user,@land_idcardnumber,@land_address,@land_map,@land_ground,@land_use,@land_use_period,@land_east,@land_south,@land_west,@land_north,@land_office,@land_send_date,@land_remarks,@land_change_items,@land_figure)";
                 SqlCommand cmd = new SqlCommand(strSql, strCon);
 
 
@@ -1439,10 +1435,7 @@ namespace FileService
                 cmd.Parameters.Add(landoffice);
                 SqlParameter land_senddate = new SqlParameter("@land_send_date", land_send_date);
                 cmd.Parameters.Add(land_senddate);
-                SqlParameter landmanagors = new SqlParameter("@land_managers", land_managers);
-                cmd.Parameters.Add(landmanagors);
-                SqlParameter landlicensing = new SqlParameter("@land_licensing_people", land_licensing_people);
-                cmd.Parameters.Add(landlicensing);
+      
 
                 SqlParameter landremarks = new SqlParameter("@land_remarks", land_remarks);
                 cmd.Parameters.Add(landremarks);
@@ -1464,13 +1457,12 @@ namespace FileService
             }
         }
         //更新land表
-        //修改数据
-        public int Updataland(string land_tile, string land_word, string land_number, string land_government, DateTime land_date, string land_user, string land_idcardnumber, string land_address, string land_map, string land_ground, string land_use, string land_use_period, string land_east, string land_south, string land_west, string land_north, string land_office, DateTime land_send_date, string land_managers, string land_licensing_people, string land_remarks, string land_change_items, string land_figure, int land_id)
+        public int Updataland(string land_tile, string land_word, string land_number, string land_government, DateTime land_date, string land_user, string land_idcardnumber, string land_address, string land_map, string land_ground, string land_use, string land_use_period, string land_east, string land_south, string land_west, string land_north, string land_office, DateTime land_send_date, string land_remarks, string land_change_items, string land_figure, int land_id)
         {
             try
             {
                 strCon.Open();
-                string strSql = "UPDATE  land  SET land_tile=@land_tile, land_word=@land_word, land_number=@land_number, land_government=@land_government, land_date=@land_date , land_user=@land_user, land_idcardnumber=@land_idcardnumber, land_address=@land_address, land_map=@land_map, land_ground=@land_ground, land_use=@land_use, land_use_period=@land_use_period, land_east=@land_east, land_south=@land_south, land_west=@land_west, land_north=@land_north,land_office=@land_office, land_send_date=@land_send_date, land_managers=@land_managers, land_licensing_people=@land_licensing_people, land_remarks=@land_remarks, land_change_items=@land_change_items, land_figure=@land_figure WHERE land_id ='" + land_id + "'";
+                string strSql = "UPDATE  land  SET land_tile=@land_tile, land_word=@land_word, land_number=@land_number, land_government=@land_government, land_date=@land_date , land_user=@land_user, land_idcardnumber=@land_idcardnumber, land_address=@land_address, land_map=@land_map, land_ground=@land_ground, land_use=@land_use, land_use_period=@land_use_period, land_east=@land_east, land_south=@land_south, land_west=@land_west, land_north=@land_north,land_office=@land_office, land_send_date=@land_send_date, land_remarks=@land_remarks, land_change_items=@land_change_items, land_figure=@land_figure WHERE land_id ='" + land_id + "'";
                 SqlCommand cmd = new SqlCommand(strSql, strCon);
                 SqlParameter landtitle = new SqlParameter("@land_tile", land_tile);
                 cmd.Parameters.Add(landtitle);
@@ -1512,10 +1504,7 @@ namespace FileService
                 cmd.Parameters.Add(landoffice);
                 SqlParameter land_senddate = new SqlParameter("@land_send_date", land_send_date);
                 cmd.Parameters.Add(land_senddate);
-                SqlParameter landmanagors = new SqlParameter("@land_managers", land_managers);
-                cmd.Parameters.Add(landmanagors);
-                SqlParameter landlicensing = new SqlParameter("@land_licensing_people", land_licensing_people);
-                cmd.Parameters.Add(landlicensing);
+
 
                 SqlParameter landremarks = new SqlParameter("@land_remarks", land_remarks);
                 cmd.Parameters.Add(landremarks);
@@ -1573,7 +1562,7 @@ namespace FileService
             {
                 strCon.Open();
 
-                string strSql = "SELECT land_id, land_tile, land_word, land_number, land_government, land_date , land_user, land_idcardnumber, land_address, land_map, land_ground, land_use, land_use_period, land_east, land_south, land_west, land_north,land_office, land_send_date, land_managers, land_licensing_people, land_remarks, land_change_items, land_figure FROM land ";
+                string strSql = "SELECT land_id, land_tile, land_word, land_number, land_government, land_date , land_user, land_idcardnumber, land_address, land_map, land_ground, land_use, land_use_period, land_east, land_south, land_west, land_north,land_office, land_send_date, land_remarks, land_change_items, land_figure FROM land ";
                 DataSet ds = new DataSet();
                 SqlDataAdapter s = new SqlDataAdapter(strSql, strCon);
                 s.Fill(ds);
@@ -1619,7 +1608,7 @@ namespace FileService
             {
                 strCon.Open();
 
-                string strSql = "SELECT land_tile, land_word, land_number, land_government, land_date , land_user, land_idcardnumber, land_address, land_map, land_ground, land_use, land_use_period, land_east, land_south, land_west, land_north,land_office, land_send_date, land_managers, land_licensing_people, land_remarks, land_change_items, land_figure FROM land where land_id='" + land_id + "'";
+                string strSql = "SELECT land_tile, land_word, land_number, land_government, land_date , land_user, land_idcardnumber, land_address, land_map, land_ground, land_use, land_use_period, land_east, land_south, land_west, land_north,land_office, land_send_date, land_remarks, land_change_items, land_figure FROM land where land_id='" + land_id + "'";
                 DataSet ds = new DataSet();
                 SqlDataAdapter s = new SqlDataAdapter(strSql, strCon);
                 s.Fill(ds);
@@ -1642,11 +1631,11 @@ namespace FileService
             try
             {
                 strCon.Open();
-                string strSql = "INSERT INTO land_countryside(land_area,cultivated_land,dry_land,paddy_field,orchard,forest_land,grassland,inmate_mining,construction_land,homestead_land,traffic_land,water_land,unused_land,land_id) VALUES(@land_area,@cultivated_land,@dry_land,@paddy_field,@orchard,@forest_land,@grassland,@inmate_mining,@construction_land,@homestead_land,@traffic_land,@water_land,@unused_land,@land_id)";
+                string strSql = "INSERT INTO land_countryside(land_countryside_area,cultivated_land,dry_land,paddy_field,orchard,forest_land,grassland,inmate_mining,construction_land,homestead_land,traffic_land,water_land,unused_land,land_id) VALUES(@land_countryside_area,@cultivated_land,@dry_land,@paddy_field,@orchard,@forest_land,@grassland,@inmate_mining,@construction_land,@homestead_land,@traffic_land,@water_land,@unused_land,@land_id)";
                 SqlCommand cmd = new SqlCommand(strSql, strCon);
 
 
-                SqlParameter landarea = new SqlParameter("@land_area", land_area);
+                SqlParameter landarea = new SqlParameter("@land_countryside_area", land_area);
                 cmd.Parameters.Add(landarea);
                 SqlParameter cultivatedland = new SqlParameter("@cultivated_land", cultivated_land);
                 cmd.Parameters.Add(cultivatedland);
@@ -1694,9 +1683,9 @@ namespace FileService
             try
             {
                 strCon.Open();
-                string strSql = "UPDATE  land_countryside  SET land_area=@land_area,cultivated_land=@cultivated_land,dry_land=@dry_land,paddy_field=@paddy_field,orchard=@orchard,forest_land=@forest_land,grassland=@grassland,inmate_mining=@inmate_mining,construction_land=@construction_land,homestead_land=@homestead_land,traffic_land=@traffic_land,water_land=@water_land,unused_land=@unused_land WHERE land_id ='" + land_id + "'";
+                string strSql = "UPDATE  land_countryside  SET land_countryside_area=@land_countryside_area,cultivated_land=@cultivated_land,dry_land=@dry_land,paddy_field=@paddy_field,orchard=@orchard,forest_land=@forest_land,grassland=@grassland,inmate_mining=@inmate_mining,construction_land=@construction_land,homestead_land=@homestead_land,traffic_land=@traffic_land,water_land=@water_land,unused_land=@unused_land WHERE land_id ='" + land_id + "'";
                 SqlCommand cmd = new SqlCommand(strSql, strCon);
-                SqlParameter landarea = new SqlParameter("@land_area", land_area);
+                SqlParameter landarea = new SqlParameter("@land_countryside_area", land_area);
                 cmd.Parameters.Add(landarea);
                 SqlParameter cultivatedland = new SqlParameter("@cultivated_land", cultivated_land);
                 cmd.Parameters.Add(cultivatedland);
@@ -1743,7 +1732,7 @@ namespace FileService
             {
                 strCon.Open();
 
-                string strSql = "SELECT land_area,cultivated_land,dry_land,paddy_field,orchard,forest_land,grassland,inmate_mining,construction_land,homestead_land,traffic_land,water_land,unused_land FROM land_countryside where land_id='" + land_id
+                string strSql = "SELECT land_countryside_area,cultivated_land,dry_land,paddy_field,orchard,forest_land,grassland,inmate_mining,construction_land,homestead_land,traffic_land,water_land,unused_land FROM land_countryside where land_id='" + land_id
                     + "' ";
                 DataSet ds = new DataSet();
                 SqlDataAdapter s = new SqlDataAdapter(strSql, strCon);
@@ -1930,6 +1919,29 @@ namespace FileService
 
 
 
+        //查询用户表
+        public DataSet Selectloginuser()
+        {
+            try
+            {
+                strCon.Open();
+
+                string strSql = "SELECT login_id,name,login_name,password FROM login ";
+                DataSet ds = new DataSet();
+                SqlDataAdapter s = new SqlDataAdapter(strSql, strCon);
+                s.Fill(ds);
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                strCon.Close();
+            }
+        }
+
         //查询登录数据数据
         public int SelectLogin(string login_name, string psw)
         {
@@ -1937,7 +1949,7 @@ namespace FileService
             {
                 strCon.Open();
 
-                string strSql = "SELECT login_id FROM Login where login_name='" + login_name + "' and password='" + psw + "' ";
+                string strSql = "SELECT login_id FROM Login where login_name='" + login_name + "' and password='" + psw + "'";
                 DataSet ds = new DataSet();
                 SqlDataAdapter s = new SqlDataAdapter(strSql, strCon);
                 s.Fill(ds);
@@ -1953,7 +1965,86 @@ namespace FileService
             }
         }
 
-         //查询登录数据数据
+        //查询用户权限
+        public string SelectLoginpem(int id)
+        {
+            try
+            {
+                strCon.Open();
+
+                string strSql = "SELECT user_right FROM Login where login_id= '" + id + "' ";
+                DataSet ds = new DataSet();
+                SqlDataAdapter s = new SqlDataAdapter(strSql, strCon);
+                s.Fill(ds);
+                return ds.Tables[0].Rows[0][0].ToString();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                strCon.Close();
+            }
+
+        }
+
+        //通过id查询用户
+        public DataSet SelectLogin_id(int id)
+        {
+            try
+            {
+                strCon.Open();
+
+                string strSql = "SELECT * FROM Login where login_id= '" + id + "' ";
+                DataSet ds = new DataSet();
+                SqlDataAdapter s = new SqlDataAdapter(strSql, strCon);
+                s.Fill(ds);
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                strCon.Close();
+            }
+
+        }
+
+        //更新用户
+        public int Updatalogin(int id, string name, string login_name, string password, string user_right)
+        {
+            try
+            {
+                strCon.Open();
+                string strSql = "UPDATE  login  SET name=@name,login_name=@login_name,password=@password,user_right=@user_right WHERE login_id='" + id + "'";
+                SqlCommand cmd = new SqlCommand(strSql, strCon);
+                SqlParameter landarea = new SqlParameter("@name", name);
+                cmd.Parameters.Add(landarea);
+                SqlParameter builtup_area = new SqlParameter("@login_name", login_name);
+                cmd.Parameters.Add(builtup_area);
+                SqlParameter commonarea = new SqlParameter("@password", password);
+                cmd.Parameters.Add(commonarea);
+                SqlParameter sharingarea = new SqlParameter("@user_right", user_right);
+                cmd.Parameters.Add(sharingarea);
+                int result = cmd.ExecuteNonQuery();
+                cmd.Dispose();
+                return result;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                strCon.Close();
+            }
+        }
+
+
+        //查询登录数据数据
         public string SelectLoginname(string login_name)
         {
             try
@@ -2015,16 +2106,40 @@ namespace FileService
             }
         }
 
+        //删除用户
+        public int Deletelogin(int id)
+        {
+            try
+            {
+                strCon.Open();
+                string strSql = "DELETE FROM Login WHERE login_id = '"+ id  +"'";
+                SqlCommand cmd = new SqlCommand(strSql, strCon);
+                SqlParameter parn = new SqlParameter("@login_id", id);
+                cmd.Parameters.Add(parn);
+                int result = cmd.ExecuteNonQuery();
+                cmd.Dispose();
+                return result;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                strCon.Close();
+            }
+        }
+
 
 
         //房屋条件查询
-        public DataSet Selecthouseinquiry(string owner, string idcardnumber,string a2, DateTime oldtime, DateTime tianfatime)
+        public DataSet Selecthouseinquiry(string owner, string idcardnumber,string located, string a2, DateTime oldtime, DateTime tianfatime)
         {
             try
             {
                 strCon.Open();
 
-                string strSql = "select * from house where house_owner like '%" + owner + "%'  and house_idcardnumber like '%" + idcardnumber + "%' and  house_tianfatime >='" + oldtime + "' and  house_tianfatime <='" + tianfatime + "'";
+                string strSql = "select * from house where house_owner like '%" + owner + "%'  and house_idcardnumber like '%" + idcardnumber + "%' and house_located like '%" + located + "%' and  house_tianfatime >='" + oldtime + "'  and  house_tianfatime <='" + tianfatime + "'";
 
                 if (a2 != "")
                 {
@@ -2054,7 +2169,8 @@ namespace FileService
             {
                 strCon.Open();
 
-                string strSql = "select * from land where land_user like '%" + user + "%'  and land_idcardnumber like '%" + idcardnumber + "%' and land_address like '%" + address + "%' and land_send_date >='" + oldtime + "' and  land_send_date <='" + send_date + "'";
+                string strSql = "select * from land   left join land_town on land.land_id = land_town.land_id left join land_countryside on land.land_id = land_countryside.land_id    where land_user like '%" + user + "%'  and land_idcardnumber like '%" + idcardnumber + "%' and land_address like '%" + address + "%' and land_send_date >='" + oldtime + "' and  land_send_date <='" + send_date + "'";
+
 
                 //if (testc != '')
                 //{

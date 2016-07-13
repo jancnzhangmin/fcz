@@ -88,6 +88,8 @@ where T : DependencyObject
 
         private void addhousegrid_Loaded(object sender, RoutedEventArgs e)
         {
+
+
             if (visible == "house")
             {
                 printreport_house.Visibility = Visibility.Hidden;
@@ -99,13 +101,22 @@ where T : DependencyObject
            
             houselicensingdate.Text = System.DateTime.Now.ToString();
             house_tianfatime.Text = System.DateTime.Now.ToString();
-            deddatetime.Text = System.DateTime.Now.ToString();
-            obl_logout_date.Text = System.DateTime.Now.ToString();
+            //deddatetime.Text = System.DateTime.Now.ToString();
+            //obl_logout_date.Text = System.DateTime.Now.ToString();
 
             house_nature.DataContext = client.Selecthousenature().Tables[0].DefaultView;
             house_located.DataContext = client.Selecthouselocated().Tables[0].DefaultView;
             if (selecthouseid > 0)
             {
+                add_condition.IsEnabled = true;
+                add_commonor.IsEnabled = true;
+                obligee_button.IsEnabled = true;
+
+                add_condition.Content = "完成修改";
+                add_commonor.Content = "完成修改";
+                obligee_button.Content = "完成修改";
+
+
                 var shuju = client.Selecthouseid(selecthouseid);
                 for (int i = 0; i < shuju.Tables[0].Rows.Count; i++)
                 {
@@ -117,8 +128,8 @@ where T : DependencyObject
                     house_nature.Text = client.selecenatureID(natureid);
 
                     idcardnumber.Text = shuju.Tables[0].Rows[0][i + 4].ToString();
-                    int locatedid = int.Parse(shuju.Tables[0].Rows[0][i + 5].ToString());
-                    house_located.Text = client.selece_located_id(locatedid);
+                    //int locatedid = int.Parse(shuju.Tables[0].Rows[0][i + 5].ToString());
+                    house_located.Text = shuju.Tables[0].Rows[0][i + 5].ToString();
                     house_dihao.Text = shuju.Tables[0].Rows[0][i + 6].ToString();
                     house_postscript.Text = shuju.Tables[0].Rows[0][i + 7].ToString();
                     house_witness.Text = shuju.Tables[0].Rows[0][i + 8].ToString();
@@ -149,35 +160,50 @@ where T : DependencyObject
                 for (int i = 0; i < houseuseland.Tables[0].Rows.Count; i++)
                 {
                     landuse_area.Text = houseuseland.Tables[0].Rows[0][i].ToString();
-                    landcompany.Text = houseuseland.Tables[0].Rows[0][i + 1].ToString();
+                    //landcompany.Text = houseuseland.Tables[0].Rows[0][i + 1].ToString();
                     landcard_number.Text = houseuseland.Tables[0].Rows[0][i + 2].ToString();
-                    landzidihao.Text = houseuseland.Tables[0].Rows[0][i + 3].ToString();
+                    //landzidihao.Text = houseuseland.Tables[0].Rows[0][i + 3].ToString();
                 }
 
 
+
+
                 house_condition_dataGrid.ItemsSource = client.Selectcondition(selecthouseid).Tables[0].DefaultView;
+                {
+                    var t = house_condition_dataGrid.Items[0];
+                    var b = t as DataRowView;
+                    if (b.Row[1].ToString() == "")
+                    {
+                        int s = int.Parse(b.Row[0].ToString());
+                        conditionid = s;
+                    }
+                }
                 commonor_dataGrid.ItemsSource = client.Selecthousecommonor(selecthouseid).Tables[0].DefaultView;
+                {
+                    var t = commonor_dataGrid.Items[0];
+                    var b = t as DataRowView;
+                    if (b.Row[1].ToString() == "")
+                    {
+                        int s = int.Parse(b.Row[0].ToString());
+                        commonorid = s;
+                    }
+                }
+
                 obligee_dataGrid.ItemsSource = client.Selectobligee(selecthouseid).Tables[0].DefaultView;
-           
+                {
+                    var t = obligee_dataGrid.Items[0];
+                    var b = t as DataRowView;
+                    if (b.Row[1].ToString() == "")
+                    {
+                        int s = int.Parse(b.Row[0].ToString());
+                        oblid = s;
+                    }
+                }
+
             }
 
 
-            //if (Selecthousecommonorid > 0)
-            //契税摘要
-                //commonor_dataGrid.ItemsSource = client.Selecthousecommonor(Selecthousecommonorid).Tables[0].DefaultView;
-                //var dateforzhaiyao = client.Selecthousedeedtaxid(Selecthousecommonorid);
-
-                //for (int i = 0; i < dateforzhaiyao.Tables[0].Rows.Count; i++)
-                //{
-                //    datetime.Text = dateforzhaiyao.Tables[0].Rows[0][i].ToString();
-                //    price.Text = dateforzhaiyao.Tables[0].Rows[0][i + 1].ToString();
-                //    type.Text = dateforzhaiyao.Tables[0].Rows[0][i + 2].ToString();
-                //    tax_rate.Text = dateforzhaiyao.Tables[0].Rows[0][i + 3].ToString();
-                //    amount_money.Text = dateforzhaiyao.Tables[0].Rows[0][i + 4].ToString();
-                //    remarks.Text = dateforzhaiyao.Tables[0].Rows[0][i + 5].ToString();
-
-                //}
-
+           
             
           
         }
@@ -234,10 +260,10 @@ where T : DependencyObject
             {
                 client.Inserthousenature(house_nature.Text.Trim());
             }
-            if (client.checkhouselocated(house_located.Text.Trim()) == 0)
-            {
-                client.Inserthouselocated(house_located.Text.Trim());
-            }
+            //if (client.checkhouselocated(house_located.Text.Trim()) == 0)
+            //{
+            //    client.Inserthouselocated(house_located.Text.Trim());
+            //}
 
 
         }
@@ -282,82 +308,110 @@ where T : DependencyObject
 
 
 
+
             if (checknull())
             {
 
-                if (selecthouseid <= 0)
+                int fanghao = 0;
+                try
                 {
+                    fanghao = client.Selecthouseiddate(house_word.Text, house_number.Text);
+                }
+                catch { }
+                if (fanghao > 0 & selecthouseid ==0)
+                {
+                    MessageBox.Show("字号已存在!");
 
-                    //if (checknull())
-                    //{
-
-                    checkmultitable();
-
-                    //}
-                    //添加房屋基本信息
-                    int nature = client.selecenayureID(house_nature.Text);
-                    int located = client.selectlocatedID(house_located.Text);
-                    client.Inserthouse(house_word.Text, house_number.Text, house_owner.Text, nature, idcardnumber.Text, located, house_dihao.Text, house_postscript.Text, house_witness.Text, house_proofreader.Text, house_autograph.Text, DateTime.Parse(houselicensingdate.Text), house_office.Text, house_banzhenren.Text, DateTime.Parse(house_tianfatime.Text), house_figure.Text);
-
-                    PublicClass.houseid = client.Selecthouseiddate(house_word.Text, house_number.Text);
-                    //添加房屋状况
-                    client.Insertcondition(conbuilding_number.Text, conroom_number.Text, conjianshu.Text, conbuilding_structure.Text, concenshu.Text, conbuilt_up_area.Text, conremarks.Text, PublicClass.houseid);
-                    //共有权人
-                    client.Inserthousencommonor(com_comments.Text, com_share.Text, com_number.Text, com_comments.Text, PublicClass.houseid);
-                    //契税摘要
-                    client.Inserthousedeedtax(DateTime.Parse(deddatetime.Text), dedprice.Text, dedtype.Text, dedtax_rate.Text, dedamount_money.Text, dedtaxremarks.Text, PublicClass.houseid);
-                    //增加设定他项权利
-                    client.Inserthouseobligee(obligee.Text, obl_type.Text, obl_room_number.Text, obl_jianshu.Text, obl_built_up_area.Text, obl_right_value.Text, obl_duration_right.Text, DateTime.Parse(obl_logout_date.Text), PublicClass.houseid);
-                    client.Inserthouseuseland(landuse_area.Text, landcompany.Text, landcard_number.Text, landzidihao.Text, PublicClass.houseid);
-                    if (PublicClass.houseid > 0)
-                    {  //查询房屋状况
-                        house_condition_dataGrid.ItemsSource = client.Selectcondition(PublicClass.houseid).Tables[0].DefaultView;
-                        //查询共有人
-                        commonor_dataGrid.ItemsSource = client.Selecthousecommonor(PublicClass.houseid).Tables[0].DefaultView;
-                        //查询他项权利
-                        obligee_dataGrid.ItemsSource = client.Selectobligee(PublicClass.houseid).Tables[0].DefaultView;
-                    }
-
-
-                    add_condition.IsEnabled = true;
-                    add_commonor.IsEnabled = true;
-                    obligee_button.IsEnabled = true;
                 }
                 else
                 {
-                    checkmultitable();
-                    //更新房屋基本信息
-                    int natureid = client.selecenayureID(house_nature.Text);
-                    int locatedid = client.selectlocatedID(house_located.Text);
-                    client.Updatahouse(house_word.Text, house_number.Text, house_owner.Text, natureid, idcardnumber.Text, locatedid, house_dihao.Text, house_postscript.Text, house_witness.Text, house_proofreader.Text, house_autograph.Text, DateTime.Parse(houselicensingdate.Text), house_office.Text, house_banzhenren.Text, DateTime.Parse(house_tianfatime.Text), house_figure.Text, selecthouseid);
-                    //更新契税摘要
-                    client.Updatehousedeedtax(DateTime.Parse(deddatetime.Text), dedprice.Text, dedtype.Text, dedtax_rate.Text, dedamount_money.Text, dedtaxremarks.Text, selecthouseid);
-                 
-                    //更新使用土地摘要
-                    client.Updataohouseuseland(landuse_area.Text, landcompany.Text, landcard_number.Text, landzidihao.Text, selecthouseid);
 
 
+                    if (selecthouseid <= 0)
+                    {
+
+                        //if (checknull())
+                        //{
+
+                        checkmultitable();
+
+                        //}
+                        //添加房屋基本信息
+                        int nature = client.selecenayureID(house_nature.Text);
+                        //int located = client.selectlocatedID(house_located.Text);
+                        client.Inserthouse(house_word.Text, house_number.Text, house_owner.Text, nature, idcardnumber.Text, house_located.Text, house_dihao.Text, house_postscript.Text, house_witness.Text, house_proofreader.Text, house_autograph.Text, DateTime.Parse(houselicensingdate.Text), house_office.Text, house_banzhenren.Text, DateTime.Parse(house_tianfatime.Text), house_figure.Text);
+
+                        PublicClass.houseid = client.Selecthouseiddate(house_word.Text, house_number.Text);
+                        //添加房屋状况
+                        client.Insertcondition(conbuilding_number.Text, conroom_number.Text, conjianshu.Text, conbuilding_structure.Text, concenshu.Text, conbuilt_up_area.Text, conremarks.Text, PublicClass.houseid);
+                        //共有权人
+                        client.Inserthousencommonor(com_commonor.Text, com_share.Text, com_number.Text, com_comments.Text, PublicClass.houseid);
+                        //契税摘要
+                        client.Inserthousedeedtax(deddatetime.Text, dedprice.Text, dedtype.Text, dedtax_rate.Text, dedamount_money.Text, dedtaxremarks.Text, PublicClass.houseid);
+                        //增加设定他项权利
+                        client.Inserthouseobligee(obligee.Text, obl_type.Text, obl_room_number.Text, obl_jianshu.Text, obl_built_up_area.Text, obl_right_value.Text, obl_duration_right.Text, obl_logout_date.Text, PublicClass.houseid);
+                        client.Inserthouseuseland(landuse_area.Text, landcard_number.Text, PublicClass.houseid);
+                        if (PublicClass.houseid > 0)
+                        {  //查询房屋状况
+                            house_condition_dataGrid.ItemsSource = client.Selectcondition(PublicClass.houseid).Tables[0].DefaultView;
+                            //查询共有人
+                            commonor_dataGrid.ItemsSource = client.Selecthousecommonor(PublicClass.houseid).Tables[0].DefaultView;
+                            //查询他项权利
+                            obligee_dataGrid.ItemsSource = client.Selectobligee(PublicClass.houseid).Tables[0].DefaultView;
+                        }
+
+
+                        add_condition.IsEnabled = true;
+                        add_commonor.IsEnabled = true;
+                        obligee_button.IsEnabled = true;
+
+
+                        MessageBoxResult confirmToDel = MessageBox.Show("已保存是否立即打印？", "提示", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                        if (confirmToDel == MessageBoxResult.Yes)
+                        {
+                            selecthouseid = PublicClass.houseid;
+                            daying();
+                        }
+                       
+
+
+                    }
+                    else
+                    {
+
+
+                        checkmultitable();
+                        //更新房屋基本信息
+                        int natureid = client.selecenayureID(house_nature.Text);
+                        //int locatedid = client.selectlocatedID(house_located.Text);
+                        client.Updatahouse(house_word.Text, house_number.Text, house_owner.Text, natureid, idcardnumber.Text, house_located.Text, house_dihao.Text, house_postscript.Text, house_witness.Text, house_proofreader.Text, house_autograph.Text, DateTime.Parse(houselicensingdate.Text), house_office.Text, house_banzhenren.Text, DateTime.Parse(house_tianfatime.Text), house_figure.Text, selecthouseid);
+                        //更新契税摘要
+                        client.Updatehousedeedtax(deddatetime.Text, dedprice.Text, dedtype.Text, dedtax_rate.Text, dedamount_money.Text, dedtaxremarks.Text, selecthouseid);
+
+                        //更新使用土地摘要
+                        client.Updataohouseuseland(landuse_area.Text, landcard_number.Text, selecthouseid);
+
+
+                    }
+
+                    EnumVisual();
                 }
 
-                EnumVisual();
+
             }
-           
-            
-        
         }
 
         //查询房屋状况
-        private void second_Loaded(object sender, RoutedEventArgs e)
+        private void house_condition_dataGrid_Loaded(object sender, RoutedEventArgs e)
         {
-
-            house_condition_dataGrid.ItemsSource = client.Selectcondition(selectcondition).Tables[0].DefaultView;
-
+            //house_condition_dataGrid.CanUserAddRows = false;
+        //    house_condition_dataGrid.ItemsSource = client.Selectcondition(selectcondition).Tables[0].DefaultView;
         }
 
         //编辑房屋状况
         private void edit_list_Click(object sender, RoutedEventArgs e)
         {
-
+            
             add_condition.IsEnabled = true;
             var t = house_condition_dataGrid.SelectedItem;
             var b = t as DataRowView;
@@ -376,6 +430,8 @@ where T : DependencyObject
 
 
             }
+            house_condition_dataGrid.ItemsSource = client.Selectcondition(selecthouseid).Tables[0].DefaultView;
+         
         }
         //删除房屋状况
         private void delete_list_Click(object sender, RoutedEventArgs e)
@@ -384,12 +440,42 @@ where T : DependencyObject
             var b = t as DataRowView;
             int s = int.Parse(b.Row[0].ToString());
             client.Deletecondition(s);
-            //second_Loaded(null, null);
+            if (PublicClass.houseid > 0)
+            {
+                if (client.Selectcondition(PublicClass.houseid).Tables[0].DefaultView.Count == 0)
+                {
+                    //client.Inserthouseobligee("", "", "", "", "", "", "", "", selecthouseid);
+                    client.Insertcondition("", "", "", "", "", "", "", PublicClass.houseid);
+                    house_condition_dataGrid.ItemsSource = client.Selectcondition(PublicClass.houseid).Tables[0].DefaultView;
+                    t = house_condition_dataGrid.Items[0];
+                    b = t as DataRowView;
+                    s = int.Parse(b.Row[0].ToString());
+                    conditionid = s;
+                }
+                house_condition_dataGrid.ItemsSource = client.Selectcondition(PublicClass.houseid).Tables[0].DefaultView;
+            }
+            if (selecthouseid > 0)
+            {
+                if (client.Selectcondition(selecthouseid).Tables[0].DefaultView.Count == 0)
+                {
+                    //client.Inserthouseobligee("", "", "", "", "", "", "", "", selecthouseid);
+                    client.Insertcondition("", "", "", "", "", "", "", selecthouseid);
+                    house_condition_dataGrid.ItemsSource = client.Selectcondition(selecthouseid).Tables[0].DefaultView;
+                    t = house_condition_dataGrid.Items[0];
+                    b = t as DataRowView;
+                    s = int.Parse(b.Row[0].ToString());
+                    conditionid = s;
+                }
+                house_condition_dataGrid.ItemsSource = client.Selectcondition(selecthouseid).Tables[0].DefaultView;
+            }
+            //house_condition_dataGrid.ItemsSource = client.Selectcondition(PublicClass.houseid).Tables[0].DefaultView;
+            //house_condition_dataGrid_Loaded(null, null);
         }
 
         //修改共有权保持证
         private void commonor_edit_list_Click(object sender, RoutedEventArgs e)
         {
+            //add_commonor.Content = "保存";
             add_commonor.IsEnabled = true;
             var t = commonor_dataGrid.SelectedItem;
             var b = t as DataRowView;
@@ -405,6 +491,15 @@ where T : DependencyObject
 
 
             }
+            commonor_dataGrid.ItemsSource = client.Selecthousecommonor(selecthouseid).Tables[0].DefaultView;
+
+        }
+
+        //查询共有权证
+        private void commonor_dataGrid_Loaded(object sender, RoutedEventArgs e)
+        {
+            commonor_dataGrid.CanUserAddRows = false;
+            //commonor_dataGrid.ItemsSource = client.Selecthousecommonor(PublicClass.houseid).Tables[0].DefaultView;
         }
         //删除共有权保持证
         private void commonor_delete_list_Click(object sender, RoutedEventArgs e)
@@ -414,6 +509,54 @@ where T : DependencyObject
             int s = int.Parse(b.Row[0].ToString());
             client.Deletecommonor(s);
             //third_Loaded(null, null);
+            //if (PublicClass.houseid == 0)
+            //{
+            //    commonor_dataGrid.ItemsSource = client.Selecthousecommonor(selecthouseid).Tables[0].DefaultView;
+            //}
+            //else
+            //{
+            //    commonor_dataGrid.ItemsSource = client.Selecthousecommonor(selecthouseid).Tables[0].DefaultView;
+            //}
+            if (PublicClass.houseid > 0)
+            {
+                if (client.Selecthousecommonor(PublicClass.houseid).Tables[0].DefaultView.Count == 0)
+                {
+                    client.Inserthousencommonor("", "", "", "", PublicClass.houseid);
+                    commonor_dataGrid.ItemsSource = client.Selecthousecommonor(PublicClass.houseid).Tables[0].DefaultView;
+                    t = commonor_dataGrid.Items[0];
+                    b = t as DataRowView;
+                    s = int.Parse(b.Row[0].ToString());
+                    commonorid = s;
+                }
+                commonor_dataGrid.ItemsSource = client.Selecthousecommonor(PublicClass.houseid).Tables[0].DefaultView;
+            }
+
+
+            if (selecthouseid > 0)
+            {
+                if (client.Selecthousecommonor(selecthouseid).Tables[0].DefaultView.Count == 0)
+                {
+                    client.Inserthousencommonor("", "", "", "", selecthouseid);
+                    commonor_dataGrid.ItemsSource = client.Selecthousecommonor(selecthouseid).Tables[0].DefaultView;
+                    t = commonor_dataGrid.Items[0];
+                    b = t as DataRowView;
+                    s = int.Parse(b.Row[0].ToString());
+                    commonorid = s;
+                }
+                commonor_dataGrid.ItemsSource = client.Selecthousecommonor(selecthouseid).Tables[0].DefaultView;
+            }
+
+
+            //commonor_dataGrid.ItemsSource = client.Selecthousecommonor(selecthouseid).Tables[0].DefaultView;
+
+
+
+
+
+
+
+
+            //client.Inserthousencommonor(com_commonor.Text, com_share.Text, com_number.Text, com_comments.Text, PublicClass.houseid);
         }
 
         private void upload_Click(object sender, RoutedEventArgs e)
@@ -444,24 +587,25 @@ where T : DependencyObject
         //查询设定他项权利摘要
         private void obligee_dataGrid_Loaded(object sender, RoutedEventArgs e)
         {
-            if (Selectobligeeid > 0)
-            {
-                obligee_dataGrid.ItemsSource = client.Selectobligee(Selectobligeeid).Tables[0].DefaultView;
+            obligee_dataGrid.CanUserAddRows = false;
+            //if (Selectobligeeid > 0)
+            //{
+                obligee_dataGrid.ItemsSource = client.Selectobligee(selecthouseid).Tables[0].DefaultView;
 
                 var dateob = client.Selecthouseuselandid(Selectobligeeid);
 
                 for (int i = 0; i < dateob.Tables[0].Rows.Count; i++)
                 {
                     landuse_area.Text = dateob.Tables[0].Rows[0][i].ToString();
-                    landcompany.Text = dateob.Tables[0].Rows[0][i + 1].ToString();
+                    //landcompany.Text = dateob.Tables[0].Rows[0][i + 1].ToString();
                     landcard_number.Text = dateob.Tables[0].Rows[0][i + 2].ToString();
-                    landzidihao.Text = dateob.Tables[0].Rows[0][i + 3].ToString();
+                    //landzidihao.Text = dateob.Tables[0].Rows[0][i + 3].ToString();
 
 
 
                 }
 
-            }
+            //}
         }
 
         //编辑设定他项权利摘要
@@ -487,6 +631,14 @@ where T : DependencyObject
 
             }
 
+            //if (client.Selectobligee(selecthouseid).Tables[0].DefaultView.Count == 0)
+            //{
+            //    client.Inserthouseobligee("", "", "", "", "", "", "", "", selecthouseid);
+            //}
+
+
+            obligee_dataGrid.ItemsSource = client.Selectobligee(selecthouseid).Tables[0].DefaultView;
+
         }
         //删除设定他项权利摘要
         private void obligee_delete_list_Click(object sender, RoutedEventArgs e)
@@ -495,7 +647,47 @@ where T : DependencyObject
             var b = t as DataRowView;
             int s = int.Parse(b.Row[0].ToString());
             client.Deleteobligee(s);
-            obligee_dataGrid_Loaded(null, null);
+            //obligee_dataGrid_Loaded(null, null);
+
+
+            if (PublicClass.houseid > 0)
+            {
+                if (client.Selectobligee(PublicClass.houseid).Tables[0].DefaultView.Count == 0)
+                {
+                    //client.Inserthouseobligee("", "", "", "", "", "", "", "", se
+                    client.Inserthouseobligee("", "", "", "", "", "", "", "", PublicClass.houseid);
+                    obligee_dataGrid.ItemsSource = client.Selectobligee(PublicClass.houseid).Tables[0].DefaultView;
+                    t = obligee_dataGrid.Items[0];
+                    b = t as DataRowView;
+                    s = int.Parse(b.Row[0].ToString());
+                    oblid = s;
+
+                }
+                obligee_dataGrid.ItemsSource = client.Selectobligee(PublicClass.houseid).Tables[0].DefaultView;
+            }
+
+            if (selecthouseid > 0)
+            {
+                if (client.Selectobligee(selecthouseid).Tables[0].DefaultView.Count == 0)
+                {
+                    //client.Inserthouseobligee("", "", "", "", "", "", "", "", se
+                    client.Inserthouseobligee("", "", "", "", "", "", "", "", selecthouseid);
+                    obligee_dataGrid.ItemsSource = client.Selectobligee(selecthouseid).Tables[0].DefaultView;
+                    t = obligee_dataGrid.Items[0];
+                    b = t as DataRowView;
+                    s = int.Parse(b.Row[0].ToString());
+                    oblid = s;
+
+                }
+                obligee_dataGrid.ItemsSource = client.Selectobligee(selecthouseid).Tables[0].DefaultView;
+            }
+
+
+
+          
+
+
+            //obligee_dataGrid.ItemsSource = client.Selectobligee(selecthouseid).Tables[0].DefaultView;
         }
 
         private void add_condition_Click(object sender, RoutedEventArgs e)
@@ -508,8 +700,11 @@ where T : DependencyObject
           else
             {
                 client.Updatacondition(conbuilding_number.Text, conroom_number.Text, conjianshu.Text, conbuilding_structure.Text, concenshu.Text, conbuilt_up_area.Text, conremarks.Text, selecthouseid, conditionid);
+                house_condition_dataGrid.ItemsSource = client.Selectcondition(selecthouseid).Tables[0].DefaultView;
+                conditionid = 0;
                
             }
+      
            
          
         }
@@ -518,13 +713,15 @@ where T : DependencyObject
         {
             if (commonorid <= 0)
             {
-                client.Inserthousencommonor(com_comments.Text, com_share.Text, com_number.Text, com_comments.Text, PublicClass.houseid);
+                client.Inserthousencommonor(com_commonor.Text, com_share.Text, com_number.Text, com_comments.Text, PublicClass.houseid);
                 //查询共有人
                 commonor_dataGrid.ItemsSource = client.Selecthousecommonor(PublicClass.houseid).Tables[0].DefaultView;
             }
             else
             {
                 client.Updatacommonor(com_commonor.Text, com_share.Text, com_number.Text, com_comments.Text, selecthouseid, commonorid);
+                commonor_dataGrid.ItemsSource = client.Selecthousecommonor(selecthouseid).Tables[0].DefaultView;
+                commonorid = 0;
             }
            
         }
@@ -533,14 +730,18 @@ where T : DependencyObject
         {
             if (oblid <= 0)
             {
-                client.Inserthouseobligee(obligee.Text, obl_type.Text, obl_room_number.Text, obl_jianshu.Text, obl_built_up_area.Text, obl_right_value.Text, obl_duration_right.Text, DateTime.Parse(obl_logout_date.Text), PublicClass.houseid);
-                //查询他项权利
+                client.Inserthouseobligee(obligee.Text, obl_type.Text, obl_room_number.Text, obl_jianshu.Text, obl_built_up_area.Text, obl_right_value.Text, obl_duration_right.Text, obl_logout_date.Text, PublicClass.houseid);
                 obligee_dataGrid.ItemsSource = client.Selectobligee(PublicClass.houseid).Tables[0].DefaultView;
+                //查询他项权利
+                
             }
             else
             {
-                client.Updataobligee(obligee.Text, obl_type.Text, obl_room_number.Text, obl_jianshu.Text, obl_built_up_area.Text, obl_right_value.Text, obl_duration_right.Text, DateTime.Parse(obl_logout_date.Text), selecthouseid, oblid);
+                client.Updataobligee(obligee.Text, obl_type.Text, obl_room_number.Text, obl_jianshu.Text, obl_built_up_area.Text, obl_right_value.Text, obl_duration_right.Text, obl_logout_date.Text, selecthouseid, oblid);
+                obligee_dataGrid.ItemsSource = client.Selectobligee(selecthouseid).Tables[0].DefaultView;
+                oblid = 0;
             }
+           
         }
 
 
@@ -680,6 +881,125 @@ where T : DependencyObject
 
 
 
+        public void daying()
+        {
+            try
+            {
+
+                if (printreport_house.Content.ToString() == "打印")
+                {
+                    try
+                    {
+                        reportrdlc = "houseReport.rdlc";
+                        printreport_house.Content = "第二页";
+                        Run();
+                    }
+                    catch { }
+                }
+                if (printreport_house.Content.ToString() == "第二页")
+                {
+                    try
+                    {
+                        reportrdlc = "houseReport1.rdlc";
+                        printreport_house.Content = "第三页";
+                        Run();
+                    }
+                    catch { }
+                }
+                if (printreport_house.Content.ToString() == "第三页")
+                {
+                    try
+                    {
+                        reportrdlc = "houseReport2.rdlc";
+                        printreport_house.Content = "第四页";
+                        Run();
+                    }
+                    catch { }
+                }
+                if (printreport_house.Content.ToString() == "第四页")
+                {
+                    try
+                    {
+                        reportrdlc = "houseReport3.rdlc";
+                        printreport_house.Content = "第五页";
+                        Run();
+                    }
+                    catch { }
+                }
+
+
+
+                if (printreport_house.Content.ToString() == "第五页")
+                {
+                    try
+                    {
+                        reportrdlc = "houseReport4.rdlc";
+                        PublicClass.picturefilename = client.Selecthousepicture(selecthouseid);//this.textBox2.Text;
+                        string path = System.AppDomain.CurrentDomain.BaseDirectory + @"\client\";
+                        bool issuccess = false;
+                        string message = "";
+                        Stream filestream = new MemoryStream();
+                        long filesize = client.DownLoadFile(PublicClass.picturefilename, out issuccess, out message, out filestream);
+
+                        if (issuccess)
+                        {
+                            if (!Directory.Exists(path))
+                            {
+                                Directory.CreateDirectory(path);
+                            }
+
+                            byte[] buffer = new byte[filesize - 1];
+                            FileStream fs = new FileStream(path + PublicClass.picturefilename, FileMode.Create, FileAccess.Write);
+
+                            int count = 0;
+                            int tt = 0;
+                            //for (int i = 0; i  < buffer.Length; i++)
+                            //{
+                            //fs.Write(buffer, i, i+1);
+
+                            while ((count = filestream.Read(buffer, 0, buffer.Length)) > 0)
+                            {
+                                fs.Write(buffer, 0, count);
+                                tt++;
+                            }
+                            //}
+
+                            //清空缓冲区
+                            fs.Flush();
+                            //关闭流
+                            fs.Close();
+                            //   MessageBox.Show("下载成功！");
+
+                        }
+                        else
+                        {
+
+                            // MessageBox.Show(message);
+
+                        }
+
+
+
+                        string path1 = System.AppDomain.CurrentDomain.BaseDirectory + @"client\" + PublicClass.picturefilename;//"file:///D:/工作/WCF测试/房产证管理系统/测试版/PocclientApplication/PocclientApplication/bin/Debug/client/2.jpg";
+                        string path2 = path1.Replace(@"\", @"/");
+                        params2 = new ReportParameter("LogoUrl", "file:///" + path2);
+
+                        Run();
+                    }
+                    catch { }
+
+
+                }
+
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
 
         private void printreport_house_Click(object sender, RoutedEventArgs e)
         {
@@ -688,85 +1008,102 @@ where T : DependencyObject
 
                 if (printreport_house.Content.ToString() == "打印")
                 {
-                    reportrdlc = "houseReport.rdlc";
-                    printreport_house.Content = "第二页";
-                    Run();
+                    try
+                    {
+                        reportrdlc = "houseReport.rdlc";
+                        printreport_house.Content = "第二页";
+                        Run();
+                    }catch{}
                 }
                 if (printreport_house.Content.ToString() == "第二页")
                 {
+                    try{
                     reportrdlc = "houseReport1.rdlc";
                     printreport_house.Content = "第三页";
                     Run();
+                    }catch{}
                 }
                 if (printreport_house.Content.ToString() == "第三页")
                 {
-                    reportrdlc = "houseReport2.rdlc";
-                    printreport_house.Content = "第四页";
-                    Run();
+                    try
+                    {
+                        reportrdlc = "houseReport2.rdlc";
+                        printreport_house.Content = "第四页";
+                        Run();
+                    }
+                    catch { }
                 }
                 if (printreport_house.Content.ToString() == "第四页")
                 {
-                    reportrdlc = "houseReport3.rdlc";
-                    printreport_house.Content = "第五页";
-                    Run();
+                    try
+                    {
+                        reportrdlc = "houseReport3.rdlc";
+                        printreport_house.Content = "第五页";
+                        Run();
+                    }
+                    catch { }
                 }
              
 
 
                 if (printreport_house.Content.ToString() == "第五页")
                 {
-                    reportrdlc = "houseReport4.rdlc";
-                    PublicClass.picturefilename = client.Selecthousepicture(selecthouseid);//this.textBox2.Text;
-                    string path = System.AppDomain.CurrentDomain.BaseDirectory + @"\client\";
-                    bool issuccess = false;
-                    string message = "";
-                    Stream filestream = new MemoryStream();
-                    long filesize = client.DownLoadFile(PublicClass.picturefilename, out issuccess, out message, out filestream);
-
-                    if (issuccess)
+                    try
                     {
-                        if (!Directory.Exists(path))
+                        reportrdlc = "houseReport4.rdlc";
+                        PublicClass.picturefilename = client.Selecthousepicture(selecthouseid);//this.textBox2.Text;
+                        string path = System.AppDomain.CurrentDomain.BaseDirectory + @"\client\";
+                        bool issuccess = false;
+                        string message = "";
+                        Stream filestream = new MemoryStream();
+                        long filesize = client.DownLoadFile(PublicClass.picturefilename, out issuccess, out message, out filestream);
+
+                        if (issuccess)
                         {
-                            Directory.CreateDirectory(path);
+                            if (!Directory.Exists(path))
+                            {
+                                Directory.CreateDirectory(path);
+                            }
+
+                            byte[] buffer = new byte[filesize - 1];
+                            FileStream fs = new FileStream(path + PublicClass.picturefilename, FileMode.Create, FileAccess.Write);
+
+                            int count = 0;
+                            int tt = 0;
+                            //for (int i = 0; i  < buffer.Length; i++)
+                            //{
+                            //fs.Write(buffer, i, i+1);
+
+                            while ((count = filestream.Read(buffer, 0, buffer.Length)) > 0)
+                            {
+                                fs.Write(buffer, 0, count);
+                                tt++;
+                            }
+                            //}
+
+                            //清空缓冲区
+                            fs.Flush();
+                            //关闭流
+                            fs.Close();
+                            //   MessageBox.Show("下载成功！");
+
+                        }
+                        else
+                        {
+
+                            // MessageBox.Show(message);
+
                         }
 
-                        byte[] buffer = new byte[filesize - 1];
-                        FileStream fs = new FileStream(path + PublicClass.picturefilename, FileMode.Create, FileAccess.Write);
 
-                        int count = 0;
-                        int tt = 0;
-                        //for (int i = 0; i  < buffer.Length; i++)
-                        //{
-                        //fs.Write(buffer, i, i+1);
 
-                        while ((count = filestream.Read(buffer, 0, buffer.Length)) > 0)
-                        {
-                            fs.Write(buffer, 0, count);
-                            tt++;
-                        }
-                        //}
+                        string path1 = System.AppDomain.CurrentDomain.BaseDirectory + @"client\" + PublicClass.picturefilename;//"file:///D:/工作/WCF测试/房产证管理系统/测试版/PocclientApplication/PocclientApplication/bin/Debug/client/2.jpg";
+                        string path2 = path1.Replace(@"\", @"/");
+                        params2 = new ReportParameter("LogoUrl", "file:///" + path2);
 
-                        //清空缓冲区
-                        fs.Flush();
-                        //关闭流
-                        fs.Close();
-                      //   MessageBox.Show("下载成功！");
-
+                        Run();
                     }
-                    else
-                    {
-
-                       // MessageBox.Show(message);
-
-                    }
-
-                
-
-                    string path1 = System.AppDomain.CurrentDomain.BaseDirectory + @"client\" + PublicClass.picturefilename;//"file:///D:/工作/WCF测试/房产证管理系统/测试版/PocclientApplication/PocclientApplication/bin/Debug/client/2.jpg";
-                    string path2 = path1.Replace(@"\", @"/");
-                    params2 = new ReportParameter("LogoUrl", "file:///"+path2);
-
-                    Run();
+                    catch { }
 
 
                 }
@@ -797,9 +1134,9 @@ where T : DependencyObject
                 ReportParameter nature = new ReportParameter("nature", client.selecenatureID(natureid_fromhouse));
                 report.SetParameters(nature);
 
-                int locatedid_fromhouse = client.selece_located_id_fromhouse(selecthouseid);
-                ReportParameter located = new ReportParameter("located", client.selece_located_id(locatedid_fromhouse));
-                report.SetParameters(located);
+                //int locatedid_fromhouse = client.selece_located_id_fromhouse(selecthouseid);
+                //ReportParameter located = new ReportParameter("located", client.selece_located_id(locatedid_fromhouse));
+                //report.SetParameters(located);
 
                 ReportParameter commonor = new ReportParameter("commonor", client.Selecthousecommonortop1(selecthouseid));
                 report.SetParameters(commonor);
@@ -832,6 +1169,8 @@ where T : DependencyObject
             // m_currentPageIndex = 0;
             Print();
         }
+
+
       
     }
 }

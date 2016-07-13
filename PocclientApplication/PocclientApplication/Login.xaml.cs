@@ -27,11 +27,18 @@ namespace PocclientApplication
         Service1Client client = new Service1Client();
         private void login_Click(object sender, RoutedEventArgs e)
         {
+            int id = 0;
+
             try
             {
-
-                if (client.SelectLogin(numberTextBox.Text, passwordTextBox.Password) > 0)
+                id = client.SelectLogin(numberTextBox.Text, passwordTextBox.Password);
+                if ( id> 0)
                 {
+                    
+                        PublicClass.loginid = id ;
+                    
+
+                    
                     MainWindow newmainwindw = new MainWindow();
                     Application.Current.MainWindow = newmainwindw;
                     //System.Windows.Application.Current.Shutdown();
@@ -46,6 +53,7 @@ namespace PocclientApplication
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                //MessageBox.Show("帐号或密码错误","提示");
             }
         }
 
@@ -60,10 +68,10 @@ namespace PocclientApplication
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             numberTextBox.Focus();
-            if (DateTime.Now > DateTime.Parse("2016-8-10"))
-            {
-                MessageBox.Show("软件注册时间已到期，请与软件服务商联系");
-            }
+            //if (DateTime.Now > DateTime.Parse("2016-8-10"))
+            //{
+            //    MessageBox.Show("软件注册时间已到期，请与软件服务商联系");
+            //}
         }
 
         private void numberTextBox_PreviewKeyUp(object sender, KeyEventArgs e)

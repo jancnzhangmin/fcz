@@ -129,10 +129,10 @@
         <Source>External</Source>
         <Value>=Parameters!LogoUrl.Value</Value>
         <Sizing>FitProportional</Sizing>
-        <Top>6.28862cm</Top>
+        <Top>2.71674cm</Top>
         <Left>1.34091cm</Left>
-        <Height>14.04125cm</Height>
-        <Width>7.69125cm</Width>
+        <Height>14.22646cm</Height>
+        <Width>9.56979cm</Width>
         <Style>
           <Border>
             <Style>None</Style>

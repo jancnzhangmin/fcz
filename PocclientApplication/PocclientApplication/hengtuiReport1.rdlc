@@ -134,16 +134,18 @@
               <TextRun>
                 <Value>=First(Fields!land_tile.Value, "DataSet1")</Value>
                 <Style>
-                  <FontSize>14pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>land_tile</rd:DefaultName>
-        <Top>1.20068cm</Top>
-        <Left>13.40592cm</Left>
+        <Top>1.26418cm</Top>
+        <Left>16.10467cm</Left>
         <Height>0.6cm</Height>
         <Width>1.52104cm</Width>
         <Style>
@@ -165,16 +167,18 @@
               <TextRun>
                 <Value>=First(Fields!land_word.Value, "DataSet1")</Value>
                 <Style>
-                  <FontSize>14pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>land_word</rd:DefaultName>
-        <Top>1.20068cm</Top>
-        <Left>15.84393cm</Left>
+        <Top>1.26418cm</Top>
+        <Left>18.54268cm</Left>
         <Height>0.6cm</Height>
         <Width>1.57396cm</Width>
         <ZIndex>1</ZIndex>
@@ -197,16 +201,18 @@
               <TextRun>
                 <Value>=First(Fields!land_number.Value, "DataSet1")</Value>
                 <Style>
-                  <FontSize>14pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>land_number</rd:DefaultName>
-        <Top>1.20068cm</Top>
-        <Left>18.5362cm</Left>
+        <Top>1.26418cm</Top>
+        <Left>21.13969cm</Left>
         <Height>0.6cm</Height>
         <Width>1.57396cm</Width>
         <ZIndex>2</ZIndex>

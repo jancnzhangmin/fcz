@@ -56,8 +56,8 @@
           <DataField>land_countryside_id</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="land_area">
-          <DataField>land_area</DataField>
+        <Field Name="land_countryside_area">
+          <DataField>land_countryside_area</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="cultivated_land">
@@ -108,14 +108,18 @@
           <DataField>unused_land</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="land_id">
+          <DataField>land_id</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
       </Fields>
       <Query>
         <DataSourceName>pocdatabaseDataSet</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <rd:DataSetInfo>
-        <rd:DataSetName>pocdatabaseDataSet</rd:DataSetName>
-        <rd:SchemaPath>D:\工作\WCF测试\房产证管理系统\测试版\PocclientApplication\PocclientApplication\pocdatabaseDataSet.xsd</rd:SchemaPath>
+        <rd:DataSetName>pocdatabaseDataSet6</rd:DataSetName>
+        <rd:SchemaPath>E:\佤邦房产地产管理软件\新建文件夹\fcz\PocclientApplication\PocclientApplication\pocdatabaseDataSet6.xsd</rd:SchemaPath>
         <rd:TableName>land_countryside</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -125,8 +129,7 @@
   </DataSets>
   <Body>
     <ReportItems>
-      <Textbox Name="land_area2">
-        <CanGrow>true</CanGrow>
+      <Textbox Name="land_area4">
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
@@ -134,16 +137,18 @@
               <TextRun>
                 <Value>=First(Fields!land_area.Value, "DataSet2")</Value>
                 <Style>
-                  <FontSize>14pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>land_area</rd:DefaultName>
-        <Top>2.3495cm</Top>
-        <Left>16.19929cm</Left>
+        <Top>2.20512cm</Top>
+        <Left>18.72392cm</Left>
         <Height>0.6cm</Height>
         <Width>5.41042cm</Width>
         <Style>
@@ -156,8 +161,7 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="built_up_area2">
-        <CanGrow>true</CanGrow>
+      <Textbox Name="built_up_area3">
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
@@ -165,16 +169,18 @@
               <TextRun>
                 <Value>=First(Fields!built_up_area.Value, "DataSet2")</Value>
                 <Style>
-                  <FontSize>14pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>built_up_area</rd:DefaultName>
-        <Top>3.21408cm</Top>
-        <Left>16.19929cm</Left>
+        <Top>3.0697cm</Top>
+        <Left>18.72392cm</Left>
         <Height>0.6cm</Height>
         <Width>5.41042cm</Width>
         <ZIndex>1</ZIndex>
@@ -188,8 +194,7 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="common_area2">
-        <CanGrow>true</CanGrow>
+      <Textbox Name="common_area3">
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
@@ -197,16 +202,18 @@
               <TextRun>
                 <Value>=First(Fields!common_area.Value, "DataSet2")</Value>
                 <Style>
-                  <FontSize>14pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>common_area</rd:DefaultName>
-        <Top>3.99047cm</Top>
-        <Left>16.19929cm</Left>
+        <Top>4.00484cm</Top>
+        <Left>18.72392cm</Left>
         <Height>0.6cm</Height>
         <Width>5.41042cm</Width>
         <ZIndex>2</ZIndex>
@@ -220,8 +227,7 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="sharing_area2">
-        <CanGrow>true</CanGrow>
+      <Textbox Name="sharing_area3">
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
@@ -229,16 +235,18 @@
               <TextRun>
                 <Value>=First(Fields!sharing_area.Value, "DataSet2")</Value>
                 <Style>
-                  <FontSize>14pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>sharing_area</rd:DefaultName>
-        <Top>4.76686cm</Top>
-        <Left>16.19929cm</Left>
+        <Top>4.87648cm</Top>
+        <Left>18.72392cm</Left>
         <Height>0.6cm</Height>
         <Width>5.41042cm</Width>
         <ZIndex>3</ZIndex>
@@ -252,8 +260,7 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="land_grade2">
-        <CanGrow>true</CanGrow>
+      <Textbox Name="land_grade3">
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
@@ -261,16 +268,18 @@
               <TextRun>
                 <Value>=First(Fields!land_grade.Value, "DataSet2")</Value>
                 <Style>
-                  <FontSize>14pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>land_grade</rd:DefaultName>
-        <Top>5.54324cm</Top>
-        <Left>16.19929cm</Left>
+        <Top>5.81161cm</Top>
+        <Left>18.72392cm</Left>
         <Height>0.6cm</Height>
         <Width>5.41042cm</Width>
         <ZIndex>4</ZIndex>
@@ -284,25 +293,26 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="land_area3">
-        <CanGrow>true</CanGrow>
+      <Textbox Name="land_area5">
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!land_area.Value, "DataSet3")</Value>
+                <Value>=First(Fields!land_countryside_area.Value, "DataSet3")</Value>
                 <Style>
-                  <FontSize>14pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>land_area1</rd:DefaultName>
-        <Top>9.83649cm</Top>
-        <Left>22.23179cm</Left>
+        <Top>8.80311cm</Top>
+        <Left>18.72392cm</Left>
         <Height>0.9175cm</Height>
         <Width>5.41042cm</Width>
         <ZIndex>5</ZIndex>
@@ -316,7 +326,7 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="cultivated_land2">
+      <Textbox Name="cultivated_land3">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
@@ -325,16 +335,18 @@
               <TextRun>
                 <Value>=First(Fields!cultivated_land.Value, "DataSet3")</Value>
                 <Style>
-                  <FontSize>14pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>cultivated_land</rd:DefaultName>
-        <Top>11.44235cm</Top>
-        <Left>20.93006cm</Left>
+        <Top>10.56772cm</Top>
+        <Left>16.97768cm</Left>
         <Height>0.6cm</Height>
         <Width>1.865cm</Width>
         <ZIndex>6</ZIndex>
@@ -348,7 +360,7 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="dry_land2">
+      <Textbox Name="dry_land3">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
@@ -357,16 +369,18 @@
               <TextRun>
                 <Value>=First(Fields!dry_land.Value, "DataSet3")</Value>
                 <Style>
-                  <FontSize>14pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>dry_land</rd:DefaultName>
-        <Top>12.37749cm</Top>
-        <Left>20.93006cm</Left>
+        <Top>11.40761cm</Top>
+        <Left>16.97768cm</Left>
         <Height>0.6cm</Height>
         <Width>1.83854cm</Width>
         <ZIndex>7</ZIndex>
@@ -380,7 +394,7 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="paddy_field2">
+      <Textbox Name="paddy_field3">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
@@ -389,16 +403,18 @@
               <TextRun>
                 <Value>=First(Fields!paddy_field.Value, "DataSet3")</Value>
                 <Style>
-                  <FontSize>14pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>paddy_field</rd:DefaultName>
-        <Top>13.31263cm</Top>
-        <Left>20.93006cm</Left>
+        <Top>12.438cm</Top>
+        <Left>16.97768cm</Left>
         <Height>0.6cm</Height>
         <Width>1.81208cm</Width>
         <ZIndex>8</ZIndex>
@@ -412,7 +428,7 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="orchard2">
+      <Textbox Name="orchard3">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
@@ -421,16 +437,18 @@
               <TextRun>
                 <Value>=First(Fields!orchard.Value, "DataSet3")</Value>
                 <Style>
-                  <FontSize>14pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>orchard</rd:DefaultName>
-        <Top>14.31127cm</Top>
-        <Left>20.9036cm</Left>
+        <Top>13.34139cm</Top>
+        <Left>16.95122cm</Left>
         <Height>0.6cm</Height>
         <Width>1.83854cm</Width>
         <ZIndex>9</ZIndex>
@@ -444,7 +462,7 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="forest_land2">
+      <Textbox Name="forest_land3">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
@@ -453,16 +471,18 @@
               <TextRun>
                 <Value>=First(Fields!forest_land.Value, "DataSet3")</Value>
                 <Style>
-                  <FontSize>14pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>forest_land</rd:DefaultName>
-        <Top>15.34165cm</Top>
-        <Left>20.87714cm</Left>
+        <Top>14.24477cm</Top>
+        <Left>16.92476cm</Left>
         <Height>0.6cm</Height>
         <Width>1.865cm</Width>
         <ZIndex>10</ZIndex>
@@ -476,7 +496,7 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="grassland2">
+      <Textbox Name="grassland3">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
@@ -485,16 +505,18 @@
               <TextRun>
                 <Value>=First(Fields!grassland.Value, "DataSet3")</Value>
                 <Style>
-                  <FontSize>14pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>grassland</rd:DefaultName>
-        <Top>16.33846cm</Top>
-        <Left>20.87714cm</Left>
+        <Top>15.11458cm</Top>
+        <Left>16.95651cm</Left>
         <Height>0.6cm</Height>
         <Width>1.865cm</Width>
         <ZIndex>11</ZIndex>
@@ -508,7 +530,7 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="inmate_mining2">
+      <Textbox Name="inmate_mining3">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
@@ -517,16 +539,18 @@
               <TextRun>
                 <Value>=First(Fields!inmate_mining.Value, "DataSet3")</Value>
                 <Style>
-                  <FontSize>14pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>inmate_mining</rd:DefaultName>
-        <Top>11.5376cm</Top>
-        <Left>25.57084cm</Left>
+        <Top>10.69472cm</Top>
+        <Left>22.69794cm</Left>
         <Height>0.6cm</Height>
         <Width>2.26188cm</Width>
         <ZIndex>12</ZIndex>
@@ -540,7 +564,7 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="construction_land2">
+      <Textbox Name="construction_land3">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
@@ -549,16 +573,18 @@
               <TextRun>
                 <Value>=First(Fields!construction_land.Value, "DataSet3")</Value>
                 <Style>
-                  <FontSize>14pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>construction_land</rd:DefaultName>
-        <Top>12.63149cm</Top>
-        <Left>25.57084cm</Left>
+        <Top>11.53461cm</Top>
+        <Left>22.69794cm</Left>
         <Height>0.6cm</Height>
         <Width>2.26188cm</Width>
         <ZIndex>13</ZIndex>
@@ -572,7 +598,7 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="homestead_land2">
+      <Textbox Name="homestead_land3">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
@@ -581,16 +607,18 @@
               <TextRun>
                 <Value>=First(Fields!homestead_land.Value, "DataSet3")</Value>
                 <Style>
-                  <FontSize>14pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>homestead_land</rd:DefaultName>
-        <Top>13.40788cm</Top>
-        <Left>25.57084cm</Left>
+        <Top>12.565cm</Top>
+        <Left>22.69794cm</Left>
         <Height>0.6cm</Height>
         <Width>2.26188cm</Width>
         <ZIndex>14</ZIndex>
@@ -604,7 +632,7 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="traffic_land2">
+      <Textbox Name="traffic_land3">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
@@ -613,16 +641,18 @@
               <TextRun>
                 <Value>=First(Fields!traffic_land.Value, "DataSet3")</Value>
                 <Style>
-                  <FontSize>14pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>traffic_land</rd:DefaultName>
-        <Top>14.43121cm</Top>
-        <Left>25.57084cm</Left>
+        <Top>13.49308cm</Top>
+        <Left>22.69794cm</Left>
         <Height>0.6cm</Height>
         <Width>2.26188cm</Width>
         <ZIndex>15</ZIndex>
@@ -636,7 +666,7 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="water_land2">
+      <Textbox Name="water_land3">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
@@ -645,16 +675,18 @@
               <TextRun>
                 <Value>=First(Fields!water_land.Value, "DataSet3")</Value>
                 <Style>
-                  <FontSize>14pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>water_land</rd:DefaultName>
-        <Top>15.24288cm</Top>
-        <Left>25.57084cm</Left>
+        <Top>14.36825cm</Top>
+        <Left>22.69794cm</Left>
         <Height>0.6cm</Height>
         <Width>2.26188cm</Width>
         <ZIndex>16</ZIndex>
@@ -668,7 +700,7 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="unused_land2">
+      <Textbox Name="unused_land3">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
@@ -677,16 +709,18 @@
               <TextRun>
                 <Value>=First(Fields!unused_land.Value, "DataSet3")</Value>
                 <Style>
-                  <FontSize>14pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>unused_land</rd:DefaultName>
-        <Top>16.43371cm</Top>
-        <Left>25.57084cm</Left>
+        <Top>15.27333cm</Top>
+        <Left>22.72969cm</Left>
         <Height>0.6cm</Height>
         <Width>2.26188cm</Width>
         <ZIndex>17</ZIndex>
@@ -701,7 +735,7 @@
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>16.53in</Height>
+    <Height>7.64458in</Height>
     <Style />
   </Body>
   <Width>11.69in</Width>

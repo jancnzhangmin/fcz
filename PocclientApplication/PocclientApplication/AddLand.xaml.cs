@@ -87,6 +87,8 @@ where T : DependencyObject
                     if (result == true)
                     {
                         MessageBox.Show("上传成功！");
+                        next_page.IsEnabled = true;
+                        prinreport.IsEnabled = false;
                     }
                     else
                     {
@@ -107,28 +109,42 @@ where T : DependencyObject
                 //string a = DateTime.Parse(land_date.Text).ToShortDateString();
                 if (landid <= 0)
                 {   //添加基本
-                    client.Insertland(land_title.Text, land_word.Text, land_number.Text, land_govermment.Text, DateTime.Parse(land_date.Text), land_user.Text, land_idcardnumber.Text, land_address.Text, land_map.Text, land_ground.Text, land_use.Text, land_use_period.Text, land_east.Text, land_south.Text, land_west.Text, land_north.Text, land_office.Text, DateTime.Parse(land_send_date.Text)
-    , land_mangaors.Text, land_licensing.Text, land_remarks.Text, land_changeitems.Text, land_figure.Text);
+                    client.Insertland(land_title.Text, land_word.Text, land_number.Text, land_govermment.Text, DateTime.Parse(land_date.Text), land_user.Text, land_idcardnumber.Text, land_address.Text, land_map.Text, land_ground.Text, land_use.Text, land_use_period.Text, land_east.Text, land_south.Text, land_west.Text, land_north.Text, land_office.Text, DateTime.Parse(land_send_date.Text) , land_remarks.Text, land_changeitems.Text, land_figure.Text);
                     PublicClass.selectlandid = client.Selectlandid(land_word.Text, land_number.Text);
                     //添加城镇
                     client.Insertlandtown(land_area.Text, built_up_area.Text, common_area.Text, sharing_area.Text, land_grade.Text, PublicClass.selectlandid);
                     //添加农村
                     client.Insertcountryside(land_area_country.Text, cultivated_land.Text, dry_land.Text, paddy_field.Text, orchard.Text, forest_land.Text, grassland.Text, inmate_mining.Text, construction_land.Text, homestead_land.Text, traffic_land.Text, water_land.Text, unused_land.Text, PublicClass.selectlandid);
 
-                    EnumVisual();
+
+                    MessageBoxResult confirmToDel = MessageBox.Show("已保存是否立即打印？", "提示", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                    if (confirmToDel == MessageBoxResult.Yes)
+                    {
+                        landid = PublicClass.selectlandid;
+                        daying();
+                    }
+                    else
+                    {
+
+                    }
+
+                    
                     //nextopen();
 
 
                 }
                 else
                 {   //更新基本
-                    client.Updataland(land_title.Text, land_word.Text, land_number.Text, land_govermment.Text, DateTime.Parse(land_date.Text), land_user.Text, land_idcardnumber.Text, land_address.Text, land_map.Text, land_ground.Text, land_use.Text, land_use_period.Text, land_east.Text, land_south.Text, land_west.Text, land_north.Text, land_office.Text, DateTime.Parse(land_send_date.Text), land_mangaors.Text, land_licensing.Text, land_remarks.Text, land_changeitems.Text, land_figure.Text, landid);
+                    client.Updataland(land_title.Text, land_word.Text, land_number.Text, land_govermment.Text, DateTime.Parse(land_date.Text), land_user.Text, land_idcardnumber.Text, land_address.Text, land_map.Text, land_ground.Text, land_use.Text, land_use_period.Text, land_east.Text, land_south.Text, land_west.Text, land_north.Text, land_office.Text, DateTime.Parse(land_send_date.Text), land_remarks.Text, land_changeitems.Text, land_figure.Text, landid);
                     //更新城镇
                     client.Updatalandtown(land_area.Text, built_up_area.Text, common_area.Text, sharing_area.Text, land_grade.Text, landid);
                     //更新农村
                     client.Updatacountryside(land_area_country.Text, cultivated_land.Text, dry_land.Text, paddy_field.Text, orchard.Text, forest_land.Text, grassland.Text, inmate_mining.Text, construction_land.Text, homestead_land.Text, traffic_land.Text, water_land.Text, unused_land.Text, landid);
                     //nextopen();
                 }
+                next_page.IsEnabled = false;
+                prinreport.IsEnabled = true;
+                //EnumVisual();
             }
 
             //C1.WPF.C1Window findfixed = MainWindow.FindChild<C1.WPF.C1Window>(Application.Current.MainWindow, "newAddLand");
@@ -211,6 +227,8 @@ where T : DependencyObject
             land_send_date.Text = DateTime.Now.ToString();
 
 
+
+
             if (landid > 0)
             {
 
@@ -236,11 +254,9 @@ where T : DependencyObject
                     land_north.Text = landdate.Tables[0].Rows[0][i + 15].ToString();
                     land_office.Text = landdate.Tables[0].Rows[0][i + 16].ToString();
                     land_send_date.Text = landdate.Tables[0].Rows[0][i + 17].ToString();
-                    land_mangaors.Text = landdate.Tables[0].Rows[0][i + 18].ToString();
-                    land_licensing.Text = landdate.Tables[0].Rows[0][i + 19].ToString();
-                    land_remarks.Text = landdate.Tables[0].Rows[0][i + 20].ToString();
-                    land_changeitems.Text = landdate.Tables[0].Rows[0][i + 21].ToString();
-                    land_figure.Text = landdate.Tables[0].Rows[0][i + 22].ToString();
+                    land_remarks.Text = landdate.Tables[0].Rows[0][i + 18].ToString();
+                    land_changeitems.Text = landdate.Tables[0].Rows[0][i + 19].ToString();
+                    land_figure.Text = landdate.Tables[0].Rows[0][i + 20].ToString();
                 }
 
                 //城镇
@@ -429,6 +445,123 @@ where T : DependencyObject
         }
 
 
+        public void daying()
+        {
+            try
+            {
+
+                if (prinreport.Content.ToString() == "打印")
+                {
+                    reportrdlc = "hengtuiReport1.rdlc";
+                    prinreport.Content = "第二页";
+                    Run();
+
+                }
+                if (prinreport.Content.ToString() == "第二页")
+                {
+                    reportrdlc = "hengtuiReport2.rdlc";
+                    prinreport.Content = "第三页";
+                    Run();
+                }
+                if (prinreport.Content.ToString() == "第三页")
+                {
+                    reportrdlc = "hengtuiReport4.rdlc";
+                    prinreport.Content = "第四页";
+                    Run();
+                }
+                if (prinreport.Content.ToString() == "第四页")
+                {
+                    reportrdlc = "hengtuiReport3.rdlc";
+                    prinreport.Content = "第五页";
+                    Run();
+                }
+                if (prinreport.Content.ToString() == "第五页")
+                {
+                    reportrdlc = "hengtuiReport5.rdlc";
+                    prinreport.Content = "第六页";
+                    Run();
+                }
+                if (prinreport.Content.ToString() == "第六页")
+                {
+                    reportrdlc = "hengtuiReport6.rdlc";
+                    prinreport.Content = "第七页";
+                    Run();
+
+
+                }
+
+
+                if (prinreport.Content.ToString() == "第七页")
+                {
+
+                    reportrdlc = "hengtuiReport7.rdlc";
+                    PublicClass.picturefilename = client.Selectlandpicture(landid);//this.textBox2.Text;
+                    string path = System.AppDomain.CurrentDomain.BaseDirectory + @"\client\";
+                    bool issuccess = false;
+                    string message = "";
+                    Stream filestream = new MemoryStream();
+                    long filesize = client.DownLoadFile(PublicClass.picturefilename, out issuccess, out message, out filestream);
+
+                    if (issuccess)
+                    {
+                        if (!Directory.Exists(path))
+                        {
+                            Directory.CreateDirectory(path);
+                        }
+
+                        byte[] buffer = new byte[filesize - 1];
+                        FileStream fs = new FileStream(path + PublicClass.picturefilename, FileMode.Create, FileAccess.Write);
+
+                        int count = 0;
+                        int tt = 0;
+                        //for (int i = 0; i  < buffer.Length; i++)
+                        //{
+                        //fs.Write(buffer, i, i+1);
+
+                        while ((count = filestream.Read(buffer, 0, buffer.Length)) > 0)
+                        {
+                            fs.Write(buffer, 0, count);
+                            tt++;
+                        }
+                        //}
+
+                        //清空缓冲区
+                        fs.Flush();
+                        //关闭流
+                        fs.Close();
+                        // MessageBox.Show("下载成功！");
+
+                    }
+                    else
+                    {
+
+                        MessageBox.Show(message);
+
+                    }
+
+
+
+                    string path1 = System.AppDomain.CurrentDomain.BaseDirectory + @"client\" + PublicClass.picturefilename;//"file:///D:/工作/WCF测试/房产证管理系统/测试版/PocclientApplication/PocclientApplication/bin/Debug/client/2.jpg";
+                    string path2 = path1.Replace(@"\", @"/");
+
+                    params2 = new ReportParameter("LogoUrl", "file:///" + path2);//路径全部用”/“file:///" + path2
+                    Run();
+
+                    stream.Close();
+                    next_page.IsEnabled = false;
+                    prinreport.IsEnabled = false;
+
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+
 
         private void prinreport_Click(object sender, RoutedEventArgs e)
         {
@@ -473,7 +606,7 @@ where T : DependencyObject
                     prinreport.Content = "第七页";
                     Run();
 
-                   
+
                 }
 
 
@@ -550,6 +683,12 @@ where T : DependencyObject
 
 
           }
+
+        private void UserControl_KeyUp(object sender, KeyEventArgs e)
+        {
+            next_page.IsEnabled = true;
+            prinreport.IsEnabled = false;
+        }
 
         
     }

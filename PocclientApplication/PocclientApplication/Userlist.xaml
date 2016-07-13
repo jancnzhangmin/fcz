@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="PocclientApplication.Userlist"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d"
+             d:DesignHeight="400" d:DesignWidth="1500">
+    <Grid ShowGridLines="True" >
+        <Grid.RowDefinitions >
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+        </Grid.RowDefinitions>
+        <DataGrid AutoGenerateColumns="False" EnableRowVirtualization="True"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch"   Name="employeesDataGrid"   Loaded="employeesDataGrid_Loaded" Margin="0,50,0,0">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="id" Binding="{Binding Path=login_id }" Visibility="Hidden" />
+                <DataGridTextColumn Header="名字" Binding="{Binding Path=name}"/>
+                <DataGridTextColumn Header="账号" Binding="{Binding Path=login_name}"/>
+                <DataGridTextColumn Header="密码" Binding="{Binding Path=password}"/>
+           
+                <DataGridTemplateColumn Header="编辑">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+
+                            <Button x:Name="edit" BorderBrush="{x:Null}" Background="{x:Null}" ToolTip="编辑" Click="edit_Click">
+                                <Image Width="18" Height="18" Source="/PocclientApplication;component/image/edit_active.png"></Image>
+                            </Button>
+
+
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="删除">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button x:Name="delete" BorderBrush="{x:Null}" Background="{x:Null}" ToolTip="删除" Click="delete_Click">
+                                <Image Width="18" Height="18" Source="/PocclientApplication;component/image/delete_active.png"></Image>
+                            </Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="add_user" Width="80" Height="26" HorizontalAlignment="Left" Margin="0,12,0,0" VerticalAlignment="Top" Content="新增" Click="add_user_Click"></Button>
+    </Grid>
+</UserControl>

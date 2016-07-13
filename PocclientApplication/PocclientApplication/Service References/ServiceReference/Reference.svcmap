@@ -21,13 +21,13 @@
     <MetadataSource Address="http://localhost:6963/Service1.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Service1.xsd" MetadataType="Schema" ID="1ea0d7f1-849d-4a86-9451-e517f59764d5" SourceId="1" SourceUrl="http://jancn-pc:6963/Service1.svc?xsd=xsd1" />
-    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="248d0b9e-4449-4783-b82f-d0a39b5f1f7f" SourceId="1" SourceUrl="http://jancn-pc:6963/Service1.svc?wsdl" />
-    <MetadataFile FileName="Service11.xsd" MetadataType="Schema" ID="7f1b86e7-cb6d-4f7d-8e20-61d4b66fa8ce" SourceId="1" SourceUrl="http://jancn-pc:6963/Service1.svc?xsd=xsd4" />
-    <MetadataFile FileName="Service12.xsd" MetadataType="Schema" ID="309cbd9d-6805-4981-909d-e49302998cfe" SourceId="1" SourceUrl="http://jancn-pc:6963/Service1.svc?xsd=xsd3" />
-    <MetadataFile FileName="Service13.xsd" MetadataType="Schema" ID="f7882e34-4722-4a0b-b057-d6403e5ef901" SourceId="1" SourceUrl="http://jancn-pc:6963/Service1.svc?xsd=xsd2" />
-    <MetadataFile FileName="Service1.disco" MetadataType="Disco" ID="846e4ab9-e604-4633-b705-31c1afa26ca3" SourceId="1" SourceUrl="http://jancn-pc:6963/Service1.svc?disco" />
-    <MetadataFile FileName="Service14.xsd" MetadataType="Schema" ID="2e56280b-554a-4d9a-a503-08aa21fd3a84" SourceId="1" SourceUrl="http://jancn-pc:6963/Service1.svc?xsd=xsd0" />
+    <MetadataFile FileName="Service15.xsd" MetadataType="Schema" ID="ca926d3f-d69e-4ae1-b0aa-a42bacfc0fc8" SourceId="1" SourceUrl="http://cloudtime-pc:6963/Service1.svc?xsd=xsd1" />
+    <MetadataFile FileName="Service151.xsd" MetadataType="Schema" ID="11e313a5-836a-4a40-ab71-fecc580a6ece" SourceId="1" SourceUrl="http://cloudtime-pc:6963/Service1.svc?xsd=xsd0" />
+    <MetadataFile FileName="Service11.disco" MetadataType="Disco" ID="10af110b-785c-4a6b-ad16-fb5fd70709fa" SourceId="1" SourceUrl="http://cloudtime-pc:6963/Service1.svc?disco" />
+    <MetadataFile FileName="Service152.xsd" MetadataType="Schema" ID="eeb15e0e-dc23-448f-b9f9-6e8dda1eac7d" SourceId="1" SourceUrl="http://cloudtime-pc:6963/Service1.svc?xsd=xsd2" />
+    <MetadataFile FileName="Service153.xsd" MetadataType="Schema" ID="a741c58a-1dac-4e59-8796-63149e1138bc" SourceId="1" SourceUrl="http://cloudtime-pc:6963/Service1.svc?xsd=xsd4" />
+    <MetadataFile FileName="Service11.wsdl" MetadataType="Wsdl" ID="729ed278-b6f7-4ff3-9de7-7da2061e8f05" SourceId="1" SourceUrl="http://cloudtime-pc:6963/Service1.svc?wsdl" />
+    <MetadataFile FileName="Service154.xsd" MetadataType="Schema" ID="68dbde03-8fc7-4b05-bf01-a11a6e0ea13c" SourceId="1" SourceUrl="http://cloudtime-pc:6963/Service1.svc?xsd=xsd3" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

@@ -17,7 +17,7 @@
             <RowDefinition Height="25" />
             <RowDefinition Height="40" />
         </Grid.RowDefinitions>
-        <Label FontSize="18" VerticalAlignment="Center" Margin="20,0,0,0">兰格驿房产地产管理软件</Label>
+        <Label FontSize="18" VerticalAlignment="Center" Margin="20,0,0,0">蓝格驿房产地产管理软件</Label>
         <Label VerticalAlignment="Center" Margin="240,0,0,0">V1.0 beta</Label>
         <Separator VerticalAlignment="Bottom" Background="#FF039FFF" />
             <Image Grid.Row="1" Source="/PocclientApplication;component/Images/logo.png"></Image>

@@ -130,7 +130,7 @@ namespace PocclientApplication.ServiceReference {
                     string house_owner, 
                     int house_nature_id, 
                     string house_idcardnumber, 
-                    int house_located_id, 
+                    string house_located, 
                     string house_dihao, 
                     string house_postscript, 
                     string house_witness, 
@@ -149,7 +149,7 @@ namespace PocclientApplication.ServiceReference {
                     string house_owner, 
                     int house_nature_id, 
                     string house_idcardnumber, 
-                    int house_located_id, 
+                    string house_located, 
                     string house_dihao, 
                     string house_postscript, 
                     string house_witness, 
@@ -208,16 +208,16 @@ namespace PocclientApplication.ServiceReference {
         int Deletecondition(int strconditionid);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Inserthousedeedtax", ReplyAction="http://tempuri.org/IService1/InserthousedeedtaxResponse")]
-        int Inserthousedeedtax(System.DateTime datetime, string price, string type, string tax_rate, string amount_money, string remarks, int house_id);
+        int Inserthousedeedtax(string datetime, string price, string type, string tax_rate, string amount_money, string remarks, int house_id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Updatehousedeedtax", ReplyAction="http://tempuri.org/IService1/UpdatehousedeedtaxResponse")]
-        int Updatehousedeedtax(System.DateTime datetime, string price, string type, string tax_rate, string amount_money, string remarks, int house_id);
+        int Updatehousedeedtax(string datetime, string price, string type, string tax_rate, string amount_money, string remarks, int house_id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Selecthousedeedtaxid", ReplyAction="http://tempuri.org/IService1/SelecthousedeedtaxidResponse")]
         System.Data.DataSet Selecthousedeedtaxid(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Inserthouseobligee", ReplyAction="http://tempuri.org/IService1/InserthouseobligeeResponse")]
-        int Inserthouseobligee(string obligee, string type, string room_number, string jianshu, string built_up_area, string right_value, string duration_right, System.DateTime logout_date, int house_id);
+        int Inserthouseobligee(string obligee, string type, string room_number, string jianshu, string built_up_area, string right_value, string duration_right, string logout_date, int house_id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Selectobligee", ReplyAction="http://tempuri.org/IService1/SelectobligeeResponse")]
         System.Data.DataSet Selectobligee(int house_id);
@@ -226,16 +226,16 @@ namespace PocclientApplication.ServiceReference {
         System.Data.DataSet Selectobligeeid(int oblid);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Updataobligee", ReplyAction="http://tempuri.org/IService1/UpdataobligeeResponse")]
-        int Updataobligee(string obligee, string type, string room_number, string jianshu, string built_up_area, string right_value, string duration_right, System.DateTime logout_date, int house_id, int oblid);
+        int Updataobligee(string obligee, string type, string room_number, string jianshu, string built_up_area, string right_value, string duration_right, string logout_date, int house_id, int oblid);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Deleteobligee", ReplyAction="http://tempuri.org/IService1/DeleteobligeeResponse")]
         int Deleteobligee(int strobligeeid);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Inserthouseuseland", ReplyAction="http://tempuri.org/IService1/InserthouseuselandResponse")]
-        int Inserthouseuseland(string use_area, string company, string card_number, string zidihao, int house_id);
+        int Inserthouseuseland(string use_area, string card_number, int house_id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Updataohouseuseland", ReplyAction="http://tempuri.org/IService1/UpdataohouseuselandResponse")]
-        int Updataohouseuseland(string use_area, string company, string card_number, string zidihao, int house_id);
+        int Updataohouseuseland(string use_area, string card_number, int house_id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Selecthouseuselandid", ReplyAction="http://tempuri.org/IService1/SelecthouseuselandidResponse")]
         System.Data.DataSet Selecthouseuselandid(int id);
@@ -272,8 +272,6 @@ namespace PocclientApplication.ServiceReference {
                     string land_north, 
                     string land_office, 
                     System.DateTime land_send_date, 
-                    string land_managers, 
-                    string land_licensing_people, 
                     string land_remarks, 
                     string land_change_items, 
                     string land_figure);
@@ -301,8 +299,6 @@ namespace PocclientApplication.ServiceReference {
                     string land_north, 
                     string land_office, 
                     System.DateTime land_send_date, 
-                    string land_managers, 
-                    string land_licensing_people, 
                     string land_remarks, 
                     string land_change_items, 
                     string land_figure, 
@@ -351,7 +347,7 @@ namespace PocclientApplication.ServiceReference {
         int Insertlogin(string name, string login_name, string password, string user_right);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Selecthouseinquiry", ReplyAction="http://tempuri.org/IService1/SelecthouseinquiryResponse")]
-        System.Data.DataSet Selecthouseinquiry(string owner, string idcardnumber, string a2, System.DateTime oldtime, System.DateTime tianfatime);
+        System.Data.DataSet Selecthouseinquiry(string owner, string idcardnumber, string located, string a2, System.DateTime oldtime, System.DateTime tianfatime);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Selectlandinquiry", ReplyAction="http://tempuri.org/IService1/SelectlandinquiryResponse")]
         System.Data.DataSet Selectlandinquiry(string user, string idcardnumber, string address, System.DateTime oldtime, System.DateTime send_date);
@@ -368,8 +364,23 @@ namespace PocclientApplication.ServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SelectTest", ReplyAction="http://tempuri.org/IService1/SelectTestResponse")]
         System.Data.DataSet SelectTest();
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Selectloginuser", ReplyAction="http://tempuri.org/IService1/SelectloginuserResponse")]
+        System.Data.DataSet Selectloginuser();
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SelectLogin", ReplyAction="http://tempuri.org/IService1/SelectLoginResponse")]
         int SelectLogin(string login_name, string psw);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SelectLoginpem", ReplyAction="http://tempuri.org/IService1/SelectLoginpemResponse")]
+        string SelectLoginpem(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SelectLogin_id", ReplyAction="http://tempuri.org/IService1/SelectLogin_idResponse")]
+        System.Data.DataSet SelectLogin_id(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Updatalogin", ReplyAction="http://tempuri.org/IService1/UpdataloginResponse")]
+        int Updatalogin(int id, string name, string login_name, string password, string user_right);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Deletelogin", ReplyAction="http://tempuri.org/IService1/DeleteloginResponse")]
+        int Deletelogin(int id);
         
         // CODEGEN: 消息 UpFile 的包装名称(UpFile)以后生成的消息协定与默认值(UpLoadFile)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/UpLoadFile", ReplyAction="http://tempuri.org/IService1/UpLoadFileResponse")]
@@ -565,7 +576,7 @@ namespace PocclientApplication.ServiceReference {
                     string house_owner, 
                     int house_nature_id, 
                     string house_idcardnumber, 
-                    int house_located_id, 
+                    string house_located, 
                     string house_dihao, 
                     string house_postscript, 
                     string house_witness, 
@@ -576,7 +587,7 @@ namespace PocclientApplication.ServiceReference {
                     string house_banzhenren, 
                     System.DateTime house_tianfatime, 
                     string house_figure) {
-            return base.Channel.Inserthouse(house_word, house_number, house_owner, house_nature_id, house_idcardnumber, house_located_id, house_dihao, house_postscript, house_witness, house_proofreader, house_autograph, house_licensing_date, house_office, house_banzhenren, house_tianfatime, house_figure);
+            return base.Channel.Inserthouse(house_word, house_number, house_owner, house_nature_id, house_idcardnumber, house_located, house_dihao, house_postscript, house_witness, house_proofreader, house_autograph, house_licensing_date, house_office, house_banzhenren, house_tianfatime, house_figure);
         }
         
         public int Updatahouse(
@@ -585,7 +596,7 @@ namespace PocclientApplication.ServiceReference {
                     string house_owner, 
                     int house_nature_id, 
                     string house_idcardnumber, 
-                    int house_located_id, 
+                    string house_located, 
                     string house_dihao, 
                     string house_postscript, 
                     string house_witness, 
@@ -597,7 +608,7 @@ namespace PocclientApplication.ServiceReference {
                     System.DateTime house_tianfatime, 
                     string house_figure, 
                     int houseid) {
-            return base.Channel.Updatahouse(house_word, house_number, house_owner, house_nature_id, house_idcardnumber, house_located_id, house_dihao, house_postscript, house_witness, house_proofreader, house_autograph, house_licensing_date, house_office, house_banzhenren, house_tianfatime, house_figure, houseid);
+            return base.Channel.Updatahouse(house_word, house_number, house_owner, house_nature_id, house_idcardnumber, house_located, house_dihao, house_postscript, house_witness, house_proofreader, house_autograph, house_licensing_date, house_office, house_banzhenren, house_tianfatime, house_figure, houseid);
         }
         
         public int Deletehouse(int strhouseid) {
@@ -660,11 +671,11 @@ namespace PocclientApplication.ServiceReference {
             return base.Channel.Deletecondition(strconditionid);
         }
         
-        public int Inserthousedeedtax(System.DateTime datetime, string price, string type, string tax_rate, string amount_money, string remarks, int house_id) {
+        public int Inserthousedeedtax(string datetime, string price, string type, string tax_rate, string amount_money, string remarks, int house_id) {
             return base.Channel.Inserthousedeedtax(datetime, price, type, tax_rate, amount_money, remarks, house_id);
         }
         
-        public int Updatehousedeedtax(System.DateTime datetime, string price, string type, string tax_rate, string amount_money, string remarks, int house_id) {
+        public int Updatehousedeedtax(string datetime, string price, string type, string tax_rate, string amount_money, string remarks, int house_id) {
             return base.Channel.Updatehousedeedtax(datetime, price, type, tax_rate, amount_money, remarks, house_id);
         }
         
@@ -672,7 +683,7 @@ namespace PocclientApplication.ServiceReference {
             return base.Channel.Selecthousedeedtaxid(id);
         }
         
-        public int Inserthouseobligee(string obligee, string type, string room_number, string jianshu, string built_up_area, string right_value, string duration_right, System.DateTime logout_date, int house_id) {
+        public int Inserthouseobligee(string obligee, string type, string room_number, string jianshu, string built_up_area, string right_value, string duration_right, string logout_date, int house_id) {
             return base.Channel.Inserthouseobligee(obligee, type, room_number, jianshu, built_up_area, right_value, duration_right, logout_date, house_id);
         }
         
@@ -684,7 +695,7 @@ namespace PocclientApplication.ServiceReference {
             return base.Channel.Selectobligeeid(oblid);
         }
         
-        public int Updataobligee(string obligee, string type, string room_number, string jianshu, string built_up_area, string right_value, string duration_right, System.DateTime logout_date, int house_id, int oblid) {
+        public int Updataobligee(string obligee, string type, string room_number, string jianshu, string built_up_area, string right_value, string duration_right, string logout_date, int house_id, int oblid) {
             return base.Channel.Updataobligee(obligee, type, room_number, jianshu, built_up_area, right_value, duration_right, logout_date, house_id, oblid);
         }
         
@@ -692,12 +703,12 @@ namespace PocclientApplication.ServiceReference {
             return base.Channel.Deleteobligee(strobligeeid);
         }
         
-        public int Inserthouseuseland(string use_area, string company, string card_number, string zidihao, int house_id) {
-            return base.Channel.Inserthouseuseland(use_area, company, card_number, zidihao, house_id);
+        public int Inserthouseuseland(string use_area, string card_number, int house_id) {
+            return base.Channel.Inserthouseuseland(use_area, card_number, house_id);
         }
         
-        public int Updataohouseuseland(string use_area, string company, string card_number, string zidihao, int house_id) {
-            return base.Channel.Updataohouseuseland(use_area, company, card_number, zidihao, house_id);
+        public int Updataohouseuseland(string use_area, string card_number, int house_id) {
+            return base.Channel.Updataohouseuseland(use_area, card_number, house_id);
         }
         
         public System.Data.DataSet Selecthouseuselandid(int id) {
@@ -739,12 +750,10 @@ namespace PocclientApplication.ServiceReference {
                     string land_north, 
                     string land_office, 
                     System.DateTime land_send_date, 
-                    string land_managers, 
-                    string land_licensing_people, 
                     string land_remarks, 
                     string land_change_items, 
                     string land_figure) {
-            return base.Channel.Insertland(land_tile, land_word, land_number, land_government, land_date, land_user, land_idcardnumber, land_address, land_map, land_ground, land_use, land_use_period, land_east, land_south, land_west, land_north, land_office, land_send_date, land_managers, land_licensing_people, land_remarks, land_change_items, land_figure);
+            return base.Channel.Insertland(land_tile, land_word, land_number, land_government, land_date, land_user, land_idcardnumber, land_address, land_map, land_ground, land_use, land_use_period, land_east, land_south, land_west, land_north, land_office, land_send_date, land_remarks, land_change_items, land_figure);
         }
         
         public int Deleteland(int land_id) {
@@ -770,13 +779,11 @@ namespace PocclientApplication.ServiceReference {
                     string land_north, 
                     string land_office, 
                     System.DateTime land_send_date, 
-                    string land_managers, 
-                    string land_licensing_people, 
                     string land_remarks, 
                     string land_change_items, 
                     string land_figure, 
                     int land_id) {
-            return base.Channel.Updataland(land_tile, land_word, land_number, land_government, land_date, land_user, land_idcardnumber, land_address, land_map, land_ground, land_use, land_use_period, land_east, land_south, land_west, land_north, land_office, land_send_date, land_managers, land_licensing_people, land_remarks, land_change_items, land_figure, land_id);
+            return base.Channel.Updataland(land_tile, land_word, land_number, land_government, land_date, land_user, land_idcardnumber, land_address, land_map, land_ground, land_use, land_use_period, land_east, land_south, land_west, land_north, land_office, land_send_date, land_remarks, land_change_items, land_figure, land_id);
         }
         
         public System.Data.DataSet Selectland() {
@@ -835,8 +842,8 @@ namespace PocclientApplication.ServiceReference {
             return base.Channel.Insertlogin(name, login_name, password, user_right);
         }
         
-        public System.Data.DataSet Selecthouseinquiry(string owner, string idcardnumber, string a2, System.DateTime oldtime, System.DateTime tianfatime) {
-            return base.Channel.Selecthouseinquiry(owner, idcardnumber, a2, oldtime, tianfatime);
+        public System.Data.DataSet Selecthouseinquiry(string owner, string idcardnumber, string located, string a2, System.DateTime oldtime, System.DateTime tianfatime) {
+            return base.Channel.Selecthouseinquiry(owner, idcardnumber, located, a2, oldtime, tianfatime);
         }
         
         public System.Data.DataSet Selectlandinquiry(string user, string idcardnumber, string address, System.DateTime oldtime, System.DateTime send_date) {
@@ -859,8 +866,28 @@ namespace PocclientApplication.ServiceReference {
             return base.Channel.SelectTest();
         }
         
+        public System.Data.DataSet Selectloginuser() {
+            return base.Channel.Selectloginuser();
+        }
+        
         public int SelectLogin(string login_name, string psw) {
             return base.Channel.SelectLogin(login_name, psw);
+        }
+        
+        public string SelectLoginpem(int id) {
+            return base.Channel.SelectLoginpem(id);
+        }
+        
+        public System.Data.DataSet SelectLogin_id(int id) {
+            return base.Channel.SelectLogin_id(id);
+        }
+        
+        public int Updatalogin(int id, string name, string login_name, string password, string user_right) {
+            return base.Channel.Updatalogin(id, name, login_name, password, user_right);
+        }
+        
+        public int Deletelogin(int id) {
+            return base.Channel.Deletelogin(id);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

@@ -11,5 +11,6 @@ namespace PocclientApplication
         public static int selectlandid;
         public static int reportlandid;
         public static string picturefilename;
+        public static int loginid;
      }
 }

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition">
   <DataSources>
-    <DataSource Name="pocdatabaseDataSet">
+    <DataSource Name="pocdatabaseDataSet6">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>999b1344-761f-4668-95da-33bd1fb7a7ed</rd:DataSourceID>
+      <rd:DataSourceID>089bb128-34bf-44d6-b2e6-e2de12842db5</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -28,17 +28,17 @@
           <DataField>house_owner</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="house_nature_id">
-          <DataField>house_nature_id</DataField>
+        <Field Name="house_nature">
+          <DataField>house_nature</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
         <Field Name="house_idcardnumber">
           <DataField>house_idcardnumber</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="house_located_id">
-          <DataField>house_located_id</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+        <Field Name="house_located">
+          <DataField>house_located</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="house_dihao">
           <DataField>house_dihao</DataField>
@@ -82,12 +82,12 @@
         </Field>
       </Fields>
       <Query>
-        <DataSourceName>pocdatabaseDataSet</DataSourceName>
+        <DataSourceName>pocdatabaseDataSet6</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <rd:DataSetInfo>
-        <rd:DataSetName>pocdatabaseDataSet</rd:DataSetName>
-        <rd:SchemaPath>D:\工作\WCF测试\房产证管理系统\测试版\PocclientApplication\PocclientApplication\pocdatabaseDataSet.xsd</rd:SchemaPath>
+        <rd:DataSetName>pocdatabaseDataSet6</rd:DataSetName>
+        <rd:SchemaPath>D:\工作\房产证管理软件\福\fcz\PocclientApplication\PocclientApplication\pocdatabaseDataSet6.xsd</rd:SchemaPath>
         <rd:TableName>house</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -134,12 +134,12 @@
         </Field>
       </Fields>
       <Query>
-        <DataSourceName>pocdatabaseDataSet</DataSourceName>
+        <DataSourceName>pocdatabaseDataSet6</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <rd:DataSetInfo>
-        <rd:DataSetName>pocdatabaseDataSet</rd:DataSetName>
-        <rd:SchemaPath>D:\工作\WCF测试\房产证管理系统\测试版\PocclientApplication\PocclientApplication\pocdatabaseDataSet.xsd</rd:SchemaPath>
+        <rd:DataSetName>pocdatabaseDataSet6</rd:DataSetName>
+        <rd:SchemaPath>D:\工作\房产证管理软件\福\fcz\PocclientApplication\PocclientApplication\pocdatabaseDataSet6.xsd</rd:SchemaPath>
         <rd:TableName>house_condition</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -157,17 +157,17 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!house_word.Value, "DataSet1")</Value>
-                <Style>
-                  <FontSize>12pt</FontSize>
-                </Style>
+                <Style />
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>house_word</rd:DefaultName>
-        <Top>2.29341cm</Top>
-        <Left>6.42091cm</Left>
+        <Top>2.57916cm</Top>
+        <Left>8.45291cm</Left>
         <Height>0.6cm</Height>
         <Width>1.56514cm</Width>
         <Style>
@@ -188,19 +188,19 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!house_number.Value, "DataSet1")</Value>
-                <Style>
-                  <FontSize>12pt</FontSize>
-                </Style>
+                <Style />
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>house_number</rd:DefaultName>
-        <Top>2.29341cm</Top>
-        <Left>7.96841cm</Left>
+        <Top>2.57916cm</Top>
+        <Left>10.00041cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
+        <Width>1.75382cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -221,16 +221,18 @@
               <TextRun>
                 <Value>=First(Fields!house_owner.Value, "DataSet1")</Value>
                 <Style>
-                  <FontSize>14pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>house_owner</rd:DefaultName>
-        <Top>3.17712cm</Top>
-        <Left>0.61595cm</Left>
+        <Top>3.52637cm</Top>
+        <Left>2.83845cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>2</ZIndex>
@@ -253,17 +255,19 @@
               <TextRun>
                 <Value>=Parameters!nature.Value</Value>
                 <Style>
-                  <FontSize>14pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
-        <Top>3.17712cm</Top>
-        <Left>4.89338cm</Left>
+        <Top>3.52637cm</Top>
+        <Left>7.11588cm</Left>
         <Height>0.6cm</Height>
-        <Width>5.67028cm</Width>
+        <Width>2.12304cm</Width>
         <ZIndex>3</ZIndex>
         <Style>
           <Border>
@@ -284,16 +288,18 @@
               <TextRun>
                 <Value>=Parameters!commonor.Value</Value>
                 <Style>
-                  <FontSize>14pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox6</rd:DefaultName>
-        <Top>4.03437cm</Top>
-        <Left>0.61595cm</Left>
+        <Top>4.54237cm</Top>
+        <Left>2.83845cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>4</ZIndex>
@@ -318,14 +324,16 @@
                 <Style />
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>house_idcardnumber</rd:DefaultName>
-        <Top>3.93912cm</Top>
-        <Left>4.89338cm</Left>
+        <Top>4.38362cm</Top>
+        <Left>7.11588cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.12304cm</Width>
+        <Width>1.97752cm</Width>
         <ZIndex>5</ZIndex>
         <Style>
           <Border>
@@ -344,18 +352,20 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Parameters!located.Value</Value>
+                <Value>=First(Fields!house_located.Value, "DataSet1")</Value>
                 <Style>
-                  <FontSize>14pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox8</rd:DefaultName>
-        <Top>4.92865cm</Top>
-        <Left>0.61595cm</Left>
+        <Top>5.3414cm</Top>
+        <Left>2.83845cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>6</ZIndex>
@@ -378,18 +388,20 @@
               <TextRun>
                 <Value>=First(Fields!house_dihao.Value, "DataSet1")</Value>
                 <Style>
-                  <FontSize>14pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>house_dihao</rd:DefaultName>
-        <Top>4.8334cm</Top>
-        <Left>4.89338cm</Left>
+        <Top>5.24615cm</Top>
+        <Left>7.11588cm</Left>
         <Height>0.6cm</Height>
-        <Width>5.67028cm</Width>
+        <Width>2.12304cm</Width>
         <ZIndex>7</ZIndex>
         <Style>
           <Border>
@@ -408,10 +420,8 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!building_number.Value, "DataSet2")</Value>
-                <Style>
-                  <FontSize>14pt</FontSize>
-                </Style>
+                <Value />
+                <Style />
               </TextRun>
             </TextRuns>
             <Style />
@@ -419,6 +429,7 @@
         </Paragraphs>
         <rd:DefaultName>building_number</rd:DefaultName>
         <Top>6.78073cm</Top>
+        <Left>15.71625cm</Left>
         <Height>0.6cm</Height>
         <Width>0.93896cm</Width>
         <ZIndex>8</ZIndex>
@@ -439,10 +450,8 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!room_number.Value, "DataSet2")</Value>
-                <Style>
-                  <FontSize>14pt</FontSize>
-                </Style>
+                <Value />
+                <Style />
               </TextRun>
             </TextRuns>
             <Style />
@@ -450,9 +459,9 @@
         </Paragraphs>
         <rd:DefaultName>room_number</rd:DefaultName>
         <Top>6.78073cm</Top>
-        <Left>0.94108cm</Left>
+        <Left>16.65733cm</Left>
         <Height>0.6cm</Height>
-        <Width>0.93896cm</Width>
+        <Width>1.06949cm</Width>
         <ZIndex>9</ZIndex>
         <Style>
           <Border>
@@ -471,10 +480,8 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!jianshu.Value, "DataSet2")</Value>
-                <Style>
-                  <FontSize>14pt</FontSize>
-                </Style>
+                <Value />
+                <Style />
               </TextRun>
             </TextRuns>
             <Style />
@@ -482,9 +489,9 @@
         </Paragraphs>
         <rd:DefaultName>jianshu</rd:DefaultName>
         <Top>6.78073cm</Top>
-        <Left>2.01409cm</Left>
+        <Left>17.7621cm</Left>
         <Height>0.6cm</Height>
-        <Width>1.09771cm</Width>
+        <Width>0.93896cm</Width>
         <ZIndex>10</ZIndex>
         <Style>
           <Border>
@@ -503,7 +510,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!building_structure.Value, "DataSet2")</Value>
+                <Value />
                 <Style />
               </TextRun>
             </TextRuns>
@@ -512,9 +519,9 @@
         </Paragraphs>
         <rd:DefaultName>building_structure</rd:DefaultName>
         <Top>6.78073cm</Top>
-        <Left>2.88426cm</Left>
+        <Left>18.79454cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.26716cm</Width>
+        <Width>2.09077cm</Width>
         <ZIndex>11</ZIndex>
         <Style>
           <Border>
@@ -533,10 +540,8 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!cengshu.Value, "DataSet2")</Value>
-                <Style>
-                  <FontSize>14pt</FontSize>
-                </Style>
+                <Value />
+                <Style />
               </TextRun>
             </TextRuns>
             <Style />
@@ -544,7 +549,7 @@
         </Paragraphs>
         <rd:DefaultName>cengshu</rd:DefaultName>
         <Top>6.78073cm</Top>
-        <Left>5.24667cm</Left>
+        <Left>21.02642cm</Left>
         <Height>0.6cm</Height>
         <Width>0.95219cm</Width>
         <ZIndex>12</ZIndex>
@@ -565,10 +570,8 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!built_up_area.Value, "DataSet2")</Value>
-                <Style>
-                  <FontSize>14pt</FontSize>
-                </Style>
+                <Value />
+                <Style />
               </TextRun>
             </TextRuns>
             <Style />
@@ -576,9 +579,9 @@
         </Paragraphs>
         <rd:DefaultName>built_up_area</rd:DefaultName>
         <Top>6.78073cm</Top>
-        <Left>6.34262cm</Left>
+        <Left>22.155cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.02375cm</Width>
+        <Width>2.20984cm</Width>
         <ZIndex>13</ZIndex>
         <Style>
           <Border>
@@ -597,10 +600,8 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!remarks.Value, "DataSet2")</Value>
-                <Style>
-                  <FontSize>12pt</FontSize>
-                </Style>
+                <Value />
+                <Style />
               </TextRun>
             </TextRuns>
             <Style />
@@ -608,9 +609,9 @@
         </Paragraphs>
         <rd:DefaultName>remarks</rd:DefaultName>
         <Top>6.78073cm</Top>
-        <Left>8.40517cm</Left>
+        <Left>24.47067cm</Left>
         <Height>0.6cm</Height>
-        <Width>1.96799cm</Width>
+        <Width>1.67695cm</Width>
         <ZIndex>14</ZIndex>
         <Style>
           <Border>
@@ -631,16 +632,18 @@
               <TextRun>
                 <Value>=First(Fields!house_postscript.Value, "DataSet1")</Value>
                 <Style>
-                  <FontSize>14pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>house_postscript</rd:DefaultName>
-        <Top>13.12014cm</Top>
-        <Left>1.22683cm</Left>
+        <Top>13.40589cm</Top>
+        <Left>1.86183cm</Left>
         <Height>0.6cm</Height>
         <Width>9.90833cm</Width>
         <ZIndex>15</ZIndex>
@@ -663,16 +666,18 @@
               <TextRun>
                 <Value>=First(Fields!house_witness.Value, "DataSet1")</Value>
                 <Style>
-                  <FontSize>14pt</FontSize>
+                  <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>house_witness</rd:DefaultName>
-        <Top>14.12556cm</Top>
-        <Left>1.22683cm</Left>
+        <Top>14.41131cm</Top>
+        <Left>1.99941cm</Left>
         <Height>0.6cm</Height>
         <Width>4.12215cm</Width>
         <ZIndex>16</ZIndex>
@@ -693,7 +698,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!house_proofreader.Value, "DataSet1")</Value>
+                <Value />
                 <Style>
                   <FontSize>14pt</FontSize>
                 </Style>
@@ -703,8 +708,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>house_proofreader</rd:DefaultName>
-        <Top>14.12556cm</Top>
-        <Left>5.4901cm</Left>
+        <Top>14.18906cm</Top>
+        <Left>7.7126cm</Left>
         <Height>0.6cm</Height>
         <Width>5.64507cm</Width>
         <ZIndex>17</ZIndex>
@@ -725,7 +730,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!house_autograph.Value, "DataSet1")</Value>
+                <Value />
                 <Style>
                   <FontSize>14pt</FontSize>
                 </Style>
@@ -735,8 +740,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>house_autograph</rd:DefaultName>
-        <Top>14.97223cm</Top>
-        <Left>1.22683cm</Left>
+        <Top>15.03573cm</Top>
+        <Left>3.44933cm</Left>
         <Height>0.6cm</Height>
         <Width>4.12215cm</Width>
         <ZIndex>18</ZIndex>
@@ -757,7 +762,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=CDate(First(Fields!house_licensing_date.Value, "DataSet1")).ToString("yyyy年MM月dd日")</Value>
+                <Value />
                 <Style>
                   <FontSize>14pt</FontSize>
                 </Style>
@@ -767,8 +772,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>house_licensing_date</rd:DefaultName>
-        <Top>14.97223cm</Top>
-        <Left>5.52538cm</Left>
+        <Top>15.03573cm</Top>
+        <Left>7.74788cm</Left>
         <Height>0.6cm</Height>
         <Width>5.60979cm</Width>
         <ZIndex>19</ZIndex>
@@ -782,6 +787,523 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
+      <Tablix Name="Tablix1">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>0.35151in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>0.40373in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>0.4675in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>0.84178in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>0.41227in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>0.98172in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>0.45664in</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>0.23622in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox1">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>building number</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox1</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox3">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>room number</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox3</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox5">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>jianshu</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox5</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox9">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>building structure</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox9</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox11">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>cengshu</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox11</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox13">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>built up area</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox13</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox15">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>remarks</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox15</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+            <TablixRow>
+              <Height>0.23622in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="building_number1">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!building_number.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>building_number1</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="room_number1">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!room_number.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>room_number1</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="jianshu1">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!jianshu.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>jianshu1</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="building_structure1">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!building_structure.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>building_structure1</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="cengshu1">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!cengshu.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>cengshu1</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="built_up_area1">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!built_up_area.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>built_up_area1</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="remarks1">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!remarks.Value</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>remarks1</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <Visibility>
+                <Hidden>true</Hidden>
+              </Visibility>
+              <KeepWithGroup>After</KeepWithGroup>
+            </TablixMember>
+            <TablixMember>
+              <Group Name="详细信息" />
+              <TablixMembers>
+                <TablixMember />
+              </TablixMembers>
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>DataSet2</DataSetName>
+        <Top>7.35223cm</Top>
+        <Left>2.06375cm</Left>
+        <Height>1.2cm</Height>
+        <Width>9.94448cm</Width>
+        <ZIndex>20</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Tablix>
+      <Rectangle Name="Rectangle1">
+        <KeepTogether>true</KeepTogether>
+        <Top>7.02415cm</Top>
+        <Left>2.00025cm</Left>
+        <Height>6.14185cm</Height>
+        <Width>10.43135cm</Width>
+        <ZIndex>21</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Rectangle>
     </ReportItems>
     <Height>16.53in</Height>
     <Style />

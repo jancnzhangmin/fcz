@@ -65,9 +65,9 @@ namespace FileService
 
         //新增房屋所有权数据
         [OperationContract]
-        int Inserthouse(string house_word, string house_number, string house_owner, int house_nature_id, string house_idcardnumber, int house_located_id, string house_dihao, string house_postscript, string house_witness, string house_proofreader, string house_autograph, DateTime house_licensing_date, string house_office, string house_banzhenren, DateTime house_tianfatime, string house_figure);
+        int Inserthouse(string house_word, string house_number, string house_owner, int house_nature_id, string house_idcardnumber, string  house_located, string house_dihao, string house_postscript, string house_witness, string house_proofreader, string house_autograph, DateTime house_licensing_date, string house_office, string house_banzhenren, DateTime house_tianfatime, string house_figure);
         [OperationContract]
-        int Updatahouse(string house_word, string house_number, string house_owner, int house_nature_id, string house_idcardnumber, int house_located_id, string house_dihao, string house_postscript, string house_witness, string house_proofreader, string house_autograph, DateTime house_licensing_date, string house_office, string house_banzhenren, DateTime house_tianfatime, string house_figure, int houseid);
+        int Updatahouse(string house_word, string house_number, string house_owner, int house_nature_id, string house_idcardnumber, string house_located, string house_dihao, string house_postscript, string house_witness, string house_proofreader, string house_autograph, DateTime house_licensing_date, string house_office, string house_banzhenren, DateTime house_tianfatime, string house_figure, int houseid);
         //删除房屋所有权表记录
         [OperationContract]
         int Deletehouse(int strhouseid);
@@ -118,17 +118,17 @@ namespace FileService
 
         //增加契税摘要
         [OperationContract]
-        int Inserthousedeedtax(DateTime datetime, string price, string type, string tax_rate, string amount_money, string remarks, int house_id);
+        int Inserthousedeedtax(string datetime, string price, string type, string tax_rate, string amount_money, string remarks, int house_id);
         //更新契税
         [OperationContract]
-        int Updatehousedeedtax(DateTime datetime, string price, string type, string tax_rate, string amount_money, string remarks, int house_id);
+        int Updatehousedeedtax(string datetime, string price, string type, string tax_rate, string amount_money, string remarks, int house_id);
         //查询编辑契税摘要
         [OperationContract]
         DataSet Selecthousedeedtaxid(int id);
 
         //增加设定他项权利摘要
         [OperationContract]
-        int Inserthouseobligee(string obligee, string type, string room_number, string jianshu, string built_up_area, string right_value, string duration_right, DateTime logout_date, int house_id);
+        int Inserthouseobligee(string obligee, string type, string room_number, string jianshu, string built_up_area, string right_value, string duration_right, string logout_date, int house_id);
         //查询他项权利摘要
         [OperationContract]
         DataSet Selectobligee(int house_id);
@@ -137,17 +137,17 @@ namespace FileService
         DataSet Selectobligeeid(int oblid);
         //更新他项权利摘要
         [OperationContract]
-        int Updataobligee(string obligee, string type, string room_number, string jianshu, string built_up_area, string right_value, string duration_right, DateTime logout_date, int house_id, int oblid);
+        int Updataobligee(string obligee, string type, string room_number, string jianshu, string built_up_area, string right_value, string duration_right, string logout_date, int house_id, int oblid);
         //删除设定他项权利摘要
         [OperationContract]
         int Deleteobligee(int strobligeeid);
 
         //增加使用土地摘要
         [OperationContract]
-        int Inserthouseuseland(string use_area, string company, string card_number, string zidihao, int house_id);
+        int Inserthouseuseland(string use_area,  string card_number, int house_id);
         //更新使用土地
         [OperationContract]
-        int Updataohouseuseland(string use_area, string company, string card_number, string zidihao, int house_id);
+        int Updataohouseuseland(string use_area, string card_number,  int house_id);
         //查询编辑使用土地摘要
         [OperationContract]
         DataSet Selecthouseuselandid(int id);
@@ -175,13 +175,13 @@ namespace FileService
 
         //新增土地使用
         [OperationContract]
-        int Insertland(string land_tile, string land_word, string land_number, string land_government, DateTime land_date, string land_user, string land_idcardnumber, string land_address, string land_map, string land_ground, string land_use, string land_use_period, string land_east, string land_south, string land_west, string land_north, string land_office, DateTime land_send_date, string land_managers, string land_licensing_people, string land_remarks, string land_change_items, string land_figure);
+        int Insertland(string land_tile, string land_word, string land_number, string land_government, DateTime land_date, string land_user, string land_idcardnumber, string land_address, string land_map, string land_ground, string land_use, string land_use_period, string land_east, string land_south, string land_west, string land_north, string land_office, DateTime land_send_date, string land_remarks, string land_change_items, string land_figure);
         //删除land数据
         [OperationContract]
         int Deleteland(int land_id);
         //修改数据
         [OperationContract]
-        int Updataland(string land_tile, string land_word, string land_number, string land_government, DateTime land_date, string land_user, string land_idcardnumber, string land_address, string land_map, string land_ground, string land_use, string land_use_period, string land_east, string land_south, string land_west, string land_north, string land_office, DateTime land_send_date, string land_managers, string land_licensing_people, string land_remarks, string land_change_items, string land_figure, int land_id);
+        int Updataland(string land_tile, string land_word, string land_number, string land_government, DateTime land_date, string land_user, string land_idcardnumber, string land_address, string land_map, string land_ground, string land_use, string land_use_period, string land_east, string land_south, string land_west, string land_north, string land_office, DateTime land_send_date, string land_remarks, string land_change_items, string land_figure, int land_id);
         //查询土地使用
         [OperationContract]
         DataSet Selectland();
@@ -237,7 +237,7 @@ namespace FileService
 
         //房屋条件查询
         [OperationContract]
-        DataSet Selecthouseinquiry(string owner, string idcardnumber, string a2, DateTime oldtime, DateTime tianfatime);
+        DataSet Selecthouseinquiry(string owner, string idcardnumber,string located, string a2, DateTime oldtime, DateTime tianfatime);
         
         //土地条件查询
         [OperationContract]
@@ -258,9 +258,29 @@ namespace FileService
         DataSet SelectTest();
 
 
+        //查询用户表
+        [OperationContract]
+        DataSet Selectloginuser();
+
         //查询登录数据数据
         [OperationContract]
         int SelectLogin(string login_name, string psw);
+
+        //查询用户权限
+        [OperationContract]
+        string SelectLoginpem(int id);
+
+        //通过id查询用户
+        [OperationContract]
+        DataSet SelectLogin_id(int id);
+
+        //更新用户
+        [OperationContract]
+        int Updatalogin(int id, string name, string login_name, string password, string user_right);
+
+        //删除用户
+        [OperationContract]
+        int Deletelogin(int id);
 
 
         //上传文件

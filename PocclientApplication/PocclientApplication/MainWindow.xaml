@@ -2,13 +2,13 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:avalonDock="http://schemas.xceed.com/wpf/xaml/avalondock"
-        Title="蓝格驿房产地产管理系统" Height="350" Width="525" WindowState="Maximized" Icon="/PocclientApplication;component/image/logo.ico">
+        Title="蓝格驿房产地产管理系统" Height="350" Width="525" WindowState="Maximized" Icon="/PocclientApplication;component/image/logo.ico" Loaded="Window_Loaded">
     
     <Grid x:Name="mainwindow">
         <Menu  HorizontalAlignment="Stretch" VerticalAlignment="Top" x:Name="menu">
             <MenuItem Header="业务管理" >
-                <MenuItem x:Name="addhouse" Click="addhouse_Click" Header="增加房产证"></MenuItem>
-                <MenuItem x:Name="addland" Header="增加土地证" Click="addland_Click"></MenuItem>
+                <MenuItem x:Name="addhouse" Click="addhouse_Click" Header="增加房产证" IsEnabled="False"></MenuItem>
+                <MenuItem x:Name="addland" Header="增加土地证" Click="addland_Click" IsEnabled="False"></MenuItem>
             </MenuItem>
             <MenuItem Header="业务查询" Click="MenuItem_Click">
                 <MenuItem Header="查询房屋使用" x:Name="selecthouse" Click="selecthouse_Click"></MenuItem>
@@ -16,7 +16,12 @@
                 
             </MenuItem>
             <MenuItem Header="系统">
-                <MenuItem Header="用户注册" x:Name="register" Click="register_Click"></MenuItem>
+                <!--<MenuItem Header="用户注册" x:Name="register" Click="register_Click" IsEnabled="False"></MenuItem>-->
+                <MenuItem Header="数据备份" x:Name="backup" Click="backup_Click" IsEnabled="False"></MenuItem>
+                <MenuItem Header="用户管理" x:Name="account" Click="account_Click" IsEnabled="False"></MenuItem>
+                <MenuItem Header="修改密码" x:Name="editpwd" Click="editpwd_Click"></MenuItem>
+                <MenuItem Header="注销" x:Name="zhuxiao" Click="zhuxiao_Click"></MenuItem>
+                
             </MenuItem>
             <MenuItem x:Name="help" Header="帮助" Click="help_Click">
                 <MenuItem Header="关于" x:Name="memuabout" Click="memuabout_Click"></MenuItem>
@@ -26,24 +31,27 @@
 
         <ToolBarPanel Height="30" HorizontalAlignment="Stretch" Margin="0,23,0,0" Name="toolBarPanel1" VerticalAlignment="Top" AllowDrop="True" >
             <ToolBar Height="30" Name="toolBar1" VerticalAlignment="Top" AllowDrop="True"  Loaded="Toolbar_loaded">
-                <ToggleButton x:Name="fix_add" Content="" IsEnabled="True" Click="addhouse_Click" ToolTip="添加房产证" Width="26" Height="26">
+                <ToggleButton x:Name="fix_add" Content="" IsEnabled="False" Click="addhouse_Click" ToolTip="添加房产证" Width="26" Height="26">
                     <ToggleButton.Background>
                         <ImageBrush ImageSource="/PocclientApplication;component/image/add_house_active.png" />
                     </ToggleButton.Background>
                 </ToggleButton>
-                <ToggleButton Name="fixed_transfers" Content="" Click="addland_Click" IsEnabled="True" ToolTip="添加土地证" Width="26" Height="26">
+                <Separator Width="20" Background="#00000000"></Separator>
+                <ToggleButton Name="fixed_transfers" Content="" Click="addland_Click" IsEnabled="False" ToolTip="添加土地证" Width="26" Height="26">
                     <ToggleButton.Background>
                         <ImageBrush ImageSource="/PocclientApplication;component/image/add_land_active.png" />
                     </ToggleButton.Background>
                 </ToggleButton>
+                <Separator Width="20" Background="#00000000"></Separator>
                 <ToggleButton x:Name="fix_prin" Content="" IsEnabled="True" ToolTip="房产证查询" Height="26" Width="26" Click="selecthouse_Click">
                     <ToggleButton.Background>
-                        <ImageBrush ImageSource="/PocclientApplication;component/image/query_house_active.png" />
+                        <ImageBrush ImageSource="/PocclientApplication;component/image/find2.png" />
                     </ToggleButton.Background>
                 </ToggleButton>
+                <Separator Width="20" Background="#00000000"></Separator>
                 <ToggleButton Content="" x:Name="effective_name" IsEnabled="True" ToolTip="土地使用证查询" Width="26" Height="26" Click="selectland_Click">
                     <ToggleButton.Background>
-                        <ImageBrush ImageSource="/PocclientApplication;component/image/query_house_active.png" />
+                        <ImageBrush ImageSource="/PocclientApplication;component/image/find1.png" />
                     </ToggleButton.Background>
                 </ToggleButton>
              
