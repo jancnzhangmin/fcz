@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="800" d:DesignWidth="1000" KeyUp="UserControl_KeyUp">
+             d:DesignHeight="800" d:DesignWidth="1000" KeyUp="UserControl_KeyUp" xmlns:c1="http://schemas.componentone.com/winfx/2006/xaml">
     
     <Grid x:Name="land" Loaded="land_Loaded">
         <Label Content="佤" Height="28" HorizontalAlignment="Left" Margin="25,35,0,0" Name="label1" VerticalAlignment="Top" />
@@ -71,8 +71,7 @@
         <Label Content="领证人（签）" Height="28" HorizontalAlignment="Left" Margin="667,235,0,0" Name="label19" VerticalAlignment="Top" Width="82" />
         <TextBox Height="28" HorizontalAlignment="Left" Margin="755,235,0,0" Name="land_licensing" VerticalAlignment="Top" Width="200" />-->
 
-        <GroupBox Header="土地使用证基本信息" Height="269" HorizontalAlignment="Left" Margin="16,12,0,0" Name="groupBox1" VerticalAlignment="Top" Width="961"/>
-
+        <GroupBox Header="土地使用证基本信息" Height="269" HorizontalAlignment="Left" Margin="16,12,0,0" Name="groupBox1" VerticalAlignment="Top" Width="961"></GroupBox>
         <Label Content="  用 地 面 积" Height="28" HorizontalAlignment="Left" Margin="25,325,0,0" Name="label27" VerticalAlignment="Top" Width="82" />
         <TextBox Height="28" HorizontalAlignment="Left" Margin="110,325,0,0" Name="land_area" VerticalAlignment="Top" Width="140" />
         

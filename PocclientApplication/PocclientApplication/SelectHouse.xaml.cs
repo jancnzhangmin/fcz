@@ -29,6 +29,8 @@ namespace PocclientApplication
         }
 
         public int located_id;
+
+
              
         public class house
         {
@@ -49,6 +51,7 @@ namespace PocclientApplication
             public string obl_jianshu { get; set; }
             public string obl_built_area { get; set; }
             public string land_use_area { get; set; }
+            public string building_structure { get; set; }
 
            //合计
             public string condition_jianshu_total { get; set; }
@@ -93,11 +96,11 @@ namespace PocclientApplication
         public void  GetDataGridColumnSum(DataGrid datagrid)
         {
             //double result = 0;
-            double temp1 = 0;
-            double temp2 = 0;
-            double temp3 = 0;
-            double temp4 = 0;
-            double temp5 = 0;
+            double temp1 = 0;//间数
+            double temp2 = 0;//面积
+            double temp3 = 0;//权间数
+            double temp4 = 0;//权面积
+            double temp5 = 0;//使用面积
             for (int i = 0; i < datagrid.Items.Count; i++)
             {
                 
@@ -105,11 +108,34 @@ namespace PocclientApplication
                 if (mySelectedElement == null)
                     continue;
                 double.TryParse(mySelectedElement.condition_jianshu.ToString(), out temp1);
-                do_jianshu_co += temp1;
+
+                string[] s = mySelectedElement.condition_jianshu.ToString().Split('|');
+                for (int t = 0; t < s.Count(); t++)
+                {
+                    try
+                    {
+                        do_jianshu_co += int.Parse(s[t].ToString());
+                    }
+                    catch { }
+                }
+                    //do_jianshu_co += temp1;
                 double.TryParse(mySelectedElement.condition_built_area.ToString(), out temp2);
                 do_area_co += temp2;
                 double.TryParse(mySelectedElement.obl_jianshu.ToString(), out temp3);
-                do_jianshu_ob += temp3;
+
+                string[] s1 = mySelectedElement.obl_jianshu.ToString().Split('|');
+                for (int t = 0; t < s1.Count(); t++)
+                {
+                    try
+                    {
+                        do_jianshu_ob += int.Parse(s1[t].ToString());
+                    }
+                    catch { }
+                }
+
+
+
+                //do_jianshu_ob += temp3;
                 double.TryParse(mySelectedElement.obl_built_area.ToString(), out temp4);
                 do_area_ob += temp4;
 
@@ -130,6 +156,7 @@ namespace PocclientApplication
 
         private void initselecthouse()
         {
+
             try
             {
                 located_id = client.selectlocatedID(located.Text);
@@ -162,14 +189,17 @@ namespace PocclientApplication
                     house.house_dihao = shuju.Tables[0].Rows[i][7].ToString();
                     house.house_witness = shuju.Tables[0].Rows[i][9].ToString();
                     house.house_tianfatime =DateTime.Parse(shuju.Tables[0].Rows[i][15].ToString());
+
+                    house.building_structure = get_building_structure(house.house_id);
+                    
                     condition_jianshu = 0;
                     condition_built_area = 0;
                     obl_jianshu = 0;
                     obl_built_area = 0;
                     land_use_area = 0;
-                    house.condition_jianshu = condition_jianshu_co(house.house_id);
+                    house.condition_jianshu = get_condition_jianshu(house.house_id);
                     house.condition_built_area = condition_built_area_co(house.house_id);
-                    house.obl_jianshu = obl_jianshu_ob(house.house_id);
+                    house.obl_jianshu = get_obl_jianshu(house.house_id);
                     house.obl_built_area = obl_built_area_ob(house.house_id);
                     house.land_use_area = land_use_area_land(house.house_id);
                     AccountList.Add(house);
@@ -188,14 +218,16 @@ namespace PocclientApplication
                     house.house_witness = shuju.Tables[0].Rows[i][9].ToString();
                     house.house_tianfatime =DateTime.Parse( shuju.Tables[0].Rows[i][15].ToString());
 
+                    house.building_structure = get_building_structure(house.house_id);
+
                     condition_jianshu = 0;
                     condition_built_area = 0;
                     obl_jianshu = 0;
                     obl_built_area = 0;
                     land_use_area = 0;
-                    house.condition_jianshu = condition_jianshu_co(house.house_id);
+                    house.condition_jianshu = get_condition_jianshu(house.house_id);
                     house.condition_built_area = condition_built_area_co(house.house_id);
-                    house.obl_jianshu = obl_jianshu_ob(house.house_id);
+                    house.obl_jianshu = get_obl_jianshu(house.house_id);
                     house.obl_built_area = obl_built_area_ob(house.house_id);
                     house.land_use_area = land_use_area_land(house.house_id);
                     AccountList.Add(house);
@@ -257,20 +289,71 @@ namespace PocclientApplication
             e.Row.Header = e.Row.GetIndex() + 1;
         }
 
+
+        public  string get_building_structure(string house_id)//获取房屋结构
+        {
+            string building_structure ="";
+            try
+            {
+                for (int i = 0; i < shuju_co.Tables[0].Rows.Count; i++)
+                {
+                    if (shuju_co.Tables[0].Rows[i][8].ToString() == house_id)
+                    {
+                        if (shuju_co.Tables[0].Rows[i][4].ToString().Trim() != "")
+                        {
+                            building_structure += shuju_co.Tables[0].Rows[i][4].ToString() + " | ";
+                        }
+                    }
+                }
+                building_structure = building_structure.Remove(building_structure.LastIndexOf(" | "), 3);
+                
+            }
+            catch { }
+            return building_structure;
+        }
+
+        private string get_condition_jianshu(string house_id)
+        {
+            string jianshu = "";
+            try
+            {
+                for (int i = 0; i < shuju_co.Tables[0].Rows.Count; i++)
+                {
+                    if (shuju_co.Tables[0].Rows[i][8].ToString() == house_id)
+                    {
+                        if (shuju_co.Tables[0].Rows[i][3].ToString().Trim() != "")
+                        {
+                            jianshu += shuju_co.Tables[0].Rows[i][3].ToString() + " | ";
+                        }
+                    }
+                }
+                jianshu = jianshu.Remove(jianshu.LastIndexOf(" | "), 3);
+
+            }
+            catch { }
+            return jianshu;
+        }
+
         private string condition_jianshu_co(string house_id)
         {
-            for (int j = 0; j < shuju_co.Tables[0].Rows.Count; j++)
+ 
+            try
             {
-                try
+                for (int j = 0; j < shuju_co.Tables[0].Rows.Count; j++)
                 {
+
                     if (shuju_co.Tables[0].Rows[j][8].ToString() == house_id)
                     {
                         condition_jianshu += int.Parse(shuju_co.Tables[0].Rows[j][3].ToString());
+
                     }
+
+
                 }
-                catch { }
 
             }
+            catch { }
+            //return jianshu;
             return condition_jianshu.ToString();
         }
 
@@ -293,6 +376,30 @@ namespace PocclientApplication
             return condition_built_area.ToString();
         }
 
+
+
+
+        private string get_obl_jianshu(string house_id)
+        {
+            string jianshu = "";
+            try
+            {
+                for (int i = 0; i < shuju_ob.Tables[0].Rows.Count; i++)
+                {
+                    if (shuju_ob.Tables[0].Rows[i][9].ToString() == house_id)
+                    {
+                        if (shuju_ob.Tables[0].Rows[i][4].ToString().Trim() != "")
+                        {
+                            jianshu += shuju_ob.Tables[0].Rows[i][4].ToString() + " | ";
+                        }
+                    }
+                }
+                jianshu = jianshu.Remove(jianshu.LastIndexOf(" | "), 3);
+
+            }
+            catch { }
+            return jianshu;
+        }
 
         private string obl_jianshu_ob(string house_id)
         {
@@ -365,6 +472,7 @@ namespace PocclientApplication
             id = id.Remove(id.LastIndexOf(","), 1);
             //房屋状况建筑面积
              shuju_co = client.Selecthouselistid(id);
+            
             //var ss=from c in 
             //for (int j = 0; j < shuju_co.Tables[0].Rows.Count; j++)
             //{
@@ -634,7 +742,11 @@ namespace PocclientApplication
         public static string ExportDataGrid(bool withHeaders, System.Windows.Controls.DataGrid grid, bool dataBind)
         {
 
-
+            string htmlstr = "<html><table border = 1>";
+            htmlstr += "<tr>";
+            htmlstr += "<td>序号</td><td>字</td><td>号</td><td>所有权人</td><td>所有权性质</td><td>身份证号码</td><td>房屋座落</td><td>地号</td><td>缮证人</td><td>填发日期</td><td>建筑结构</td><td>房屋间数</td><td>房屋建筑面积</td><td>权利摘要间数</td><td>权利摘要建筑面积</td><td>使用土地面积</td>";
+            htmlstr += "</tr>";
+            int xuhao = 1; 
             //try
             //{
                 var strBuilder = new System.Text.StringBuilder();
@@ -701,6 +813,26 @@ namespace PocclientApplication
 
                     string c = a.house_word.ToString() + ',' + a.house_number + ',' + a.house_owner + ',' + a.house_nature + ',' + a.house_idcardnumber + ',' + a.house_located + ',' + a.house_dihao + ',' + a.house_witness + ',' +string.Format("{0:d}", a.house_tianfatime) + ',' + a.condition_jianshu + ',' + a.condition_built_area + ',' + a.obl_jianshu + ',' + a.obl_built_area + ',' + a.land_use_area;
                         csvRow.Add(c);
+                        htmlstr += "<tr>";
+                        htmlstr += "<td>" + xuhao + "</td>";
+                        htmlstr += "<td>" + a.house_word.ToString() + "</td>";
+                        htmlstr += "<td>" + a.house_number + "</td>";
+                        htmlstr += "<td>" + a.house_owner + "</td>";
+                        htmlstr += "<td>" + a.house_nature + "</td>";
+                        htmlstr += "<td>" + a.house_idcardnumber + "&nbsp;</td>";
+                        htmlstr += "<td>" + a.house_located + "</td>";
+                        htmlstr += "<td>" + a.house_dihao + "</td>";
+                        htmlstr += "<td>" + a.house_witness + "</td>";
+                        htmlstr += "<td>" + string.Format("{0:d}", a.house_tianfatime) + "</td>";
+                        htmlstr += "<td>" + a.building_structure + "</td>";
+                        htmlstr += "<td>" + a.condition_jianshu + "</td>";
+                        htmlstr += "<td>" + a.condition_built_area + "</td>";
+                        htmlstr += "<td>" + a.obl_jianshu + "</td>";
+                        htmlstr += "<td>" + a.obl_built_area + "</td>";
+                        htmlstr += "<td>" + a.land_use_area + "</td>";
+                        htmlstr += "</tr>";
+                    xuhao++;
+
 
                         //}
                     //}
@@ -710,10 +842,20 @@ namespace PocclientApplication
                 }
                 //strBuilder.Append(String.Join(",", csvRow.ToArray())).Append("\r\n");
                 string heji = "合计" + ',' + "" + ',' + "" + ',' + "" + ',' + "" + ',' + "" + ',' + "" + ',' + "" + ',' + "" + ',' + do_jianshu_co + ',' + do_area_co + ',' + do_jianshu_ob + ',' + do_area_ob+ ',' + do_use_area;
-                csvRow.Add(heji);
+                htmlstr += "<tr>";
+                htmlstr += "<td>合计</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>";
+                htmlstr += "<td>" + do_jianshu_co + "</td>";
+                htmlstr += "<td>" + do_area_co + "</td>";
+                htmlstr += "<td>" + do_jianshu_ob + "</td>";
+                htmlstr += "<td>" + do_area_ob + "</td>";
+                htmlstr += "<td>" + do_use_area + "</td>";
+                htmlstr += "</tr></table></html>";
+            csvRow.Add(heji);
                 strBuilder.Append(String.Join(",", csvRow.ToArray())).Append("\r\n");
 
-                return strBuilder.ToString();
+                //return strBuilder.ToString();
+                return htmlstr;
+
             //}
             //catch (Exception ex)
             //{
@@ -736,8 +878,8 @@ namespace PocclientApplication
                 string data = ExportDataGrid(true, grid, true);
                 var sfd = new Microsoft.Win32.SaveFileDialog
                 {
-                    DefaultExt = "csv",
-                    Filter = "CSV Files (*.csv)|*.csv|All files (*.*)|*.*",
+                    DefaultExt = "xls",
+                    Filter = "EXCEL Files (*.xls)|*.xls|All files (*.*)|*.*",
                     FilterIndex = 1
                 };
                 if (sfd.ShowDialog() == true)
@@ -746,7 +888,7 @@ namespace PocclientApplication
                     {
                         using (var writer = new StreamWriter(stream, System.Text.Encoding.Unicode))
                         {
-                            data = data.Replace(",", "\t");
+                            //data = data.Replace(",", "\t");
                             writer.Write(data);
                             writer.Close();
                         }

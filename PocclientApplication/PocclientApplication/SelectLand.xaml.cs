@@ -330,7 +330,11 @@ namespace PocclientApplication
         public static string ExportDataGrid(bool withHeaders, System.Windows.Controls.DataGrid grid, bool dataBind)
         {
 
-
+            string htmlstr = "<html><table border = 1>";
+            htmlstr += "<tr>";
+            htmlstr += "<td>序号</td><td>佤用</td><td>字</td><td>号</td><td>政府</td><td>发证日期</td><td>土地使用者</td><td>身份证号码</td><td>地址</td><td>地号</td><td>用途</td><td>批准使用期限</td><td>东至</td><td>南至</td><td>西至</td><td>北至</td><td>填发机关</td><td>填发机关</td><td>填发日期</td><td>备注</td><td>注意事项</td><td>用地面积</td><td>建筑面积</td><td>共有使用权面积</td><td>分摊面积</td><td>土地等级</td><td>土地面积</td><td>耕地</td><td>旱地</td><td>水田</td><td>园地</td><td>林地</td><td>牧草地</td><td>矿用地</td><td>建设用地</td><td>宅基地</td><td>交通用地</td><td>水域</td><td>未利用</td>";
+            htmlstr += "</tr>";
+            int xuhao = 1; 
             try
             {
                 var strBuilder = new System.Text.StringBuilder();
@@ -370,6 +374,10 @@ namespace PocclientApplication
                 foreach (var t in grid.Items)
                 {
                     var a = t as DataRowView;
+
+                    htmlstr += "<tr>";
+                    htmlstr += "<td>" + xuhao + "</td>";
+
                     for (int i = 1; i < 43; i++)
                     {
                         if (i !=21& i !=22 & i != 28 & i != 29)
@@ -378,27 +386,59 @@ namespace PocclientApplication
                             if (i == 5 || i == 18)
                             {
                                 string g = string.Format("{0:d}", a[i]);
+                                htmlstr += "<td>" + g + "</td>";
                                 csvRow.Add(g);
+                            }
+                            else if (i == 7)
+                            {
+                                htmlstr += "<td>" + a[i].ToString() + "&nbsp;</td>";
+                                csvRow.Add(a[i].ToString());
                             }
                             else
                             {
-                                csvRow.Add(a[i].ToString());
+                                htmlstr += "<td>" + a[i].ToString() + "</td>";
                             }
-
+                            string tem = a[i].ToString();
                         }
                     }
+                    htmlstr += "</tr>";
+                    xuhao++;
                     //csvRow[csvRow.Count()-1] = csvRow.Last() + "\r\n";
                     strBuilder.Append(String.Join(",", csvRow.ToArray())).Append("\r\n");
                     csvRow.Clear();
                 }
                 string heji = "合计" + ',' + "" + ',' + "" + ',' + "" + ',' + "" + ',' + "" + ',' + "" + ',' + "" + ',' + "" + ',' + "" + ',' + "" + ',' + "" + ',' + "" + ',' + "" + ',' + "" + ',' + "" + ',' + "" + ',' + "" + ',' + "" + ',' + "" + ',' +  double1 + ',' + double2 + ',' + double3 + ',' + double4 + ',' + "" + ',' + double5 + ',' + double6 + ',' + double7 + ',' + double8 + ',' + double9 + ',' + double10 + ',' + double11 + ',' + double12 + ',' + double13 + ',' + double14 + ',' + double15 + ',' + double16 + ',' + double17;
+
+                htmlstr += "<tr>";
+                htmlstr += "<td>合计</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>";
+                htmlstr += "<td>" + double1 + "</td>";
+                htmlstr += "<td>" + double2 + "</td>";
+                htmlstr += "<td>" + double3 + "</td>";
+                htmlstr += "<td>" + double4 + "</td>";
+                htmlstr += "<td>&nbsp;</td>";
+                htmlstr += "<td>" + double5 + "</td>";
+                htmlstr += "<td>" + double6 + "</td>";
+                htmlstr += "<td>" + double7 + "</td>";
+                htmlstr += "<td>" + double8 + "</td>";
+                htmlstr += "<td>" + double9 + "</td>";
+                htmlstr += "<td>" + double10 + "</td>";
+                htmlstr += "<td>" + double11 + "</td>";
+                htmlstr += "<td>" + double12 + "</td>";
+                htmlstr += "<td>" + double13 + "</td>";
+                htmlstr += "<td>" + double14 + "</td>";
+                htmlstr += "<td>" + double15 + "</td>";
+                htmlstr += "<td>" + double16 + "</td>";
+                htmlstr += "<td>" + double17 + "</td>";
+                htmlstr += "</tr>";
+                htmlstr += "</table>";
+                htmlstr += "</html>";
                 //strBuilder.Append(String.Join(",", csvRow.ToArray())).Append("\r\n");
                 csvRow.Add(heji);
                 strBuilder.Append(String.Join(",", csvRow.ToArray())).Append("\r\n");
                 csvRow.Clear();
 
-
-                return strBuilder.ToString();
+                return htmlstr;
+                //return strBuilder.ToString();
            }
              catch (Exception ex)
             {
@@ -421,8 +461,8 @@ namespace PocclientApplication
                 string data = ExportDataGrid(true, grid, true);
                 var sfd = new Microsoft.Win32.SaveFileDialog
                 {
-                    DefaultExt = "csv",
-                    Filter = "CSV Files (*.csv)|*.csv|All files (*.*)|*.*",
+                    DefaultExt = "xls",
+                    Filter = "EXCEL Files (*.xls)|*.xls|All files (*.*)|*.*",
                     FilterIndex = 1
                 };
                 if (sfd.ShowDialog() == true)
@@ -431,7 +471,7 @@ namespace PocclientApplication
                     {
                         using (var writer = new StreamWriter(stream, System.Text.Encoding.Unicode))
                         {
-                            data = data.Replace(",", "\t");
+                            //data = data.Replace(",", "\t");
                             writer.Write(data);
                             writer.Close();
                         }

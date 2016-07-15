@@ -23,6 +23,7 @@
 
 
                 <DataGridTextColumn Header="填发日期" Binding="{Binding house_tianfatime,StringFormat=\{0:d\}}"/>
+                <DataGridTextColumn Header="建筑结构" Binding="{Binding building_structure}"/>
                 <DataGridTextColumn Header="房屋间数" Binding="{Binding condition_jianshu}"/>
                 <DataGridTextColumn Header="房屋建筑面积" Binding="{Binding condition_built_area}"/>
                 <DataGridTextColumn Header="权利摘要间数" Binding="{Binding obl_jianshu}"/>

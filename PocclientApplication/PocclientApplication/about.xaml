@@ -18,7 +18,7 @@
             <RowDefinition Height="40" />
         </Grid.RowDefinitions>
         <Label FontSize="18" VerticalAlignment="Center" Margin="20,0,0,0">蓝格驿房产地产管理软件</Label>
-        <Label VerticalAlignment="Center" Margin="240,0,0,0">V1.0 beta</Label>
+        <Label VerticalAlignment="Center" Margin="240,0,0,0">V1.0</Label>
         <Separator VerticalAlignment="Bottom" Background="#FF039FFF" />
             <Image Grid.Row="1" Source="/PocclientApplication;component/Images/logo.png"></Image>
         <Label Grid.Row="3" HorizontalAlignment="Center">玉溪蓝格软件有限公司</Label>
@@ -26,6 +26,6 @@
         <Label Grid.Row="5" HorizontalAlignment="Center">公司电话：0877-2063335、6125756、6125047</Label>
         <Label Grid.Row="6" HorizontalAlignment="Center">公司网站：http://www.langeyi.cn</Label>
         <Label Grid.Row="7" HorizontalAlignment="Center">公司邮箱：112059802@qq.com</Label>
-        <Button Grid.Row="8" Width="60" Height="24" HorizontalAlignment="Right" Margin="0,0,20,0">确定</Button>
+        <Button x:Name="queding" Grid.Row="8" Width="60" Height="24" HorizontalAlignment="Right" Margin="0,0,20,0" Click="queding_Click">确定</Button>
     </Grid>
 </UserControl>

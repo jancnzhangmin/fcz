@@ -422,13 +422,15 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value />
+                <Value>=First(Fields!datetime.Value, "DataSet2")</Value>
                 <Style>
                   <FontSize>8pt</FontSize>
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>datetime</rd:DefaultName>
@@ -515,6 +517,143 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
+      <Rectangle Name="Rectangle3">
+        <ReportItems>
+          <Textbox Name="use_area">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!use_area.Value, "DataSet4")</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>use_area</rd:DefaultName>
+            <Top>0.70172cm</Top>
+            <Height>0.6cm</Height>
+            <Width>2.94979cm</Width>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="card_number">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=First(Fields!card_number.Value, "DataSet4")</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>card_number</rd:DefaultName>
+            <Top>0.70172cm</Top>
+            <Left>4.78129cm</Left>
+            <Height>0.6cm</Height>
+            <Width>2.80396cm</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="company">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value />
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>company</rd:DefaultName>
+            <Top>0.70172cm</Top>
+            <Left>3.2426cm</Left>
+            <Height>0.6cm</Height>
+            <Width>1.50341cm</Width>
+            <ZIndex>2</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="zidihao">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value />
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>zidihao</rd:DefaultName>
+            <Top>1.33672cm</Top>
+            <Left>8.16382cm</Left>
+            <Height>0.6cm</Height>
+            <Width>4.19743cm</Width>
+            <ZIndex>3</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+        </ReportItems>
+        <KeepTogether>true</KeepTogether>
+        <Top>15.23153cm</Top>
+        <Left>0.87105cm</Left>
+        <Height>2.59292cm</Height>
+        <Width>12.36125cm</Width>
+        <ZIndex>8</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Rectangle>
       <Textbox Name="tax_rate">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
@@ -538,7 +677,7 @@
         <Left>6.27115cm</Left>
         <Height>0.6cm</Height>
         <Width>2.02375cm</Width>
-        <ZIndex>8</ZIndex>
+        <ZIndex>9</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -572,7 +711,7 @@
         <Left>8.33019cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
-        <ZIndex>9</ZIndex>
+        <ZIndex>10</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -606,7 +745,7 @@
         <Left>10.83019cm</Left>
         <Height>0.6cm</Height>
         <Width>1.07125cm</Width>
-        <ZIndex>10</ZIndex>
+        <ZIndex>11</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -636,7 +775,7 @@
         <Left>11.87212cm</Left>
         <Height>0.6cm</Height>
         <Width>1.61396cm</Width>
-        <ZIndex>11</ZIndex>
+        <ZIndex>12</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -666,7 +805,7 @@
         <Left>13.47019cm</Left>
         <Height>0.6cm</Height>
         <Width>1.11535cm</Width>
-        <ZIndex>12</ZIndex>
+        <ZIndex>13</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -696,7 +835,7 @@
         <Left>14.62083cm</Left>
         <Height>0.6cm</Height>
         <Width>1.13299cm</Width>
-        <ZIndex>13</ZIndex>
+        <ZIndex>14</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -726,7 +865,7 @@
         <Left>15.79615cm</Left>
         <Height>0.6cm</Height>
         <Width>2.02375cm</Width>
-        <ZIndex>14</ZIndex>
+        <ZIndex>15</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -756,7 +895,7 @@
         <Left>17.85519cm</Left>
         <Height>0.6cm</Height>
         <Width>1.41521cm</Width>
-        <ZIndex>15</ZIndex>
+        <ZIndex>16</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -786,7 +925,7 @@
         <Left>19.27745cm</Left>
         <Height>0.6cm</Height>
         <Width>1.01424cm</Width>
-        <ZIndex>16</ZIndex>
+        <ZIndex>17</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -818,131 +957,7 @@
         <Left>20.35519cm</Left>
         <Height>0.6cm</Height>
         <Width>2.42063cm</Width>
-        <ZIndex>17</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="use_area">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=First(Fields!use_area.Value, "DataSet4")</Value>
-                <Style />
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Center</TextAlign>
-            </Style>
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>use_area</rd:DefaultName>
-        <Top>15.93325cm</Top>
-        <Left>0.88428cm</Left>
-        <Height>0.6cm</Height>
-        <Width>2.94979cm</Width>
         <ZIndex>18</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="company">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value />
-                <Style />
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>company</rd:DefaultName>
-        <Top>15.93325cm</Top>
-        <Left>4.12688cm</Left>
-        <Height>0.6cm</Height>
-        <Width>1.50341cm</Width>
-        <ZIndex>19</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="card_number">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=First(Fields!card_number.Value, "DataSet4")</Value>
-                <Style />
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Center</TextAlign>
-            </Style>
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>card_number</rd:DefaultName>
-        <Top>15.93325cm</Top>
-        <Left>5.66557cm</Left>
-        <Height>0.6cm</Height>
-        <Width>2.80396cm</Width>
-        <ZIndex>20</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="zidihao">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value />
-                <Style />
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>zidihao</rd:DefaultName>
-        <Top>15.93325cm</Top>
-        <Left>9.0481cm</Left>
-        <Height>0.6cm</Height>
-        <Width>4.19743cm</Width>
-        <ZIndex>21</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1561,7 +1576,7 @@
         <Left>1.01129cm</Left>
         <Height>1.58834cm</Height>
         <Width>10.66536cm</Width>
-        <ZIndex>22</ZIndex>
+        <ZIndex>19</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1574,7 +1589,7 @@
         <Left>1.01128cm</Left>
         <Height>3.74354cm</Height>
         <Width>10.6786cm</Width>
-        <ZIndex>23</ZIndex>
+        <ZIndex>20</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1587,7 +1602,7 @@
         <Left>1.01128cm</Left>
         <Height>2.76458cm</Height>
         <Width>9.84415cm</Width>
-        <ZIndex>24</ZIndex>
+        <ZIndex>21</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2300,7 +2315,7 @@
         <Left>1.01128cm</Left>
         <Height>1.37665cm</Height>
         <Width>9.6854cm</Width>
-        <ZIndex>25</ZIndex>
+        <ZIndex>22</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>

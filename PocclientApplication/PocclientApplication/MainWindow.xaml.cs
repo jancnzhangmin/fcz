@@ -50,7 +50,7 @@ namespace PocclientApplication
         {
             
             //StreamWriter test = new StreamWriter(System.AppDomain.CurrentDomain.BaseDirectory + @"\Autobak\", true);
-            string a = string.Format("{0:yyyyMMddHHmmssffff}", System.DateTime.Now);
+            string a = string.Format("{0:yyyyMMddHHmmss}", System.DateTime.Now);
 
             string saveAway = System.AppDomain.CurrentDomain.BaseDirectory + Directory.CreateDirectory("Autobak") + @"\"+a+".bak";
             //SaveFileDialog sa = new SaveFileDialog();
@@ -389,6 +389,7 @@ where T : DependencyObject
         private void memuabout_Click(object sender, RoutedEventArgs e)
         {
             C1.WPF.C1Window cabout = new C1.WPF.C1Window();
+            cabout.Name = "about";
             cabout.IsResizable = false;
             cabout.Width = 636;
             cabout.Height = 368;

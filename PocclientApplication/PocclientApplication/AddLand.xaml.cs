@@ -105,42 +105,58 @@ where T : DependencyObject
         {
             if (checknull())
             {
-                //land_date.Text = DateTime.Now.Date.ToShortDateString();
-                //string a = DateTime.Parse(land_date.Text).ToShortDateString();
-                if (landid <= 0)
-                {   //添加基本
-                    client.Insertland(land_title.Text, land_word.Text, land_number.Text, land_govermment.Text, DateTime.Parse(land_date.Text), land_user.Text, land_idcardnumber.Text, land_address.Text, land_map.Text, land_ground.Text, land_use.Text, land_use_period.Text, land_east.Text, land_south.Text, land_west.Text, land_north.Text, land_office.Text, DateTime.Parse(land_send_date.Text) , land_remarks.Text, land_changeitems.Text, land_figure.Text);
-                    PublicClass.selectlandid = client.Selectlandid(land_word.Text, land_number.Text);
-                    //添加城镇
-                    client.Insertlandtown(land_area.Text, built_up_area.Text, common_area.Text, sharing_area.Text, land_grade.Text, PublicClass.selectlandid);
-                    //添加农村
-                    client.Insertcountryside(land_area_country.Text, cultivated_land.Text, dry_land.Text, paddy_field.Text, orchard.Text, forest_land.Text, grassland.Text, inmate_mining.Text, construction_land.Text, homestead_land.Text, traffic_land.Text, water_land.Text, unused_land.Text, PublicClass.selectlandid);
 
-
-                    MessageBoxResult confirmToDel = MessageBox.Show("已保存是否立即打印？", "提示", MessageBoxButton.YesNo, MessageBoxImage.Question);
-                    if (confirmToDel == MessageBoxResult.Yes)
-                    {
-                        landid = PublicClass.selectlandid;
-                        daying();
-                    }
-                    else
-                    {
-
-                    }
-
-                    
-                    //nextopen();
-
+                int fanghao = 0;
+                try
+                {
+                    fanghao = client.Selectlandid(land_word.Text.Trim(), land_number.Text.Trim());
+                }
+                catch { }
+                if (fanghao > 0 & landid == 0)
+                {
+                    MessageBox.Show("字号已存在!");
 
                 }
                 else
-                {   //更新基本
-                    client.Updataland(land_title.Text, land_word.Text, land_number.Text, land_govermment.Text, DateTime.Parse(land_date.Text), land_user.Text, land_idcardnumber.Text, land_address.Text, land_map.Text, land_ground.Text, land_use.Text, land_use_period.Text, land_east.Text, land_south.Text, land_west.Text, land_north.Text, land_office.Text, DateTime.Parse(land_send_date.Text), land_remarks.Text, land_changeitems.Text, land_figure.Text, landid);
-                    //更新城镇
-                    client.Updatalandtown(land_area.Text, built_up_area.Text, common_area.Text, sharing_area.Text, land_grade.Text, landid);
-                    //更新农村
-                    client.Updatacountryside(land_area_country.Text, cultivated_land.Text, dry_land.Text, paddy_field.Text, orchard.Text, forest_land.Text, grassland.Text, inmate_mining.Text, construction_land.Text, homestead_land.Text, traffic_land.Text, water_land.Text, unused_land.Text, landid);
-                    //nextopen();
+                {
+                    //land_date.Text = DateTime.Now.Date.ToShortDateString();
+                    //string a = DateTime.Parse(land_date.Text).ToShortDateString();
+                    if (landid <= 0)
+                    {   //添加基本
+                        client.Insertland(land_title.Text, land_word.Text, land_number.Text, land_govermment.Text, DateTime.Parse(land_date.Text), land_user.Text, land_idcardnumber.Text, land_address.Text, land_map.Text, land_ground.Text, land_use.Text, land_use_period.Text, land_east.Text, land_south.Text, land_west.Text, land_north.Text, land_office.Text, DateTime.Parse(land_send_date.Text), land_remarks.Text, land_changeitems.Text, land_figure.Text);
+                        PublicClass.selectlandid = client.Selectlandid(land_word.Text, land_number.Text);
+                        //添加城镇
+                        client.Insertlandtown(land_area.Text, built_up_area.Text, common_area.Text, sharing_area.Text, land_grade.Text, PublicClass.selectlandid);
+                        //添加农村
+                        client.Insertcountryside(land_area_country.Text, cultivated_land.Text, dry_land.Text, paddy_field.Text, orchard.Text, forest_land.Text, grassland.Text, inmate_mining.Text, construction_land.Text, homestead_land.Text, traffic_land.Text, water_land.Text, unused_land.Text, PublicClass.selectlandid);
+
+
+                        MessageBoxResult confirmToDel = MessageBox.Show("已保存是否立即打印？", "提示", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                        if (confirmToDel == MessageBoxResult.Yes)
+                        {
+                            landid = PublicClass.selectlandid;
+                            daying();
+                        }
+                        else
+                        {
+
+                        }
+
+
+                        //nextopen();
+
+
+                    }
+
+                    else
+                    {   //更新基本
+                        client.Updataland(land_title.Text, land_word.Text, land_number.Text, land_govermment.Text, DateTime.Parse(land_date.Text), land_user.Text, land_idcardnumber.Text, land_address.Text, land_map.Text, land_ground.Text, land_use.Text, land_use_period.Text, land_east.Text, land_south.Text, land_west.Text, land_north.Text, land_office.Text, DateTime.Parse(land_send_date.Text), land_remarks.Text, land_changeitems.Text, land_figure.Text, landid);
+                        //更新城镇
+                        client.Updatalandtown(land_area.Text, built_up_area.Text, common_area.Text, sharing_area.Text, land_grade.Text, landid);
+                        //更新农村
+                        client.Updatacountryside(land_area_country.Text, cultivated_land.Text, dry_land.Text, paddy_field.Text, orchard.Text, forest_land.Text, grassland.Text, inmate_mining.Text, construction_land.Text, homestead_land.Text, traffic_land.Text, water_land.Text, unused_land.Text, landid);
+                        //nextopen();
+                    }
                 }
                 next_page.IsEnabled = false;
                 prinreport.IsEnabled = true;
@@ -263,11 +279,15 @@ where T : DependencyObject
                 var selectcountrysidedate = client.Selectlandtowniddate(landid);
                 for (int t = 0; t < selectcountrysidedate.Tables[0].Rows.Count; t++)
                 {
-                    land_area.Text = selectcountrysidedate.Tables[0].Rows[0][t].ToString();
-                    built_up_area.Text = selectcountrysidedate.Tables[0].Rows[0][t + 1].ToString();
-                    common_area.Text = selectcountrysidedate.Tables[0].Rows[0][t + 2].ToString();
-                    sharing_area.Text = selectcountrysidedate.Tables[0].Rows[0][t + 3].ToString();
-                    land_grade.Text = selectcountrysidedate.Tables[0].Rows[0][t + 4].ToString();
+                    try
+                    {
+                        land_area.Text = selectcountrysidedate.Tables[0].Rows[0][t].ToString();
+                        built_up_area.Text = selectcountrysidedate.Tables[0].Rows[0][t + 1].ToString();
+                        common_area.Text = selectcountrysidedate.Tables[0].Rows[0][t + 2].ToString();
+                        sharing_area.Text = selectcountrysidedate.Tables[0].Rows[0][t + 3].ToString();
+                        land_grade.Text = selectcountrysidedate.Tables[0].Rows[0][t + 4].ToString();
+                    }
+                    catch { }
 
 
                 }
@@ -276,19 +296,23 @@ where T : DependencyObject
                 var countryside = client.Selectcountrysideiddate(landid);
                 for (int i = 0; i < countryside.Tables[0].Rows.Count; i++)
                 {
-                    land_area_country.Text = countryside.Tables[0].Rows[0][i].ToString();
-                    cultivated_land.Text = countryside.Tables[0].Rows[0][i + 1].ToString();
-                    dry_land.Text = countryside.Tables[0].Rows[0][i + 2].ToString();
-                    paddy_field.Text = countryside.Tables[0].Rows[0][i + 3].ToString();
-                    orchard.Text = countryside.Tables[0].Rows[0][i + 4].ToString();
-                    forest_land.Text = countryside.Tables[0].Rows[0][i + 5].ToString();
-                    grassland.Text = countryside.Tables[0].Rows[0][i + 6].ToString();
-                    inmate_mining.Text = countryside.Tables[0].Rows[0][i + 7].ToString();
-                    construction_land.Text = countryside.Tables[0].Rows[0][i + 8].ToString();
-                    homestead_land.Text = countryside.Tables[0].Rows[0][i + 9].ToString();
-                    traffic_land.Text = countryside.Tables[0].Rows[0][i + 10].ToString();
-                    water_land.Text = countryside.Tables[0].Rows[0][i + 11].ToString();
-                    unused_land.Text = countryside.Tables[0].Rows[0][i + 12].ToString();
+                    try
+                    {
+                        land_area_country.Text = countryside.Tables[0].Rows[0][i].ToString();
+                        cultivated_land.Text = countryside.Tables[0].Rows[0][i + 1].ToString();
+                        dry_land.Text = countryside.Tables[0].Rows[0][i + 2].ToString();
+                        paddy_field.Text = countryside.Tables[0].Rows[0][i + 3].ToString();
+                        orchard.Text = countryside.Tables[0].Rows[0][i + 4].ToString();
+                        forest_land.Text = countryside.Tables[0].Rows[0][i + 5].ToString();
+                        grassland.Text = countryside.Tables[0].Rows[0][i + 6].ToString();
+                        inmate_mining.Text = countryside.Tables[0].Rows[0][i + 7].ToString();
+                        construction_land.Text = countryside.Tables[0].Rows[0][i + 8].ToString();
+                        homestead_land.Text = countryside.Tables[0].Rows[0][i + 9].ToString();
+                        traffic_land.Text = countryside.Tables[0].Rows[0][i + 10].ToString();
+                        water_land.Text = countryside.Tables[0].Rows[0][i + 11].ToString();
+                        unused_land.Text = countryside.Tables[0].Rows[0][i + 12].ToString();
+                    }
+                    catch { }
                  }
                 
             }

@@ -11,6 +11,5 @@
             <viewer:ReportViewer x:Name="viewerInstance" >
             </viewer:ReportViewer>
         </WindowsFormsHost>
-        <c1:C1ReportViewer HorizontalAlignment="Left" Margin="161,358,0,0" Name="c1ReportViewer1" VerticalAlignment="Top" />
     </Grid>
 </UserControl>

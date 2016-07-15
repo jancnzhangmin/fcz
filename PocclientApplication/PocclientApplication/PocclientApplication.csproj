@@ -79,10 +79,8 @@
   <ItemGroup>
     <Reference Include="C1.WPF.4, Version=4.0.20141.391, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\C1.WPF.4.dll</HintPath>
+      <HintPath>C:\Users\jancn\Desktop\房产地产管理软件(2016-7-14-am)\房产地产管理软件\fcz\PocclientApplication\PocclientApplication\bin\Debug\C1.WPF.4.dll</HintPath>
     </Reference>
-    <Reference Include="C1.WPF.C1Report.4, Version=4.0.20151.38, Culture=neutral, PublicKeyToken=594a0605db190bb9" />
-    <Reference Include="C1.WPF.ReportViewer.4, Version=4.0.20151.455, Culture=neutral, PublicKeyToken=2aa4ec5576d6c3ce" />
     <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="ReachFramework" />
